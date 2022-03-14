@@ -1,5 +1,7 @@
-import "./App.css";
-import Homepage from "./components/Pages/Homepage";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Shared/Navbar/Navbar";
+import Booking from "./Pages/Booking";
+import Homepage from "./Pages/Homepage";
 
 console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
@@ -8,7 +10,12 @@ console.log(
 function App() {
   return (
     <div className="App">
-      <Homepage />
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/booking" element={<Booking />} />
+      </Routes>
     </div>
   );
 }
