@@ -10,6 +10,7 @@
   top: 0;
   /* padding: 0 20px; */
   transition: all 0.4s ease-in-out;
+  z-index: 999999;
 }
 .white-line {
   margin: 0 auto;
@@ -30,7 +31,9 @@
   align-items: center;
   padding: 0px 0px;
 }
-
+.logo-link img {
+  transition: all 0.4s ease-in-out;
+}
 .navbar-main-container img {
   width: 100px;
   fill: black;

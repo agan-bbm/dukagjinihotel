@@ -9,6 +9,8 @@ import "./navbar.css";
 
 // IMAGES
 import Util from "../../Shared/util";
+import Logow from "../../../Assets/logo-white.svg";
+import Logob from "../../../Assets/logo-black.svg";
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -20,13 +22,21 @@ function Navbar() {
       );
     }
   }, []);
+
+  const logo = () => {
+    if (!navbar) {
+      return <img src={Logow} alt="logo-white" />;
+    } else {
+      return <img src={Logob} alt="logo-black" />;
+    }
+  };
   console.log(navbar);
   return (
     <div className={!navbar ? "navbar" : "navbar navbar-active"}>
       <div className="navbar-main-container">
         <RiPhoneFill size={30} color={!navbar ? "white" : "black"} />
-        <Link to="/">
-          <Util />
+        <Link to="/" className="logo-link">
+          {logo()}
         </Link>
         <Link
           to="/booking"
@@ -65,6 +75,7 @@ function Navbar() {
         <span
           className={!navbar ? "white-dots" : " black-dots white-dots "}
         ></span>
+
         <Link
           to="/"
           className={!navbar ? "white-links" : " black-links white-links "}

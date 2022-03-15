@@ -1,3 +1,11 @@
 .hompage-first-section {
-  margin-top: 150px;
+  width: 100%;
+  height: 85vh;
+}
+.mySwiper {
+  height: 100%;
+  background-color: white;
+}
+.mySwiper img {
+  width: 100%;
 }
