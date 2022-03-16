@@ -30,7 +30,6 @@ function Navbar() {
       return <img src={Logob} alt="logo-black" />;
     }
   };
-  console.log(navbar);
   return (
     <div className={!navbar ? "navbar" : "navbar navbar-active"}>
       <div className="navbar-main-container">
