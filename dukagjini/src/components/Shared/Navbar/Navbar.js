@@ -9,8 +9,8 @@ import "./navbar.css";
 
 // IMAGES
 import Util from "../../Shared/util";
-import Logow from "../../../assets/logo-white.svg";
-import Logob from "../../../assets/logo-black.svg";
+import Logow from "../../../Assets/logo-white.svg";
+import Logob from "../../../Assets/logo-black.svg";
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
