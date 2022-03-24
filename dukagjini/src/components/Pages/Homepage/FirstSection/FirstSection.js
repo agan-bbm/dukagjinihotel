@@ -11,10 +11,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import Img1 from "../../../../Assets/hotel/1.jpg";
-import Img2 from "../../../../Assets/hotel/2.jpg";
-import Img3 from "../../../../Assets/hotel/3.jpg";
-import Img4 from "../../../../Assets/hotel/4.jpg";
+//IMAGES
+import Img1 from "../../../../images/1.jpg";
+import Img2 from "../../../../images/2.jpg";
+import Img3 from "../../../../images/3.jpg";
+import Img4 from "../../../../images/4.jpg";
 function FirstSection() {
   return (
     <div className="hompage-first-section">

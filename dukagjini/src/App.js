@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Shared/Navbar/Navbar";
+import About from "./components/Shared/Pages/About";
 import Booking from "./Pages/Booking";
 import Homepage from "./Pages/Homepage";
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/booking" element={<Booking />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );
