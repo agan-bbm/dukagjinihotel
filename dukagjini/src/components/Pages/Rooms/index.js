@@ -43,13 +43,13 @@ export function Rooms() {
                     <img src={standard} alt="" />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src={standard} alt="" />
+                    <img src={deluxequeen} alt="" />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src={standard} alt="" />
+                    <img src={deluxetwin} alt="" />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src={standard} alt="" />
+                    <img src={penthouse} alt="" />
                   </SwiperSlide>
                 </Swiper>
               </div>
@@ -85,7 +85,27 @@ export function Rooms() {
             <div className="single-room">
               <h2 className="room-title">Standard Double Queen Room</h2>
               <div>
-                <img src={standard} alt="" />
+                <Swiper
+                  modules={[Navigation]}
+                  spaceBetween={50}
+                  slidesPerView={1}
+                  navigation
+                  onSlideChange={() => console.log("slide change")}
+                  onSwiper={(swiper) => console.log(swiper)}
+                >
+                  <SwiperSlide>
+                    <img src={standard} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={deluxequeen} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={deluxetwin} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={penthouse} alt="" />
+                  </SwiperSlide>
+                </Swiper>
               </div>
               <div className="icon-info">
                 <div className="icon">
@@ -122,7 +142,27 @@ export function Rooms() {
             <div className="single-room">
               <h2 className="room-title">Standard Double Queen Room</h2>
               <div>
-                <img src={standard} alt="" />
+                <Swiper
+                  modules={[Navigation]}
+                  spaceBetween={50}
+                  slidesPerView={1}
+                  navigation
+                  onSlideChange={() => console.log("slide change")}
+                  onSwiper={(swiper) => console.log(swiper)}
+                >
+                  <SwiperSlide>
+                    <img src={standard} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={deluxequeen} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={deluxetwin} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={penthouse} alt="" />
+                  </SwiperSlide>
+                </Swiper>
               </div>
               <div className="icon-info">
                 <div className="icon">
@@ -156,7 +196,27 @@ export function Rooms() {
             <div className="single-room">
               <h2 className="room-title">Standard Double Queen Room</h2>
               <div>
-                <img src={standard} alt="" />
+                <Swiper
+                  modules={[Navigation]}
+                  spaceBetween={50}
+                  slidesPerView={1}
+                  navigation
+                  onSlideChange={() => console.log("slide change")}
+                  onSwiper={(swiper) => console.log(swiper)}
+                >
+                  <SwiperSlide>
+                    <img src={standard} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={deluxequeen} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={deluxetwin} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={penthouse} alt="" />
+                  </SwiperSlide>
+                </Swiper>
               </div>
               <div className="icon-info">
                 <div className="icon">
@@ -193,7 +253,27 @@ export function Rooms() {
             <div className="single-room">
               <h2 className="room-title">Standard Double Queen Room</h2>
               <div>
-                <img src={standard} alt="" />
+                <Swiper
+                  modules={[Navigation]}
+                  spaceBetween={50}
+                  slidesPerView={1}
+                  navigation
+                  onSlideChange={() => console.log("slide change")}
+                  onSwiper={(swiper) => console.log(swiper)}
+                >
+                  <SwiperSlide>
+                    <img src={standard} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={deluxequeen} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={deluxetwin} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={penthouse} alt="" />
+                  </SwiperSlide>
+                </Swiper>
               </div>
               <div className="icon-info">
                 <div className="icon">

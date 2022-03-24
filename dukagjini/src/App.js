@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Rooms } from "./components/Pages/Rooms";
+import Footer from "./components/Shared/Footer";
 import Navbar from "./components/Shared/Navbar/Navbar";
 import About from "./components/Shared/Pages/About";
 import Booking from "./Pages/Booking";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/rooms" element={<Rooms />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
