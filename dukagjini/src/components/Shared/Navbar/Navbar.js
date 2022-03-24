@@ -46,7 +46,7 @@ function Navbar() {
       <hr className={!navbar ? "white-line" : "black-line white-line"} />
       <div className="navbar-links">
         <Link
-          to="/"
+          to="/rooms"
           className={!navbar ? "white-links" : " black-links white-links "}
         >
           Rooms
