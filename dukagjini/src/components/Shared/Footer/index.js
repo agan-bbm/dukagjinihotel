@@ -69,7 +69,14 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="bbm">Developed with love by Black Bird Marketing</div>
+      <div className="bbm">
+        <div class="">
+          Made with <span class="love">❤</span> by{" "}
+          <a id="blackbird" href="https://www.blackbird.marketing/">
+            Black Bird Marketing
+          </a>
+        </div>
+      </div>
     </>
   );
 }
