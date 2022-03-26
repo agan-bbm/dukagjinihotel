@@ -21,7 +21,7 @@ function ThirdSection() {
   return (
     <div className="thirdSection">
         <Swiper
-                    slidesPerView={1.6}
+                    slidesPerView={1.7}
                     centeredSlides={true}
                     //spaceBetween={0}
                     grabCursor={true}
@@ -61,9 +61,8 @@ function ThirdSection() {
                 
     
             <div className="thirdSectionBottom">
-                <div className="thirdSectionLeft"><h2 className="thirdSectionHeader">The shelter is the Outcome of the Dream</h2></div>
+                <div className="thirdSectionLeft"><h2 className="thirdSectionHeader">Pampering Included</h2></div>
                     <div className="thirdSectionRight">
-                        <p className='thirdSectionParagraph'>Broker ipsum dolor sit amet, consectetuer luxury elit. Carrara marble commodo ligula eget dolor cum sociis cozy penatibus et magnis.</p>
                         <p className='thirdSectionParagraph'>Ochean de View extends along a private, quiet and beautiful tropical beach. Stay away from the crowd and enjoy the beauty and lust of Cancun with us.</p>
                     </div>
                 </div>   

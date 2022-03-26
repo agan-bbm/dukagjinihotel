@@ -21,33 +21,36 @@
 .thirdSectionBottom {
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items:stretch;   
     padding: 0;
 }
 .thirdSectionLeft {
+    align-items: inherit;
     width: 50%;
 }
 
 .thirdSectionRight {
     margin-left: 10%;
-    margin-right: 10%;
-    width: 60%;
+    /* margin-right: 10%; */
+    width: 50%;
     
 }
 
 .thirdSectionHeader {
-    padding-left: 20%;
+    padding-left: 40%;
     font-size: 40px;
     margin: 0;
 }
 
 .thirdSectionParagraph {
     font-size: 18px;
+    padding-right: 30%;
 }
 
 .swiper-slide {
     transform: scale(0.7);
 }
+
 
 .swiper-slide-active{
     transform: scale(1.0);

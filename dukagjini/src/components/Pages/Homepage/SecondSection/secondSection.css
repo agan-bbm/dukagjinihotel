@@ -6,7 +6,7 @@
 }
 
 .secondContainer {
-    padding-top: 50px;
+    padding-top: 80px;
     align-items: center;
     width: 100%;
 }
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 .secondSectionLeft {
     width: 40%;
@@ -29,11 +29,15 @@
 
 .secondSectionHeader {
     font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
     margin: 0;
 }
 
 .secondSectionParagraph {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    padding-right: 30%;
 }
 
 .secondImgContainer {
