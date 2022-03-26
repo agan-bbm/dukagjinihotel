@@ -4,8 +4,6 @@
     align-items: center;
     margin: 0 auto;
 }
-.containerWrapper {
-}
 
 .secondContainer {
     padding-top: 50px;
@@ -17,6 +15,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    padding-bottom: 30px;
 }
 .secondSectionLeft {
     width: 40%;

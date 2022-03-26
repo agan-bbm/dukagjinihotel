@@ -1,0 +1,77 @@
+.thirdSection1 {
+    width: 100%;
+
+    align-items:center;
+    padding: 50px 0;
+    
+ }
+
+.thirdContainer {
+    padding-top: 50px;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.thirdSectionBottom {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    padding: 25px 0
+}
+.thirdSectionLeft {
+    width: 40%;
+}
+
+.thirdSectionRight {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 60%;
+    
+}
+
+.thirdSectionHeader {
+    font-size: 50px;
+    margin: 0;
+}
+
+.thirdSectionParagraph {
+    font-size: 18px;
+}
+
+.swiper-slide {
+    transform: scale(0.6);
+    transition: .5s;
+}
+
+.swiper-slide-active{
+    transform: scale(1.0);
+    transition: .6s;
+}
+
+.swiper-wrapper{
+    align-items: center;
+}
+
+/* .swiper-slide{
+    transform: scale(0.6);
+    transition: .4s;
+} */
+
+.swiper{
+    background-color: wheat;
+}
+
+.swiper-slide-prev {
+    transform: scale(0.6);
+    transition: .5s;
+}
+
+.swiper-slide-next{
+    transform: scale(0.6);
+    transition: .5s;
+}
+
+.swiper-slide-duplicate-prev{
+    transform: scale(0.6);
+}
