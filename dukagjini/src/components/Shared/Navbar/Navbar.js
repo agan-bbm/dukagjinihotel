@@ -8,9 +8,8 @@ import { RiPhoneFill } from "react-icons/ri";
 import "./navbar.css";
 
 // IMAGES
-import Util from "../../Shared/util";
-import Logow from "../../../Assets/logo-white.svg";
-import Logob from "../../../Assets/logo-black.svg";
+import Logow from "../../../images/logo-white.svg";
+import Logob from "../../../images/logo-black.svg";
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -47,7 +46,7 @@ function Navbar() {
       <hr className={!navbar ? "white-line" : "black-line white-line"} />
       <div className="navbar-links">
         <Link
-          to="/"
+          to="/rooms"
           className={!navbar ? "white-links" : " black-links white-links "}
         >
           Rooms
@@ -71,10 +70,20 @@ function Navbar() {
         >
           Restaurant
         </Link>
+
         <span
           className={!navbar ? "white-dots" : " black-dots white-dots "}
         ></span>
+        <Link
+          to="/about"
+          className={!navbar ? "white-links" : " black-links white-links "}
+        >
+          About
+        </Link>
 
+        <span
+          className={!navbar ? "white-dots" : " black-dots white-dots "}
+        ></span>
         <Link
           to="/"
           className={!navbar ? "white-links" : " black-links white-links "}

@@ -1,0 +1,85 @@
+.rooms {
+  padding-top: 100px;
+}
+.room-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.room-title {
+  color: #8e652c;
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+}
+.single-room {
+  width: 48%;
+  padding: 50px 0px;
+}
+hr {
+  border: 1px solid #8e652c;
+}
+.single-room img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  width: 33.33%;
+}
+.icon p {
+  font-family: lato, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  height: 30px;
+  color: #8e652c;
+  margin-left: 10px;
+}
+.icon-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.icon-info img {
+  width: 30px;
+  height: 30px;
+}
+.room-buttons {
+  display: flex;
+}
+.book-button button {
+  background-color: #8e652c;
+  padding: 20px 30px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+.book-button button:hover {
+  background-color: #623c0f;
+  transition: all 0.3s ease-out;
+}
+.details-button {
+  display: flex;
+  align-items: center;
+}
+.details-button a {
+  color: #8e652c;
+  margin-left: 20px;
+}
+.swiper-button-prev::after {
+  color: white;
+}
+
+.swiper-button-next::after {
+  color: white;
+}
+@media (max-width: 600px) {
+  .single-room {
+    width: 100%;
+  }
+}
