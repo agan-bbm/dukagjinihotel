@@ -1,6 +1,11 @@
+.thirdSection{
+    background-color: wheat;
+    padding-top: 60px;
+}
+
 .thirdSection1 {
     width: 100%;
-
+    background-color: wheat;
     align-items:center;
     padding: 50px 0;
     
@@ -17,10 +22,10 @@
     display: flex;
     flex-direction: row;
     align-items:center;
-    padding: 25px 0
+    padding: 0;
 }
 .thirdSectionLeft {
-    width: 40%;
+    width: 50%;
 }
 
 .thirdSectionRight {
@@ -31,7 +36,8 @@
 }
 
 .thirdSectionHeader {
-    font-size: 50px;
+    padding-left: 20%;
+    font-size: 40px;
     margin: 0;
 }
 
@@ -40,8 +46,7 @@
 }
 
 .swiper-slide {
-    transform: scale(0.6);
-    transition: .5s;
+    transform: scale(0.7);
 }
 
 .swiper-slide-active{
@@ -63,15 +68,15 @@
 }
 
 .swiper-slide-prev {
-    transform: scale(0.6);
+    transform: scale(0.7);
     transition: .5s;
 }
 
 .swiper-slide-next{
-    transform: scale(0.6);
+    transform: scale(0.7);
     transition: .5s;
 }
 
 .swiper-slide-duplicate-prev{
-    transform: scale(0.6);
+    transform: scale(0.7);
 }

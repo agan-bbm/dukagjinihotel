@@ -20,12 +20,10 @@ import Img1 from "../../../../images/1.jpg";
 function ThirdSection() {
   return (
     <div className="thirdSection">
-        <div className="containerWrapper" >
-            <div className="thirdSection1">
-                <Swiper
-                    slidesPerView={2}
+        <Swiper
+                    slidesPerView={1.6}
                     centeredSlides={true}
-                    spaceBetween={30}
+                    //spaceBetween={0}
                     grabCursor={true}
                     navigation
                     // pagination={{
@@ -58,6 +56,9 @@ function ThirdSection() {
                         <img src={Img4} />
                         </SwiperSlide>
                     </Swiper>
+        <div className="containerWrapper" >
+            <div className="thirdSection1">
+                
     
             <div className="thirdSectionBottom">
                 <div className="thirdSectionLeft"><h2 className="thirdSectionHeader">The shelter is the Outcome of the Dream</h2></div>
