@@ -1,0 +1,76 @@
+.sixthSection{
+    color: #3c3a34;
+}
+
+.sixthHeader{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.sixthHeader h2{
+    padding: 0 25%;
+    padding-bottom: 25px;
+    font-weight: 400;
+    font-size: 55px;
+    text-align: center;
+}
+
+.swiper-slide {
+    background-color: whitesmoke;
+    border-top: solid 3px darkgray;
+}
+.sswiper-pointer-events{
+    background-color: white;
+}
+
+.swiper-backface-hidden{
+    background-color: white;   
+}
+
+.testimonial{
+    padding: 0 6%;
+}
+
+
+.testimonial p{
+    font-size: 20px;
+    margin: 0;
+    padding: 40px 0;
+    color: #636363;
+}
+
+.user p{
+    font-size: 16px;
+    padding: 0;
+}
+.user span{
+    font-size: 20px;
+}
+
+.testimonial span{
+    font-weight: 600;
+}
+
+.swiper{
+    background-color: #fcfaf3;
+    padding-bottom: 80px;
+}
+
+.profilePic {
+    width: 50px;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-top: solid 1px darkgray;
+
+}
+
+.userName {
+    padding-left: 15px;
+}
+

@@ -1,11 +1,11 @@
 .thirdSection{
-    background-color: wheat;
+    background-color: #ececdc;
     padding-top: 60px;
 }
 
 .thirdSection1 {
     width: 100%;
-    background-color: wheat;
+    background-color: #ececdc;
     align-items:center;
     padding: 50px 0;
     
@@ -67,7 +67,7 @@
 } */
 
 .swiper{
-    background-color: wheat;
+    background-color: #ececdc;
 }
 
 .swiper-slide-prev {

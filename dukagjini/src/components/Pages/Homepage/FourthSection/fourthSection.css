@@ -1,0 +1,57 @@
+.fourthSection {
+    width:  100%;
+    background-color: whitesmoke;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.fourthSectionFliped {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-bottom: 80px; 
+}
+
+.fourthSectionPart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 80px;   
+}
+.fourthContainer {
+    padding-top: 80px;
+    align-items: center;
+    width: 100%;
+}
+
+.fourthSectionLeft{
+    width: 60%;
+}
+
+.fourthSectionRight{
+    width: 25%;
+    height: auto;
+    background-color: white;
+    padding: 4%;
+    margin: 0 -5%;
+}
+
+
+.fourthSectionParagraph{
+    padding-right: 20%;
+}
+
+.fourthSectionTop{
+    align-items: center;
+}
+
+.fourthSection img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+
+
+ 

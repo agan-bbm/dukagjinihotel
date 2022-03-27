@@ -31,7 +31,7 @@ function SecondSection() {
             </div>
           </div>
           <div className="secondImgContainer">
-            <div className="secomdImg">
+            <div className="secondImg">
               <img src={sSBg}></img>
             </div>
           </div>
