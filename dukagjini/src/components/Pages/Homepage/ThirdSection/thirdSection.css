@@ -7,7 +7,7 @@
   width: 100%;
   background-color: #ececdc;
   align-items: center;
-  padding: 50px 0;
+  padding: 20px 0;
 }
 
 .thirdContainer {
@@ -129,7 +129,7 @@
 @media (max-width: 767px) {
   .thirdSection {
     background-color: #ececdc;
-    padding-top: 60px;
+    padding-top: 20px;
   }
 
   .thirdSection1 {
@@ -167,7 +167,7 @@
   }
 
   .thirdSectionParagraph {
-    font-size: 18px;
+    font-size: 16px;
   }
   .swiper {
     background-color: #ffffff00;
