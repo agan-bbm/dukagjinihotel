@@ -1,5 +1,12 @@
-.fifthSection Img{
+.fifthSection Img {
     width: 100%;
     height: 400px;
     object-fit: cover;
+}
+@media (max-width: 767px) {
+    .fifthSection Img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
 }

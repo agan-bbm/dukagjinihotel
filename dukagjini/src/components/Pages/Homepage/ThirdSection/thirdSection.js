@@ -21,7 +21,7 @@ function ThirdSection() {
   return (
     <div className="thirdSection">
       <Swiper
-        slidesPerView={1.7}
+        slidesPerView={1.00001}
         centeredSlides={true}
         //spaceBetween={0}
         grabCursor={true}
@@ -32,6 +32,11 @@ function ThirdSection() {
         modules={[Navigation]}
         className="mySwiper"
         loop={true}
+        breakpoints={{
+          600: {
+            slidesPerView: 1.7,
+          }
+        }}
       >
         <SwiperSlide>
           <img src={Img1} />

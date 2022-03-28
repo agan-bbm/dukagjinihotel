@@ -46,6 +46,55 @@
 
 .secondImg img {
     width: 100%;
-    height: 767px;
+    height: 600px;
     object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .secondImg img {
+        height: 300px;
+    }
+
+    .secondSection {
+        width: 100%;
+        background-color: whitesmoke;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .secondContainer {
+        padding-top: 80px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .seconSectionTop {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .secondSectionLeft {
+        width: 100%;
+    }
+
+    .secondSectionRight {
+        margin: 0;
+        width: 100%;
+    }
+
+    .secondSectionHeader {
+        font-size: 30px;
+        font-weight: 400px;
+        margin: 0;
+    }
+
+    .secondSectionParagraph {
+        padding: 0;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .secondImgContainer {
+        width: 100%;
+    }
 }

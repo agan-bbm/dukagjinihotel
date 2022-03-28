@@ -23,7 +23,7 @@ function SixthSection() {
             </h2>
           </div>
           <Swiper
-            slidesPerView={2}
+            slidesPerView={1}
             //centeredSlides={true}
             spaceBetween={30}
             //grabCursor={true}
@@ -31,6 +31,14 @@ function SixthSection() {
             modules={[Pagination]}
             className="mySwiper"
             loop={true}
+
+            breakpoints={{
+              // when window width is >= 600px
+              600: {
+                slidesPerView: 2,
+              },
+            }}
+
           >
 
             <SwiperSlide>

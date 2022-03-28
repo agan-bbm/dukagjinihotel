@@ -1,5 +1,6 @@
 .sixthSection {
   color: #3c3a34;
+  padding-bottom: 40px;
 }
 
 .sixthHeader {
@@ -20,11 +21,8 @@
   background-color: whitesmoke;
   border-top: solid 3px darkgray;
 }
-.sswiper-pointer-events {
-  background-color: white;
-}
 
-.swiper-backface-hidden {
+.sswiper-pointer-events {
   background-color: white;
 }
 
@@ -52,8 +50,8 @@
 }
 
 .swiper {
-  background-color: #fcfaf3;
-  padding-bottom: 80px;
+  background-color: #ffffff00;
+  padding-bottom: 40px;
 }
 
 .profilePic {
@@ -70,4 +68,30 @@
 
 .userName {
   padding-left: 15px;
+}
+
+@media (max-width: 767px) {
+  .sixthHeader {
+    margin: 0;
+    padding: 25px 0;
+  }
+  .sixthHeader h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .sixthSection {
+    padding: 25px 0;
+  }
+  .swiper {
+    background-color: #ffffff00;
+    padding: 0;
+  }
+
+  .swiper-pagination-bullets {
+    display: none;
+  }
 }

@@ -1,5 +1,5 @@
 .fourthSection {
-    width:  100%;
+    width: 100%;
     background-color: whitesmoke;
     align-items: center;
     margin: 0 auto;
@@ -9,26 +9,26 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    padding-bottom: 80px; 
+    padding-bottom: 40px;
 }
 
-.fourthSectionPart{
+.fourthSectionPart {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-bottom: 80px;   
+    padding-bottom: 80px;
 }
 .fourthContainer {
-    padding-top: 80px;
+    padding: 40px 0;
     align-items: center;
     width: 100%;
 }
 
-.fourthSectionLeft{
+.fourthSectionLeft {
     width: 60%;
 }
 
-.fourthSectionRight{
+.fourthSectionRight {
     width: 25%;
     height: auto;
     background-color: white;
@@ -36,22 +36,65 @@
     margin: 0 -5%;
 }
 
-
-.fourthSectionParagraph{
+.fourthSectionParagraph {
     padding-right: 20%;
 }
 
-.fourthSectionTop{
+.fourthSectionTop {
     align-items: center;
 }
 
-.fourthSection img{
+.fourthSection img {
     width: 100%;
     height: 500px;
     object-fit: cover;
 }
 
+@media (max-width: 767px) {
+    .fourthHeader h2 {
+        padding: 0;
+        padding-bottom: 15px;
+        font-weight: 400;
+        font-size: 30px;
+        text-align: left;
+    }
 
+    .fourthSection img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .fourthSection h2 {
+        font-weight: 400;
+        margin: 0;
+    }
 
+    .fourthSectionPart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 40px;
+    }
 
- 
+    .fourthSectionParagraph {
+        padding: 0;
+    }
+
+    .fourthSectionLeft {
+        width: 100%;
+    }
+
+    .fourthSectionRight {
+        width: 100%;
+        height: auto;
+        background-color: #ffffff00;
+        margin: 0;
+    }
+
+    .fourthSectionFliped {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+}
