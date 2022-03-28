@@ -8,7 +8,7 @@ body {
   background-color: #fcfaf3;
   overflow-x: hidden;
   width: 100%;
-  height: 200vh;
+  /* height: 200vh; */
 }
 
 .containerWrapper {

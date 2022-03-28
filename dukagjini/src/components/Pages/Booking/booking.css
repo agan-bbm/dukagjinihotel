@@ -1,5 +1,5 @@
 .booking-main {
-  margin-top: 350px;
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,4 +13,62 @@
 }
 .inputs-container input {
   margin-top: 10px;
+}
+.rooms-container {
+  padding: 50px;
+}
+.single-room-card {
+  border: 2px solid black;
+}
+.single-room-card {
+  display: flex;
+}
+.room-name {
+  font-size: 30px;
+}
+.room-img-slider img {
+  width: 500px;
+  height: 100%;
+}
+.room-info-container {
+  padding: 20px;
+  background-color: white;
+}
+.room-desc-icons {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+}
+.room-icon {
+  width: 33.33%;
+}
+.room-icon img {
+  width: 40px;
+}
+.room-price-and-more p {
+  text-align: right;
+}
+.grey {
+  color: grey;
+  font-size: 18px;
+}
+.room-row-info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.room-normal-text {
+  text-align: right;
+  font-size: 24px;
+}
+.offer {
+  text-align: right;
+}
+.additional-heading {
+  /* position: absolute;
+  margin-top: -8px; */
+  /* z-index: 45 !important; */
+  /* background: #fcfaf3;
+  padding: 20px;
+  right: 200px; */
 }
