@@ -1,51 +1,51 @@
 .secondSection {
-  width: 100%;
-  background-color: whitesmoke;
-  align-items: center;
-  margin: 0 auto;
+    width: 100%;
+    background-color: whitesmoke;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .secondContainer {
-  padding-top: 80px;
-  align-items: center;
-  width: 100%;
+    padding-top: 80px;
+    align-items: center;
+    width: 100%;
 }
 
 .seconSectionTop {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 40px;
 }
 .secondSectionLeft {
-  width: 40%;
+    width: 40%;
 }
 
 .secondSectionRight {
-  /* margin-right: 20%; */
-  width: 60%;
-  margin-left: 20%;
+    /* margin-right: 20%; */
+    width: 60%;
+    margin-left: 20%;
 }
 
 .secondSectionHeader {
-  font-size: 50px;
-  font-weight: 767px;
-  letter-spacing: 1px;
-  margin: 0;
+    font-size: 50px;
+    font-weight: 767px;
+    letter-spacing: 1px;
+    margin: 0;
 }
 
 .secondSectionParagraph {
-  font-size: 16px;
-  font-weight: 400;
-  padding-right: 30%;
+    font-size: 16px;
+    font-weight: 400;
+    padding-right: 30%;
 }
 
 .secondImgContainer {
-  width: 100%;
+    width: 100%;
 }
 
 .secondImg img {
-  width: 100%;
-  height: 767px;
-  object-fit: cover;
+    width: 100%;
+    height: 767px;
+    object-fit: cover;
 }
