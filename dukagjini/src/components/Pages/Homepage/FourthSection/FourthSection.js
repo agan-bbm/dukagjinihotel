@@ -47,23 +47,21 @@ function fourthSection() {
               </div>
             </div>
           </div>
-          <div>
 
-            <div className="fourthSectionPart">
-              <div className="fourthSectionLeft">
-                <img src={Img3} />
-              </div>
-              <div className="fourthSectionRight">
-                <div className="fourthSectionBox">
-                  <h2 className="fourthSectionHeader">
-                    A world-class restaurant
-                  </h2>
-                  <p>Ochean de View extends along a private, quiet and beautiful tropical beach. Stay away from the crowd and enjoy the beauty and lust.</p>
-                </div>
+          <div className="fourthSectionPart">
+            <div className="fourthSectionLeft">
+              <img src={Img3} />
+            </div>
+            <div className="fourthSectionRight">
+              <div className="fourthSectionBox">
+                <h2 className="fourthSectionHeader">
+                  A world-class restaurant
+                </h2>
+                <p>Ochean de View extends along a private, quiet and beautiful tropical beach. Stay away from the crowd and enjoy the beauty and lust.</p>
               </div>
             </div>
-
           </div>
+
         </div>
       </div>
     </div>

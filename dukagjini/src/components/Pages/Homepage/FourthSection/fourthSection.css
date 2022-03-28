@@ -73,9 +73,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 40px;
+        padding-bottom: 10px;
     }
-
+    .fourthSectionFliped {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 10px;
+    }
     .fourthSectionParagraph {
         padding: 0;
     }
@@ -89,12 +94,5 @@
         height: auto;
         background-color: #ffffff00;
         margin: 0;
-    }
-
-    .fourthSectionFliped {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        padding-bottom: 40px;
     }
 }
