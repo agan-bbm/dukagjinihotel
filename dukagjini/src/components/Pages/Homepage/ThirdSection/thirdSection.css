@@ -1,125 +1,176 @@
 .thirdSection {
-    background-color: #ececdc;
-    padding-top: 60px;
+  background-color: #ececdc;
+  padding-top: 60px;
 }
 
 .thirdSection1 {
-    width: 100%;
-    background-color: #ececdc;
-    align-items: center;
-    padding: 50px 0;
+  width: 100%;
+  background-color: #ececdc;
+  align-items: center;
+  padding: 50px 0;
 }
 
 .thirdContainer {
-    padding-top: 50px;
-    align-items: center;
-    width: 100%;
+  padding-top: 50px;
+  align-items: center;
+  width: 100%;
 }
 
 .thirdSectionBottom {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 0;
+  background-color: #ececdc;
+  padding-top: 60px;
+}
+
+.thirdSection1 {
+  width: 100%;
+  background-color: #ececdc;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.thirdContainer {
+  padding-top: 50px;
+  align-items: center;
+  width: 100%;
+}
+
+.thirdSectionBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 0;
 }
 .thirdSectionLeft {
-    align-items: inherit;
-    width: 50%;
+  align-items: inherit;
+  width: 50%;
 }
 
 .thirdSectionRight {
-    margin-left: 10%;
-    /* margin-right: 10%; */
-    width: 50%;
+  margin-left: 10%;
+  /* margin-right: 10%; */
+  width: 50%;
 }
 
 .thirdSectionHeader {
-    padding-left: 40%;
-    font-size: 40px;
-    margin: 0;
+  padding-left: 40%;
+  font-size: 40px;
+  margin: 0;
 }
 
 .thirdSectionParagraph {
-    font-size: 18px;
-    padding-right: 30%;
+  font-size: 18px;
+  padding-right: 30%;
 }
 
 .swiper-slide {
-    transform: scale(0.7);
+  transform: scale(0.7);
 }
 
 .swiper-slide-active {
-    transform: scale(1);
-    transition: 0.6s;
+  transform: scale(1);
+  transition: 0.6s;
 }
 
 .swiper-wrapper {
-    align-items: center;
+  align-items: center;
 }
 
 .swiper-slide-prev {
-    transform: scale(0.7);
-    transition: 0.5s;
+  transform: scale(0.7);
+  transition: 0.5s;
 }
 
 .swiper-slide-next {
-    transform: scale(0.7);
-    transition: 0.5s;
+  transform: scale(0.7);
+  transition: 0.5s;
 }
 
 .swiper-slide-duplicate-prev {
-    transform: scale(0.7);
+  transform: scale(0.7);
+  transform: scale(1);
+  transition: 0.6s;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+/* .swiper-slide{
+    transform: scale(0.6);
+    transition: .4s;
+} */
+
+.swiper {
+  background-color: #ececdc;
+}
+
+.swiper-slide-prev {
+  transform: scale(0.7);
+  transition: 0.5s;
+}
+
+.swiper-slide-next {
+  transform: scale(0.7);
+  transition: 0.5s;
+}
+
+.swiper-slide-duplicate-prev {
+  transform: scale(0.7);
 }
 
 .swiper {
-    background-color: #ffffff00;
+  background-color: #ffffff00;
 }
 
 @media (max-width: 767px) {
-    .thirdSection {
-        background-color: #ececdc;
-        padding-top: 60px;
-    }
+  .thirdSection {
+    background-color: #ececdc;
+    padding-top: 60px;
+  }
 
-    .thirdSection1 {
-        width: 100%;
-        background-color: #ececdc;
-        align-items: center;
-        padding: 0;
-    }
+  .thirdSection1 {
+    width: 100%;
+    background-color: #ececdc;
+    align-items: center;
+    padding: 0;
+  }
 
-    .thirdContainer {
-        padding-top: 50px;
-        align-items: center;
-        width: 100%;
-    }
+  .thirdContainer {
+    padding-top: 50px;
+    align-items: center;
+    width: 100%;
+  }
 
-    .thirdSectionBottom {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-    }
-    .thirdSectionLeft {
-        width: 100%;
-    }
+  .thirdSectionBottom {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .thirdSectionLeft {
+    width: 100%;
+  }
 
-    .thirdSectionRight {
-        margin-left: 0;
-        width: 100%;
-    }
+  .thirdSectionRight {
+    margin-left: 0;
+    width: 100%;
+  }
 
-    .thirdSectionHeader {
-        padding: 0;
-        font-size: 30px;
-        font-weight: 400;
-        margin: 0;
-    }
+  .thirdSectionHeader {
+    padding: 0;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+  }
 
-    .thirdSectionParagraph {
-        font-size: 18px;
-    }
-    .swiper {
-        background-color: #ffffff00;
-        padding: 0;
-    }
+  .thirdSectionParagraph {
+    font-size: 18px;
+  }
+  .swiper {
+    background-color: #ffffff00;
+    padding: 0;
+  }
 }

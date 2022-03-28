@@ -6,7 +6,8 @@ import "./secondSection.css";
 //IMAGES
 import sSBg from "../../../../images/sSBg.webp";
 
-function SecondSection() {
+function SecondSection({ posts }) {
+  console.log(posts);
   return (
     <div className="secondSection">
       <div className="containerWrapper">
@@ -16,6 +17,7 @@ function SecondSection() {
               <h2 className="secondSectionHeader">
                 The shelter is the Outcome of the Dream
               </h2>
+              <h2>{posts[0].acf.first.firstheading}</h2>
             </div>
             <div className="secondSectionRight">
               <p className="secondSectionParagraph">
