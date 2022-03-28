@@ -72,7 +72,7 @@ ul li {
     transform: scale(1.2);
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .footer-container {
     flex-direction: column;
   }

@@ -78,7 +78,7 @@ hr {
 .swiper-button-next::after {
   color: white;
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .single-room {
     width: 100%;
   }

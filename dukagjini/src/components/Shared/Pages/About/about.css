@@ -35,7 +35,7 @@
   height: 400px;
   background-size: cover;
 }
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .images-grid {
     display: flex;
     flex-direction: column;

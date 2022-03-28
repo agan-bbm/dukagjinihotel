@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 //CSS
 import "./thirdSection.css";
@@ -20,57 +20,59 @@ import Img1 from "../../../../images/1.jpg";
 function ThirdSection() {
   return (
     <div className="thirdSection">
-        <Swiper
-                    slidesPerView={1.7}
-                    centeredSlides={true}
-                    //spaceBetween={0}
-                    grabCursor={true}
-                    navigation
-                    // pagination={{
-                    //   clickable: true,
-                    // }}
-                    modules={[Navigation]}
-                    className="mySwiper"
-                    loop={true}
-                    >
-
-                    <SwiperSlide>
-                        <img src={Img1} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                        <img src={Img2} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                        <img src={Img3} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                        <img src={Img4} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                        <img src={Img2} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                        <img src={Img1} />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                        <img src={Img4} />
-                        </SwiperSlide>
-                    </Swiper>
-        <div className="containerWrapper" >
-            <div className="thirdSection1">
-                
-    
-            <div className="thirdSectionBottom">
-                <div className="thirdSectionLeft"><h2 className="thirdSectionHeader">Pampering Included</h2></div>
-                    <div className="thirdSectionRight">
-                        <p className='thirdSectionParagraph'>Ochean de View extends along a private, quiet and beautiful tropical beach. Stay away from the crowd and enjoy the beauty and lust of Cancun with us.</p>
-                    </div>
-                </div>   
+      <Swiper
+        slidesPerView={1.7}
+        centeredSlides={true}
+        //spaceBetween={0}
+        grabCursor={true}
+        navigation
+        // pagination={{
+        //   clickable: true,
+        // }}
+        modules={[Navigation]}
+        className="mySwiper"
+        loop={true}
+      >
+        <SwiperSlide>
+          <img src={Img1} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Img2} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Img3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Img4} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Img2} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Img1} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Img4} />
+        </SwiperSlide>
+      </Swiper>
+      <div className="containerWrapper">
+        <div className="thirdSection1">
+          <div className="thirdSectionBottom">
+            <div className="thirdSectionLeft">
+              <h2 className="thirdSectionHeader">Pampering Included</h2>
             </div>
+            <div className="thirdSectionRight">
+              <p className="thirdSectionParagraph">
+                Ochean de View extends along a private, quiet and beautiful
+                tropical beach. Stay away from the crowd and enjoy the beauty
+                and lust of Cancun with us.
+              </p>
+            </div>
+          </div>
         </div>
-        
+      </div>
     </div>
-  )
+  );
 }
 
-export default ThirdSection
+export default ThirdSection;
