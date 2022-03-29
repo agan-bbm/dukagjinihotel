@@ -10,6 +10,7 @@ import "./navbar.css";
 // IMAGES
 import Logow from "../../../images/logo-white.svg";
 import Logob from "../../../images/logo-black.svg";
+import getLogo from "../../Utils/getLogo";
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -23,11 +24,7 @@ function Navbar() {
   }, []);
 
   const logo = () => {
-    if (!navbar) {
-      return <img src={Logow} alt="logo-white" />;
-    } else {
-      return <img src={Logob} alt="logo-black" />;
-    }
+    return getLogo({ navbar: navbar, width: 120, height: 60 })
   };
   return (
     <div className={!navbar ? "navbar" : "navbar navbar-active"}>

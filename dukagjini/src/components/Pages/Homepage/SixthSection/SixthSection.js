@@ -29,7 +29,7 @@ function SixthSection() {
             //grabCursor={true}
             pagination={{ clickable: true }}
             modules={[Pagination]}
-            className="mySwiper"
+            className="mySwiper testimonial"
             loop={true}
 
             breakpoints={{

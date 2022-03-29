@@ -107,3 +107,65 @@
   background-color: black;
   transition: all 0.4s ease-in-out;
 }
+
+g.left-group {
+  transform: scale(1) rotate(0);
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+}
+g.right-group {
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1) rotate(0);
+}
+path.top-group {
+  transform: scale(1) rotate(0);
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+}
+path.bottom-right-group {
+  transform: scale(1) rotate(0);
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+}
+path.center-group {
+  transform: scale(1) rotate(0);
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+}
+g.bottom-left-group {
+  transform: scale(1) rotate(0);
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+}
+/* scrolled log */
+g.left-group.scrolled {
+  transform: scale(0);
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+}
+g.right-group.scrolled {
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0);
+}
+path.top-group.scrolled {
+  transform: scale(0);
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+}
+path.bottom-right-group.scrolled {
+  transform: scale(0);
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+}
+path.center-group.scrolled {
+  transform: scale(2);
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+}
+g.bottom-left-group.scrolled {
+  transform: scale(0);
+  transform-origin: bottom center;
+  transition: all 0.2s ease-in-out;
+}

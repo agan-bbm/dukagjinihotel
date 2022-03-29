@@ -1,13 +1,14 @@
 .hompage-first-section {
   width: 100%;
-  height: 85vh;
 }
-.mySwiper {
+.main-banner {
   height: 100%;
   background-color: white;
 }
-.mySwiper img {
+.coverImage img {
   width: 100%;
+  height: 85vh;
+  object-fit: cover;
 }
 
 @media (max-width: 600px) {

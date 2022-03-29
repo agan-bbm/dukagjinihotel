@@ -35,7 +35,13 @@
     padding: 4%;
     margin: 0 -5%;
 }
-
+.fourthHeader h2 {
+    padding-right: 40%;
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 60px;
+    text-align: left;
+}
 .fourthSectionParagraph {
     padding-right: 20%;
 }
