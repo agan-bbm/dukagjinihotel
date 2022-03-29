@@ -20,7 +20,7 @@ import Img4 from "../../../../images/4.jpg";
 function FirstSection() {
   return (
     <div className="hompage-first-section">
-      <div>
+      <div className="coverImage">
         <img src={Img1} />
       </div>
 
