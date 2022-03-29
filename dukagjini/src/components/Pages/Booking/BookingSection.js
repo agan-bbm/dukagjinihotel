@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Navigation } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 // CSS
 import "../Booking/booking.css";
+// import "swiper/css";
 
 //images
 import Img1 from "../../../images/1.jpg";
@@ -13,8 +14,6 @@ import Img3 from "../../../images/3.jpg";
 import Img4 from "../../../images/4.jpg";
 
 //icons
-
-import livingroom from "../../../images/livingroom.png";
 import bath from "../../../images/bath.png";
 import seaview from "../../../images/seaview.png";
 import balcony from "../../../images/balcony.png";
@@ -60,6 +59,13 @@ function BookingSection() {
     return [year, month, day].join("/");
   };
   var today = new Date().toISOString().split("T")[0];
+  const [visible, setVisible] = useState({
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+  });
+
   return (
     <>
       <div className="containerWrapper">
@@ -97,71 +103,395 @@ function BookingSection() {
           >
             Book
           </button>
+
           <div className="rooms-container">
             <div className="single-room-card">
-              <div className="room-img-slider">
-                <img src={Img1} alt="" />
-
-                {/* <img src={Img2} alt="" />
-
-              <img src={Img3} alt="" />
-
-              <img src={Img4} alt="" /> */}
+              <div>
+                <div className="room-img-slider">
+                  {/* <img src={Img2} alt="" /> */}
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    onSlideChange={() => console.log("slide change")}
+                    onSwiper={(swiper) => console.log(swiper)}
+                  >
+                    <SwiperSlide>
+                      <img src={Img2} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img1} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img3} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img1} alt="" />
+                    </SwiperSlide>
+                  </Swiper>
+                </div>
               </div>
-
-              <div className="room-info-container">
-                <div className="room-name">GRAND SUITE LAGO</div>
-                <div className="room-short-desc">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
-                </div>
-                <div className="room-row-info">
-                  <div className="room-desc-icons">
-                    <div className="room-icon">
-                      <img src={seaview} alt="" />
+              <div>
+                <div className="room-info-container">
+                  <div className="room-name">GRAND SUITE LAGO</div>
+                  <div className="room-short-desc">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                  <div className="room-row-info">
+                    <div className="room-desc-icons">
+                      <div className="room-icon">
+                        <img src={seaview} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={balcony} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={bath} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={seaview} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={balcony} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={bath} alt="" />
+                      </div>
                     </div>
-                    <div className="room-icon">
-                      <img src={balcony} alt="" />
-                    </div>
-
-                    <div className="room-icon">
-                      <img src={bath} alt="" />
-                    </div>
-                    <div className="room-icon">
-                      <img src={seaview} alt="" />
-                    </div>
-                    <div className="room-icon">
-                      <img src={balcony} alt="" />
-                    </div>
-
-                    <div className="room-icon">
-                      <img src={bath} alt="" />
+                    <div className="room-price-and-more">
+                      <p>
+                        <span className="room-normal-text">
+                          FROM <br /> €1,280/NIGHT <br />
+                        </span>
+                        <span className="grey">EXCLUDING TAXES AND FEES</span>
+                      </p>
                     </div>
                   </div>
-                  <div className="room-price-and-more">
-                    <p>
-                      {" "}
-                      <span className="room-normal-text">
-                        FROM <br /> €1,280/NIGHT <br />
-                      </span>
-                      <span className="grey">EXCLUDING TAXES AND FEES</span>
-                    </p>
+
+                  <div className="offer">
+                    <div>
+                      <div className="offer">
+                        <button
+                          className="view-offer"
+                          onClick={() => {
+                            setVisible({
+                              ...visible,
+                              1: !visible[1],
+                            });
+                          }}
+                        >
+                          {visible ? "VIEW OFFER" : "VIEW OFFER"}
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                <div className="offer">
-                  <button className="view-offer">
-                    <h4>VIEW OFFER</h4>
-                  </button>
-                </div>
-                {/* <div className="additional-details">
-                  <h4 className="additional-heading">ADDITIONAL DETAILS</h4>
-                </div> */}
               </div>
             </div>
+            {visible[1] ? (
+              <div className={"offer-images"}>
+                <img src={Img2} alt="" />
+                <img src={Img1} alt="" />
+                <img src={Img3} alt="" />
+                <img src={Img2} alt="" />
+              </div>
+            ) : null}
+            <div className="single-room-card">
+              <div>
+                <div className="room-img-slider">
+                  {/* <img src={Img2} alt="" /> */}
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    onSlideChange={() => console.log("slide change")}
+                    onSwiper={(swiper) => console.log(swiper)}
+                  >
+                    <SwiperSlide>
+                      <img src={Img2} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img1} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img3} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img1} alt="" />
+                    </SwiperSlide>
+                  </Swiper>
+                </div>
+              </div>
+              <div>
+                <div className="room-info-container">
+                  <div className="room-name">GRAND SUITE LAGO</div>
+                  <div className="room-short-desc">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                  <div className="room-row-info">
+                    <div className="room-desc-icons">
+                      <div className="room-icon">
+                        <img src={seaview} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={balcony} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={bath} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={seaview} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={balcony} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={bath} alt="" />
+                      </div>
+                    </div>
+                    <div className="room-price-and-more">
+                      <p>
+                        <span className="room-normal-text">
+                          FROM <br /> €1,280/NIGHT <br />
+                        </span>
+                        <span className="grey">EXCLUDING TAXES AND FEES</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="offer">
+                    <div>
+                      <div className="offer">
+                        <button
+                          className="view-offer"
+                          onClick={() => {
+                            setVisible({
+                              ...visible,
+
+                              2: !visible[2],
+                            });
+                          }}
+                        >
+                          {visible ? "VIEW OFFER" : "VIEW OFFER"}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {visible[2] ? (
+              <div className={"offer-images"}>
+                <img src={Img2} alt="" />
+                <img src={Img1} alt="" />
+                <img src={Img3} alt="" />
+                <img src={Img2} alt="" />
+              </div>
+            ) : null}
+            <div className="single-room-card">
+              <div>
+                <div className="room-img-slider">
+                  {/* <img src={Img2} alt="" /> */}
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    onSlideChange={() => console.log("slide change")}
+                    onSwiper={(swiper) => console.log(swiper)}
+                  >
+                    <SwiperSlide>
+                      <img src={Img2} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img1} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img3} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img1} alt="" />
+                    </SwiperSlide>
+                  </Swiper>
+                </div>
+              </div>
+              <div>
+                <div className="room-info-container">
+                  <div className="room-name">GRAND SUITE LAGO</div>
+                  <div className="room-short-desc">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                  <div className="room-row-info">
+                    <div className="room-desc-icons">
+                      <div className="room-icon">
+                        <img src={seaview} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={balcony} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={bath} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={seaview} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={balcony} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={bath} alt="" />
+                      </div>
+                    </div>
+                    <div className="room-price-and-more">
+                      <p>
+                        <span className="room-normal-text">
+                          FROM <br /> €1,280/NIGHT <br />
+                        </span>
+                        <span className="grey">EXCLUDING TAXES AND FEES</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="offer">
+                    <div>
+                      <div className="offer">
+                        <button
+                          className="view-offer"
+                          onClick={() => {
+                            setVisible({
+                              ...visible,
+
+                              3: !visible[3],
+                            });
+                          }}
+                        >
+                          {visible ? "VIEW OFFER" : "VIEW OFFER"}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {visible[3] ? (
+              <div className={"offer-images"}>
+                <img src={Img2} alt="" />
+                <img src={Img1} alt="" />
+                <img src={Img3} alt="" />
+                <img src={Img2} alt="" />
+              </div>
+            ) : null}
+            <div className="single-room-card">
+              <div>
+                <div className="room-img-slider">
+                  {/* <img src={Img2} alt="" /> */}
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    onSlideChange={() => console.log("slide change")}
+                    onSwiper={(swiper) => console.log(swiper)}
+                  >
+                    <SwiperSlide>
+                      <img src={Img2} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img1} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img3} alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src={Img1} alt="" />
+                    </SwiperSlide>
+                  </Swiper>
+                </div>
+              </div>
+              <div>
+                <div className="room-info-container">
+                  <div className="room-name">GRAND SUITE LAGO</div>
+                  <div className="room-short-desc">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                  <div className="room-row-info">
+                    <div className="room-desc-icons">
+                      <div className="room-icon">
+                        <img src={seaview} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={balcony} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={bath} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={seaview} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={balcony} alt="" />
+                      </div>
+                      <div className="room-icon">
+                        <img src={bath} alt="" />
+                      </div>
+                    </div>
+                    <div className="room-price-and-more">
+                      <p>
+                        <span className="room-normal-text">
+                          FROM <br /> €1,280/NIGHT <br />
+                        </span>
+                        <span className="grey">EXCLUDING TAXES AND FEES</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="offer">
+                    <div>
+                      <div className="offer">
+                        <button
+                          className="view-offer"
+                          onClick={() => {
+                            setVisible({
+                              ...visible,
+
+                              4: !visible[4],
+                            });
+                          }}
+                        >
+                          {visible ? "VIEW OFFER" : "VIEW OFFER"}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {visible[4] ? (
+              <div className={"offer-images"}>
+                <img src={Img2} alt="" />
+                <img src={Img1} alt="" />
+                <img src={Img3} alt="" />
+                <img src={Img2} alt="" />
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

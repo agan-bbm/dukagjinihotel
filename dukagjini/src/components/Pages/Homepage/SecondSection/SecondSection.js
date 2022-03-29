@@ -17,7 +17,7 @@ function SecondSection({ posts }) {
               <h2 className="secondSectionHeader">
                 The shelter is the Outcome of the Dream
               </h2>
-              <h2>{posts[0].acf.first.firstheading}</h2>
+              <h2>{posts[0].acf.first.firstparagraph}</h2>
             </div>
             <div className="secondSectionRight">
               <p className="secondSectionParagraph">
