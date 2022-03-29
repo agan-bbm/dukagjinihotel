@@ -27,13 +27,13 @@
 }
 
 .testimonial {
-  padding: 0 6%;
+  padding: 0 25px;
 }
 
 .testimonial p {
   font-size: 20px;
   margin: 0;
-  padding: 40px 0;
+  padding: 20px 0;
   color: #636363;
 }
 
