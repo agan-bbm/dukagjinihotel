@@ -20,9 +20,13 @@ import Img4 from "../../../../images/4.jpg";
 function FirstSection() {
   return (
     <div className="hompage-first-section">
-      <Swiper
+      <div>
+        <img src={Img1} />
+      </div>
+
+      {/* <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        className="mySwiper"
+        className="main-banner"
         navigation
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
@@ -53,7 +57,7 @@ function FirstSection() {
         <SwiperSlide>
           <img src={Img3} />
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 }

@@ -21,7 +21,7 @@ function ThirdSection() {
   return (
     <div className="thirdSection">
       <Swiper
-        slidesPerView={1.00001}
+        slidesPerView={1}
         centeredSlides={true}
         //spaceBetween={0}
         grabCursor={true}
@@ -30,7 +30,7 @@ function ThirdSection() {
         //   clickable: true,
         // }}
         modules={[Navigation]}
-        className="mySwiper"
+        className="home-gallery"
         loop={true}
         breakpoints={{
           600: {
