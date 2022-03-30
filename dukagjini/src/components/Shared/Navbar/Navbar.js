@@ -30,11 +30,7 @@ function Navbar() {
   //   return getLogo({ navbar: navbar, width: 120, height: 60 })
   // };
   const logo = () => {
-<<<<<<< Updated upstream
-    return getLogo({ navbar: navbar, width: 120, height: 60 });
-=======
     return logo_2({ navbar: navbar })
->>>>>>> Stashed changes
   };
   return (
     <div className={!navbar ? "navbar" : "navbar navbar-active"}>
@@ -102,50 +98,9 @@ function Navbar() {
           Book Now
         </Link>
       </div>
-<<<<<<< Updated upstream
-      <hr className={!navbar ? "white-line" : "black-line white-line"} />
-      <div className="navbar-links">
-        <Link
-          to="/rooms"
-          className={!navbar ? "white-links" : " black-links white-links "}
-        >
-          Rooms
-        </Link>
-        <span
-          className={!navbar ? "white-dots" : " black-dots white-dots "}
-        ></span>
-
-        <Link
-          to="/booking"
-          className={!navbar ? "white-links" : " black-links white-links "}
-        >
-          Booking
-        </Link>
-        <span
-          className={!navbar ? "white-dots" : " black-dots white-dots "}
-        ></span>
-        <Link
-          to="/"
-          className={!navbar ? "white-links" : " black-links white-links "}
-        >
-          Restaurant
-        </Link>
-
-        <span
-          className={!navbar ? "white-dots" : " black-dots white-dots "}
-        ></span>
-        <Link
-          to="/about"
-          className={!navbar ? "white-links" : " black-links white-links "}
-        >
-          About
-        </Link>
-      </div>
-=======
       {/* <hr className={!navbar ? "white-line" : "black-line white-line"} /> */}
 
 
->>>>>>> Stashed changes
     </div>
   );
 }
