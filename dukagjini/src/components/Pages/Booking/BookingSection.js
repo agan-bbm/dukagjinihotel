@@ -97,6 +97,7 @@ function BookingSection() {
             />
           </div>
           <button
+            className="booking-mainbutton"
             onClick={() => {
               getRooms();
             }}

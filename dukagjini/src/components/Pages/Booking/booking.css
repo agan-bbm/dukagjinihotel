@@ -4,7 +4,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 200px;
 }
+.booking-mainbutton {
+  padding: 15px;
+  width: 180px;
+  background: #003580;
+  color: white;
+  font-size: 22px;
+  border-radius: 20px;
+  border: none;
+}
+
 .inputs-container {
   display: flex;
   flex-direction: column;
@@ -13,6 +24,9 @@
 }
 .inputs-container input {
   margin-top: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background: cornsilk;
 }
 .rooms-container {
   padding: 50px 0px;

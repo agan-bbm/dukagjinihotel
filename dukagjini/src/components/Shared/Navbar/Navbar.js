@@ -24,7 +24,7 @@ function Navbar() {
   }, []);
 
   const logo = () => {
-    return getLogo({ navbar: navbar, width: 120, height: 60 })
+    return getLogo({ navbar: navbar, width: 120, height: 60 });
   };
   return (
     <div className={!navbar ? "navbar" : "navbar navbar-active"}>
@@ -53,10 +53,10 @@ function Navbar() {
         ></span>
 
         <Link
-          to="/"
+          to="/booking"
           className={!navbar ? "white-links" : " black-links white-links "}
         >
-          Lobby
+          Booking
         </Link>
         <span
           className={!navbar ? "white-dots" : " black-dots white-dots "}
@@ -76,16 +76,6 @@ function Navbar() {
           className={!navbar ? "white-links" : " black-links white-links "}
         >
           About
-        </Link>
-
-        <span
-          className={!navbar ? "white-dots" : " black-dots white-dots "}
-        ></span>
-        <Link
-          to="/"
-          className={!navbar ? "white-links" : " black-links white-links "}
-        >
-          Offers
         </Link>
       </div>
     </div>

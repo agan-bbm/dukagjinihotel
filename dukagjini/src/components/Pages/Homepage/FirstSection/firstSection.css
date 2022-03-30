@@ -12,6 +12,9 @@
 }
 
 @media (max-width: 600px) {
+  .coverImage img {
+    height: 50vh;
+  }
   .hompage-first-section {
     height: 100%;
     padding-top: 150px;
