@@ -43,75 +43,85 @@ function SixthSection() {
 
             <SwiperSlide>
               <div className="testimonial">
-                <p>"Aenean eget consectetur ante. Quisque sit amet sem id nulla tincidunt rhoncus. Sed iaculis tortor vitae nibh varius bibendum. Pellentesque a lectus consectetur."</p>
-                <div className="user">
-                  <div className="profilePic">
-                    <img src={ProfilePic} />
+                <div className="testimonialContainer">
+                  <p>"Aenean eget consectetur ante. Quisque sit amet sem id nulla tincidunt rhoncus. Sed iaculis tortor vitae nibh varius bibendum. Pellentesque a lectus consectetur."</p>
+                  <div className="user">
+                    <div className="profilePic">
+                      <img src={ProfilePic} />
 
-                  </div>
-                  <div className="userName">
-                    <span>Graham Cracker</span>
-                    <p>Designer at Colorlib</p>
+                    </div>
+                    <div className="userName">
+                      <span>Graham Cracker</span>
+                      <p>Designer at Colorlib</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="testimonial">
-                <p>"Aenean eget consectetur ante. Quisque sit amet sem id nulla tincidunt rhoncus. Sed iaculis tortor vitae nibh varius bibendum. Pellentesque a lectus consectetur."</p>
-                <div className="user">
-                  <div className="profilePic">
-                    <img src={ProfilePic} />
+                <div className="testimonialContainer">
+                  <p>"Aenean eget consectetur ante. Quisque sit amet sem id nulla tincidunt rhoncus. Sed iaculis tortor vitae nibh varius bibendum. Pellentesque a lectus consectetur."</p>
+                  <div className="user">
+                    <div className="profilePic">
+                      <img src={ProfilePic} />
 
-                  </div>
-                  <div className="userName">
-                    <span>Name Surname</span>
-                    <p>Designer at Colorlib</p>
+                    </div>
+                    <div className="userName">
+                      <span>Name Surname</span>
+                      <p>Designer at Colorlib</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="testimonial">
-                <p>"Aenean eget consectetur ante. Quisque sit amet sem id nulla tincidunt rhoncus. Sed iaculis tortor vitae nibh varius bibendum. Pellentesque a lectus consectetur."</p>
-                <div className="user">
-                  <div className="profilePic">
-                    <img src={ProfilePic} />
+                <div className="testimonialContainer">
+                  <p>"Aenean eget consectetur ante. Quisque sit amet sem id nulla tincidunt rhoncus. Sed iaculis tortor vitae nibh varius bibendum. Pellentesque a lectus consectetur."</p>
+                  <div className="user">
+                    <div className="profilePic">
+                      <img src={ProfilePic} />
 
-                  </div>
-                  <div className="userName">
-                    <span>Name Surname</span>
-                    <p>Designer at Colorlib</p>
+                    </div>
+                    <div className="userName">
+                      <span>Name Surname</span>
+                      <p>Designer at Colorlib</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="testimonial">
-                <p>"Aenean eget consectetur ante. Quisque sit amet sem id nulla tincidunt rhoncus. Sed iaculis tortor vitae nibh varius bibendum. Pellentesque a lectus consectetur."</p>
-                <div className="user">
-                  <div className="profilePic">
-                    <img src={ProfilePic} />
+                <div className="testimonialContainer">
+                  <p>"Aenean eget consectetur ante. Quisque sit amet sem id nulla tincidunt rhoncus. Sed iaculis tortor vitae nibh varius bibendum. Pellentesque a lectus consectetur."</p>
+                  <div className="user">
+                    <div className="profilePic">
+                      <img src={ProfilePic} />
 
-                  </div>
-                  <div className="userName">
-                    <span>Name Surname </span>
-                    <p>Designer at Colorlib</p>
+                    </div>
+                    <div className="userName">
+                      <span>Name Surname </span>
+                      <p>Designer at Colorlib</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="testimonial">
-                <p>"Aenean eget consectetur ante. Quisque sit amet sem id nulla tincidunt rhoncus. Sed iaculis tortor vitae nibh varius bibendum. Pellentesque a lectus consectetur."</p>
-                <div className="user">
-                  <div className="profilePic">
-                    <img src={ProfilePic} />
+                <div className="testimonialContainer">
+                  <p>"Aenean eget consectetur ante. Quisque sit amet sem id nulla tincidunt rhoncus. Sed iaculis tortor vitae nibh varius bibendum. Pellentesque a lectus consectetur."</p>
+                  <div className="user">
+                    <div className="profilePic">
+                      <img src={ProfilePic} />
 
-                  </div>
-                  <div className="userName">
-                    <span>Name Surname</span>
-                    <p>Designer at Colorlib</p>
+                    </div>
+                    <div className="userName">
+                      <span>Name Surname</span>
+                      <p>Designer at Colorlib</p>
+                    </div>
                   </div>
                 </div>
               </div>
