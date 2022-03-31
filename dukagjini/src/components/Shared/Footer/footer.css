@@ -11,15 +11,70 @@ z-index: 1;
   left: 0;
   z-index: -4;
   width: 100%;
-  color: RED;
   margin: auto;
-  background-color: green;
+  background-color: #3c3a3433;
   display: grid;
   place-items: center;
 height: 80vh;
 }
-.sticky h2{
-  margin: auto;
+#start{
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid grey;
+  width: 200px;
+
+}
+.guest-adults{
+  border: none;
+    border-bottom: 2px solid grey;
+    width: 200px;
+}
+.plus , .minus{
+  margin-bottom: 0;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 100%;
+  border: 1px solid #ddd;
+  color: #242f3e;
+  text-decoration: none;
+  line-height: 28px;
+  margin: 0 10px;
+}
+.available{
+  appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 2rem;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1em;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    margin: 0;
+    line-height: 52px;
+    opacity: 1!important;
+    -webkit-transition: all 250ms;
+    -moz-transition: all 250ms;
+    transition: all 250ms;
+    border: 1px solid #e9e9e9;
+    color: #242f3e;
+    background-color: #e9e9e9;
+    margin-top: 50px;
+}
+.sticky-content{
+  width: 80%;
+}
+.booking-footer-inputs{
+  display: flex;
+  justify-content: space-between;
 }
 .footer-container {
   display: flex;
