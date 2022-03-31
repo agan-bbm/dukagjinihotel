@@ -56,12 +56,14 @@ function App() {
       <div className="App">
         <Navbar />
 
-        <Routes>
-          <Route path="/" exact element={<Homepage posts={state.posts} />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/rooms" element={<Rooms />} />
-        </Routes>
+        <div className="homepage">
+          <Routes>
+            <Route path="/" exact element={<Homepage posts={state.posts} />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/rooms" element={<Rooms />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     );
