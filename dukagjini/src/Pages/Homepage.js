@@ -6,17 +6,20 @@ import ThirdSection from "../components/Pages/Homepage/ThirdSection/ThirdSection
 import FourthSection from "../components/Pages/Homepage/FourthSection/FourthSection";
 import FifthSection from "../components/Pages/Homepage/FifthSection/FifthSection";
 import SixthSection from "../components/Pages/Homepage/SixthSection/SixthSection";
+import "./homepage.css";
 
 function Homepage({ posts }) {
   console.log(posts);
   return (
     <>
-      <FirstSection />
-      <SecondSection posts={posts} />
-      <ThirdSection />
-      <FourthSection />
-      <FifthSection />
-      <SixthSection />
+      <div className="homepage">
+        <FirstSection />
+        <SecondSection posts={posts} />
+        <ThirdSection />
+        <FourthSection />
+        <FifthSection />
+        <SixthSection />
+      </div>
     </>
   );
 }

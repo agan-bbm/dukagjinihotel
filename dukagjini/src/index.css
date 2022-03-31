@@ -8,6 +8,8 @@ body {
   background-color: #fcfaf3;
   overflow-x: hidden;
   width: 100%;
+  position: relative;
+  z-index: 1;
   /* height: 200vh; */
 }
 

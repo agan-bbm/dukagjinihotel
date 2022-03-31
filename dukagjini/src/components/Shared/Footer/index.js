@@ -77,6 +77,9 @@ function Footer() {
           </a>
         </div>
       </div>
+      <div className="sticky">
+        <h2>BOOK NOW</h2>
+      </div>
     </>
   );
 }
