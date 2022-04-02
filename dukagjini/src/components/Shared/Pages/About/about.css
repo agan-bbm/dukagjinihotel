@@ -34,7 +34,7 @@
   width: auto;
   height: 400px;
   background-size: cover;
-}
+} 
 @media (max-width: 767px) {
   .images-grid {
     display: flex;

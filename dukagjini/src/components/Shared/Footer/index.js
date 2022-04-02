@@ -8,6 +8,9 @@ import instagram from "../../../images/instagram.png";
 import dukagjinilogofooter from "../../../images/dukagjinilogofooter.svg";
 import twitter from "../../../images/twitter.png";
 
+const onClick = () => {
+  console.log("u klikua");
+};
 function Footer() {
   return (
     <>
@@ -18,6 +21,7 @@ function Footer() {
               <div className="footer-logo">
                 <img src={dukagjinilogofooter} alt="" />
               </div>
+              <button onClick={onClick}></button>
               <div className="footer-info">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 <br /> sed do eiusmod tempor incididunt ut labore et <br />{" "}
@@ -75,6 +79,31 @@ function Footer() {
           <a id="blackbird" href="https://www.blackbird.marketing/">
             Black Bird Marketing
           </a>
+        </div>
+      </div>
+      <div className="sticky">
+        <div className="sticky-content">
+          <p>Book directly with Us</p>
+          <div className="booking-footer-inputs">
+            <input
+              type="date"
+              id="start"
+              name="trip-start"
+              value="2018-07-22"
+              min="2018-01-01"
+              max="2018-12-31"
+            ></input>
+            <div class="guest-adults">
+              <span class="number">2</span>
+              <span>Adults</span>
+              <button className="plus">+</button>
+              <button className="minus">-</button>
+            </div>
+            <div className="counter-btns"></div>
+          </div>
+          <div>
+            <button className="available">Check Availability</button>
+          </div>
         </div>
       </div>
     </>
