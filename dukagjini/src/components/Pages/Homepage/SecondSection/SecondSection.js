@@ -7,7 +7,7 @@ import "./secondSection.css";
 import sSBg from "../../../../images/sSBg.webp";
 
 function SecondSection({ posts }) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <div className="secondSection">
       <div className="containerWrapper">

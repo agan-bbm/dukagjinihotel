@@ -21,7 +21,7 @@ function App() {
     axios
       .get("http://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/pages/")
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setState({
           posts: res.data,
           isLoaded: true,

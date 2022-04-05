@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 
 //styles
 import "./footer.css";
@@ -8,10 +8,16 @@ import instagram from "../../../images/instagram.png";
 import dukagjinilogofooter from "../../../images/dukagjinilogofooter.svg";
 import twitter from "../../../images/twitter.png";
 
-const onClick = () => {
-  console.log("u klikua");
-};
 function Footer() {
+  const [setCounter] = useState(0);
+  const increase = () => {
+    setCounter((count) => count + 1);
+  };
+
+  //decrease counter
+  const decrease = () => {
+    setCounter((count) => count - 1);
+  };
   return (
     <>
       <div className="footer">
@@ -21,16 +27,16 @@ function Footer() {
               <div className="footer-logo">
                 <img src={dukagjinilogofooter} alt="" />
               </div>
-              <button onClick={onClick}></button>
+
               <div className="footer-info">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 <br /> sed do eiusmod tempor incididunt ut labore et <br />{" "}
                 dolore magna aliqua.
               </div>
-              <div>
+              {/* <div>
                 <h2>Subscribe to our newsletter</h2>
                 <input type="email" />
-              </div>
+              </div> */}
             </div>
             <div className="about-footer">
               <h2>ABOUT</h2>
@@ -74,8 +80,8 @@ function Footer() {
         </div>
       </div>
       <div className="bbm">
-        <div class="">
-          Made with <span class="love">❤</span> by{" "}
+        <div className="">
+          Made with <span className="love">❤</span> by{" "}
           <a id="blackbird" href="https://www.blackbird.marketing/">
             Black Bird Marketing
           </a>
@@ -89,15 +95,19 @@ function Footer() {
               type="date"
               id="start"
               name="trip-start"
-              value="2018-07-22"
+              // value="2018-07-22"
               min="2018-01-01"
               max="2018-12-31"
             ></input>
-            <div class="guest-adults">
-              <span class="number">2</span>
+            <div className="guest-adults">
+              <span className="number">2</span>
               <span>Adults</span>
-              <button className="plus">+</button>
-              <button className="minus">-</button>
+              <button className="plus" onClick={increase}>
+                +
+              </button>
+              <button className="minus" onClick={decrease}>
+                -
+              </button>
             </div>
             <div className="counter-btns"></div>
           </div>

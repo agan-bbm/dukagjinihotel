@@ -9,7 +9,7 @@ import SixthSection from "../components/Pages/Homepage/SixthSection/SixthSection
 import "./homepage.css";
 
 function Homepage({ posts }) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <>
       <div className="homepage">

@@ -11,7 +11,6 @@ import "../Booking/booking.css";
 import Img1 from "../../../images/1.jpg";
 import Img2 from "../../../images/2.jpg";
 import Img3 from "../../../images/3.jpg";
-import Img4 from "../../../images/4.jpg";
 
 //icons
 import bath from "../../../images/bath.png";
@@ -115,8 +114,8 @@ function BookingSection() {
                     spaceBetween={50}
                     slidesPerView={1}
                     navigation
-                    onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log("slide change")}
+                    // onSwiper={(swiper) => console.log(swiper)}
                   >
                     <SwiperSlide>
                       <img src={Img2} alt="" />
@@ -211,8 +210,8 @@ function BookingSection() {
                     spaceBetween={50}
                     slidesPerView={1}
                     navigation
-                    onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log("slide change")}
+                    // onSwiper={(swiper) => console.log(swiper)}
                   >
                     <SwiperSlide>
                       <img src={Img2} alt="" />
@@ -308,8 +307,8 @@ function BookingSection() {
                     spaceBetween={50}
                     slidesPerView={1}
                     navigation
-                    onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log("slide change")}
+                    // onSwiper={(swiper) => console.log(swiper)}
                   >
                     <SwiperSlide>
                       <img src={Img2} alt="" />
@@ -405,8 +404,8 @@ function BookingSection() {
                     spaceBetween={50}
                     slidesPerView={1}
                     navigation
-                    onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log("slide change")}
+                    // onSwiper={(swiper) => console.log(swiper)}
                   >
                     <SwiperSlide>
                       <img src={Img2} alt="" />

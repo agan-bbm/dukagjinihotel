@@ -2,8 +2,8 @@ const Util = () => {
   const css = `
     .st0{fill:#9F1A16;}
     .st1{fill:#AB1816;}
-    .st2{fill-rule:evenodd;clip-rule:evenodd;fill:#AB1816;}
-    .st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+    .st2{fillRule:evenodd;clipRule:evenodd;fill:#AB1816;}
+    .st3{fillRule:evenodd;clipRule:evenodd;fill:#FFFFFF;}
     .logo{width:100px;height:100px;}
     `;
   return (

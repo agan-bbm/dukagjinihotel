@@ -18,11 +18,21 @@ z-index: 1;
 height: 80vh;
 }
 #start{
-  border: none;
-  background: transparent;
+  background: lightblue;
   border-bottom: 2px solid grey;
   width: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  border: none;
 
+}
+#end{
+  background: lightblue;
+  border-bottom: 2px solid grey;
+  width: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  border: none;
 }
 .guest-adults{
   border: none;
