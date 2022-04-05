@@ -26,8 +26,10 @@
   background-color: white;
 }
 
+
 .testimonialContainer {
   padding: 0 20px;
+/* >>>>>>> 837f64c11862281ec49b3ce619ae1e37140a43be */
 }
 
 .testimonial p {
@@ -51,7 +53,7 @@
 
 .swiper {
   background-color: #ffffff00;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
 }
 
 .profilePic {
@@ -69,7 +71,9 @@
 .userName {
   padding-left: 15px;
 }
-
+.chill {
+  padding-bottom: 40px;
+}
 @media (max-width: 767px) {
   .sixthHeader {
     margin: 0;
