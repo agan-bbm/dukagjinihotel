@@ -189,4 +189,18 @@ g.bottom-left-group.scrolled {
   transform: scale(0);
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
+}.burger-icon{
+  display: none;
+}
+@media(max-width:600px){
+  .navbar-links{
+    display: none;
+  }
+  .burger-icon{
+    display: block;
+  }
+  .mobile-menu{
+    background-color: white;
+    width: 100%;
+  }
 }

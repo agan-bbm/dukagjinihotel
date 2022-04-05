@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { Turn as Hamburger } from "hamburger-react";
 //  ICONS
 import { RiPhoneFill } from "react-icons/ri";
 
@@ -17,6 +17,15 @@ import { ReactComponent as SvgLogo } from "../../../images/dukagjinihotel-respon
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
+  const [visible, setVisible] = React.useState(false);
+  const [style, setStyle] = useState("cont");
+
+  const changeStyle = () => {
+    setStyle("fixed");
+  };
+  const changeFixed = () => {
+    setStyle("");
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -25,12 +34,38 @@ function Navbar() {
       );
     }
   }, []);
-
+  const button = () => {
+    if (visible) {
+      return (
+        <button
+          onClick={() => {
+            setVisible(!visible);
+            changeFixed();
+          }}
+          className="burger-icon"
+        >
+          <Hamburger size={25} />
+        </button>
+      );
+    } else {
+      return (
+        <button
+          onClick={() => {
+            setVisible(!visible);
+            changeStyle();
+          }}
+          className="burger-icon"
+        >
+          <Hamburger size={25} />
+        </button>
+      );
+    }
+  };
   // const logo = () => {
   //   return getLogo({ navbar: navbar, width: 120, height: 60 })
   // };
   const logo = () => {
-    return logo_2({ navbar: navbar })
+    return logo_2({ navbar: navbar });
   };
   return (
     <div className={!navbar ? "navbar" : "navbar navbar-active"}>
@@ -91,16 +126,29 @@ function Navbar() {
             Offers
           </Link>
         </div>
+
+        {visible && (
+          <div className="mobile-menu">
+            <p className="mobile-menu-link">
+              <Link to="/aboutus">About</Link>
+            </p>
+            <p className="mobile-menu-link">
+              <Link to="/peek-inside">Rooms</Link>
+            </p>
+            <p className="mobile-menu-link">
+              <Link to="/peek-inside">Restaurant</Link>
+            </p>
+          </div>
+        )}
         <Link
           to="/booking"
           className={!navbar ? "white-button" : "white-button black-button"}
         >
           Book Now
         </Link>
+        <div className="burger-icon-button">{button()}</div>
       </div>
       {/* <hr className={!navbar ? "white-line" : "black-line white-line"} /> */}
-
-
     </div>
   );
 }
