@@ -61,9 +61,7 @@ function Navbar() {
       );
     }
   };
-  // const logo = () => {
-  //   return getLogo({ navbar: navbar, width: 120, height: 60 })
-  // };
+
   const logo = () => {
     return logo_2({ navbar: navbar });
   };
