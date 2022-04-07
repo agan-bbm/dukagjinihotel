@@ -1,14 +1,13 @@
 .navbar {
   width: 100%;
   height: 70px;
-  background-color: transparent;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
-  /* padding: 0 20px; */
   transition: all 0.4s ease-in-out;
   z-index: 999999;
 }
@@ -63,7 +62,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #c3996c;
 }
 
 .white-dots {
@@ -76,7 +75,7 @@
 }
 .white-links {
   text-decoration: none;
-  color: white;
+  color: #c3996c;
   padding: 0 10px;
   width: 100px;
   text-align: center;
@@ -90,7 +89,7 @@
 .black-button {
   background-color: black;
   color: white;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   transition: all 0.4s ease-in-out;
 }
 
@@ -111,7 +110,7 @@
 }
 
 .svgWhite {
-  fill: white;
+  fill: #c3996c;
 }
 
 .svgBlack {
@@ -196,9 +195,13 @@ g.bottom-left-group.scrolled {
   .navbar-links{
     display: none;
   }
+  
   .burger-icon{
     display: block;
+    background-color: transparent;
+    border: none;
   }
+  
   .mobile-menu{
     background-color: white;
     width: 100%;

@@ -6,7 +6,7 @@ function About() {
   const style = {
     color: "white",
     // backgroundColor: "red",
-    paddingTop: "400px",
+    paddingTop: "50px",
     textAlign: "center",
   };
 

@@ -2,18 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Turn as Hamburger } from "hamburger-react";
 //  ICONS
-import { RiPhoneFill } from "react-icons/ri";
 
 // CSS
 import "./navbar.css";
 
 // IMAGES
-import Logow from "../../../images/logo-white.svg";
-import Logob from "../../../images/logo-black.svg";
-import getLogo from "../../Utils/getLogo";
+
 import logo_2 from "../../Utils/logo_2";
-//import LogoR from "../../../images/dukagjinihotel-responsive.svg";
-import { ReactComponent as SvgLogo } from "../../../images/dukagjinihotel-responsive.svg";
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -77,6 +72,7 @@ function Navbar() {
         <Link to="/" className="logo-link">
           {logo()}
         </Link>
+
         <div className="navbar-links">
           <Link
             to="/rooms"
@@ -128,13 +124,13 @@ function Navbar() {
         {visible && (
           <div className="mobile-menu">
             <p className="mobile-menu-link">
-              <Link to="/aboutus">About</Link>
+              <Link to="/about">About</Link>
             </p>
             <p className="mobile-menu-link">
-              <Link to="/peek-inside">Rooms</Link>
+              <Link to="/rooms">Rooms</Link>
             </p>
             <p className="mobile-menu-link">
-              <Link to="/peek-inside">Restaurant</Link>
+              <Link to="/restaurant">Restaurant</Link>
             </p>
           </div>
         )}
