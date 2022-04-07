@@ -65,6 +65,7 @@ function Navbar() {
   const logo = () => {
     return logo_2({ navbar: navbar });
   };
+  
   return (
     <div className={!navbar ? "navbar" : "navbar navbar-active"}>
       <div className="navbar-main-container">
