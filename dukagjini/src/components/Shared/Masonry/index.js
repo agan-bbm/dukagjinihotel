@@ -32,7 +32,7 @@ export default function ImageMasonry() {
       <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}>
 
       {/* 
-      Breaking Points
+      BreakPoints
       xs, extra-small: 0px
       sm, small: 600px
       md, medium: 900px
