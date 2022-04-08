@@ -29,18 +29,27 @@ export default function ImageMasonry() {
       <div className="containerWrapper">
         <div className="MasonryContainer">
     <Box sx={{ width: "100%", minHeight: 829 }}>
-      <Masonry columns={3} spacing={2}>
+      <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}>
+
+      {/* 
+      Breaking Points
+      xs, extra-small: 0px
+      sm, small: 600px
+      md, medium: 900px
+      lg, large: 1200px
+      xl, extra-large: 1536px   */}
+
         {itemData.map((item, index) => (
           <div key={index}>
-            <Label>{index + 1}</Label>
+
             <img
               src={`${item.img}?w=162&auto=format`}
               srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
               alt={item.title}
               loading="lazy"
               style={{
-                borderBottomLeftRadius: 4,
-                borderBottomRightRadius: 4,
+                // borderBottomLeftRadius: 4,
+                // borderBottomRightRadius: 4,
                 display: 'block',
                 width: '100%',
               }}
@@ -67,10 +76,6 @@ const itemData = [
   {
     img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
     title: 'Mushrooms',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
   },
   {
     img: 'https://images.unsplash.com/photo-1529655683826-aba9b3e77383',
