@@ -5,7 +5,7 @@ import "./footer.css";
 //images
 import facebook from "../../../images/facebook.png";
 import instagram from "../../../images/instagram.png";
-import dukagjinilogofooter from "../../../images/dukagjinilogofooter.svg";
+import dukagjinilogofooter from "../../../images/logooffooter.png";
 import twitter from "../../../images/twitter.png";
 
 function Footer() {
@@ -26,52 +26,70 @@ function Footer() {
             <div className="logo-container">
               <div className="footer-logo">
                 <img src={dukagjinilogofooter} alt="" />
+                <p>Our Stores</p>
               </div>
 
               <div className="footer-info">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                <br /> sed do eiusmod tempor incididunt ut labore et <br />{" "}
-                dolore magna aliqua.
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  <br /> sed do eiusmod tempor incididunt ut labore et <br />{" "}
+                  dolore magna aliqua.
+                </p>
+                <p>dukagjini@hotmail.com</p>
+                <p>049-111-222</p>
               </div>
+
               {/* <div>
                 <h2>Subscribe to our newsletter</h2>
                 <input type="email" />
               </div> */}
             </div>
             <div className="about-footer">
-              <h2>ABOUT</h2>
+              <h2>About</h2>
               <ul>
+                <li>Get the Cooper Kit</li>
+              </ul>
+            </div>
+            <div className="contact-footer">
+              <h2>Rooms</h2>
+
+              <ul className="footerLists">
                 <li>Get the Cooper Kit</li>
                 <li>See Inside a Kit</li>
                 <li>About Us</li>
               </ul>
             </div>
             <div className="contact-footer">
-              <h2>CONTACT</h2>
+              <h2>Offers</h2>
 
-              <ul>
+              <ul className="footerLists">
                 <li>Get the Cooper Kit</li>
                 <li>See Inside a Kit</li>
                 <li>About Us</li>
               </ul>
             </div>
             <div className="socials-footer">
-              <h2>SOCIALS</h2>
+              <h2>Social</h2>
 
               <ul>
                 <li>
                   <div className="icon-socials">
-                    <img src={facebook} alt="" /> Facebook
+                    {/* <img src={facebook} alt="" /> Facebook */}
+                    <p>Facebook</p>
                   </div>
                 </li>
                 <li>
                   <div className="icon-socials">
-                    <img src={instagram} alt="" /> Instagram
+                    <p>Instagram</p>
+
+                    {/* <img src={instagram} alt="" /> Instagram */}
                   </div>
                 </li>
                 <li>
                   <div className="icon-socials">
-                    <img src={twitter} alt="" /> Twitter
+                    <p>Twitter</p>
+
+                    {/* <img src={twitter} alt="" /> Twitter */}
                   </div>
                 </li>
               </ul>

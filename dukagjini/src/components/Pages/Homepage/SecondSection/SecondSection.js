@@ -4,7 +4,7 @@ import React from "react";
 import "./secondSection.css";
 
 //IMAGES
-import sSBg from "../../../../images/sSBg.webp";
+import secondBanner from "../../../../images/secondsectionbanner.png";
 
 function SecondSection({ posts }) {
   // console.log(posts);
@@ -15,26 +15,19 @@ function SecondSection({ posts }) {
           <div className="seconSectionTop">
             <div className="secondSectionLeft">
               <h2 className="secondSectionHeader">
-                The shelter is the Outcome of the Dream
+                Shijoni bukuritë e maleve të Pejës, përgjatë qëndrimit tuaj.
               </h2>
-              <h2>{posts[0].acf.first.firstparagraph}</h2>
-            </div>
-            <div className="secondSectionRight">
               <p className="secondSectionParagraph">
-                Broker ipsum dolor sit amet, consectetuer luxury elit. Carrara
-                marble commodo ligula eget dolor cum sociis cozy penatibus et
-                magnis.
-              </p>
-              <p className="secondSectionParagraph">
-                Ochean de View extends along a private, quiet and beautiful
-                tropical beach. Stay away from the crowd and enjoy the beauty
-                and lust of Cancun with us.
+                Përjetoni rehati dhe relaksim në ambientet e Hotel Dukagjinit.
+                Me një standart të lartë të shërbimit dhe mirëkpritjes, ju do të
+                përjetoni një pushim të paharruar.
               </p>
             </div>
+            <div className="secondSectionRight"></div>
           </div>
           <div className="secondImgContainer">
             <div className="secondImg">
-              <img src={sSBg}></img>
+              <img src={secondBanner}></img>
             </div>
           </div>
         </div>

@@ -60,7 +60,7 @@ function Navbar() {
   const logo = () => {
     return logo_2({ navbar: navbar });
   };
-  
+
   return (
     <div className={!navbar ? "navbar" : "navbar navbar-active"}>
       <div className="navbar-main-container">
@@ -81,9 +81,9 @@ function Navbar() {
           >
             Rooms
           </Link>
-          <span
+          {/* <span
             className={!navbar ? "white-dots" : " black-dots white-dots "}
-          ></span>
+          ></span> */}
 
           <Link
             to="/"
@@ -91,9 +91,9 @@ function Navbar() {
           >
             Lobby
           </Link>
-          <span
+          {/* <span
             className={!navbar ? "white-dots" : " black-dots white-dots "}
-          ></span>
+          ></span> */}
           <Link
             to="/"
             className={!navbar ? "white-links" : " black-links white-links "}
@@ -101,9 +101,9 @@ function Navbar() {
             Restaurant
           </Link>
 
-          <span
+          {/* <span
             className={!navbar ? "white-dots" : " black-dots white-dots "}
-          ></span>
+          ></span> */}
           <Link
             to="/about"
             className={!navbar ? "white-links" : " black-links white-links "}
@@ -111,9 +111,9 @@ function Navbar() {
             About
           </Link>
 
-          <span
+          {/* <span
             className={!navbar ? "white-dots" : " black-dots white-dots "}
-          ></span>
+          ></span> */}
           <Link
             to="/"
             className={!navbar ? "white-links" : " black-links white-links "}

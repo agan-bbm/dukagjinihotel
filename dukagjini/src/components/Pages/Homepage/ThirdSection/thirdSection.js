@@ -35,7 +35,7 @@ function ThirdSection() {
         breakpoints={{
           600: {
             slidesPerView: 1.7,
-          }
+          },
         }}
       >
         <SwiperSlide>
@@ -62,17 +62,15 @@ function ThirdSection() {
       </Swiper>
       <div className="containerWrapper">
         <div className="thirdSection1">
-          <div className="thirdSectionBottom">
-            <div className="thirdSectionLeft">
-              <h2 className="thirdSectionHeader">Pampering Included</h2>
-            </div>
-            <div className="thirdSectionRight">
-              <p className="thirdSectionParagraph">
-                Ochean de View extends along a private, quiet and beautiful
-                tropical beach. Stay away from the crowd and enjoy the beauty
-                and lust of Cancun with us.
-              </p>
-            </div>
+          <div className="thirdsectionDesc">
+            <h2>Njihuni me ambientet e Hotel Dukagjinit</h2>
+            <p>
+              Me një ekip të pasionuar dhe të palodhur në punën që bëjnë, kemi
+              arritur t'iu sjellim momente magjike. Në Hotel Dukagjini,
+              përjetoni komoditet dhe ekperiencë unike. Hotel Dukagjini është
+              dhurata më e mirë për ju dhe të dashurit tuaj.
+            </p>
+            <button className="bookingThirdButton">View our rooms</button>
           </div>
         </div>
       </div>

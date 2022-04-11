@@ -1,6 +1,5 @@
 .fourthSection {
     width: 100%;
-    background-color: whitesmoke;
     align-items: center;
     margin: 0 auto;
 }
@@ -9,6 +8,7 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    justify-content: space-between;
     padding-bottom: 40px;
 }
 
@@ -17,11 +17,21 @@
     flex-direction: row;
     align-items: center;
     padding-bottom: 80px;
+    justify-content: space-between;
 }
 .fourthContainer {
     padding: 40px 0;
     align-items: center;
     width: 100%;
+}
+.gridBtn{
+    border: 1px solid #CA9E72;
+    color: #CA9E72;
+    padding: 5px 25px;
+    /* width: 150px; */
+    font-size: 16px;
+    height: 60px;
+    width: auto;
 }
 
 .fourthSectionLeft {
@@ -31,9 +41,9 @@
 .fourthSectionRight {
     width: 25%;
     height: auto;
-    background-color: white;
-    padding: 4%;
-    margin: 0 -5%;
+    /* background-color: white; */
+    /* padding: 4%; */
+    
 }
 .fourthHeader h2 {
     padding-right: 40%;
@@ -49,12 +59,100 @@
 .fourthSectionTop {
     align-items: center;
 }
-
+.single-room-rec img{
+    width: 100%;
+    height: auto !important;
+    object-fit: contain !important;
+}
 .fourthSection img {
     width: 100%;
     height: 500px;
     object-fit: cover;
 }
+
+.roomRecomendations{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.single-room-rec{
+    /* background-color: red; */
+    border: 1px solid black;
+    width: 30%;
+    padding: 15px;
+}
+.price-book{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price-book p{
+    font-size: 28px;
+    font-weight: 500;
+}
+.pernight{
+    font-size: 21px;
+    font-weight: 300;
+}
+.price-book button{
+    background-color: #CA9E72;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    width: 150px;
+    font-size: 16px;
+    height: 60px;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin: 5px 0px;
+    background: #F8F2EC;
+  }
+  .bookOffer{
+    background-color: #77522D;
+    display: flex;
+    animation: unset;
+    align-items: center;
+    padding: 20px 50px;
+    justify-content: space-between;
+    color: white;
+    margin-top: 50px;
+  }
+ .offerLeft{
+     width: 70%;
+ }
+ .offerLeft h2{
+     font-size: 35px;
+     font-weight: 300;
+ }
+ .offerRight button{
+    background-color: #F1E5DA;
+    border: 1px solid #A3703D;
+    color: #A3703D;
+    padding: 15px 20px;
+ }
+  .icon p {
+    font-family: lato, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    height: 30px;
+    color: #8e652c;
+    margin-left: 10px;
+  }
+  .icon-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .icon-info img {
+    width: 30px;
+    height: 30px;
+  }
 
 @media (max-width: 767px) {
     .fourthHeader h2 {
@@ -80,12 +178,14 @@
         flex-direction: column;
         align-items: center;
         padding-bottom: 10px;
+        justify-content: space-between;
     }
     .fourthSectionFliped {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         padding-bottom: 10px;
+        justify-content: space-between;
     }
     .fourthSectionParagraph {
         padding: 0;

@@ -4,19 +4,27 @@
 }
 
 .sixthHeader {
-  display: flex;
+ 
   justify-content: center;
   padding: 50px 0;
+  text-align: center;
 }
 
 .sixthHeader h2 {
-  padding: 0 25%;
-  padding-bottom: 25px;
+
+ 
   font-weight: 400;
   font-size: 55px;
   text-align: center;
 }
-
+.sixthHeader p{
+  width: 50%;
+  margin: 0 auto;
+  font-size: 18px;
+}
+.swiper{
+  overflow:hidden !important;
+}
 .swiper-slide {
   background-color: whitesmoke;
   border-top: solid 3px darkgray;
@@ -25,13 +33,26 @@
 .sswiper-pointer-events {
   background-color: white;
 }
-
+.sixthslidegallery .swiper-slide-active {
+  /* transform: none; */
+  transition: 0.6s;
+}
+.swiper-slide{
+  background-color: none;
+}
 
 .testimonialContainer {
-  padding: 0 20px;
+  padding: 50px;
+  text-align: center;
 /* >>>>>>> 837f64c11862281ec49b3ce619ae1e37140a43be */
 }
 
+.testimonial h2{
+  
+  color: #AB753F;
+  font-size: 36px;
+  font-weight: 500;
+}
 .testimonial p {
   font-size: 20px;
   margin: 0;
@@ -57,7 +78,7 @@
 }
 
 .profilePic {
-  width: 50px;
+  /* width: 50px; */
 }
 
 .user {

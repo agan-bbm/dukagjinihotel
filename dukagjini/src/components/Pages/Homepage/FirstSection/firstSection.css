@@ -1,22 +1,51 @@
-.hompage-first-section {
-  width: 100%;
+.firstSection{
+  display: flex;
 }
-.main-banner {
-  height: 100%;
-  background-color: white;
+.leftSide{
+  width: 70%;
 }
-.coverImage img {
-  width: 100%;
-  height: 60vh;
-  object-fit: cover;
+.leftContainer{
+  padding: 150px 80px;
 }
-
-@media (max-width: 600px) {
-  .coverImage img {
-    height: 50vh;
-  }
-  .hompage-first-section {
-    height: 100%;
-   
-  }
+.leftContainer h2{
+  font-size: 46px;
+  font-weight: 300;
+}
+.leftContainer p{
+  font-size: 16px;
+}
+.leftContainer button{
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 1px solid #CA9E72;
+  color: #CA9E72;
+}
+.rightSide{
+  background-image: url("../../../../images/mainimagebanner.png");
+}
+.bookingFirstBanner{
+  display: flex;
+  justify-content: space-between;
+  background-color: #EAD9C7;
+  /* border: 1px solid #CA9E72; */
+  padding: 50px;
+  position: absolute;
+  margin-top: 50px;
+  align-items: center;
+  width: 65%;
+}
+.choosing-option{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.choosing-option label{
+  color: #A07346;
+  font-weight: 600;
+}
+.choosing-option input{
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #CA9E72;
+  color: #CA9E72;
 }

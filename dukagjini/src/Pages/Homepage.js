@@ -8,6 +8,7 @@ import FifthSection from "../components/Pages/Homepage/FifthSection/FifthSection
 import SixthSection from "../components/Pages/Homepage/SixthSection/SixthSection";
 import "./homepage.css";
 import ImageMasonry from "../components/Shared/Masonry/index";
+import Faq from "../components/Pages/Homepage/Faq/Faq";
 
 function Homepage({ posts }) {
   // console.log(posts);
@@ -17,11 +18,12 @@ function Homepage({ posts }) {
         <FirstSection />
         <SecondSection posts={posts} />
         <ThirdSection />
+
         <FourthSection />
         <FifthSection />
         <SixthSection />
-        <ImageMasonry />
-        
+        {/* <ImageMasonry /> */}
+        <Faq />
       </div>
     </>
   );
