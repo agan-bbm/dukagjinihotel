@@ -20,8 +20,8 @@ function fourthSection() {
       <div className="containerWrapper">
         <div className="recomendations">
           <h2>Rekomandimet tona për ju!</h2>
-          <p>
-            Të gjitha dhomat tona janë unike me një stil të veçantë dhe luksos.
+          <p id="recommendationParagraph">
+            Të gjitha dhomat tona janë unike me një stil të veçantë dhe luksoz.
             Hotel Dukagjini sjell për ju magjinë e të ndjehurit rehat në dhomat
             e përgatitura për komoditetin tuaj!
           </p>
@@ -34,22 +34,30 @@ function fourthSection() {
               </p>
               <div className="icon-info">
                 <div className="icon">
-                  <img src={seaview} alt="" />
-                  <p>Sea view</p>
+                  <p>
+                    <img src={seaview} alt="" />
+                    Sea view
+                  </p>
                 </div>
                 <div className="icon">
-                  <img src={balcony} alt="" />
-                  <p>Balcony </p>
+                  <p>
+                    <img src={balcony} alt="" />
+                    Balcony{" "}
+                  </p>
                 </div>
 
                 <div className="icon">
-                  <img src={bath} alt="" />
-                  <p>Bath</p>
+                  <p>
+                    <img src={bath} alt="" />
+                    Bath
+                  </p>
                 </div>
 
                 <div className="icon">
-                  <img src={livingroom} alt="" />
-                  <p>Living Room</p>
+                  <p>
+                    <img src={livingroom} alt="" />
+                    Living Room
+                  </p>
                 </div>
               </div>
               <div className="price-book">
@@ -67,22 +75,30 @@ function fourthSection() {
               </p>
               <div className="icon-info">
                 <div className="icon">
-                  <img src={seaview} alt="" />
-                  <p>Sea view</p>
+                  <p>
+                    <img src={seaview} alt="" />
+                    Sea view
+                  </p>
                 </div>
                 <div className="icon">
-                  <img src={balcony} alt="" />
-                  <p>Balcony </p>
+                  <p>
+                    <img src={balcony} alt="" />
+                    Balcony{" "}
+                  </p>
                 </div>
 
                 <div className="icon">
-                  <img src={bath} alt="" />
-                  <p>Bath</p>
+                  <p>
+                    <img src={bath} alt="" />
+                    Bath
+                  </p>
                 </div>
 
                 <div className="icon">
-                  <img src={livingroom} alt="" />
-                  <p>Living Room</p>
+                  <p>
+                    <img src={livingroom} alt="" />
+                    Living Room
+                  </p>
                 </div>
               </div>
               <div className="price-book">
@@ -101,22 +117,30 @@ function fourthSection() {
                 </p>
                 <div className="icon-info">
                   <div className="icon">
-                    <img src={seaview} alt="" />
-                    <p>Sea view</p>
+                    <p>
+                      <img src={seaview} alt="" />
+                      Sea view
+                    </p>
                   </div>
                   <div className="icon">
-                    <img src={balcony} alt="" />
-                    <p>Balcony </p>
+                    <p>
+                      <img src={balcony} alt="" />
+                      Balcony{" "}
+                    </p>
                   </div>
 
                   <div className="icon">
-                    <img src={bath} alt="" />
-                    <p>Bath</p>
+                    <p>
+                      <img src={bath} alt="" />
+                      Bath
+                    </p>
                   </div>
 
                   <div className="icon">
-                    <img src={livingroom} alt="" />
-                    <p>Living Room</p>
+                    <p>
+                      <img src={livingroom} alt="" />
+                      Living Room
+                    </p>
                   </div>
                 </div>
                 <div className="price-book">
@@ -144,9 +168,9 @@ function fourthSection() {
           </div>
         </div>
         <div className="fourthContainer">
-          <div className="fourthHeader">
+          {/* <div className="fourthHeader">
             <h2>Joyful experiences for you and your family</h2>
-          </div>
+          </div> */}
 
           <div className="fourthSectionPart">
             <div className="fourthSectionLeft">
@@ -169,7 +193,7 @@ function fourthSection() {
                   tropical beach. Stay away from the crowd and enjoy the beauty
                   and lust.
                 </p>
-                <button className="gridBtn">VIEW OUR ROOMS</button>
+                <button className="gridBtn">View our rooms</button>
               </div>
             </div>
           </div>
@@ -190,7 +214,7 @@ function fourthSection() {
                   relaksoheni në pishinën tonë, e të shijoni edhe pamjet
                   mahnitëse që ofron qyteti i bukur i Pejës.
                 </p>
-                <button className="gridBtn">VIEW OUR ROOMS</button>
+                <button className="gridBtn">View our rooms</button>
               </div>
             </div>
           </div>

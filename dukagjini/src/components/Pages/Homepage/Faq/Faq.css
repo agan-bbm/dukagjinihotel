@@ -1,0 +1,58 @@
+h2{
+    margin: 0;
+}
+.faqs{
+    padding: 50px 0px;
+}
+.accordion {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .accordion-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+   
+  }
+  
+  .accordion-title:hover {
+    
+  }
+  
+  .accordion-title,
+  .accordion-content {
+    padding: 1rem;
+  }
+  .plusminus{
+    border: 1px solid #CA9E72;
+    border-radius: 50%;
+    margin: 0;
+    width: 20px;
+    color: #CA9E72;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    text-align: center;
+      
+  }
+  .accordionHr{
+      border: 1px solid #E6E6E6;
+      margin: 0;
+  }
+  #minus{
+    margin: 0;
+    width: 100%;
+    background-color: #CA9E72;
+    border-radius: 50%;
+    color: white;
+  }
+    #plus{
+    
+    margin: 0;
+}
+  .accordion-content {
+    
+  }

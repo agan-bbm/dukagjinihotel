@@ -20,17 +20,19 @@
     justify-content: space-between;
 }
 .fourthContainer {
-    padding: 40px 0;
+    padding: 50px 0;
     align-items: center;
     width: 100%;
 }
+
 .gridBtn{
     border: 1px solid #CA9E72;
     color: #CA9E72;
-    padding: 5px 25px;
+    padding: 15px 20px;
     /* width: 150px; */
     font-size: 16px;
-    height: 60px;
+    background-color: transparent;
+   
     width: auto;
 }
 
@@ -39,11 +41,17 @@
 }
 
 .fourthSectionRight {
-    width: 25%;
+    width:40%;
     height: auto;
     /* background-color: white; */
-    /* padding: 4%; */
+  padding-left: 50px;
     
+}
+.fourthSectionHeader{
+    font-size: 38px;
+    font-weight: 300;
+    margin: 0;
+
 }
 .fourthHeader h2 {
     padding-right: 40%;
@@ -69,26 +77,48 @@
     height: 500px;
     object-fit: cover;
 }
-
+.recomendations h2{
+    font-weight: 300;
+    font-size: 38px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+#recommendationParagraph{
+    width: 55%;
+    margin: 0;
+}   
 .roomRecomendations{
     display: flex;
+    padding-top: 50px;
     width: 100%;
     justify-content: space-between;
 }
 .single-room-rec{
-    /* background-color: red; */
-    border: 1px solid black;
+   
     width: 30%;
+    box-shadow: 0 15px 12px rgb(0 0 0 / 8%);
     padding: 15px;
+}
+.single-room-rec h4
+{
+    font-size: 28px;
+    margin: 0;
+    font-weight: 500;
+}
+.single-room-rec p{
+    color: #575757;
+    margin-top: 0;
 }
 .price-book{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px 0px;
 }
 .price-book p{
     font-size: 28px;
     font-weight: 500;
+    margin: 0;
 }
 .pernight{
     font-size: 21px;
@@ -97,11 +127,10 @@
 .price-book button{
     background-color: #CA9E72;
     color: white;
-    padding: 5px 10px;
+    padding: 15px 0px;
     border: none;
     width: 150px;
-    font-size: 16px;
-    height: 60px;
+    font-size: 14px;
 }
 .icon {
     display: flex;
@@ -111,7 +140,7 @@
     background: #F8F2EC;
   }
   .bookOffer{
-    background-color: #77522D;
+    background:linear-gradient(to right,#77522D ,#A3703D);
     display: flex;
     animation: unset;
     align-items: center;
@@ -129,18 +158,23 @@
  }
  .offerRight button{
     background-color: #F1E5DA;
-    border: 1px solid #A3703D;
+    border: none;
     color: #A3703D;
     padding: 15px 20px;
  }
   .icon p {
-    font-family: lato, sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
     height: 30px;
+    display: flex;
     color: #8e652c;
+    align-items: center;
     margin-left: 10px;
+    margin: 0 !important;
+    padding:  10px 0px;
+    justify-content: space-evenly;
+    width: 100%;
   }
   .icon-info {
     display: flex;
@@ -153,7 +187,10 @@
     width: 30px;
     height: 30px;
   }
-
+  .fourthSectionFliped .fourthSectionRight{
+    padding-left: 0 !important;
+    padding-right: 50px;
+}
 @media (max-width: 767px) {
     .fourthHeader h2 {
         padding: 0;
@@ -187,6 +224,7 @@
         padding-bottom: 10px;
         justify-content: space-between;
     }
+    
     .fourthSectionParagraph {
         padding: 0;
     }
@@ -202,3 +240,4 @@
         margin: 0;
     }
 }
+
