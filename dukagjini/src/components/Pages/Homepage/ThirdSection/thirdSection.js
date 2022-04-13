@@ -11,11 +11,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 //import Img1 from "../../../../images/1.jpg";
-import Img2 from "../../../../images/2.jpg";
-import Img3 from "../../../../images/3.jpg";
-import Img4 from "../../../../images/4.jpg";
+import Img2 from "../../../../images/2.png";
+import Img3 from "../../../../images/2.png";
+import Img4 from "../../../../images/2.png";
 
-import Img1 from "../../../../images/1.jpg";
+import Img1 from "../../../../images/2.png";
 
 function ThirdSection() {
   return (

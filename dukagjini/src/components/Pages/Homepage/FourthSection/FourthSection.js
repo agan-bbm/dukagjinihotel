@@ -4,14 +4,15 @@ import React from "react";
 import "./fourthSection.css";
 
 //IMAGES
-import Img1 from "../../../../images/1.jpg";
-import Img2 from "../../../../images/2.jpg";
+import Img1 from "../../../../images/happy.png";
+import Img2 from "../../../../images/modern.png";
 import Img3 from "../../../../images/3.jpg";
 
-import livingroom from "../../../../images/livingroom.png";
-import bath from "../../../../images/bath.png";
-import seaview from "../../../../images/seaview.png";
-import balcony from "../../../../images/balcony.png";
+import livingroom from "../../../../images/bed.svg";
+import bath from "../../../../images/bathhub.svg";
+// import wifi from "../../../../images/dashboard.svg";
+import balcony from "../../../../images/user.svg";
+import wifi from "../../../../images/wifi.svg";
 import recommendedRoom from "../../../../images/recommendedRoom.png";
 
 function fourthSection() {
@@ -34,30 +35,30 @@ function fourthSection() {
               </p>
               <div className="icon-info">
                 <div className="icon">
-                  <p>
-                    <img src={seaview} alt="" />
-                    Sea view
-                  </p>
-                </div>
-                <div className="icon">
-                  <p>
+                  <div className="icon-flex">
                     <img src={balcony} alt="" />
-                    Balcony{" "}
-                  </p>
+                    <p>Balcony</p>
+                  </div>
                 </div>
 
                 <div className="icon">
-                  <p>
+                  <div className="icon-flex">
                     <img src={bath} alt="" />
-                    Bath
-                  </p>
+                    <p>Bath</p>
+                  </div>
+                </div>
+                <div className="icon">
+                  <div className="icon-flex">
+                    <img src={wifi} alt="" />
+                    <p>Wifi</p>
+                  </div>
                 </div>
 
                 <div className="icon">
-                  <p>
+                  <div className="icon-flex">
                     <img src={livingroom} alt="" />
-                    Living Room
-                  </p>
+                    <p>Bathroom</p>
+                  </div>
                 </div>
               </div>
               <div className="price-book">
@@ -75,30 +76,30 @@ function fourthSection() {
               </p>
               <div className="icon-info">
                 <div className="icon">
-                  <p>
-                    <img src={seaview} alt="" />
-                    Sea view
-                  </p>
-                </div>
-                <div className="icon">
-                  <p>
+                  <div className="icon-flex">
                     <img src={balcony} alt="" />
-                    Balcony{" "}
-                  </p>
+                    <p>Balcony</p>
+                  </div>
                 </div>
 
                 <div className="icon">
-                  <p>
+                  <div className="icon-flex">
                     <img src={bath} alt="" />
-                    Bath
-                  </p>
+                    <p>Bath</p>
+                  </div>
+                </div>
+                <div className="icon">
+                  <div className="icon-flex">
+                    <img src={wifi} alt="" />
+                    <p>Wifi</p>
+                  </div>
                 </div>
 
                 <div className="icon">
-                  <p>
+                  <div className="icon-flex">
                     <img src={livingroom} alt="" />
-                    Living Room
-                  </p>
+                    <p>Bathroom</p>
+                  </div>
                 </div>
               </div>
               <div className="price-book">
@@ -110,45 +111,43 @@ function fourthSection() {
             </div>
             <div className="single-room-rec">
               <img src={recommendedRoom} alt="" />
-              <div className="room-dsc-div">
-                <h4>Deluxe Room</h4>
-                <p className="recpar">
-                  A 120sq foot bedroom apartment with a view.
+              <h4>Deluxe Room</h4>
+              <p className="recpar">
+                A 120sq foot bedroom apartment with a view.
+              </p>
+              <div className="icon-info">
+                <div className="icon">
+                  <div className="icon-flex">
+                    <img src={balcony} alt="" />
+                    <p>Balcony</p>
+                  </div>
+                </div>
+
+                <div className="icon">
+                  <div className="icon-flex">
+                    <img src={bath} alt="" />
+                    <p>Bath</p>
+                  </div>
+                </div>
+                <div className="icon">
+                  <div className="icon-flex">
+                    <img src={wifi} alt="" />
+                    <p>Wifi</p>
+                  </div>
+                </div>
+
+                <div className="icon">
+                  <div className="icon-flex">
+                    <img src={livingroom} alt="" />
+                    <p>Bathroom</p>
+                  </div>
+                </div>
+              </div>
+              <div className="price-book">
+                <p className="price">
+                  $35 <span className="pernight">/Night</span>
                 </p>
-                <div className="icon-info">
-                  <div className="icon">
-                    <p>
-                      <img src={seaview} alt="" />
-                      Sea view
-                    </p>
-                  </div>
-                  <div className="icon">
-                    <p>
-                      <img src={balcony} alt="" />
-                      Balcony{" "}
-                    </p>
-                  </div>
-
-                  <div className="icon">
-                    <p>
-                      <img src={bath} alt="" />
-                      Bath
-                    </p>
-                  </div>
-
-                  <div className="icon">
-                    <p>
-                      <img src={livingroom} alt="" />
-                      Living Room
-                    </p>
-                  </div>
-                </div>
-                <div className="price-book">
-                  <p className="price">
-                    $35 <span className="pernight">/Night</span>
-                  </p>
-                  <button>Check Rooms</button>
-                </div>
+                <button>Check Rooms</button>
               </div>
             </div>
           </div>

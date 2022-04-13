@@ -106,27 +106,17 @@
   padding-bottom: 40px;
 }
 @media (max-width: 767px) {
-  .sixthHeader {
-    margin: 0;
-    padding: 25px 0;
-  }
   .sixthHeader h2 {
     margin: 0;
-    padding: 0;
+    padding: 10px;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 22px;
     text-align: center;
-  }
-
-  .sixthSection {
-    padding: 25px 0;
-  }
-  .swiper {
-    background-color: #ffffff00;
-    padding: 0;
-  }
-
-  .swiper-pagination-bullets {
-    display: none;
-  }
+}
+.sixthHeader p {
+  width: auto;
+  margin: 0 auto;
+  font-size: 16px;
+  padding: 10px;
+}
 }

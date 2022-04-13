@@ -135,9 +135,17 @@
 .icon {
     display: flex;
     align-items: center;
-    width: 30%;
+    width: auto;
     margin: 5px 0px;
     background: #F8F2EC;
+    padding: 0px 10px;
+  }
+
+  .icon-flex{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 10px;
   }
   .bookOffer{
     background:linear-gradient(to right,#77522D ,#A3703D);
@@ -192,52 +200,58 @@
     padding-right: 50px;
 }
 @media (max-width: 767px) {
-    .fourthHeader h2 {
-        padding: 0;
-        padding-bottom: 15px;
-        font-weight: 400;
-        font-size: 30px;
-        text-align: left;
-    }
-
-    .fourthSection img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-    }
     .fourthSection h2 {
         font-weight: 400;
         margin: 0;
+        text-align: center;
+        font-size: 22px;
+        padding: 20px;
     }
-
-    .fourthSectionPart {
-        display: flex;
+    #recommendationParagraph {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    .roomRecomendations{
         flex-direction: column;
-        align-items: center;
-        padding-bottom: 10px;
-        justify-content: space-between;
     }
-    .fourthSectionFliped {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        padding-bottom: 10px;
-        justify-content: space-between;
+    .single-room-rec{
+        width: auto;
+        margin: 20px 10px;
+
     }
-    
-    .fourthSectionParagraph {
+    .bookOffer {
+     padding: 20px;
+        flex-direction: column;
+    }
+    .fourthSection h2{
         padding: 0;
     }
-
-    .fourthSectionLeft {
+    .offerLeft{
+        width: 100%;
+        text-align: center;
+    }
+    .fourthSectionPart{
+        flex-direction: column;
+    }.fourthSectionLeft{
         width: 100%;
     }
-
     .fourthSectionRight {
         width: 100%;
         height: auto;
-        background-color: #ffffff00;
-        margin: 0;
+        /* background-color: white; */
+        padding-left: 0px;
+        padding-top: 20px;
+        text-align: center;
+    }.fourthSectionFliped{
+        flex-direction: column;
+    }.fourthSectionFliped .fourthSectionRight{
+        padding: 0;
+        padding-top: 20px;
+    }
+    .fourthSection img {
+      
+        height: 300px;
+     
     }
 }
-

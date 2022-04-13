@@ -38,15 +38,17 @@ function Faq() {
   return (
     <>
       <div className="faqs">
-        <h1
-          style={{ textAlign: "center", fontSize: "28px", fontWeight: "400" }}
-        >
-          Pyetjet më të shpeshta!
-        </h1>
-        <div className="accordion">
-          {accordionData.map(({ title, content }) => (
-            <Accordion title={title} content={content} />
-          ))}
+        <div className="containerWrapper">
+          <h1
+            style={{ textAlign: "center", fontSize: "28px", fontWeight: "400" }}
+          >
+            Pyetjet më të shpeshta!
+          </h1>
+          <div className="accordion">
+            {accordionData.map(({ title, content }) => (
+              <Accordion title={title} content={content} />
+            ))}
+          </div>
         </div>
       </div>
     </>

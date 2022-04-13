@@ -1,15 +1,17 @@
 .firstSection{
   display: flex;
+  height: 85vh;
 }
 .leftSide{
   width: 70%;
 }
 .leftContainer{
   padding: 150px 80px;
+  padding-right: 200px;
 }
 .leftContainer h2{
   font-size: 46px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .leftContainer p{
   font-size: 16px;
@@ -21,7 +23,7 @@
   color: #CA9E72;
 }
 .rightSide{
-  background-image: url("../../../../images/mainimagebanner.png");
+  background-image: url("../../../../images/mainbanerfirst.png");
 }
 .bookingFirstBanner{
   display: flex;
@@ -48,4 +50,62 @@
   background: transparent;
   border-bottom: 1px solid #CA9E72;
   color: #CA9E72;
+}
+.rightSide{
+  width: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#pc{
+  display: block;
+}
+#mobile{
+  display: none;
+}
+@media(max-width:767px){
+  .firstSection{
+    height: auto;
+  }
+  .rightSide{
+    height: 500px;
+    width: auto;
+  }
+  .firstSection{
+    flex-direction: column-reverse;
+  }
+  #pc{
+    display: none;
+  }
+  #mobile{
+    display: block;
+    width: 100%;
+  }
+  .rightSide{
+    background-image: url("../../../../images/mainbanerfirst.png");
+    background-size: cover;
+  }
+  .leftSide {
+    width: 100%;
+    text-align: center;
+}.leftContainer {
+  padding: 10px;
+}.leftContainer h2 {
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+}.bookingFirstBanner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #EAD9C7;
+  /* border: 1px solid #CA9E72; */
+  padding: 10px;
+  position: relative;
+  margin-top: 50px;
+  align-items: center;
+  width: auto;
+  flex-direction: column;
+}.leftContainer p{
+  font-weight: 300;
+}
+
 }

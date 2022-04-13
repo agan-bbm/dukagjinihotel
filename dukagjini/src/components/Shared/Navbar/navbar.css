@@ -218,4 +218,7 @@ g.bottom-left-group.scrolled {
     height: 100vh;
     overflow: hidden;
   }
+  .white-button{
+    display: none;
+  }
 }
