@@ -1,6 +1,7 @@
 import React from "react";
-
+import QuiltedImageList from "../../Gallery";
 import "./about.css";
+import ImageMasonry from '../../Masonry';
 
 function About() {
   const style = {
@@ -16,12 +17,16 @@ function About() {
         <div>
           <h2 style={style}>ABOUT US </h2>
 
-          <div className="images-grid">
+
+          <QuiltedImageList  />
+          <ImageMasonry />
+          
+          {/* <div className="images-grid">
             <div className="div1"></div>
             <div className="div2"></div>
             <div className="div3"></div>
             <div className="div4"></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
