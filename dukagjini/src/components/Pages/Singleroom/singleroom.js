@@ -4,6 +4,10 @@ import "./singleroom.css";
 import fullrightimg from "../../../images/fullrightimg.png";
 import lefttopimg from "../../../images/lefttopimg.png";
 import leftbottomimg from "../../../images/leftbottomimg.png";
+import livingroom from "../../../images/user.svg";
+import bath from "../../../images/bed.svg";
+import seaview from "../../../images/dashboard.svg";
+import balcony from "../../../images/wifi.svg";
 
 function Singleroom() {
   return (
@@ -23,32 +27,79 @@ function Singleroom() {
               <img src={fullrightimg} alt="" />
             </div>
             <div className="grid-right-side">
-              <div>
+              <div className="rightside-div">
                 <img src={lefttopimg} alt="" />
               </div>
-              <div>
+              <div className="rightside-div">
                 <img src={leftbottomimg} alt="" />
               </div>
             </div>
           </div>
-          <h2>Standard room</h2>
-          <p>Prishtine, Kosove</p>
+          <div className="title-and-location">
+            <h2 className="single-room-title">Standard room</h2>
+            <p id="lokacioni-dhomes">Prishtine, Kosove</p>
+          </div>
 
           <div className="single-room-informations">
             <div className="sr-info-left">
-              <p>Përshkrimi</p>
-              <p>
+              <p className="single-room-description">Përshkrimi</p>
+              <p className="pershkrimi-p">
                 Me një pamje mahnitëse të qytetit dhe lumit, shijoni rehatinë e
                 dhomës standarte. Dhoma standarte përbëhet prej: një shtrat për
                 të rritur, sipas kërkesës edhe për fëmijë. Dhoma ka një banjo
                 komforte, minibar, kondicioner, TV, tharëse flokësh.{" "}
               </p>
 
-              <p>Hotel Features</p>
-              <div className="ikonat-single-room"></div>
+              <div className="room-features-wrapper">
+                <p className="room-features-p">Hotel Features</p>
 
-              <p>Hotel Features</p>
-              <div className="ikonat-single-room"></div>
+                <div className="ikonat-single-room">
+                  <div className="icon-info" id="single-room-iconinfo1">
+                    <div className="icon-singleroom-page">
+                      <img src={seaview} alt="" />
+                      <p>Sea view</p>
+                    </div>
+                    <div className="icon-singleroom-page">
+                      <img src={balcony} alt="" />
+                      <p>Balcony </p>
+                    </div>
+
+                    <div className="icon-singleroom-page">
+                      <img src={bath} alt="" />
+                      <p>Bath</p>
+                    </div>
+
+                    <div className="icon-singleroom-page">
+                      <img src={livingroom} alt="" />
+                      <p>Living Room</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p className="room-features-p">Hotel Features</p>
+              <div className="ikonat-single-room">
+                <div className="icon-info" id="single-room-iconinfo2">
+                  <div className="icon-singleroom-page">
+                    <img src={seaview} alt="" />
+                    <p>Sea view</p>
+                  </div>
+                  <div className="icon-singleroom-page">
+                    <img src={balcony} alt="" />
+                    <p>Balcony </p>
+                  </div>
+
+                  <div className="icon-singleroom-page">
+                    <img src={bath} alt="" />
+                    <p>Bath</p>
+                  </div>
+
+                  <div className="icon-singleroom-page">
+                    <img src={livingroom} alt="" />
+                    <p>Living Room</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="sr-info-right">
               <div className="cart">
@@ -79,10 +130,10 @@ function Singleroom() {
                     </div>
                   </div>
                 </div>
-                <div className="shujorik">
+                <div className="price-wrapper">
                   <div className="price-single-page">
-                    <p>Total</p>
-                    <p>$70</p>
+                    <p className="total">Total</p>
+                    <p className="total-price">$70</p>
                   </div>
                   <div className="single-page-button">
                     <button>Book</button>

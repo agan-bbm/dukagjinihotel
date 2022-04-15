@@ -84,7 +84,7 @@ export function Rooms() {
                     <p>Living Room</p>
                   </div>
                 </div>
-                <p style={{ color: "#575757" }}>
+                <p className="rooms-p-desc" style={{ color: "#575757" }}>
                   “Elegant, inviting and with a wonderful view over the city and
                   the beautiful park – this is how my hotelier imagined his
                   Sun-Room and I have to admit that I am proud of what he made
@@ -165,7 +165,7 @@ export function Rooms() {
                     <p>Living Room</p>
                   </div>
                 </div>
-                <p style={{ color: "#575757" }}>
+                <p className="rooms-p-desc" style={{ color: "#575757" }}>
                   “Elegant, inviting and with a wonderful view over the city and
                   the beautiful park – this is how my hotelier imagined his
                   Sun-Room and I have to admit that I am proud of what he made
@@ -246,7 +246,7 @@ export function Rooms() {
                     <p>Living Room</p>
                   </div>
                 </div>
-                <p style={{ color: "#575757" }}>
+                <p className="rooms-p-desc" style={{ color: "#575757" }}>
                   “Elegant, inviting and with a wonderful view over the city and
                   the beautiful park – this is how my hotelier imagined his
                   Sun-Room and I have to admit that I am proud of what he made
@@ -327,7 +327,7 @@ export function Rooms() {
                     <p>Living Room</p>
                   </div>
                 </div>
-                <p style={{ color: "#575757" }}>
+                <p className="rooms-p-desc" style={{ color: "#575757" }}>
                   “Elegant, inviting and with a wonderful view over the city and
                   the beautiful park – this is how my hotelier imagined his
                   Sun-Room and I have to admit that I am proud of what he made

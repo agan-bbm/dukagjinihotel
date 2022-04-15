@@ -20,6 +20,9 @@
 .room-img-gallery{
   width: 40%;
 }
+.rooms-p-desc{
+  width: 80%;
+}
 .main-room-infos{
   display: flex;
   justify-content: space-between;
@@ -58,7 +61,7 @@
 .room-desc-info{
   width: 60%;
   DISPLAY: FLEX;
-  padding: 30px;
+  padding:40px 30px;
   flex-direction: column;
   justify-content: space-between;
   /* padding-left: 50px; */
@@ -101,6 +104,7 @@ hr {
 .icon-info {
   display: flex;
   flex-direction: row;
+  width: 80%;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -159,12 +163,16 @@ hr {
   }
   .room-desc-info{
     width: auto;
+    border-left: 1px solid #d6d6d6;
   }
   .main-room-infos{
     flex-direction: column;
   }
   .room-desc-info{
-    padding: 30px 5px;
+    padding: 30px 10px;
+  }
+  .icon-info{
+    width: 100%;
   }
   .icon-rooms-page{
     width: auto;
