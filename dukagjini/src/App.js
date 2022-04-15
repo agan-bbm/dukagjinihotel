@@ -8,6 +8,7 @@ import Booking from "./Pages/Booking";
 import Homepage from "./Pages/Homepage";
 import axios from "axios";
 import Singleroom from "./components/Pages/Singleroom/singleroom";
+import Checkout from "./components/Pages/Checkout/checkout";
 
 console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
@@ -64,6 +65,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/rooms" element={<Rooms />} />
             <Route path="/single-room" element={<Singleroom />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </div>
         <Footer />
