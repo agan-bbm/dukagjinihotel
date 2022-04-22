@@ -152,6 +152,9 @@ hr {
   display: block;
 }
 @media (max-width: 767px) {
+  .rooms{
+    padding-top: 100px;
+  }
   .single-room {
     width: 100%;
   }
