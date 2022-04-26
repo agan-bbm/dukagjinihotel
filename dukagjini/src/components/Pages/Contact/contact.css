@@ -1,0 +1,119 @@
+.contactWrapper {
+  padding-top: 100px;
+}
+
+.titulli {
+  margin: 0;
+}
+.paragraf {
+  margin: 0 0 30px 0;
+}
+.form {
+  width: 80%;
+  /* overflow: hidden; */
+}
+.formAndMap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formDiv {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form label {
+  margin-top: 0px;
+  width: 100%;
+  font-size: 14px;
+  padding-top: 20px;
+  display: inline-block;
+}
+
+.nameEmail {
+  width: calc(100% - 24px);
+  font-size: 12px;
+  border: 0;
+  border-bottom: solid 2px #a6a6a6;
+  padding: 12px;
+  outline: none;
+}
+
+.sendButton {
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px;
+  background-color: #c38f5b;
+  border: 2px solid #c38f5b;
+  color: white;
+  transition-duration: 300ms;
+  /* display: inline-block; */
+}
+
+.sendButton:hover {
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid #c38f5b;
+  color: #c38f5b;
+  transition-duration: 300ms;
+}
+.nameEmail::placeholder {
+  /* padding: 10px; */
+  color: #a6a6a6;
+}
+.message::placeholder {
+  color: #a6a6a6;
+}
+
+/* .formDiv input {
+  width: 70%;
+  font-size: 11px;
+  border: 0;
+  border-bottom: solid 2px #a6a6a6;
+  padding: 10px;
+} */
+.message {
+  width: calc(100% - 24px);
+  height: 150px;
+  padding: 12px;
+  border: 0;
+  border-bottom: solid 2px #a6a6a6;
+  outline: none;
+  resize: none;
+}
+.mapDiv {
+  height: 600px;
+  width: 50%;
+  background-color: whitesmoke;
+}
+
+@media (max-width: 767px) {
+  .formAndMap {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .form {
+    width: 100%;
+  }
+  .formDiv {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .mapDiv {
+    height: 150px;
+    width: 100%;
+    background-color: whitesmoke;
+  }
+
+  .message {
+    height: 100px;
+  }
+}

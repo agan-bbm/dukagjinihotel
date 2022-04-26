@@ -1,62 +1,10 @@
 .aboutBanner {
   padding-top: 150px;
-  background-image: url("../../../../images/aboutBanner.png");
+  background-image: url("../../../../src/images/aboutBanner.png");
   background-size: cover;
-  height: 300px;
-}
-.about-buttons {
-  display: flex;
-  justify-content: space-between;
+  height: 200px;
 }
 
-.about-button {
-  width: 200px;
-  font-size: 22px;
-  color: #e8e8e8;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  text-align: center;
-  cursor: pointer;
-}
-.about-button:hover {
-  color: #000000;
-}
-#about-active {
-  color: #000000;
-  background-color: transparent;
-  border: none;
-  border-bottom: solid 2px #c38f5b;
-}
-.tabName {
-  margin: 13px 0;
-}
-.bannerH {
-  color: #ffffff;
-  font-size: 50px;
-  font-weight: 400;
-}
-.bannerP {
-  color: #ffffff;
-  padding-right: 45%;
-  font-weight: 350;
-}
-.aboutTab {
-  padding: 100px 0;
-  text-align: center;
-}
-.aboutTab h2 {
-  font-size: 38px;
-  font-weight: 400;
-}
-.aboutTab p {
-  padding: 0 20%;
-}
-.aboutTab img {
-  width: 100%;
-  padding-top: 50px;
-}
-/* //Agan */
 .images-grid {
   display: grid;
   grid-column-gap: 10px;
