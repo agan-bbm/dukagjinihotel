@@ -6,6 +6,17 @@
   align-items: center;
   padding-top: 200px;
 }
+#check-avl-rooms{
+  padding: 10px 20px;
+  text-align:center;
+  display: flex;
+  justify-content: center;
+  background-color: #D8B897 !important;
+  width: 100px;
+  color: white;
+  margin: 0 auto;
+  cursor: pointer;
+}
 .booking-mainbutton {
   padding: 15px;
   width: 180px;

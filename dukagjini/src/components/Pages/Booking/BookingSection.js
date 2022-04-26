@@ -16,6 +16,7 @@ import Img3 from "../../../images/3.jpg";
 import bath from "../../../images/bath.png";
 import seaview from "../../../images/seaview.png";
 import balcony from "../../../images/balcony.png";
+import Daterange from "../../Shared/DatePicker/daterange";
 
 function BookingSection() {
   const [dates, setDates] = useState({
@@ -103,7 +104,10 @@ function BookingSection() {
           >
             Book
           </button>
-
+          <div>
+            <Daterange />
+            <butto id="check-avl-rooms">Check Rooms</butto>
+          </div>
           <div className="rooms-container">
             <div className="single-room-card">
               <div>
