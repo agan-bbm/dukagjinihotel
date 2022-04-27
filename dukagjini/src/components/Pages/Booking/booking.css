@@ -4,18 +4,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 200px;
+  padding-top: 100px;
 }
 #check-avl-rooms{
-  padding: 10px 20px;
-  text-align:center;
+  padding: 15px 25px;
+  text-align: center;
   display: flex;
   justify-content: center;
   background-color: #D8B897 !important;
-  width: 100px;
+  width: auto;
   color: white;
   margin: 0 auto;
+  box-shadow: 3px 8px 15px rgb(0 0 0 / 10%);
   cursor: pointer;
+  border: none;
 }
 .booking-mainbutton {
   padding: 15px;

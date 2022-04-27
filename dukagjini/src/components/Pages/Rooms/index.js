@@ -26,6 +26,7 @@ export function Rooms() {
     <>
       <div className="containerWrapper">
         <div className="rooms">
+          <h2 className="all-rooms-heading">Our Rooms</h2>
           <div className="single-room">
             <div className="singleroom-flex">
               <div className="room-img-gallery">

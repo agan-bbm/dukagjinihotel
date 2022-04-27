@@ -1,5 +1,5 @@
 .rooms {
-  padding-top: 200px;
+  padding-top: 100px;
 }
 .room-row {
   display: flex;
@@ -19,6 +19,10 @@
 }
 .room-img-gallery{
   width: 40%;
+}
+.all-rooms-heading{
+  font-weight: 400;
+  font-size: 38px;
 }
 .rooms-p-desc{
   width: 80%;
@@ -153,10 +157,15 @@ hr {
 }
 @media (max-width: 767px) {
   .rooms{
-    padding-top: 100px;
+    padding-top: 80px;
+  }
+  .all-rooms-heading{
+    font-weight: 400;
+    font-size: 30px;
   }
   .single-room {
     width: 100%;
+    padding: 20px 0px;
   }
   .singleroom-flex{
     flex-direction: column;

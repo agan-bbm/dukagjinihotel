@@ -11,6 +11,7 @@ function Daterange() {
     setStartDate(start);
     setEndDate(end);
   };
+  const todayDate = Date.now();
   const formatDate = (date) => {
     let d = new Date(date);
     let month = (d.getMonth() + 1).toString();
@@ -27,15 +28,23 @@ function Daterange() {
   console.log(formatDate(startDate));
   console.log(formatDate(endDate));
   return (
-    <DatePicker
-      selected={startDate}
-      onChange={onChange}
-      startDate={startDate}
-      endDate={endDate}
-      monthsShown={2}
-      selectsRange
-      inline
-    />
+    <>
+      <div className="select-dates-txt">
+        <h2>Select Dates</h2>
+        <p>Book directly with us. Best Rates Generated</p>
+      </div>
+
+      <DatePicker
+        selected={startDate}
+        onChange={onChange}
+        startDate={startDate}
+        endDate={endDate}
+        monthsShown={2}
+        selectsRange
+        inline
+        minDate={todayDate}
+      />
+    </>
   );
 }
 
