@@ -12,7 +12,7 @@
 .about-button {
   width: 200px;
   font-size: 22px;
-  color: #e8e8e8;
+  color: #c8c8c8;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -42,7 +42,7 @@
   font-weight: 350;
 }
 .aboutTab {
-  padding: 100px 0;
+  padding: 50px 0;
   text-align: center;
 }
 .aboutTab h2 {
@@ -56,57 +56,41 @@
   width: 100%;
   padding-top: 50px;
 }
-/* //Agan */
-.images-grid {
-  display: grid;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  padding: 0px 40px;
-}
 
-.div1 {
-  grid-area: 1 / 1 / 3 / 2;
-  background-image: url("../../../../images/portrait.jpg");
-  /* width: auto; */
-  /* height: auto; */
-  background-size: cover;
-}
-
-.div2 {
-  grid-area: 2 / 2 / 3 / 3;
-  background-image: url("../../../../images/landscape.jpg");
-  width: auto;
-  height: 200px;
-  background-size: cover;
-}
-
-.div3 {
-  grid-area: 2 / 3 / 3 / 4;
-  background-image: url("../../../../images/landone.jpg");
-  width: auto;
-  height: 200px;
-  background-size: cover;
-}
-.div4 {
-  grid-area: 1 / 2 / 2 / 4;
-  background-image: url("../../../../images/landtwo.jpg");
-  width: auto;
-  height: 400px;
-  background-size: cover;
-}
 @media (max-width: 767px) {
-  .images-grid {
-    display: flex;
-    flex-direction: column;
-    grid-row-gap: 20px;
-    padding: 0 10px;
+  #about-active {
+    font-weight: 600;
   }
-  .div1,
-  .div2,
-  .div3,
-  .div4 {
-    width: auto;
-    height: 200px;
-    background-position: center;
+  .tabName {
+    font-size: 16px;
+    margin: 13px 0;
+  }
+  .bannerH {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+  }
+  .bannerP {
+    color: #ffffff;
+    padding-right: 0;
+    font-weight: 350;
+  }
+  .aboutTab {
+    padding: 20px 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .aboutTab h2 {
+    font-size: 38px;
+    font-weight: 400;
+  }
+  .aboutTab p {
+    padding: 0;
+  }
+  .aboutTab img {
+    width: 100%;
+    padding-top: 20px;
+    margin: 0;
   }
 }
