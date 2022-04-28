@@ -63,31 +63,32 @@ function Checkout() {
       <div className="checkout">
         {showDesc()}
         {showForm()}
-
-        <button
-          className="form-button default-button"
-          onClick={() => {
-            if (page === 2) {
-              window.location = "/";
-            } else {
-              setPage(page + 1);
-            }
-          }}
-        >
-          Continue
-        </button>
-        <button
-          className="back-button default-button"
-          onClick={() => {
-            if (page === 0) {
-              window.location = "/checkout";
-            } else {
-              setPage(page - 1);
-            }
-          }}
-        >
-          Back
-        </button>
+        <div className="checkout-btns">
+          <button
+            className="form-button default-button"
+            onClick={() => {
+              if (page === 2) {
+                window.location = "/";
+              } else {
+                setPage(page + 1);
+              }
+            }}
+          >
+            Continue
+          </button>
+          <button
+            className="back-button default-button"
+            onClick={() => {
+              if (page === 0) {
+                window.location = "/checkout";
+              } else {
+                setPage(page - 1);
+              }
+            }}
+          >
+            Back
+          </button>
+        </div>
       </div>
     </>
   );

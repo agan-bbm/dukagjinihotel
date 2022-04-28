@@ -39,6 +39,10 @@
     margin: 10px 0px;
     font-weight: 500;
 }
+.checkout-btns{
+    display: flex;
+    flex-direction: column;
+}
 .form-button{
     width: 95%;
     padding: 15px;
@@ -49,9 +53,10 @@
     color: white;
     margin-top: 40px;
     cursor: pointer;
+    margin: 40px auto 0px auto;
 }
 .back-button{
-    margin: 10px;
+    margin: 10px auto 0px auto;
     border: none;
     background: transparent;
     /* border-bottom: 1px solid black; */
