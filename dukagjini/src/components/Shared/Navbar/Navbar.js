@@ -9,6 +9,7 @@ import "./navbar.css";
 // IMAGES
 
 import logo_2 from "../../Utils/logo_2";
+import imgllogo from "../../../images/mobilellogo.png";
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -124,15 +125,28 @@ function Navbar() {
 
         {visible && (
           <div className="mobile-menu">
-            <p className="mobile-menu-link">
-              <Link to="/about">About</Link>
-            </p>
-            <p className="mobile-menu-link">
-              <Link to="/rooms">Rooms</Link>
-            </p>
-            <p className="mobile-menu-link">
-              <Link to="/restaurant">Restaurant</Link>
-            </p>
+            <div className="SvgLogo" id="logomobile-burger">
+              <Link to="/" className="logo-link">
+                <img src={imgllogo} alt="" />
+              </Link>
+            </div>
+            <div className="mobile-menu-div">
+              <p className="mobile-menu-link">
+                <Link to="/about">Rooms</Link>
+              </p>
+              <p className="mobile-menu-link">
+                <Link to="/rooms">Restaurant</Link>
+              </p>
+              <p className="mobile-menu-link">
+                <Link to="/restaurant">About</Link>
+              </p>
+              <p className="mobile-menu-link">
+                <Link to="/about">Contact</Link>
+              </p>
+              <p className="mobile-menu-link">
+                <Link to="/about">Rooms</Link>
+              </p>
+            </div>
           </div>
         )}
         <Link

@@ -30,8 +30,8 @@ function Daterange() {
   return (
     <>
       <div className="select-dates-txt">
-        <h2>Select Dates</h2>
-        <p>Book directly with us. Best Rates Generated</p>
+        <h2 className="range-h2">Select Dates</h2>
+        <p className="range-p">Book directly with us. Best Rates Generated</p>
       </div>
 
       <DatePicker
@@ -42,7 +42,7 @@ function Daterange() {
         monthsShown={2}
         selectsRange
         inline
-        minDate={todayDate}
+        // minDate={todayDate}
       />
     </>
   );

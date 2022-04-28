@@ -65,7 +65,7 @@ function fourthSection() {
                 <p className="price">
                   $35 <span className="pernight">/Night</span>
                 </p>
-                <button>Check Rooms</button>
+                <button className="default-button">Check Rooms</button>
               </div>
             </div>
             <div className="single-room-rec">
@@ -106,7 +106,7 @@ function fourthSection() {
                 <p className="price">
                   $35 <span className="pernight">/Night</span>
                 </p>
-                <button>Check Rooms</button>
+                <button className="default-button">Check Rooms</button>
               </div>
             </div>
             <div className="single-room-rec">
@@ -147,7 +147,7 @@ function fourthSection() {
                 <p className="price">
                   $35 <span className="pernight">/Night</span>
                 </p>
-                <button>Check Rooms</button>
+                <button className="default-button">Check Rooms</button>
               </div>
             </div>
           </div>
@@ -162,7 +162,7 @@ function fourthSection() {
               </p>
             </div>
             <div className="offerRight">
-              <button>Check Rooms</button>
+              <button className="default-button">Check Rooms</button>
             </div>
           </div>
         </div>
@@ -192,7 +192,9 @@ function fourthSection() {
                   tropical beach. Stay away from the crowd and enjoy the beauty
                   and lust.
                 </p>
-                <button className="gridBtn">View our rooms</button>
+                <button className="gridBtn default-button">
+                  View our rooms
+                </button>
               </div>
             </div>
           </div>
@@ -213,7 +215,9 @@ function fourthSection() {
                   relaksoheni në pishinën tonë, e të shijoni edhe pamjet
                   mahnitëse që ofron qyteti i bukur i Pejës.
                 </p>
-                <button className="gridBtn">View our rooms</button>
+                <button className="gridBtn  default-button">
+                  View our rooms
+                </button>
               </div>
             </div>
           </div>

@@ -70,7 +70,9 @@ function ThirdSection() {
               përjetoni komoditet dhe ekperiencë unike. Hotel Dukagjini është
               dhurata më e mirë për ju dhe të dashurit tuaj.
             </p>
-            <button className="bookingThirdButton">View our rooms</button>
+            <button className="bookingThirdButton  default-button">
+              View our rooms
+            </button>
           </div>
         </div>
       </div>

@@ -17,20 +17,21 @@
 .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header{
     position: absolute !important;
     top: -50px;
-}
-.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header{
-    left: 40%;
+    color: #CA9E72 !important;
+    font-weight: 300 !important;
+    font-size: 30px !important;
+    width: 100%;
 }
 
 .react-datepicker__navigation--next{
     position: absolute;
     top: -46px !important;
-    right: 17% !important;
+    /* right: 17% !important; */
 }
 .react-datepicker__navigation--previous{
     position: absolute;
     top: -46px !important;
-    left: 17% !important;
+    /* left: 17% !important; */
 }
 
 
@@ -86,6 +87,9 @@
     border-radius: 0px 10px 10px 0px !important;
 
 }
+.react-datepicker__current-month:nth-of-type(2){
+    left: 0 !important;
+}
 @media(min-width:1200px){
 
    
@@ -97,9 +101,9 @@
     text-align: center;
 }
 @media(max-width:767px){
-    #root > div > div.homepage > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(5){
+    /* #root > div > div.homepage > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(5){
         display: none;
-    }
+    } */
    
     .react-datepicker__current-month{
         font-size: 20px !important;
@@ -111,6 +115,16 @@
     top: 45 !important;
     }
     .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header{
-        top: -45px !important;
+        /* margin-top: 0px !important; */
+        position: relative !important;
+    }
+    /* .react-datepicker__month-container{
+        margin: 30px 20px;
+    } */
+    /* #root > div > div.homepage > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(4){
+        margin-top: 50px;;
+    } */
+    .react-datepicker .react-datepicker__month-container:nth-of-type(2){
+        display: none;
     }
 }

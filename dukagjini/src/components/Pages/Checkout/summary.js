@@ -88,8 +88,8 @@ export function Summary(props) {
                 <h4 id="price">$120,00</h4>
                 <p id="nights">1 night, 2 persons</p>
               </div>
-              <div className="book-button">
-                <button>Reserve</button>
+              <div className="book-button default-button">
+                <butto className="default-button">Reserve</butto>
               </div>
               {/* <div className="details-button">
                     <a href="">View</a>

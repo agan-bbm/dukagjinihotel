@@ -40,10 +40,10 @@ function FirstSection() {
                 male të larta, Hotel Dukagjini vendos një standard të ri për
                 mikpritje dhe shërbim.
               </p>
-              <button> View our rooms</button>
+              <button className="default-button"> View our rooms</button>
               <div className="bookingFirstBanner">
                 <div className="choosing-option">
-                  <label for="start">Start date:</label>
+                  <p for="start">Start date:</p>
 
                   <input
                     type="date"
@@ -56,7 +56,7 @@ function FirstSection() {
                   ></input>
                 </div>
                 <div className="choosing-option">
-                  <label for="start">Start date:</label>
+                  <p for="start">Start date:</p>
 
                   <input
                     type="date"
@@ -69,7 +69,7 @@ function FirstSection() {
                   ></input>
                 </div>
                 <div className="choosing-option">
-                  <label for="start">Start date:</label>
+                  <p for="start">Start date:</p>
 
                   <input
                     type="date"
@@ -81,8 +81,8 @@ function FirstSection() {
 <input "
                   ></input>
                 </div>
-                <div>
-                  <button> Check rooms</button>
+                <div className="firstButtonRes">
+                  <button className="default-button"> Check rooms</button>
                 </div>
               </div>
             </div>

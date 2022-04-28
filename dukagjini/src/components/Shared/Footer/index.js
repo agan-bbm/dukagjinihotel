@@ -105,7 +105,7 @@ function Footer() {
           </a>
         </div>
       </div>
-      <div className="sticky">
+      {/* <div className="sticky">
         <div className="sticky-content">
           <p>Book directly with Us</p>
           <div className="booking-footer-inputs">
@@ -133,7 +133,7 @@ function Footer() {
             <button className="available">Check Availability</button>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

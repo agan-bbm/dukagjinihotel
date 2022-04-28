@@ -98,7 +98,7 @@ export function Rooms() {
                     <p id="nights">1 night, 2 persons</p>
                   </div>
                   <div className="book-button">
-                    <button>Reserve</button>
+                    <button className="default-button">Reserve</button>
                   </div>
                   {/* <div className="details-button">
                     <a href="">View</a>
@@ -179,7 +179,7 @@ export function Rooms() {
                     <p id="nights">1 night, 2 persons</p>
                   </div>
                   <div className="book-button">
-                    <button>Reserve</button>
+                    <button className="default-button">Reserve</button>
                   </div>
                   {/* <div className="details-button">
                     <a href="">View</a>
@@ -260,7 +260,7 @@ export function Rooms() {
                     <p id="nights">1 night, 2 persons</p>
                   </div>
                   <div className="book-button">
-                    <button>Reserve</button>
+                    <button className="default-button">Reserve</button>
                   </div>
                   {/* <div className="details-button">
                     <a href="">View</a>
@@ -341,7 +341,7 @@ export function Rooms() {
                     <p id="nights">1 night, 2 persons</p>
                   </div>
                   <div className="book-button">
-                    <button>Reserve</button>
+                    <button className="default-button">Reserve</button>
                   </div>
                   {/* <div className="details-button">
                     <a href="">View</a>

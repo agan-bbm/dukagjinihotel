@@ -136,7 +136,7 @@ function Singleroom() {
                     <p className="total-price">$70</p>
                   </div>
                   <div className="single-page-button">
-                    <button>Book</button>
+                    <button className="default-button">Book</button>
                   </div>
                 </div>
               </div>

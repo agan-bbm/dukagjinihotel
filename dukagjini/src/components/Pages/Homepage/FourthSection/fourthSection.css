@@ -212,6 +212,7 @@
         font-size: 22px;
         padding: 20px;
     }
+  
     #recommendationParagraph {
         width: 100%;
         text-align: center;
@@ -219,6 +220,7 @@
     }
     .roomRecomendations{
         flex-direction: column;
+        padding-top: 0px;
     }
     .single-room-rec{
         width: auto;
@@ -230,7 +232,7 @@
         flex-direction: column;
     }
     .fourthSection h2{
-        padding: 0;
+        padding-top: 20px;
     }
     .offerLeft{
         width: 100%;

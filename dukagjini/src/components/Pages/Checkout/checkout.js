@@ -65,7 +65,7 @@ function Checkout() {
         {showForm()}
 
         <button
-          className="form-button"
+          className="form-button default-button"
           onClick={() => {
             if (page === 2) {
               window.location = "/";
@@ -77,7 +77,7 @@ function Checkout() {
           Continue
         </button>
         <button
-          className="back-button"
+          className="back-button default-button"
           onClick={() => {
             if (page === 0) {
               window.location = "/checkout";

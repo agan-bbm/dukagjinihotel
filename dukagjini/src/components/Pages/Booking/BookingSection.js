@@ -110,7 +110,9 @@ function BookingSection() {
           <div>
             <Daterange />
             <div>
-              <button id="check-avl-rooms">Check Rooms</button>
+              <button className="default-button" id="check-avl-rooms">
+                Check Rooms
+              </button>
             </div>
           </div>
           <Rooms />
