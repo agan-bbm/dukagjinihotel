@@ -1,4 +1,5 @@
 import React from "react";
+import { AddressMap, Map } from "../About/map";
 import "./contact.css";
 
 function Contact() {
@@ -54,7 +55,9 @@ function Contact() {
                 </div>
               </form>
             </div>
-            <div className="mapDiv">{/* <Map /> */}</div>
+            <div className="mapDiv">
+              <AddressMap />
+            </div>
           </div>
         </div>
       </div>
