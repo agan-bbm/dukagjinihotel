@@ -108,25 +108,47 @@ function Singleroom() {
                 </p>
                 <hr />
                 <div className="date-inputs">
-                  <div>
+                  <div className="sr-dates-flex">
                     <div className="select-dates">
                       <label htmlFor="checkin">Check In Date</label>
                       <input type="date" name="checkin" />
                     </div>
                     <div className="select-dates">
-                      <label htmlFor="checkin">Check In Date</label>
+                      <label htmlFor="checkin">Check out Date</label>
                       <input type="date" name="checkin" />
                     </div>
                   </div>
 
-                  <div>
-                    <div className="select-dates">
-                      <label htmlFor="checkin">Check In Date</label>
-                      <input type="date" name="checkin" />
+                  <div className="sr-selects-flex">
+                    <div className="select-dates select">
+                      <label htmlFor="checkin">Adult</label>
+                      <select name="checkin" id="">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+
+                        <option value="2">2</option>
+
+                        <option value="3">3</option>
+
+                        <option value="4">4</option>
+
+                        <option value="5">5</option>
+                      </select>
                     </div>
-                    <div className="select-dates">
-                      <label htmlFor="checkin">Check In Date</label>
-                      <input type="date" name="checkin" />
+                    <div className="select-dates select">
+                      <label htmlFor="checkin">Children</label>
+                      <select name="checkin" id="">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+
+                        <option value="2">2</option>
+
+                        <option value="3">3</option>
+
+                        <option value="4">4</option>
+
+                        <option value="5">5</option>
+                      </select>
                     </div>
                   </div>
                 </div>

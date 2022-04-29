@@ -38,12 +38,48 @@
 }
 .date-inputs{
     display: flex;
+    flex-direction: column;
 }
 .sr-info-left{
     padding-right: 50px;
 }
+.select-dates label{
+    color: #686868;
+    font-weight: 600;
+}
+.select{
+    display: flex;
+    flex-direction: column;
+}
 .select-dates{
     margin: 20px 0px;
+    width: 50%;
+}
+.select-dates input{
+    border-radius: 20px;
+    padding: 5px;
+    text-align: center;
+    background: #FAF5F0;
+    color: #A07346;
+    border: none;
+    margin-top: 10px;
+    flex-direction: row-reverse;
+}
+.select-dates select{
+    width: 50px;
+    border-radius: 20px;
+    padding: 5px;
+    text-align: center;
+    background: #FAF5F0;
+    color: #A07346;
+    border: none;
+    margin-top: 10px;
+}
+.sr-dates-flex{
+display: flex;
+}
+.sr-selects-flex{
+display: flex;
 }
 hr{
     border: 1px solid #D8D8D8;
@@ -105,8 +141,9 @@ hr{
     font-weight: 400;
     margin-top: 0;
 }
-.title-and-location{
-    padding-top: 50px;
+.title-and-location h2 {
+    /* padding-top: 50px; */
+    margin: 10px 0px;
 }
 .total{
     margin-bottom: 0;

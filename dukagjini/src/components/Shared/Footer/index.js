@@ -45,53 +45,36 @@ function Footer() {
               </div> */}
             </div>
             <div className="about-footer">
-              <h2>About</h2>
-              <ul>
-                <li>Get the Cooper Kit</li>
-              </ul>
-            </div>
-            <div className="contact-footer">
-              <h2>Rooms</h2>
-
+              <h2 className="footer-link-heading">About</h2>
               <ul className="footerLists">
-                <li>Get the Cooper Kit</li>
-                <li>See Inside a Kit</li>
                 <li>About Us</li>
               </ul>
             </div>
             <div className="contact-footer">
-              <h2>Offers</h2>
+              <h2 className="footer-link-heading">Rooms</h2>
 
               <ul className="footerLists">
-                <li>Get the Cooper Kit</li>
-                <li>See Inside a Kit</li>
-                <li>About Us</li>
+                <li>Our rooms</li>
+                <li>Lobby</li>
+                <li>Restaurant</li>
               </ul>
             </div>
-            <div className="socials-footer">
-              <h2>Social</h2>
+            <div className="contact-footer">
+              <h2 className="footer-link-heading">Offers</h2>
 
-              <ul>
-                <li>
-                  <div className="icon-socials">
-                    {/* <img src={facebook} alt="" /> Facebook */}
-                    <p>Facebook</p>
-                  </div>
-                </li>
-                <li>
-                  <div className="icon-socials">
-                    <p>Instagram</p>
+              <ul className="footerLists">
+                <li>Our offers</li>
+                <li>Contact us</li>
+                {/* <li>About Us</li> */}
+              </ul>
+            </div>
+            <div className="contact-footer">
+              <h2 className="footer-link-heading">Social</h2>
 
-                    {/* <img src={instagram} alt="" /> Instagram */}
-                  </div>
-                </li>
-                <li>
-                  <div className="icon-socials">
-                    <p>Twitter</p>
-
-                    {/* <img src={twitter} alt="" /> Twitter */}
-                  </div>
-                </li>
+              <ul className="footerLists">
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Twitter</li>
               </ul>
             </div>
           </div>
