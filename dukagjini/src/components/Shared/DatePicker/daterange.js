@@ -3,12 +3,12 @@ import DatePicker from "react-datepicker";
 import "./daterange.css";
 
 import "react-datepicker/dist/react-datepicker.css";
-function Daterange() {
+function Daterange({ dates, setDates }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
   const onChange = (dates) => {
     const [start, end] = dates;
-    setStartDate(start);
+    setDates({ ...dates, from: formatDate(start), to: formatDate(end) });
     setEndDate(end);
   };
   const todayDate = Date.now();

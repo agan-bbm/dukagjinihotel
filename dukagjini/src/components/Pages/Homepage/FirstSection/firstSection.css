@@ -5,6 +5,13 @@
 .leftSide{
   width: 70%;
 }
+.select-dates-home  select{
+  border: none !important;
+background: transparent !important;
+border-bottom: 1px solid #CA9E72 !important;
+color: #CA9E72 !important;
+width: 100px;
+}
 .leftContainer{
   padding: 150px 80px;
   padding-right: 25%;
@@ -125,19 +132,30 @@ padding-top: 30px;
 .choosing-option{
   padding: 0px 20px;
   display: block;
+  width: 100px !important;
+  text-align: left;
 }
-.bookingFirstBanner :nth-child(1){
+.choosing-option input{
+ 
+  width: 100px !important;
+}
+.firstButtonRes{
+  position: absolute;
+    top: calc(100%-50px);
+    top: calc(100% - 50px);
+}
+/* .bookingFirstBanner :nth-child(1){
   grid-area: 1 / 1 / 2 / 2;
 }
 .bookingFirstBanner :nth-child(2){
   grid-area: 1 / 2 / 2 / 3;
 }
 .bookingFirstBanner :nth-child(3){
-  grid-area: 1 / 1 / 4 / auto;
+  grid-area: 1 / 1 / 3 / 3;
 }
 .bookingFirstBanner :nth-child(4){
-  grid-area: 3 / 1 / 4 / 3;
-}
+  grid-area: 1 / 2 / 3 / 3;
+} */
 .leftContainer p{
   font-weight: 300;
 }
@@ -147,6 +165,7 @@ padding-top: 30px;
  text-align: left;
   font-weight: 600;
 }
+
 .firstButtonRes{
   width: 100% !important;
 }
@@ -154,5 +173,7 @@ padding-top: 30px;
   background-color: #CA9E72;
   width: 100% !important;
   color: white;
+  padding: 0 !important;
+  height: 50px;
 }
 }

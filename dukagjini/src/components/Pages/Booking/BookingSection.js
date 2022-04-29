@@ -46,7 +46,9 @@ function BookingSection() {
       })
       .catch((err) => console.log(err));
   }
-  console.log(rooms.rooms);
+  console.log(rooms.rooms.filter((e) => e.IsFree));
+  console.log(dates.from);
+  console.log(dates.to);
 
   const formatDate = (date) => {
     let d = new Date(date);
@@ -68,6 +70,7 @@ function BookingSection() {
     3: false,
     4: false,
   });
+  console.log(rooms);
 
   return (
     <>
@@ -108,9 +111,15 @@ function BookingSection() {
             Book
           </button> */}
           <div>
-            <Daterange />
+            <Daterange dates={dates} setDates={setDates} />
             <div>
-              <button className="default-button" id="check-avl-rooms">
+              <button
+                className="default-button"
+                id="check-avl-rooms"
+                onClick={() => {
+                  getRooms();
+                }}
+              >
                 Check Rooms
               </button>
             </div>

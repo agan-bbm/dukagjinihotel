@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // SLIDER
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
@@ -18,7 +18,10 @@ import Img2 from "../../../../images/2.jpg";
 import Img3 from "../../../../images/3.jpg";
 import Img4 from "../../../../images/4.jpg";
 
+import DatePicker from "react-datepicker";
 function FirstSection() {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
   return (
     // <div className="hompage-first-section">
     //   <div className="coverImage">
@@ -43,43 +46,60 @@ function FirstSection() {
               <button className="default-button"> View our rooms</button>
               <div className="bookingFirstBanner">
                 <div className="choosing-option">
-                  <p for="start">Start date:</p>
-
-                  <input
-                    type="date"
-                    id="start"
-                    name="trip-start"
-                    value="2018-07-22"
-                    min="2018-01-01"
-                    max="2018-12-31>
-<input "
-                  ></input>
+                  <label htmlFor="checkin">Check In</label>
+                  <DatePicker
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                    selectsStart
+                    startDate={startDate}
+                    endDate={endDate}
+                    minDate={startDate}
+                  />
                 </div>
                 <div className="choosing-option">
-                  <p for="start">Start date:</p>
-
-                  <input
-                    type="date"
-                    id="start"
-                    name="trip-start"
-                    value="2018-07-22"
-                    min="2018-01-01"
-                    max="2018-12-31>
-<input "
-                  ></input>
+                  <label htmlFor="checkin">Check Out</label>
+                  <DatePicker
+                    selected={endDate}
+                    onChange={(date) => setEndDate(date)}
+                    selectsEnd
+                    // startDate={startDate}
+                    endDate={endDate}
+                    minDate={startDate}
+                  />
                 </div>
                 <div className="choosing-option">
-                  <p for="start">Start date:</p>
+                  <div className="select-dates-home select">
+                    <label htmlFor="checkin">Adults</label>
+                    <select name="checkin" id="">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
 
-                  <input
-                    type="date"
-                    id="start"
-                    name="trip-start"
-                    value="2018-07-22"
-                    min="2018-01-01"
-                    max="2018-12-31>
-<input "
-                  ></input>
+                      <option value="2">2</option>
+
+                      <option value="3">3</option>
+
+                      <option value="4">4</option>
+
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="choosing-option">
+                  <div className="select-dates-home select">
+                    <label htmlFor="checkin">Children</label>
+                    <select name="checkin" id="">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+
+                      <option value="2">2</option>
+
+                      <option value="3">3</option>
+
+                      <option value="4">4</option>
+
+                      <option value="5">5</option>
+                    </select>
+                  </div>
                 </div>
                 <div className="firstButtonRes">
                   <button className="default-button"> Check rooms</button>
