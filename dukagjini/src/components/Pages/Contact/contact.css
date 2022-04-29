@@ -9,7 +9,7 @@
   margin: 0 0 30px 0;
 }
 .form {
-  /* width: 80%; */
+  width: 80%;
   /* overflow: hidden; */
 }
 .formAndMap {
@@ -108,13 +108,10 @@
   }
 
   .mapDiv {
-
     width: 100%;
+    height: 200px;
     background-color: whitesmoke;
   }
-.google-map-code iframe{
-  width: 100%;
-}
   .message {
     height: 100px;
   }
