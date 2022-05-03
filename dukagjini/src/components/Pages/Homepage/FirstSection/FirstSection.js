@@ -19,7 +19,7 @@ import Img3 from "../../../../images/3.jpg";
 import Img4 from "../../../../images/4.jpg";
 
 import DatePicker from "react-datepicker";
-function FirstSection() {
+function FirstSection({ posts }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   return (
@@ -32,10 +32,7 @@ function FirstSection() {
         <div className="leftSide">
           <div className="containerWrapper">
             <div className="leftContainer">
-              <h2>
-                Mirësevini në Hotel Dukagjini, një ikonë historike e vendosur në
-                zemër të qytetit të Pejës.
-              </h2>
+              <h2>{posts[2].acf.first.firstheading}</h2>
               <p>
                 Hoteli paraqet një arkitekturë unike që tërheq banorë dhe
                 vizitorë duke qenë edhe pikë referimi për qytetin e Pejës. I

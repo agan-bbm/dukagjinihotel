@@ -15,13 +15,13 @@ function Homepage({ posts }) {
   return (
     <>
       <div className="homepage">
-        <FirstSection />
+        <FirstSection posts={posts} />
         <SecondSection posts={posts} />
         <ThirdSection />
 
-        <FourthSection />
-        <FifthSection />
-        <SixthSection />
+        <FourthSection posts={posts} />
+        <FifthSection posts={posts} />
+        <SixthSection posts={posts} />
         {/* <ImageMasonry /> */}
         <Faq />
       </div>
