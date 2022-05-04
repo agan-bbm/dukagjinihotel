@@ -25,8 +25,8 @@ function Daterange({ dates, setDates }) {
     }
     return [year, month, day].join("/");
   };
-  console.log(formatDate(startDate));
-  console.log(formatDate(endDate));
+  // console.log(formatDate(startDate));
+  // console.log(formatDate(endDate));
   return (
     <>
       <div className="select-dates-txt">
