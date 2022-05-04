@@ -14,20 +14,14 @@ function SecondSection({ posts }) {
         <div className="secondContainer">
           <div className="seconSectionTop">
             <div className="secondSectionLeft">
-              <h2 className="secondSectionHeader">
-                {posts[2].acf.secondbanner.secondparagraph}
-              </h2>
-              <p className="secondSectionParagraph">
-                Përjetoni rehati dhe relaksim në ambientet e Hotel Dukagjinit.
-                Me një standart të lartë të shërbimit dhe mirëkpritjes, ju do të
-                përjetoni një pushim të paharruar.
-              </p>
+              <h2 className="secondSectionHeader">{posts[2].acf.secondbanner.secondheading}</h2>
+              <p className="secondSectionParagraph">{posts[2].acf.secondbanner.secondparagraph}</p>
             </div>
             <div className="secondSectionRight"></div>
           </div>
           <div className="secondImgContainer">
             <div className="secondImg">
-              <img src={secondBanner}></img>
+              <img src={posts[2].acf.secondbanner.secondbannerimg} />
             </div>
           </div>
         </div>

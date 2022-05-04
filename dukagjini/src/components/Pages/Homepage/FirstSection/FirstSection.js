@@ -33,25 +33,12 @@ function FirstSection({ posts }) {
           <div className="containerWrapper">
             <div className="leftContainer">
               <h2>{posts[2].acf.first.firstheading}</h2>
-              <p>
-                Hoteli paraqet një arkitekturë unike që tërheq banorë dhe
-                vizitorë duke qenë edhe pikë referimi për qytetin e Pejës. I
-                vendosur në qendër të qytetit, i rrethuar nga lumi Lumbardh dhe
-                male të larta, Hotel Dukagjini vendos një standard të ri për
-                mikpritje dhe shërbim.
-              </p>
+              <p>{posts[2].acf.first.firstparagraph}</p>
               <button className="default-button"> View our rooms</button>
               <div className="bookingFirstBanner">
                 <div className="choosing-option">
                   <label htmlFor="checkin">Check In</label>
-                  <DatePicker
-                    selected={startDate}
-                    onChange={(date) => setStartDate(date)}
-                    selectsStart
-                    startDate={startDate}
-                    endDate={endDate}
-                    minDate={startDate}
-                  />
+                  <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} selectsStart startDate={startDate} endDate={endDate} minDate={startDate} />
                 </div>
                 <div className="choosing-option">
                   <label htmlFor="checkin">Check Out</label>
@@ -105,7 +92,18 @@ function FirstSection({ posts }) {
             </div>
           </div>
         </div>
-        <div className="rightSide">{/*  */}</div>
+        <div className="rightSide">
+          {/* <img
+            src={posts[2].acf.first.firstbannerimg}
+            srcSet={`${posts[2].acf.first.firstbannerimgmobile} 768w, ${posts[2].acf.first.firstbannerimgtablet} 1240w, ${posts[2].acf.first.firstbannerimg} 1280w`}
+          /> */}
+
+          <img className="desktopVisibility" src={posts[2].acf.first.firstbannerimg} />
+
+          <img className="tabletVisibility" src={posts[2].acf.first.firstbannerimgtablet} />
+
+          <img className="mobileVisibility" src={posts[2].acf.first.firstbannerimgmobile} />
+        </div>
       </div>
     </>
   );
