@@ -10,14 +10,8 @@ import "swiper/css";
 //import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-//import Img1 from "../../../../images/1.jpg";
-import Img2 from "../../../../images/2.png";
-import Img3 from "../../../../images/2.png";
-import Img4 from "../../../../images/2.png";
-
-import Img1 from "../../../../images/2.png";
-
-function ThirdSection() {
+function ThirdSection({ posts }) {
+  console.log(posts);
   return (
     <div className="thirdSection">
       <Swiper
@@ -39,40 +33,33 @@ function ThirdSection() {
         }}
       >
         <SwiperSlide>
-          <img src={Img1} />
+          <img src={posts[2].acf.thirdbanner.thirdslider.firstsliderimg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Img2} />
+          <img src={posts[2].acf.thirdbanner.thirdslider.secondslideimg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Img3} />
+          <img src={posts[2].acf.thirdbanner.thirdslider.thirdslideimg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Img4} />
+          <img src={posts[2].acf.thirdbanner.thirdslider.fourthslideimg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Img2} />
+          <img src={posts[2].acf.thirdbanner.thirdslider.fifthsliderimg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Img1} />
+          <img src={posts[2].acf.thirdbanner.thirdslider.sixthsliderimg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={Img4} />
+          <img src={posts[2].acf.thirdbanner.thirdslider.seventhsliderimg} />
         </SwiperSlide>
       </Swiper>
       <div className="containerWrapper">
         <div className="thirdSection1">
           <div className="thirdsectionDesc">
-            <h2>Njihuni me ambientet e Hotel Dukagjinit</h2>
-            <p>
-              Me një ekip të pasionuar dhe të palodhur në punën që bëjnë, kemi
-              arritur t'iu sjellim momente magjike. Në Hotel Dukagjini,
-              përjetoni komoditet dhe ekperiencë unike. Hotel Dukagjini është
-              dhurata më e mirë për ju dhe të dashurit tuaj.
-            </p>
-            <button className="bookingThirdButton  default-button">
-              View our rooms
-            </button>
+            <h2>{posts[2].acf.thirdbanner.thirdheading}</h2>
+            <p>{posts[2].acf.thirdbanner.thirdheading}</p>
+            <button className="bookingThirdButton  default-button">View our rooms</button>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ function Homepage({ posts }) {
       <div className="homepage">
         <FirstSection posts={posts} />
         <SecondSection posts={posts} />
-        <ThirdSection />
+        <ThirdSection posts={posts} />
 
         <FourthSection posts={posts} />
         <FifthSection posts={posts} />

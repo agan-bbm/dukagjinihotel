@@ -7,7 +7,7 @@ import "./secondSection.css";
 import secondBanner from "../../../../images/secondsectionbanner.png";
 
 function SecondSection({ posts }) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <div className="secondSection">
       <div className="containerWrapper">
@@ -21,7 +21,11 @@ function SecondSection({ posts }) {
           </div>
           <div className="secondImgContainer">
             <div className="secondImg">
-              <img src={posts[2].acf.secondbanner.secondbannerimg} />
+              <img className="desktopVisibility" src={posts[2].acf.secondbanner.secondbannerimg} />
+
+              <img className="tabletVisibility" src={posts[2].acf.secondbanner.secondbannerimgtablet} />
+
+              <img className="mobileVisibility" src={posts[2].acf.secondbanner.secondbannerimgmobile} />
             </div>
           </div>
         </div>

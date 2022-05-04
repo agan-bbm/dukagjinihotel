@@ -1,7 +1,7 @@
 import React from "react";
 import Accordion from "./accordion";
 import "./Faq.css";
-function Faq() {
+function Faq({ posts }) {
   const accordionData = [
     {
       title: "What time do you open?",
@@ -39,11 +39,7 @@ function Faq() {
     <>
       <div className="faqs">
         <div className="containerWrapper">
-          <h1
-            style={{ textAlign: "center", fontSize: "28px", fontWeight: "400" }}
-          >
-            Pyetjet më të shpeshta!
-          </h1>
+          <h1 style={{ textAlign: "center", fontSize: "28px", fontWeight: "400" }}>Pyetjet më të shpeshta!</h1>
           <div className="accordion">
             {accordionData.map(({ title, content }) => (
               <Accordion title={title} content={content} />
