@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./singleroom.css";
 
 import fullrightimg from "../../../images/fullrightimg.png";
@@ -8,14 +8,40 @@ import livingroom from "../../../images/user.svg";
 import bath from "../../../images/bed.svg";
 import seaview from "../../../images/dashboard.svg";
 import balcony from "../../../images/wifi.svg";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 function Singleroom() {
+  const params = useParams();
+  console.log(params);
+
+  const [rooms, setRooms] = useState({
+    rooms: [],
+    isLoaded: false,
+  });
+  useEffect(() => {
+    axios
+      .get(
+        "http://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/Rooms/" +
+          params.id
+      )
+      .then((res) => {
+        setRooms({
+          ...rooms,
+          rooms: res.data,
+          isLoaded: true,
+        });
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  console.log(rooms);
   return (
     <>
       <div className="single-room-page">
         <div className="containerWrapper">
           <div>
-            <h2 className="single-room-title">Standard Room</h2>
+            {/* <h2 className="single-room-title">Standard Room</h2> */}
+            <h2>{rooms.rooms.acf.room.name}</h2>
           </div>
 
           <div className="review-single-room">

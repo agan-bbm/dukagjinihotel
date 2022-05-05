@@ -21,8 +21,10 @@ import bath from "../../../images/bed.svg";
 import seaview from "../../../images/dashboard.svg";
 import balcony from "../../../images/wifi.svg";
 import axios from "axios";
+import Singleroom from "../Singleroom/singleroom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
-export function Rooms() {
+export function Rooms(props) {
   const [state, setState] = useState({
     posts: [],
     isLoaded: false,
@@ -76,6 +78,7 @@ export function Rooms() {
         break;
     }
   });
+
   // console.log(rooms.rooms[5].acf.room.images[0].image1);
 
   return (
@@ -156,9 +159,11 @@ export function Rooms() {
                       <p>{e.acf.room.personnight}</p>
                     </div>
                     <div className="book-button">
-                      <button className="default-button">
-                        {e.acf.room.button}
-                      </button>
+                      <Link to={"/single-room/" + e.id}>
+                        <button className="default-button">
+                          {e.acf.room.button}
+                        </button>
+                      </Link>
                     </div>
                     {/* <div className="details-button">
                     <a href="">View</a>

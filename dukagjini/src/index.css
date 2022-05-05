@@ -52,4 +52,5 @@ body {
   padding: 15px 0px !important;
   width: 150px !important;
   font-size: 14px !important;
+  cursor: pointer;
 }
