@@ -44,22 +44,15 @@ function ThirdSection({ posts }) {
         <SwiperSlide>
           <img src={posts[2].acf.thirdbanner.thirdslider.fourthslideimg} />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src={posts[2].acf.thirdbanner.thirdslider.fifthsliderimg} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={posts[2].acf.thirdbanner.thirdslider.sixthsliderimg} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={posts[2].acf.thirdbanner.thirdslider.seventhsliderimg} />
-        </SwiperSlide>
       </Swiper>
       <div className="containerWrapper">
         <div className="thirdSection1">
           <div className="thirdsectionDesc">
             <h2>{posts[2].acf.thirdbanner.thirdheading}</h2>
             <p>{posts[2].acf.thirdbanner.thirdheading}</p>
-            <button className="bookingThirdButton  default-button">View our rooms</button>
+            <button className="bookingThirdButton  default-button">
+              View our rooms
+            </button>
           </div>
         </div>
       </div>
