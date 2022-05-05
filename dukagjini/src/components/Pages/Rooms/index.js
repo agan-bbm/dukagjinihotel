@@ -95,6 +95,13 @@ export function Rooms() {
                     // onSlideChange={() => console.log("slide change")}
                     // onSwiper={(swiper) => console.log(swiper)}
                   >
+                    {e.acf.room.images
+                      ? e.acf.room.images.map((img) => (
+                          <SwiperSlide>
+                            <img src={img.length > 0 ? img : ""} />
+                          </SwiperSlide>
+                        ))
+                      : ""}
                     {/* <SwiperSlide>
                       <img src={rooms.rooms[5].acf.room.images[0].image1.url} />
                     </SwiperSlide>
