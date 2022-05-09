@@ -14,6 +14,7 @@ import bath from "../../../../images/bathhub.svg";
 import balcony from "../../../../images/user.svg";
 import wifi from "../../../../images/wifi.svg";
 import recommendedRoom from "../../../../images/recommendedRoom.png";
+import { Link } from "react-router-dom";
 
 function fourthSection() {
   return (
@@ -29,7 +30,7 @@ function fourthSection() {
           <div className="roomRecomendations">
             <div className="single-room-rec">
               <img src={recommendedRoom} alt="" />
-              <h4>Deluxe Room</h4>
+              <h4>Standard Double Queen Room</h4>
               <p className="recpar">
                 A 120sq foot bedroom apartment with a view.
               </p>
@@ -65,12 +66,14 @@ function fourthSection() {
                 <p className="price">
                   $35 <span className="pernight">/Night</span>
                 </p>
-                <button className="default-button">Check Rooms</button>
+                <Link to="/single-room/87">
+                  <button className="default-button">Check Rooms</button>
+                </Link>
               </div>
             </div>
             <div className="single-room-rec">
               <img src={recommendedRoom} alt="" />
-              <h4>Deluxe Room</h4>
+              <h4>Standard Double Queen Room</h4>
               <p className="recpar">
                 A 120sq foot bedroom apartment with a view.
               </p>
@@ -106,12 +109,14 @@ function fourthSection() {
                 <p className="price">
                   $35 <span className="pernight">/Night</span>
                 </p>
-                <button className="default-button">Check Rooms</button>
+                <Link to="/single-room/87">
+                  <button className="default-button">Check Rooms</button>
+                </Link>
               </div>
             </div>
             <div className="single-room-rec">
               <img src={recommendedRoom} alt="" />
-              <h4>Deluxe Room</h4>
+              <h4>Standard Double Queen Room</h4>
               <p className="recpar">
                 A 120sq foot bedroom apartment with a view.
               </p>
@@ -147,7 +152,9 @@ function fourthSection() {
                 <p className="price">
                   $35 <span className="pernight">/Night</span>
                 </p>
-                <button className="default-button">Check Rooms</button>
+                <Link to="/single-room/87">
+                  <button className="default-button">Check Rooms</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -162,7 +169,10 @@ function fourthSection() {
               </p>
             </div>
             <div className="offerRight">
-              <button className="default-button">Check Rooms</button>
+              <Link to="booking">
+                {" "}
+                <button className="default-button">Check Rooms</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -192,9 +202,12 @@ function fourthSection() {
                   tropical beach. Stay away from the crowd and enjoy the beauty
                   and lust.
                 </p>
-                <button className="gridBtn default-button">
-                  View our rooms
-                </button>
+
+                <Link to="/rooms">
+                  <button className="gridBtn default-button">
+                    View our rooms
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -215,9 +228,11 @@ function fourthSection() {
                   relaksoheni në pishinën tonë, e të shijoni edhe pamjet
                   mahnitëse që ofron qyteti i bukur i Pejës.
                 </p>
-                <button className="gridBtn  default-button">
-                  View our rooms
-                </button>
+                <Link to="/rooms">
+                  <button className="gridBtn default-button">
+                    View our rooms
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

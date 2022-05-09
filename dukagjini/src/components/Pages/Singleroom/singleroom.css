@@ -9,7 +9,7 @@
     display: flex;
 }
 .grid-right-side{
-    margin-left: 20px;
+    margin-left: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -152,6 +152,22 @@ hr{
     margin: 0 auto;
     font-size: 38px;
     font-weight: 400;
+}
+@media(min-width:768px){
+    .grid-left-side{
+        height: 500px;
+    }
+    .grid-left-side img{
+        height: 500px;
+    }
+    .grid-right-side{
+        height: 500px;
+    }
+    .grid-right-side img{
+        height: 250px;
+        width: 100%;
+    }
+
 }
 @media(max-width:767px){
     .single-room-title{

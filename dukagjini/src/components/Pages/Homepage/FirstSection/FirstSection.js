@@ -19,6 +19,7 @@ import Img3 from "../../../../images/3.jpg";
 import Img4 from "../../../../images/4.jpg";
 
 import DatePicker from "react-datepicker";
+import { Link } from "react-router-dom";
 function FirstSection({ posts }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -34,11 +35,21 @@ function FirstSection({ posts }) {
             <div className="leftContainer">
               <h2>{posts[2].acf.first.firstheading}</h2>
               <p>{posts[2].acf.first.firstparagraph}</p>
-              <button className="default-button"> View our rooms</button>
+              <Link to="/rooms">
+                <button className="default-button"> View our rooms</button>
+              </Link>
+
               <div className="bookingFirstBanner">
                 <div className="choosing-option">
                   <label htmlFor="checkin">Check In</label>
-                  <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} selectsStart startDate={startDate} endDate={endDate} minDate={startDate} />
+                  <DatePicker
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                    selectsStart
+                    startDate={startDate}
+                    endDate={endDate}
+                    minDate={startDate}
+                  />
                 </div>
                 <div className="choosing-option">
                   <label htmlFor="checkin">Check Out</label>
@@ -98,11 +109,20 @@ function FirstSection({ posts }) {
             srcSet={`${posts[2].acf.first.firstbannerimgmobile} 768w, ${posts[2].acf.first.firstbannerimgtablet} 1240w, ${posts[2].acf.first.firstbannerimg} 1280w`}
           /> */}
 
-          <img className="desktopVisibility" src={posts[2].acf.first.firstbannerimg} />
+          <img
+            className="desktopVisibility"
+            src={posts[2].acf.first.firstbannerimg}
+          />
 
-          <img className="tabletVisibility" src={posts[2].acf.first.firstbannerimgtablet} />
+          <img
+            className="tabletVisibility"
+            src={posts[2].acf.first.firstbannerimgtablet}
+          />
 
-          <img className="mobileVisibility" src={posts[2].acf.first.firstbannerimgmobile} />
+          <img
+            className="mobileVisibility"
+            src={posts[2].acf.first.firstbannerimgmobile}
+          />
         </div>
       </div>
     </>

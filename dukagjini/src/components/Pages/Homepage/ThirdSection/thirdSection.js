@@ -9,6 +9,7 @@ import { Navigation } from "swiper";
 import "swiper/css";
 //import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 function ThirdSection({ posts }) {
   console.log(posts);
@@ -50,9 +51,12 @@ function ThirdSection({ posts }) {
           <div className="thirdsectionDesc">
             <h2>{posts[2].acf.thirdbanner.thirdheading}</h2>
             <p>{posts[2].acf.thirdbanner.thirdheading}</p>
-            <button className="bookingThirdButton  default-button">
-              View our rooms
-            </button>
+
+            <Link to="/rooms">
+              <button className="bookingThirdButton  default-button">
+                View our rooms
+              </button>
+            </Link>
           </div>
         </div>
       </div>

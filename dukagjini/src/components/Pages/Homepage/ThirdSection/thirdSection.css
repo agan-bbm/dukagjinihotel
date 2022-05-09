@@ -49,6 +49,7 @@
 
 .swiper-slide img {
   object-fit: cover;
+  
 }
 .home-gallery .swiper-wrapper {
   align-items: center;
@@ -110,6 +111,9 @@
 }
 
 @media (max-width: 767px) {
+  .swiper-slide img{
+    height: 220px;
+  }
   .thirdSection1{
     width: 100%;
   }

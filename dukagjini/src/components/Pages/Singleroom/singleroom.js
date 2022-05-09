@@ -50,14 +50,14 @@ function Singleroom() {
 
           <div className="single-room-grid">
             <div className="grid-left-side">
-              <img src={fullrightimg} alt="" />
+              <img src={rooms.rooms.acf.room.images[0]} alt="" />
             </div>
             <div className="grid-right-side">
               <div className="rightside-div">
-                <img src={lefttopimg} alt="" />
+                <img src={rooms.rooms.acf.room.images[1]} alt="" />
               </div>
               <div className="rightside-div">
-                <img src={leftbottomimg} alt="" />
+                <img src={rooms.rooms.acf.room.images[2]} alt="" />
               </div>
             </div>
           </div>
