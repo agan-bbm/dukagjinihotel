@@ -34,8 +34,8 @@ function Singleroom() {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(rooms);
-  return (
+  console.log(rooms.rooms.acf);
+  return rooms.isLoaded ? (
     <>
       <div className="single-room-page">
         <div className="containerWrapper">
@@ -62,19 +62,15 @@ function Singleroom() {
             </div>
           </div>
           <div className="title-and-location">
-            <h2 className="single-room-title">Standard room</h2>
+            <h2 className="single-room-title">{rooms.rooms.acf.room.name}</h2>
+
             <p id="lokacioni-dhomes">Prishtine, Kosove</p>
           </div>
 
           <div className="single-room-informations">
             <div className="sr-info-left">
               <p className="single-room-description">Përshkrimi</p>
-              <p className="pershkrimi-p">
-                Me një pamje mahnitëse të qytetit dhe lumit, shijoni rehatinë e
-                dhomës standarte. Dhoma standarte përbëhet prej: një shtrat për
-                të rritur, sipas kërkesës edhe për fëmijë. Dhoma ka një banjo
-                komforte, minibar, kondicioner, TV, tharëse flokësh.{" "}
-              </p>
+              <p className="pershkrimi-p">{rooms.rooms.acf.room.longdesc}</p>
 
               <div className="room-features-wrapper">
                 <p className="room-features-p">Hotel Features</p>
@@ -193,6 +189,8 @@ function Singleroom() {
         </div>
       </div>
     </>
+  ) : (
+    <p>sdasdsaads</p>
   );
 }
 export default Singleroom;
