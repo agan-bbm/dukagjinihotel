@@ -13,7 +13,7 @@ function Contact() {
               <p className="paragraf">
                 Contact us if you need any help or have any questions
               </p>
-              <form className="form">
+              <form className="contactform">
                 <div className="nameLabel">
                   <label for="fullName">Full name</label>
                 </div>
