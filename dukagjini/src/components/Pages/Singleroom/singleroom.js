@@ -126,7 +126,8 @@ function Singleroom() {
             <div className="sr-info-right">
               <div className="cart">
                 <p className="cmimi-dhomes">
-                  $35<span>/Night</span>
+                  {rooms.rooms.acf.room.room_price}
+                  <span>/Night</span>
                 </p>
                 <hr />
                 <div className="date-inputs">
@@ -177,7 +178,9 @@ function Singleroom() {
                 <div className="price-wrapper">
                   <div className="price-single-page">
                     <p className="total">Total</p>
-                    <p className="total-price">$70</p>
+                    <p className="total-price">
+                      {rooms.rooms.acf.room.room_price}
+                    </p>
                   </div>
                   <div className="single-page-button">
                     <button className="default-button">Book</button>
