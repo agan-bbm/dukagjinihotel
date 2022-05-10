@@ -9,15 +9,20 @@ export function Addresses(props) {
           <div className="inputs">
             <div>
               <div class="input-field">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Name" />
+                <label for="name">Address</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Address"
+                />
               </div>
             </div>
 
             <div>
               <div class="input-field">
-                <label for="surname">Surname</label>
-                <input type="text" name="surname" placeholder="Surname" />
+                <label for="surname">City</label>
+                <input type="text" name="surname" placeholder="City" />
               </div>
             </div>
           </div>

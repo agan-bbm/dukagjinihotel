@@ -22,6 +22,7 @@ import deluxetwin from "../../../images/deluxetwin.jpg";
 import penthouse from "../../../images/penthouse.jpg";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { borderRadius } from "@mui/system";
 
 export function Summary() {
   const params = useParams();
@@ -50,7 +51,7 @@ export function Summary() {
   return rooms.isLoaded ? (
     <>
       <div className="single-room">
-        <div className="singleroom-flex">
+        <div className="singleroom-flex" id="checkout-singleroom-style">
           <div className="room-img-gallery">
             <Swiper
               modules={[Navigation]}
@@ -63,7 +64,10 @@ export function Summary() {
               {rooms.rooms.acf.room.images
                 ? rooms.rooms.acf.room.images.map((img) => (
                     <SwiperSlide>
-                      <img src={img.length > 0 ? img : ""} />
+                      <img
+                        src={img.length > 0 ? img : ""}
+                        style={{ borderRadius: "20px" }}
+                      />
                     </SwiperSlide>
                   ))
                 : ""}
@@ -78,19 +82,21 @@ export function Summary() {
                     </SwiperSlide> */}
             </Swiper>
           </div>
-          <div className="room-desc-info">
+          <div className="room-desc-info" id="checkout-roomdescinfo">
             <div className="main-room-infos">
               <div className="room-name-shortdesc">
-                <h2 className="room-title">{rooms.rooms.acf.room.name}</h2>
+                <h2 className="room-title" style={{ textAlign: "left" }}>
+                  {rooms.rooms.acf.room.name}
+                </h2>
                 <p className="room-short-desc">
                   {rooms.rooms.acf.room.shortdesc}
                 </p>
               </div>
               <div className="price-night-desktop">
-                <h4 id="price">{rooms.rooms.acf.room.room_price}</h4>
+                {/* <h4 id="price">{rooms.rooms.acf.room.room_price}</h4> */}
                 {/* <img src={e.acf.room.images[0].image1.url} /> */}
 
-                <p id="nights">{rooms.rooms.acf.room.personnight}</p>
+                {/* <p id="nights">{rooms.rooms.acf.room.personnight}</p> */}
               </div>
             </div>
             <div className="icon-info">
@@ -113,14 +119,16 @@ export function Summary() {
                 <p>Living Room</p>
               </div>
             </div>
-            <p className="rooms-p-desc" style={{ color: "#575757" }}>
+            {/* <p className="rooms-p-desc" style={{ color: "#575757" }}>
               {rooms.rooms.acf.room.longdesc}
-            </p>
+            </p> */}
 
-            <div className="room-buttons">
-              <div className="price-night-mobile">
-                <h4 id="price">{rooms.rooms.acf.room.room_price}</h4>
-                <p>{rooms.rooms.acf.room.personnight}</p>
+            <div className="checkoutroom-buttons">
+              <div className="price-night" style={{ textAlign: "left" }}>
+                <h4 style={{ fontSize: "26px", fontWeight: "400" }}>
+                  {rooms.rooms.acf.room.room_price}
+                </h4>
+                {/* <p>{rooms.rooms.acf.room.personnight}</p> */}
               </div>
               <div className="book-button">
                 {/* <button className="default-button">

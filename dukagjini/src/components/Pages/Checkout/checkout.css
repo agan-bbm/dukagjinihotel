@@ -74,6 +74,18 @@
     font-size: 22px;
     margin: auto 0;
 }
+#checkout-singleroom-style{
+    padding: 20px;
+    background: #FCFCFC;
+    border-radius: 20px;
+    border: 1px solid #DFDFDF;
+}
+#checkout-roomdescinfo{
+        border: none;
+        background-color: #FCFCFC;
+        padding: 0px 30px;
+        padding-right: 0px;
+}
 @media(min-width:768px){
     .checkout{
         width: 1100px;
