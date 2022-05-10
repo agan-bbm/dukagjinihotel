@@ -6,10 +6,17 @@ import "react-datepicker/dist/react-datepicker.css";
 function Daterange({ dates, setDates }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
+  // const onChange = (dates) => {
+  //   const [start, end] = dates;
+  //   setDates({ ...dates, from: formatDate(start), to: formatDate(end) });
+  //   setEndDate(end);
+  // };
   const onChange = (dates) => {
     const [start, end] = dates;
-    setDates({ ...dates, from: formatDate(start), to: formatDate(end) });
+    setStartDate(start);
     setEndDate(end);
+    console.log(start);
+    console.log(end);
   };
   const todayDate = Date.now();
   const formatDate = (date) => {

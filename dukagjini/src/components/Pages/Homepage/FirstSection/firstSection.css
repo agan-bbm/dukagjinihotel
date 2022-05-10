@@ -25,6 +25,9 @@
   object-fit: cover;
 }
 @media only screen and (max-width: 1299px) and (min-width: 768px) {
+#datepickerihome{
+  display: none !important;
+}
   .containerWrapper {
     width: 1200px;
   }

@@ -55,7 +55,7 @@ function Footer() {
 
               <ul className="footerLists">
                 <li>Our rooms</li>
-                <li>Lobby</li>
+
                 <li>Restaurant</li>
               </ul>
             </div>

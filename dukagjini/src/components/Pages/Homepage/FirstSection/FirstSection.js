@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // CSS
 import "./firstSection.css";
+// import { datepickerihome } from "./firstSection.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -23,11 +24,13 @@ import { Link } from "react-router-dom";
 function FirstSection({ posts }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+
   return (
     // <div className="hompage-first-section">
     //   <div className="coverImage">
     //     <img src={Img1} />
     //   </div>
+
     <>
       <div className="firstSection">
         <div className="leftSide">
@@ -58,6 +61,7 @@ function FirstSection({ posts }) {
                     onChange={(date) => setEndDate(date)}
                     selectsEnd
                     // startDate={startDate}
+
                     endDate={endDate}
                     minDate={startDate}
                   />

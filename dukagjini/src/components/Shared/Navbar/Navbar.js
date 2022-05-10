@@ -85,13 +85,13 @@ function Navbar() {
           {/* <span
             className={!navbar ? "white-dots" : " black-dots white-dots "}
           ></span> */}
-
+          {/* 
           <Link
             to="/"
             className={!navbar ? "white-links" : " black-links white-links "}
           >
             Lobby
-          </Link>
+          </Link> */}
           {/* <span
             className={!navbar ? "white-dots" : " black-dots white-dots "}
           ></span> */}
@@ -115,12 +115,12 @@ function Navbar() {
           {/* <span
             className={!navbar ? "white-dots" : " black-dots white-dots "}
           ></span> */}
-          <Link
+          {/* <Link
             to="/"
             className={!navbar ? "white-links" : " black-links white-links "}
           >
             Offers
-          </Link>
+          </Link> */}
         </div>
 
         {visible && (

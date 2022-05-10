@@ -9,10 +9,29 @@
     position: relative;
     margin-top: 100px;
 }
+.choosing-option .react-datepicker{
+    margin-top: 0 !important;
+   
+}
 
-
-
-
+.choosing-option .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header{
+    position: unset !important;
+}
+.choosing-option .react-datepicker .react-datepicker__month-container:nth-of-type(2){
+    display: block;
+    border: 1px solid lightgrey;
+    margin: 0 auto;
+}
+.choosing-option .react-datepicker__navigation--next {
+    right: 2px;
+    position: relative;
+    right: 0 !important;
+    left: 90%;
+    top: 0 !important;
+}
+.choosing-option .react-datepicker__navigation--previous{
+left: 0;
+top: 0 !important;}
 
 .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header{
     position: absolute !important;
@@ -101,6 +120,11 @@
     text-align: center;
 }
 @media(max-width:767px){
+    .choosing-option .react-datepicker{
+
+        left: -20px !important;
+    }
+    
     /* #root > div > div.homepage > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(5){
         display: none;
     } */
