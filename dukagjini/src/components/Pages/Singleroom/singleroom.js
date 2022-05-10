@@ -8,7 +8,7 @@ import livingroom from "../../../images/user.svg";
 import bath from "../../../images/bed.svg";
 import seaview from "../../../images/dashboard.svg";
 import balcony from "../../../images/wifi.svg";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 function Singleroom() {
@@ -34,7 +34,8 @@ function Singleroom() {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(rooms.rooms.acf);
+  rooms.isLoaded ? console.log(rooms.rooms.acf) : console.log("sadsa");
+
   return rooms.isLoaded ? (
     <>
       <div className="single-room-page">
@@ -183,7 +184,9 @@ function Singleroom() {
                     </p>
                   </div>
                   <div className="single-page-button">
-                    <button className="default-button">Book</button>
+                    <Link to={"/checkout/" + params.id}>
+                      <button className="default-button">Book</button>
+                    </Link>
                   </div>
                 </div>
               </div>
