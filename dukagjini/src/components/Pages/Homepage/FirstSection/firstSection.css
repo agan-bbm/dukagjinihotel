@@ -18,6 +18,11 @@
 }
 .rightSide {
   display: contents;
+
+}
+.rightSide .desktopVisibility{
+  width: 100%;
+  object-fit: cover;
 }
 @media only screen and (max-width: 1299px) and (min-width: 768px) {
   .containerWrapper {
