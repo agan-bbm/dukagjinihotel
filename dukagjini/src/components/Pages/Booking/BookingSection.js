@@ -46,7 +46,7 @@ function BookingSection() {
       })
       .catch((err) => console.log(err));
   }
-  console.log(rooms.rooms.filter((e) => e.IsFree));
+  // console.log(rooms.rooms.filter((e) => e.IsFree));
   console.log(dates.from);
   console.log(dates.to);
 
