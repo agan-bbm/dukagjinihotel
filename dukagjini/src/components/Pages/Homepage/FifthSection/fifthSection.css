@@ -42,5 +42,6 @@
         width: auto;
         height: 200px;
         margin: 10px 0px;
+        object-fit: cover;
     }
 }

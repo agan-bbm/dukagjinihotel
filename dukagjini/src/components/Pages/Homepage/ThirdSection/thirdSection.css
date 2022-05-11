@@ -112,7 +112,7 @@
 
 @media (max-width: 767px) {
   .swiper-slide img{
-    height: 220px;
+    /* height: 220px; */
   }
   .thirdSection1{
     width: 100%;

@@ -65,7 +65,7 @@ function Checkout() {
         {showForm()}
         <div className="checkout-btns">
           <button
-            className="form-button default-button"
+            className="form-button "
             onClick={() => {
               if (page === 2) {
                 window.location = "/";
