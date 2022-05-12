@@ -1,19 +1,31 @@
 import React, { useState } from "react";
 import "./checkout.css";
-import { Addresses } from "./addresses";
+// import { Addresses } from "./addresses";
 import { Summary } from "./summary";
 import { Userdetails } from "./userdetails";
 
 function Checkout() {
+  const [formData, setFormData] = useState({
+    name: "",
+    lastName: "",
+    email: "",
+    product: [],
+    number: "",
+    // email: localStorage.getItem("email"),
+    accepted: false,
+    connections: {},
+    mailError: true,
+    nameValid: true,
+    lastNameValid: true,
+    numberValid: true,
+  });
   const [page, setPage] = useState(0);
 
   const showForm = () => {
     switch (page) {
       case 0:
-        return <Userdetails />;
+        return <Userdetails formData={formData} setFormData={setFormData} />;
       case 1:
-        return <Addresses />;
-      case 2:
         return <Summary />;
     }
   };
@@ -58,24 +70,58 @@ function Checkout() {
         );
     }
   };
+  const [required, setRequired] = useState(false);
+
   return (
     <>
       <div className="checkout">
         {showDesc()}
         {showForm()}
+        {required ? (
+          <p
+            style={{
+              color: "red",
+              fontSize: "12px",
+              textAlign: "center",
+            }}
+          >
+            Ju lutem plotësoni të gjitha fushat në mënyrë të saktë!
+          </p>
+        ) : (
+          <p
+            style={{
+              color: "red",
+              fontSize: "12px",
+              textAlign: "center",
+            }}
+          ></p>
+        )}
         <div className="checkout-btns">
           <button
             className="form-button "
+            type="submit"
             onClick={() => {
-              if (page === 2) {
-                window.location = "/";
+              // if (page === 2) {
+              //   window.location = "/";
+              // } else {
+              //   setPage(page + 1);
+              // }
+              if (
+                formData.name === "" ||
+                formData.lastName === "" ||
+                formData.email === "" ||
+                formData.number === ""
+              ) {
+                setRequired(true);
               } else {
+                setRequired(false);
                 setPage(page + 1);
               }
             }}
           >
             Continue
           </button>
+
           <button
             className="back-button default-button"
             onClick={() => {
