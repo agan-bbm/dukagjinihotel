@@ -23,7 +23,7 @@ function Homepage({ posts }) {
         <FifthSection posts={posts} />
         <SixthSection posts={posts} />
         {/* <ImageMasonry /> */}
-        <Faq />
+        <Faq posts={posts} />
       </div>
     </>
   );
