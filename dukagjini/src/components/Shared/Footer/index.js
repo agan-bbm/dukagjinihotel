@@ -26,11 +26,13 @@ function Footer() {
             <div className="logo-container">
               <div className="footer-logo">
                 <img src={dukagjinilogofooter} alt="" />
-                <p>Dukagjini Hotel</p>
+                <p style={{ marginBottom: "0" }}>Dukagjini Hotel</p>
+                <p style={{ marginTop: "0" }}>
+                  The place you need to be when in Peja
+                </p>
               </div>
 
               <div className="footer-info">
-                <p>The place you need to be when in Peja</p>
                 <p>dukagjini@hotmail.com</p>
                 <p>049-149-835</p>
               </div>

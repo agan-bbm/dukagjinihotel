@@ -11,7 +11,6 @@ function Thankyou() {
           have any question, please don't hesitate to contact us. Thank you!
         </p>
         <p className="tu-contact">
-          {" "}
           +383 49 766 140 <br /> info@hoteldukagjini.com
         </p>
 

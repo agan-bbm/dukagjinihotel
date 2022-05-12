@@ -85,6 +85,9 @@
     margin-bottom: 0px;
     margin-top: 50px;
 }
+.recomendations .swiper{
+    padding-bottom: 40px;
+}
 #recommendationParagraph{
     width: 55%;
     margin: 0;
