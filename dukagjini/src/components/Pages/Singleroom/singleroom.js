@@ -42,7 +42,9 @@ function Singleroom() {
         <div className="containerWrapper">
           <div>
             {/* <h2 className="single-room-title">Standard Room</h2> */}
-            <h2>{rooms.rooms.acf.room.name}</h2>
+            <h2 style={{ marginBottom: "0px" }} className="single-room-title">
+              {rooms.rooms.acf.room.name}
+            </h2>
           </div>
 
           <div className="review-single-room">

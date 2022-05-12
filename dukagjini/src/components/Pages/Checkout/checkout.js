@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Thankyou from "../Thankyou/Thankyou";
 import "./checkout.css";
 // import { Addresses } from "./addresses";
 import { Summary } from "./summary";
@@ -27,7 +29,14 @@ function Checkout() {
         return <Userdetails formData={formData} setFormData={setFormData} />;
       case 1:
         return <Summary />;
+
+      case 2:
+        return <Thankyou />;
     }
+  };
+  const [style, setStyle] = useState("cont");
+  const changeStyle = () => {
+    setStyle("none");
   };
 
   const showDesc = () => {
@@ -88,16 +97,17 @@ function Checkout() {
             Ju lutem plotësoni të gjitha fushat në mënyrë të saktë!
           </p>
         ) : (
-          <p
-            style={{
-              color: "red",
-              fontSize: "12px",
-              textAlign: "center",
-            }}
-          ></p>
+          ""
         )}
-        <div className="checkout-btns">
+
+        <div
+          className="checkout-btns"
+          style={{
+            display: page === 2 ? "none" : "block",
+          }}
+        >
           <button
+            id="finalBtn"
             className="form-button "
             type="submit"
             onClick={() => {
