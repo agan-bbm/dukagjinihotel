@@ -45,9 +45,9 @@
 }
 
 .testimonialContainer {
+  height: 400px;
   padding: 50px;
   text-align: center;
-/* >>>>>>> 837f64c11862281ec49b3ce619ae1e37140a43be */
 }
 .testimonial{
   background: white;
