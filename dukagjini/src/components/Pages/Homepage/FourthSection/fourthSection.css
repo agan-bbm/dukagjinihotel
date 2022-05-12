@@ -3,7 +3,9 @@
     align-items: center;
     margin: 0 auto;
 }
-
+.swiper-paginationi{
+    bottom: 50px;
+}
 .fourthSectionFliped {
     display: flex;
     flex-direction: row-reverse;
@@ -95,7 +97,7 @@
 }
 .single-room-rec{
    
-    width: 30%;
+    /* width: 30%; */
     box-shadow: 0 15px 12px rgb(0 0 0 / 8%);
     padding: 15px;
 }
@@ -222,6 +224,10 @@
         flex-direction: column;
         padding-top: 0px;
     }
+    .recomendations .swiper-slide{
+        width: 100% !important;
+    }
+    
     .single-room-rec{
         width: auto;
         margin: 20px 10px;

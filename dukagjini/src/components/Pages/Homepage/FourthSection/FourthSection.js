@@ -16,6 +16,9 @@ import wifi from "../../../../images/wifi.svg";
 import recommendedRoom from "../../../../images/recommendedRoom.png";
 import { Link } from "react-router-dom";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+
 function fourthSection() {
   return (
     <div className="fourthSection">
@@ -27,137 +30,300 @@ function fourthSection() {
             Hotel Dukagjini sjell për ju magjinë e të ndjehurit rehat në dhomat
             e përgatitura për komoditetin tuaj!
           </p>
-          <div className="roomRecomendations">
-            <div className="single-room-rec">
-              <img src={recommendedRoom} alt="" />
-              <h4>Standard Double Queen Room</h4>
-              <p className="recpar">
-                A 120sq foot bedroom apartment with a view.
-              </p>
-              <div className="icon-info">
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={balcony} alt="" />
-                    <p>Balcony</p>
-                  </div>
-                </div>
+          <div style={{ padding: "20px 0px" }}>
+            <Swiper
+              // slidesPerView={1}
+              // centeredSlides={true}
+              // spaceBetween={0}
+              grabCursor={true}
+              spaceBetween={50}
+              slidesPerView={1}
+              roundLengths={true}
+              loop={true}
+              pagination={true}
+              modules={[Pagination]}
+              loopAdditionalSlides={30}
+              className=""
+              breakpoints={{
+                600: {
+                  slidesPerView: 3,
+                },
+              }}
+            >
+              <div className="roomRecomendations">
+                <SwiperSlide>
+                  <div className="single-room-rec">
+                    <img src={recommendedRoom} alt="" />
+                    <h4>Standard Double Queen Room</h4>
+                    <p className="recpar">
+                      A 120sq foot bedroom apartment with a view.
+                    </p>
+                    <div className="icon-info">
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={balcony} alt="" />
+                          <p>Balcony</p>
+                        </div>
+                      </div>
 
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={bath} alt="" />
-                    <p>Bath</p>
-                  </div>
-                </div>
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={wifi} alt="" />
-                    <p>Wifi</p>
-                  </div>
-                </div>
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={bath} alt="" />
+                          <p>Bath</p>
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={wifi} alt="" />
+                          <p>Wifi</p>
+                        </div>
+                      </div>
 
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={livingroom} alt="" />
-                    <p>Bathroom</p>
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={livingroom} alt="" />
+                          <p>Bathroom</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="price-book">
+                      <p className="price">
+                        $35 <span className="pernight">/Night</span>
+                      </p>
+                      <Link to="/single-room/87">
+                        <button className="default-button">Check Rooms</button>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="price-book">
-                <p className="price">
-                  $35 <span className="pernight">/Night</span>
-                </p>
-                <Link to="/single-room/87">
-                  <button className="default-button">Check Rooms</button>
-                </Link>
-              </div>
-            </div>
-            <div className="single-room-rec">
-              <img src={recommendedRoom} alt="" />
-              <h4>Standard Double Queen Room</h4>
-              <p className="recpar">
-                A 120sq foot bedroom apartment with a view.
-              </p>
-              <div className="icon-info">
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={balcony} alt="" />
-                    <p>Balcony</p>
-                  </div>
-                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="single-room-rec">
+                    <img src={recommendedRoom} alt="" />
+                    <h4>Standard Double Queen Room</h4>
+                    <p className="recpar">
+                      A 120sq foot bedroom apartment with a view.
+                    </p>
+                    <div className="icon-info">
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={balcony} alt="" />
+                          <p>Balcony</p>
+                        </div>
+                      </div>
 
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={bath} alt="" />
-                    <p>Bath</p>
-                  </div>
-                </div>
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={wifi} alt="" />
-                    <p>Wifi</p>
-                  </div>
-                </div>
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={bath} alt="" />
+                          <p>Bath</p>
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={wifi} alt="" />
+                          <p>Wifi</p>
+                        </div>
+                      </div>
 
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={livingroom} alt="" />
-                    <p>Bathroom</p>
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={livingroom} alt="" />
+                          <p>Bathroom</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="price-book">
+                      <p className="price">
+                        $35 <span className="pernight">/Night</span>
+                      </p>
+                      <Link to="/single-room/87">
+                        <button className="default-button">Check Rooms</button>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="price-book">
-                <p className="price">
-                  $35 <span className="pernight">/Night</span>
-                </p>
-                <Link to="/single-room/87">
-                  <button className="default-button">Check Rooms</button>
-                </Link>
-              </div>
-            </div>
-            <div className="single-room-rec">
-              <img src={recommendedRoom} alt="" />
-              <h4>Standard Double Queen Room</h4>
-              <p className="recpar">
-                A 120sq foot bedroom apartment with a view.
-              </p>
-              <div className="icon-info">
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={balcony} alt="" />
-                    <p>Balcony</p>
-                  </div>
-                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="single-room-rec">
+                    <img src={recommendedRoom} alt="" />
+                    <h4>Standard Double Queen Room</h4>
+                    <p className="recpar">
+                      A 120sq foot bedroom apartment with a view.
+                    </p>
+                    <div className="icon-info">
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={balcony} alt="" />
+                          <p>Balcony</p>
+                        </div>
+                      </div>
 
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={bath} alt="" />
-                    <p>Bath</p>
-                  </div>
-                </div>
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={wifi} alt="" />
-                    <p>Wifi</p>
-                  </div>
-                </div>
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={bath} alt="" />
+                          <p>Bath</p>
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={wifi} alt="" />
+                          <p>Wifi</p>
+                        </div>
+                      </div>
 
-                <div className="icon">
-                  <div className="icon-flex">
-                    <img src={livingroom} alt="" />
-                    <p>Bathroom</p>
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={livingroom} alt="" />
+                          <p>Bathroom</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="price-book">
+                      <p className="price">
+                        $35 <span className="pernight">/Night</span>
+                      </p>
+                      <Link to="/single-room/87">
+                        <button className="default-button">Check Rooms</button>
+                      </Link>
+                    </div>
                   </div>
-                </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="single-room-rec">
+                    <img src={recommendedRoom} alt="" />
+                    <h4>Standard Double Queen Room</h4>
+                    <p className="recpar">
+                      A 120sq foot bedroom apartment with a view.
+                    </p>
+                    <div className="icon-info">
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={balcony} alt="" />
+                          <p>Balcony</p>
+                        </div>
+                      </div>
+
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={bath} alt="" />
+                          <p>Bath</p>
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={wifi} alt="" />
+                          <p>Wifi</p>
+                        </div>
+                      </div>
+
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={livingroom} alt="" />
+                          <p>Bathroom</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="price-book">
+                      <p className="price">
+                        $35 <span className="pernight">/Night</span>
+                      </p>
+                      <Link to="/single-room/87">
+                        <button className="default-button">Check Rooms</button>
+                      </Link>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="single-room-rec">
+                    <img src={recommendedRoom} alt="" />
+                    <h4>Standard Double Queen Room</h4>
+                    <p className="recpar">
+                      A 120sq foot bedroom apartment with a view.
+                    </p>
+                    <div className="icon-info">
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={balcony} alt="" />
+                          <p>Balcony</p>
+                        </div>
+                      </div>
+
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={bath} alt="" />
+                          <p>Bath</p>
+                        </div>
+                      </div>
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={wifi} alt="" />
+                          <p>Wifi</p>
+                        </div>
+                      </div>
+
+                      <div className="icon">
+                        <div className="icon-flex">
+                          <img src={livingroom} alt="" />
+                          <p>Bathroom</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="price-book">
+                      <p className="price">
+                        $35 <span className="pernight">/Night</span>
+                      </p>
+                      <Link to="/single-room/87">
+                        <button className="default-button">Check Rooms</button>
+                      </Link>
+                    </div>
+                  </div>
+                </SwiperSlide>
               </div>
-              <div className="price-book">
-                <p className="price">
-                  $35 <span className="pernight">/Night</span>
-                </p>
-                <Link to="/single-room/87">
-                  <button className="default-button">Check Rooms</button>
-                </Link>
-              </div>
-            </div>
+            </Swiper>
           </div>
+
+          {/* <div className="single-room-rec">
+              <img src={recommendedRoom} alt="" />
+              <h4>Standard Double Queen Room</h4>
+              <p className="recpar">
+                A 120sq foot bedroom apartment with a view.
+              </p>
+              <div className="icon-info">
+                <div className="icon">
+                  <div className="icon-flex">
+                    <img src={balcony} alt="" />
+                    <p>Balcony</p>
+                  </div>
+                </div>
+
+                <div className="icon">
+                  <div className="icon-flex">
+                    <img src={bath} alt="" />
+                    <p>Bath</p>
+                  </div>
+                </div>
+                <div className="icon">
+                  <div className="icon-flex">
+                    <img src={wifi} alt="" />
+                    <p>Wifi</p>
+                  </div>
+                </div>
+
+                <div className="icon">
+                  <div className="icon-flex">
+                    <img src={livingroom} alt="" />
+                    <p>Bathroom</p>
+                  </div>
+                </div>
+              </div>
+              <div className="price-book">
+                <p className="price">
+                  $35 <span className="pernight">/Night</span>
+                </p>
+                <Link to="/single-room/87">
+                  <button className="default-button">Check Rooms</button>
+                </Link>
+              </div>
+            </div>
+          </div> */}
 
           <div className="bookOffer">
             <div className="offerLeft">
