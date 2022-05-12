@@ -6,6 +6,10 @@
 .fifthImgs img{
     width: 24%;
 }
+.fifthImgs img{
+    height: 600px;
+    object-fit: cover;
+}
 .fifthSection h2  {
     text-align: center;
     font-size: 36px;

@@ -45,9 +45,9 @@
   margin-top: 30px;
   width: 100%;
   padding: 10px;
-  background-color: #c38f5b;
+  background-color: white;
   border: 2px solid #c38f5b;
-  color: white;
+  color: #c38f5b;
   transition-duration: 300ms;
   /* display: inline-block; */
 }
@@ -56,9 +56,9 @@
   margin-top: 30px;
   width: 100%;
   padding: 10px;
-  background-color: white;
+  background-color: #c38f5b;
   border: 2px solid #c38f5b;
-  color: #c38f5b;
+  color: white;
   transition-duration: 300ms;
 }
 .nameEmail::placeholder {
