@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
-function fourthSection() {
+function fourthSection({ posts }) {
   return (
     <div className="fourthSection">
       <div className="containerWrapper">
@@ -327,11 +327,9 @@ function fourthSection() {
 
           <div className="bookOffer">
             <div className="offerLeft">
-              <h2>Book your first room with a 20% discount.</h2>
+              <h2>{posts[2].acf.bookOffer.bookheading}</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam,Lorem ipsum dolor sit ame.
+                {posts[2].acf.bookOffer.bookparagraph}
               </p>
             </div>
             <div className="offerRight">
@@ -349,24 +347,15 @@ function fourthSection() {
 
           <div className="fourthSectionPart">
             <div className="fourthSectionLeft">
-              <img src={Img1} />
+              <img src={posts[2].acf.fifthbanner[0].fifthimage} />
             </div>
             <div className="fourthSectionRight">
               <div className="fourthSectionBox">
                 <h2 className="fourthSectionHeader">
-                  Momente lumturie për ju dhe familjen tuaj!
+                  {posts[2].acf.fifthbanner[0].fifthheading}
                 </h2>
                 <p>
-                  Nëse dëshironi të kaloni një vikend relaksues, me familjen
-                  tuaj, Hotel Dukagjini është zgjidhja ideale. Së bashku do të
-                  keni mundësin të shijoni pjata tejet të shijshme, të
-                  relaksoheni në pishinën tonë, e të shijoni edhe pamjet
-                  mahnitëse që ofron qyteti i bukur i Pejës.
-                </p>
-                <p>
-                  Ochean de View extends along a private, quiet and beautiful
-                  tropical beach. Stay away from the crowd and enjoy the beauty
-                  and lust.
+                  {posts[2].acf.fifthbanner[0].fifthparagraph}
                 </p>
 
                 <Link to="/rooms">
@@ -380,19 +369,16 @@ function fourthSection() {
 
           <div className="fourthSectionFliped">
             <div className="fourthSectionLeft">
-              <img src={Img2} />
+              <img src={posts[2].acf.fifthbanner[1].fifthimage} />
             </div>
             <div className="fourthSectionRight">
               <div className="fourthSectionBox">
                 <h2 className="fourthSectionHeader">
-                  Momente lumturie për ju dhe familjen tuaj!
+                  {posts[2].acf.fifthbanner[1].fifthheading}
+
                 </h2>
                 <p>
-                  Nëse dëshironi të kaloni një vikend relaksues, me familjen
-                  tuaj, Hotel Dukagjini është zgjidhja ideale. Së bashku do të
-                  keni mundësin të shijoni pjata tejet të shijshme, të
-                  relaksoheni në pishinën tonë, e të shijoni edhe pamjet
-                  mahnitëse që ofron qyteti i bukur i Pejës.
+                  {posts[2].acf.fifthbanner[1].fifthparagraph}
                 </p>
                 <Link to="/rooms">
                   <button className="gridBtn default-button">

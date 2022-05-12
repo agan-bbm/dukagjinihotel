@@ -12,18 +12,16 @@ import "swiper/css/navigation";
 
 import ProfilePic from "../../../../../src/images/sixthSectionProfilePic.webp";
 
-function SixthSection() {
+function SixthSection({ posts }) {
   return (
     <div className="sixthSection">
       <div className="containerWrapper">
         {/* <div className="containerWrapper"> */}
         <div className="sixthContainer">
           <div className="sixthHeader">
-            <h2>Hear what our past guests have to say</h2>
+            <h2>{posts[2].acf.sixthbanner.sixthheading}</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor inc ut labore et dolore magna aliqua. Ut enim ad
-              minim veniam,Lorem ipsum dolor sit ame.
+              {posts[2].acf.sixthbanner.sixthparagraph}
             </p>
           </div>
           <Swiper
@@ -31,7 +29,7 @@ function SixthSection() {
             centeredSlides={true}
             // spaceBetween={0}
             grabCursor={true}
-            spaceBetween={120}
+            spaceBetween={50}
             slidesPerView={1}
             roundLengths={true}
             loop={true}
@@ -49,14 +47,12 @@ function SixthSection() {
               <div className="testimonial">
                 <div className="testimonialContainer">
                   <div className="profilePic">
-                    <img src={ProfilePic} />
+                    <img src={posts[2].acf.testimonials[0].clientimg} />
                   </div>
-                  <p className="userDscr">Tourist</p>
-                  <h2>“Great hospitality”</h2>
+                  <p className="userDscr">{posts[2].acf.testimonials[0].clienttype}</p>
+                  <h2>{posts[2].acf.testimonials[0].testimonialheding}</h2>
                   <p>
-                    "Aenean eget consectetur ante. Quisque sit amet sem id nulla
-                    tincidunt rhoncus. Sed iaculis tortor vitae nibh varius
-                    bibendum. Pellentesque a lectus consectetur."
+                    {posts[2].acf.testimonials[0].testimonialparagraph}
                   </p>
                   {/* <div className="user">
                     <div className="userName">
@@ -71,14 +67,12 @@ function SixthSection() {
               <div className="testimonial">
                 <div className="testimonialContainer">
                   <div className="profilePic">
-                    <img src={ProfilePic} />
+                    <img src={posts[2].acf.testimonials[1].clientimg} />
                   </div>
-                  <p className="userDscr">Tourist</p>
-                  <h2>“Great hospitality”</h2>
+                  <p className="userDscr">{posts[2].acf.testimonials[1].clienttype}</p>
+                  <h2>{posts[2].acf.testimonials[1].testimonialheding}</h2>
                   <p>
-                    "Aenean eget consectetur ante. Quisque sit amet sem id nulla
-                    tincidunt rhoncus. Sed iaculis tortor vitae nibh varius
-                    bibendum. Pellentesque a lectus consectetur."
+                    {posts[2].acf.testimonials[1].testimonialparagraph}
                   </p>
                   {/* <div className="user">
                     <div className="userName">
@@ -93,14 +87,12 @@ function SixthSection() {
               <div className="testimonial">
                 <div className="testimonialContainer">
                   <div className="profilePic">
-                    <img src={ProfilePic} />
+                    <img src={posts[2].acf.testimonials[2].clientimg} />
                   </div>
-                  <p className="userDscr">Tourist</p>
-                  <h2>“Great hospitality”</h2>
+                  <p className="userDscr">{posts[2].acf.testimonials[2].clienttype}</p>
+                  <h2>{posts[2].acf.testimonials[2].testimonialheding}</h2>
                   <p>
-                    "Aenean eget consectetur ante. Quisque sit amet sem id nulla
-                    tincidunt rhoncus. Sed iaculis tortor vitae nibh varius
-                    bibendum. Pellentesque a lectus consectetur."
+                    {posts[2].acf.testimonials[2].testimonialparagraph}
                   </p>
                   {/* <div className="user">
                     <div className="userName">
@@ -115,14 +107,12 @@ function SixthSection() {
               <div className="testimonial">
                 <div className="testimonialContainer">
                   <div className="profilePic">
-                    <img src={ProfilePic} />
+                    <img src={posts[2].acf.testimonials[3].clientimg} />
                   </div>
-                  <p className="userDscr">Tourist</p>
-                  <h2>“Great hospitality”</h2>
+                  <p className="userDscr">{posts[2].acf.testimonials[3].clienttype}</p>
+                  <h2>{posts[2].acf.testimonials[3].testimonialheding}</h2>
                   <p>
-                    "Aenean eget consectetur ante. Quisque sit amet sem id nulla
-                    tincidunt rhoncus. Sed iaculis tortor vitae nibh varius
-                    bibendum. Pellentesque a lectus consectetur."
+                    {posts[2].acf.testimonials[3].testimonialparagraph}
                   </p>
                   {/* <div className="user">
                     <div className="userName">
@@ -137,14 +127,12 @@ function SixthSection() {
               <div className="testimonial">
                 <div className="testimonialContainer">
                   <div className="profilePic">
-                    <img src={ProfilePic} />
+                    <img src={posts[2].acf.testimonials[4].clientimg} />
                   </div>
-                  <p className="userDscr">Tourist</p>
-                  <h2>“Great hospitality”</h2>
+                  <p className="userDscr">{posts[2].acf.testimonials[4].clienttype}</p>
+                  <h2>{posts[2].acf.testimonials[4].testimonialheding}</h2>
                   <p>
-                    "Aenean eget consectetur ante. Quisque sit amet sem id nulla
-                    tincidunt rhoncus. Sed iaculis tortor vitae nibh varius
-                    bibendum. Pellentesque a lectus consectetur."
+                    {posts[2].acf.testimonials[4].testimonialparagraph}
                   </p>
                   {/* <div className="user">
                     <div className="userName">

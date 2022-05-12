@@ -18,7 +18,6 @@ function About() {
           <h2 style={style}>ABOUT US </h2>
 
           <QuiltedImageList />
-          <ImageMasonry />
 
           {/* <div className="images-grid">
             <div className="div1"></div>

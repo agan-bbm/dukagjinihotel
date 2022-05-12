@@ -2,7 +2,7 @@ import React from "react";
 import { AddressMap, Map } from "../About/map";
 import "./contact.css";
 
-function Contact() {
+function Contact({ posts }) {
   return (
     <>
       <div className="contactWrapper">
@@ -21,7 +21,8 @@ function Contact() {
                   <input
                     type="text"
                     name="fullName"
-                    placeholder="Emri Mbiemri"
+                    required
+                    placeholder="Full name"
                     className="nameEmail"
                     tabIndex="1"
                   />
@@ -34,6 +35,7 @@ function Contact() {
                     type="email"
                     name="email"
                     id="email"
+                    required="true"
                     className="nameEmail"
                     placeholder="example@email.com"
                     tabIndex="3"
@@ -48,6 +50,7 @@ function Contact() {
                     placeholder="Message"
                     className="message"
                     name="message"
+                    required
                   />
                 </div>
                 <div>
