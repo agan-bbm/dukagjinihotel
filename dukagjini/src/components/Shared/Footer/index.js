@@ -26,17 +26,13 @@ function Footer() {
             <div className="logo-container">
               <div className="footer-logo">
                 <img src={dukagjinilogofooter} alt="" />
-                <p>Our Stores</p>
+                <p>Dukagjini Hotel</p>
               </div>
 
               <div className="footer-info">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  <br /> sed do eiusmod tempor incididunt ut labore et <br />{" "}
-                  dolore magna aliqua.
-                </p>
+                <p>The place you need to be when in Peja</p>
                 <p>dukagjini@hotmail.com</p>
-                <p>049-111-222</p>
+                <p>049-149-835</p>
               </div>
 
               {/* <div>
@@ -53,9 +49,9 @@ function Footer() {
             <div className="contact-footer">
               <h2 className="footer-link-heading">Rooms</h2>
 
-              <ul className="footerLists">
+              <ul className="foote rLists">
                 <li>Our rooms</li>
-
+                <li>Lobby</li>
                 <li>Restaurant</li>
               </ul>
             </div>
@@ -73,8 +69,8 @@ function Footer() {
 
               <ul className="footerLists">
                 <li>Facebook</li>
-                <li>Instagram</li>
-                <li>Twitter</li>
+                <li>Twitter </li>
+                <li>Linkedin</li>
               </ul>
             </div>
           </div>
