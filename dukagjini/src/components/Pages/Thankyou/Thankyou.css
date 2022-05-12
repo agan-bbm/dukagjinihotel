@@ -18,3 +18,9 @@
 .tu-back{
     list-style: none;
 }
+@media(max-width:787px){
+    .tu-container{
+        margin: 50px auto;
+        width: 80%;
+    }
+}

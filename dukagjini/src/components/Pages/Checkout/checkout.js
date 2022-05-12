@@ -69,12 +69,12 @@ function Checkout() {
         return (
           <>
             {" "}
-            <h2>Summary</h2>
+            {/* <h2>Summary</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor inc ut <br></br>labore et dolore magna aliqua. Ut
               enim ad minim veniam,Lorem ipsum dolor sit ame.
-            </p>
+            </p> */}
           </>
         );
     }

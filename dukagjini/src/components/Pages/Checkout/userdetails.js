@@ -45,7 +45,7 @@ export function Userdetails({ formData, setFormData }) {
       <div className="checkout-form">
         <form action="" className="form">
           <div className="inputs">
-            <div>
+            <div className="userdtl-inputrow">
               <div class="input-field">
                 <label for="name">Name</label>
                 <input
@@ -67,33 +67,6 @@ export function Userdetails({ formData, setFormData }) {
                   {formData.nameValid ? "" : "Ju lutem shënoni një emër valid!"}
                 </p>
               </div>
-
-              <div class="input-field">
-                <label for="number">Number</label>
-                <input
-                  type="text"
-                  required
-                  value={formData.number}
-                  onChange={(e) => {
-                    validateNumber(e.target.value);
-                  }}
-                />
-                <p
-                  style={{
-                    color: "red",
-                    fontSize: "12px",
-                    textAlign: "left",
-                    width: "300px",
-                  }}
-                >
-                  {formData.numberValid
-                    ? ""
-                    : "Ju lutem shënoni një numër telefoni valid"}
-                </p>
-              </div>
-            </div>
-
-            <div>
               <div class="input-field">
                 <label for="surname">Surname</label>
                 <input
@@ -117,7 +90,32 @@ export function Userdetails({ formData, setFormData }) {
                     : "Ju lutem shënoni një mbiemër valid"}
                 </p>
               </div>
+            </div>
 
+            <div className="userdtl-inputrow">
+              <div class="input-field">
+                <label for="number">Number</label>
+                <input
+                  type="text"
+                  required
+                  value={formData.number}
+                  onChange={(e) => {
+                    validateNumber(e.target.value);
+                  }}
+                />
+                <p
+                  style={{
+                    color: "red",
+                    fontSize: "12px",
+                    textAlign: "left",
+                    width: "300px",
+                  }}
+                >
+                  {formData.numberValid
+                    ? ""
+                    : "Ju lutem shënoni një numër telefoni valid"}
+                </p>
+              </div>
               <div class="input-field">
                 <label for="email">Email</label>
                 <input

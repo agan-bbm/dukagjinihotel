@@ -18,8 +18,11 @@
     
 }
 .inputs{
-    display: grid;
-    grid-template-columns: repeat(2 ,1fr);
+    display: flex;
+    flex-direction: column;
+}
+.userdtl-inputrow{
+    display: flex;
 }
 .input-field{
     width: 90%;
@@ -93,6 +96,9 @@
     }
 }
 @media(max-width:767px){
+    .userdtl-inputrow{
+        flex-direction: column;
+    }
     .checkout{
         width: 90%;
         padding-top: 100px;
