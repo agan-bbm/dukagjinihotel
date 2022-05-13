@@ -64,7 +64,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Homepage posts={state.posts} />} />
           <Route path="/booking" element={<Booking />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About posts={state.posts} />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/single-room/:id" element={<Singleroom />} />
           <Route path="/checkout/:id" element={<Checkout />} />

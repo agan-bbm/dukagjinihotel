@@ -7,6 +7,8 @@ import AboutTab from "./aboutTab";
 import { Link } from "react-router-dom";
 
 function About({ posts, founder }) {
+
+  console.log(window.innerWidth)
   const style = {
     color: "white",
     // backgroundColor: "red",
@@ -16,12 +18,11 @@ function About({ posts, founder }) {
   const [content, setContent] = useState(0);
   const showContent = () => {
     if (content === 0) {
-      return <QuiltedImageList />;
+      return <QuiltedImageList posts={posts} />;
     } else if (content === 1) {
       return (
         <div>
-          <br></br>
-          <ImageMasonry />
+          <AboutTab />
         </div>
       );
     } else
@@ -34,12 +35,12 @@ function About({ posts, founder }) {
   return (
     <div>
       <div className="aboutBanner">
-        <div className="containerWrapper">
-          <h2 /*style={style}*/ className="bannerH">About us </h2>
+        <div className="containerWrapper"
+        // style={{backgroundImage:`url(${post})`}}
+        >
+          <h2 /*style={style}*/ className="bannerH">{posts[0].acf.aboutheading}</h2>
           <p className="bannerP">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor inc ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam,Lorem ipsum dolor sit ame.
+            {posts[0].acf.aboutparagraph}
           </p>
         </div>
       </div>
