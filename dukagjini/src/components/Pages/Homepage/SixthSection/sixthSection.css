@@ -20,7 +20,8 @@
 .sixthHeader p{
   width: 50%;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 400 !important;
 }
 .swiper{
   overflow:hidden !important;
@@ -43,7 +44,9 @@
   opacity: 0.2;
   /* width: 400px !important; */
 }
-
+.sixthContainer .swiper{
+  padding-bottom: 40px;
+}
 .testimonialContainer {
   height: 400px;
   padding: 50px;

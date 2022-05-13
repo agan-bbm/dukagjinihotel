@@ -102,7 +102,7 @@ function Singleroom() {
                 </div>
               </div>
 
-              <p className="room-features-p">Hotel Features</p>
+              {/* <p className="room-features-p">Hotel Features</p>
               <div className="ikonat-single-room">
                 <div className="icon-info" id="single-room-iconinfo2">
                   <div className="icon-singleroom-page">
@@ -124,7 +124,7 @@ function Singleroom() {
                     <p>Living Room</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="sr-info-right">
               <div className="cart">

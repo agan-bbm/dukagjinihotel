@@ -156,7 +156,9 @@ export function Rooms(props) {
                   <div className="room-buttons">
                     <div className="price-night-mobile">
                       <h4 id="price">{e.acf.room.room_price}</h4>
-                      <p>{e.acf.room.personnight}</p>
+                      <p style={{ marginTop: "0px", color: "#575757" }}>
+                        {e.acf.room.personnight}
+                      </p>
                     </div>
                     <div className="book-button">
                       <Link to={"/single-room/" + e.id}>

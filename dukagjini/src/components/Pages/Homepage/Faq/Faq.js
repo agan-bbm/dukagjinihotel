@@ -27,7 +27,7 @@ function Faq({ posts }) {
           <h1
             style={{ textAlign: "center", fontSize: "28px", fontWeight: "400" }}
           >
-            Pyetjet më të shpeshta!
+            FAQ
           </h1>
           <div className="accordion">
             {accordionData.map(({ title, content }) => (

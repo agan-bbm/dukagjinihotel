@@ -72,7 +72,10 @@ function FourthSection({ posts }) {
                 {rooms.rooms.map((e) => (
                   <SwiperSlide>
                     <div className="single-room-rec">
-                      <img src={recommendedRoom} alt="" />
+                      <div className="mainSingleImg">
+                        <img src={e.acf.room.images[0]} alt="" />
+                      </div>
+
                       <h4>{e.acf.room.name}</h4>
                       <p className="recpar">{e.acf.room.shortdesc}</p>
                       <div className="icon-info">

@@ -103,6 +103,14 @@
     /* width: 30%; */
     box-shadow: 0 15px 12px rgb(0 0 0 / 8%);
     padding: 15px;
+    background-color: white;
+}
+.mainSingleImg{
+    height: 220px !important;
+}
+.mainSingleImg img{
+    height: 100% !important;
+    object-fit: cover !important;
 }
 .single-room-rec h4
 {
@@ -121,13 +129,15 @@
     margin: 10px 0px;
 }
 .price-book p{
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 500;
     margin: 0;
 }
 .pernight{
-    font-size: 21px;
+    font-size: 16px;
     font-weight: 300;
+    /* display: flex; */
+    /* vertical-align: text-top; */
 }
 .price-book button{
     background-color: #CA9E72;
@@ -233,7 +243,7 @@
     
     .single-room-rec{
         width: auto;
-        margin: 20px 10px;
+        /* margin: 20px 10px; */
 
     }
     .bookOffer {

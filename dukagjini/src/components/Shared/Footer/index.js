@@ -51,7 +51,7 @@ function Footer() {
             <div className="contact-footer">
               <h2 className="footer-link-heading">Rooms</h2>
 
-              <ul className="foote rLists">
+              <ul className="footerLists">
                 <li>Our rooms</li>
                 <li>Lobby</li>
                 <li>Restaurant</li>

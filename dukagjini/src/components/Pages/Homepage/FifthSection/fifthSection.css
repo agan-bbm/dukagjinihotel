@@ -20,7 +20,8 @@
     text-align: center;
     width: 50%;
     margin: 0 auto;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 400 !important;
 }
 @media(max-width:767px){
     .fifthSection h2 {

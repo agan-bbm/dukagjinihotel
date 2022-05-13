@@ -159,6 +159,15 @@ hr {
   .rooms{
     padding-top: 80px;
   }
+  .rooms .swiper-slide img{
+    height: 220px;
+    width: 96% !important;
+    margin: 2% auto;
+    justify-content: center;
+    display: flex;
+  }
+  .rooms .swiper-slide {
+    background-color: #FCFCFC;}
   .all-rooms-heading{
     font-weight: 400;
     font-size: 30px;
@@ -169,6 +178,7 @@ hr {
   }
   .singleroom-flex{
     flex-direction: column;
+    border: 1px solid #F5F5F5;
   }
   .room-img-gallery{
     width: 100%;
@@ -176,12 +186,14 @@ hr {
   .room-desc-info{
     width: auto;
     border-left: 1px solid #d6d6d6;
+    border: 1px solid #F5F5F5;
+    border-top: 0;
   }
   .main-room-infos{
     flex-direction: column;
   }
   .room-desc-info{
-    padding: 30px 10px;
+    padding: 10px;
   }
   .icon-info{
     width: 100%;

@@ -19,9 +19,11 @@ function SixthSection({ posts }) {
         {/* <div className="containerWrapper"> */}
         <div className="sixthContainer">
           <div className="sixthHeader">
-            <h2>{posts[2].acf.sixthbanner.sixthheading}</h2>
-            <p>
-              {posts[2].acf.sixthbanner.sixthparagraph}
+            <h2 style={{ fontSize: "26px" }}>
+              {posts[2].acf.sixthbanner.testimonialheading}
+            </h2>
+            <p style={{ fontWeight: "300", fontSize: "16px" }}>
+              {posts[2].acf.sixthbanner.testimonialParagraph}
             </p>
           </div>
           <Swiper
@@ -49,11 +51,11 @@ function SixthSection({ posts }) {
                   <div className="profilePic">
                     <img src={posts[2].acf.testimonials[0].clientimg} />
                   </div>
-                  <p className="userDscr">{posts[2].acf.testimonials[0].clienttype}</p>
-                  <h2>{posts[2].acf.testimonials[0].testimonialheding}</h2>
-                  <p>
-                    {posts[2].acf.testimonials[0].testimonialparagraph}
+                  <p className="userDscr">
+                    {posts[2].acf.testimonials[0].clienttype}
                   </p>
+                  <h2>{posts[2].acf.testimonials[0].testimonialheding}</h2>
+                  <p>{posts[2].acf.testimonials[0].testimonialparagraph}</p>
                   {/* <div className="user">
                     <div className="userName">
                       <span>Name Surname</span>
@@ -69,11 +71,11 @@ function SixthSection({ posts }) {
                   <div className="profilePic">
                     <img src={posts[2].acf.testimonials[1].clientimg} />
                   </div>
-                  <p className="userDscr">{posts[2].acf.testimonials[1].clienttype}</p>
-                  <h2>{posts[2].acf.testimonials[1].testimonialheding}</h2>
-                  <p>
-                    {posts[2].acf.testimonials[1].testimonialparagraph}
+                  <p className="userDscr">
+                    {posts[2].acf.testimonials[1].clienttype}
                   </p>
+                  <h2>{posts[2].acf.testimonials[1].testimonialheding}</h2>
+                  <p>{posts[2].acf.testimonials[1].testimonialparagraph}</p>
                   {/* <div className="user">
                     <div className="userName">
                       <span>Name Surname</span>
@@ -89,11 +91,11 @@ function SixthSection({ posts }) {
                   <div className="profilePic">
                     <img src={posts[2].acf.testimonials[2].clientimg} />
                   </div>
-                  <p className="userDscr">{posts[2].acf.testimonials[2].clienttype}</p>
-                  <h2>{posts[2].acf.testimonials[2].testimonialheding}</h2>
-                  <p>
-                    {posts[2].acf.testimonials[2].testimonialparagraph}
+                  <p className="userDscr">
+                    {posts[2].acf.testimonials[2].clienttype}
                   </p>
+                  <h2>{posts[2].acf.testimonials[2].testimonialheding}</h2>
+                  <p>{posts[2].acf.testimonials[2].testimonialparagraph}</p>
                   {/* <div className="user">
                     <div className="userName">
                       <span>Name Surname</span>
@@ -109,11 +111,11 @@ function SixthSection({ posts }) {
                   <div className="profilePic">
                     <img src={posts[2].acf.testimonials[3].clientimg} />
                   </div>
-                  <p className="userDscr">{posts[2].acf.testimonials[3].clienttype}</p>
-                  <h2>{posts[2].acf.testimonials[3].testimonialheding}</h2>
-                  <p>
-                    {posts[2].acf.testimonials[3].testimonialparagraph}
+                  <p className="userDscr">
+                    {posts[2].acf.testimonials[3].clienttype}
                   </p>
+                  <h2>{posts[2].acf.testimonials[3].testimonialheding}</h2>
+                  <p>{posts[2].acf.testimonials[3].testimonialparagraph}</p>
                   {/* <div className="user">
                     <div className="userName">
                       <span>Name Surname</span>
@@ -129,11 +131,11 @@ function SixthSection({ posts }) {
                   <div className="profilePic">
                     <img src={posts[2].acf.testimonials[4].clientimg} />
                   </div>
-                  <p className="userDscr">{posts[2].acf.testimonials[4].clienttype}</p>
-                  <h2>{posts[2].acf.testimonials[4].testimonialheding}</h2>
-                  <p>
-                    {posts[2].acf.testimonials[4].testimonialparagraph}
+                  <p className="userDscr">
+                    {posts[2].acf.testimonials[4].clienttype}
                   </p>
+                  <h2>{posts[2].acf.testimonials[4].testimonialheding}</h2>
+                  <p>{posts[2].acf.testimonials[4].testimonialparagraph}</p>
                   {/* <div className="user">
                     <div className="userName">
                       <span>Name Surname</span>

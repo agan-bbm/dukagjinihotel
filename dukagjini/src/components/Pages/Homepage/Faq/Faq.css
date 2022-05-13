@@ -12,7 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
     cursor: pointer;
-   
+   font-weight: 700 !important;
   }
   
   .accordion-title:hover {
