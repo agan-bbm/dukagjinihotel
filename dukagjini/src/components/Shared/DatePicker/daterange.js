@@ -11,12 +11,13 @@ function Daterange({ dates, setDates }) {
   //   setDates({ ...dates, from: formatDate(start), to: formatDate(end) });
   //   setEndDate(end);
   // };
-  const onChange = (dates) => {
-    const [start, end] = dates;
+  const onChange = (date) => {
+    const [start, end] = date;
     setStartDate(start);
     setEndDate(end);
     console.log(start);
     console.log(end);
+    setDates({ ...dates, from: startDate, to: endDate });
   };
   const todayDate = Date.now();
   const formatDate = (date) => {
@@ -32,8 +33,8 @@ function Daterange({ dates, setDates }) {
     }
     return [year, month, day].join("/");
   };
-  // console.log(formatDate(startDate));
-  // console.log(formatDate(endDate));
+  console.log(startDate);
+  console.log(endDate);
   return (
     <>
       <div className="select-dates-txt">

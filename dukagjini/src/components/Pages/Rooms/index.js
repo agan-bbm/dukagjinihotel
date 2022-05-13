@@ -24,16 +24,18 @@ import axios from "axios";
 import Singleroom from "../Singleroom/singleroom";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-export function Rooms(props) {
+export function Rooms({ freeRooms }) {
   const [state, setState] = useState({
     posts: [],
     isLoaded: false,
+  });
+  freeRooms.rooms.map((e) => {
+    console.log(e.RoomTypeName);
   });
   const [rooms, setRooms] = useState({
     rooms: [],
     isLoaded: false,
   });
-  // console.log(dhomat);
   useEffect(() => {
     axios
       .get("http://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/Rooms")
@@ -47,6 +49,8 @@ export function Rooms(props) {
       .catch((err) => console.log(err));
   }, []);
   console.log(rooms);
+  var p = "agan";
+  console.log(p.match("orik"));
 
   var firstRoomId,
     secondRoomId,
@@ -80,6 +84,9 @@ export function Rooms(props) {
   });
 
   // console.log(rooms.rooms[5].acf.room.images[0].image1);
+  const showFreeRooms = () => {
+    // if(freeRooms.)
+  };
 
   return (
     <>

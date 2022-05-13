@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import DatePicker from "react-datepicker";
+import "../../Shared/DatePicker/daterange.css";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { Link } from "react-router-dom";
@@ -22,33 +25,41 @@ import Daterange from "../../Shared/DatePicker/daterange";
 import { Rooms } from "../Rooms";
 
 function BookingSection() {
-  const [dates, setDates] = useState({
-    from: null,
-    to: null,
-  });
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(null);
+
   const [rooms, setRooms] = useState({
     rooms: [],
     isLoaded: false,
   });
 
+  const onChange = (date) => {
+    const [start, end] = date;
+    setStartDate(start);
+    setEndDate(end);
+    console.log(start);
+    console.log(end);
+  };
   async function getRooms() {
     await axios
       .get(
-        `http://cmsdukagjini.blackbird.marketing/wp-content/fetch.php?fromDate=${dates.from}&toDate=${dates.to}`,
+        `http://cmsdukagjini.blackbird.marketing/wp-content/fetch.php?fromDate=${formatDate(
+          startDate
+        )}&toDate=${formatDate(endDate)}`,
         {}
       )
       .then((res) => {
         setRooms({
           ...rooms,
-          rooms: res.data,
+          rooms: res.data.filter((e) => e.IsFree),
           isLoaded: true,
         });
       })
       .catch((err) => console.log(err));
   }
   // console.log(rooms.rooms.filter((e) => e.IsFree));
-  console.log(dates.start);
-  console.log(dates.end);
+  console.log(startDate);
+  console.log(endDate);
 
   const formatDate = (date) => {
     let d = new Date(date);
@@ -70,48 +81,32 @@ function BookingSection() {
     3: false,
     4: false,
   });
-  console.log(rooms);
+  console.log(formatDate(startDate));
+  console.log(formatDate(endDate));
+  console.log(rooms.rooms.filter((e) => e.IsFree));
 
   return (
     <>
       <div className="booking-container">
         <div className="booking-main">
-          {/* <div className="inputs-container">
-            <label htmlFor="start">Start Date</label>
-            <input
-              type="date"
-              id="start"
-              name="fromDate"
-              required
-              min={today}
-              onChange={(e) => {
-                setDates({ ...dates, from: formatDate(e.target.value) });
-              }}
-            />
-          </div> */}
-          {/* <div className="inputs-container">
-            <label htmlFor="end">End Date</label>
-            <input
-              type="date"
-              id="end"
-              name="toDate"
-              min={today}
-              required
-              onChange={(e) => {
-                setDates({ ...dates, to: formatDate(e.target.value) });
-              }}
-            />
-          </div> */}
-          {/* <button
-            className="booking-mainbutton"
-            onClick={() => {
-              getRooms();
-            }}
-          >
-            Book
-          </button> */}
           <div>
-            <Daterange dates={dates} setDates={setDates} />
+            <div className="select-dates-txt">
+              <h2 className="range-h2">Select Dates</h2>
+              <p className="range-p">
+                Book directly with us. Best Rates Generated
+              </p>
+            </div>
+
+            <DatePicker
+              selected={startDate}
+              onChange={onChange}
+              startDate={startDate}
+              endDate={endDate}
+              monthsShown={2}
+              selectsRange
+              inline
+              // minDate={todayDate}
+            />
             <div>
               <button
                 className="default-button"
@@ -124,7 +119,7 @@ function BookingSection() {
               </button>
             </div>
           </div>
-          <Rooms />
+          <Rooms freeRooms={rooms} />
         </div>
       </div>
     </>
