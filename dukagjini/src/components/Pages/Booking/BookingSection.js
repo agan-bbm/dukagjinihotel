@@ -81,9 +81,11 @@ function BookingSection() {
     3: false,
     4: false,
   });
-  console.log(formatDate(startDate));
-  console.log(formatDate(endDate));
-  console.log(rooms.rooms.filter((e) => e.IsFree));
+
+  // console.log(formatDate(startDate));
+  // console.log(formatDate(endDate));
+  // console.log(rooms.rooms.filter((e) => e.IsFree));
+  console.log(rooms.rooms);
 
   return (
     <>
@@ -119,6 +121,7 @@ function BookingSection() {
               </button>
             </div>
           </div>
+
           <Rooms freeRooms={rooms} />
         </div>
       </div>

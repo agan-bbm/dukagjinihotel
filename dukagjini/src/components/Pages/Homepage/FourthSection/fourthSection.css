@@ -211,6 +211,7 @@
   flex-wrap: wrap;
   }
   
+  
   .single-room-rec .icon-info img {
     width: 30px;
     height: 30px;
@@ -220,6 +221,10 @@
     padding-right: 50px;
 }
 @media (max-width: 767px) {
+
+    .recomendations .icon{
+        width: 130px;
+    }
     .fourthSection h2 {
         font-weight: 400;
         margin: 0;

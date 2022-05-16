@@ -29,10 +29,14 @@ export function Rooms({ freeRooms }) {
     posts: [],
     isLoaded: false,
   });
-  freeRooms.rooms.map((e) => {
-    console.log(e.RoomTypeName);
-  });
+  // freeRooms.rooms.map((e) => {
+  //   // console.log(e.RoomTypeName);
+  // });
   const [rooms, setRooms] = useState({
+    rooms: [],
+    isLoaded: false,
+  });
+  const [showRooms, setShowRooms] = useState({
     rooms: [],
     isLoaded: false,
   });
@@ -49,17 +53,15 @@ export function Rooms({ freeRooms }) {
       .catch((err) => console.log(err));
   }, []);
   console.log(rooms);
-  var p = "agan";
-  console.log(p.match("orik"));
 
   var firstRoomId,
     secondRoomId,
-    thidRoomId,
+    thirdRoomId,
     fourthRoomId,
     fifthRoomId,
     sixthRoomId;
 
-  state.posts.map((e) => {
+  rooms.rooms.map((e) => {
     switch (e.id) {
       case 87:
         firstRoomId = e;
@@ -69,7 +71,7 @@ export function Rooms({ freeRooms }) {
         secondRoomId = e;
         break;
       case 107:
-        thidRoomId = e;
+        thirdRoomId = e;
         break;
       case 108:
         fourthRoomId = e;
@@ -83,12 +85,39 @@ export function Rooms({ freeRooms }) {
     }
   });
 
-  // console.log(rooms.rooms[5].acf.room.images[0].image1);
-  const showFreeRooms = () => {
-    // if(freeRooms.)
-  };
+  // useEffect(()=>{
+  //   for (var i = 0; i < freeRooms.rooms.length; i++) {
+  //     if (freeRooms.rooms[i].RoomTypeName === "SDQR") {
+  //       // return sixthRoomId;
+  //       console.log(sixthRoomId);
+  //       setShowRooms({ ...showRooms, rooms: sixthRoomId });
+  //     } else if (freeRooms.rooms[i].RoomTypeName === "DDQR") {
+  //       // return secondRoomId;
 
-  return (
+  //       console.log(secondRoomId);
+
+  //       setShowRooms({ ...showRooms, rooms: secondRoomId });
+  //     } else if (freeRooms.rooms[i].RoomTypeName === "PRST") {
+  //       // return fourthRoomId;
+  //       console.log(fourthRoomId);
+  //       setShowRooms({ ...showRooms, rooms: fourthRoomId });
+  //     } else if (freeRooms.rooms[i].RoomTypeName === "PENT") {
+  //       // return thidRoomId;
+  //       console.log(thirdRoomId);
+  //       setShowRooms({ ...showRooms, rooms: thirdRoomId });
+  //     } else if (freeRooms.rooms[i].RoomTypeName === "DDTR") {
+  //       // return fifthRoomId;
+  //       console.log(fifthRoomId);
+  //       setShowRooms({ ...showRooms, rooms: fifthRoomId });
+  //     } else {
+  //       console.log("ska maaa");
+  //     }
+  //   }
+  // },[])
+  console.log(showRooms);
+  // };
+  rooms.isLoaded ? console.log(rooms.rooms.acf) : console.log("sadsa");
+  return rooms.isLoaded ? (
     <>
       <div className="containerWrapper">
         <div className="rooms">
@@ -137,24 +166,15 @@ export function Rooms({ freeRooms }) {
                     </div>
                   </div>
                   <div className="icon-info">
-                    <div className="icon-rooms-page">
-                      <img src={seaview} alt="" />
-                      <p>Sea view</p>
-                    </div>
-                    <div className="icon-rooms-page">
-                      <img src={balcony} alt="" />
-                      <p>Balcony </p>
-                    </div>
+                    {e.acf.room.icons
+                      ? e.acf.room.icons.map((icons) => (
+                          <div className="icon-rooms-page">
+                            <img src={icons.icon} alt="" />
 
-                    <div className="icon-rooms-page">
-                      <img src={bath} alt="" />
-                      <p>Bath</p>
-                    </div>
-
-                    <div className="icon-rooms-page">
-                      <img src={livingroom} alt="" />
-                      <p>Living Room</p>
-                    </div>
+                            <p>{icons.text}</p>
+                          </div>
+                        ))
+                      : ""}
                   </div>
                   <p className="rooms-p-desc" style={{ color: "#575757" }}>
                     {e.acf.room.longdesc}
@@ -185,5 +205,7 @@ export function Rooms({ freeRooms }) {
         </div>
       </div>
     </>
+  ) : (
+    <p>sdasdsaads</p>
   );
 }

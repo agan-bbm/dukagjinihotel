@@ -79,32 +79,17 @@ function FourthSection({ posts }) {
                       <h4>{e.acf.room.name}</h4>
                       <p className="recpar">{e.acf.room.shortdesc}</p>
                       <div className="icon-info">
-                        <div className="icon">
-                          <div className="icon-flex">
-                            <img src={balcony} alt="" />
-                            <p>Balcony</p>
-                          </div>
-                        </div>
+                        {e.acf.room.icons
+                          ? e.acf.room.icons.map((icons) => (
+                              <div className="icon">
+                                <div className="icon-flex">
+                                  <img src={icons.icon} alt="" />
 
-                        <div className="icon">
-                          <div className="icon-flex">
-                            <img src={bath} alt="" />
-                            <p>Bath</p>
-                          </div>
-                        </div>
-                        <div className="icon">
-                          <div className="icon-flex">
-                            <img src={wifi} alt="" />
-                            <p>Wifi</p>
-                          </div>
-                        </div>
-
-                        <div className="icon">
-                          <div className="icon-flex">
-                            <img src={livingroom} alt="" />
-                            <p>Bathroom</p>
-                          </div>
-                        </div>
+                                  <p>{icons.text}</p>
+                                </div>
+                              </div>
+                            ))
+                          : ""}
                       </div>
                       <div className="price-book">
                         <p className="price">

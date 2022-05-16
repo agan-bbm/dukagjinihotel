@@ -80,24 +80,15 @@ function Singleroom() {
 
                 <div className="ikonat-single-room">
                   <div className="icon-info" id="single-room-iconinfo1">
-                    <div className="icon-singleroom-page">
-                      <img src={seaview} alt="" />
-                      <p>Sea view</p>
-                    </div>
-                    <div className="icon-singleroom-page">
-                      <img src={balcony} alt="" />
-                      <p>Balcony </p>
-                    </div>
+                    {rooms.rooms.acf.room.icons
+                      ? rooms.rooms.acf.room.icons.map((icons) => (
+                          <div className="icon-singleroom-page">
+                            <img src={icons.icon} alt="" />
 
-                    <div className="icon-singleroom-page">
-                      <img src={bath} alt="" />
-                      <p>Bath</p>
-                    </div>
-
-                    <div className="icon-singleroom-page">
-                      <img src={livingroom} alt="" />
-                      <p>Living Room</p>
-                    </div>
+                            <p>{icons.text}</p>
+                          </div>
+                        ))
+                      : ""}
                   </div>
                 </div>
               </div>
