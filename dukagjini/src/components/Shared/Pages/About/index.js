@@ -7,8 +7,7 @@ import AboutTab from "./aboutTab";
 import { Link } from "react-router-dom";
 
 function About({ posts, founder }) {
-
-  console.log(window.innerWidth)
+  console.log(window.innerWidth);
   const style = {
     color: "white",
     // backgroundColor: "red",
@@ -35,13 +34,9 @@ function About({ posts, founder }) {
   return (
     <div>
       <div className="aboutBanner">
-        <div className="containerWrapper"
-          style={{ backgroundImage: `url(${posts[0].acf.aboutbannerimg})` }}
-        >
+        <div className="containerWrapper" style={{ backgroundImage: `url(${posts[0].acf.aboutbannerimg})` }}>
           <h2 /*style={style}*/ className="bannerH">{posts[0].acf.aboutheading}</h2>
-          <p className="bannerP">
-            {posts[0].acf.aboutparagraph}
-          </p>
+          <p className="bannerP">{posts[0].acf.aboutparagraph}</p>
         </div>
       </div>
       <div className="containerWrapper">
