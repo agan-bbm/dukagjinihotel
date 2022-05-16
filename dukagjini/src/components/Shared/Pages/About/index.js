@@ -22,13 +22,13 @@ function About({ posts, founder }) {
     } else if (content === 1) {
       return (
         <div>
-          <AboutTab />
+          <AboutTab posts={posts[0].acf.abouttabs.secondtab} />
         </div>
       );
     } else
       return (
         <div>
-          <AboutTab />
+          <AboutTab posts={posts[0].acf.abouttabs.thirdtab} />
         </div>
       );
   };
@@ -36,7 +36,7 @@ function About({ posts, founder }) {
     <div>
       <div className="aboutBanner">
         <div className="containerWrapper"
-        // style={{backgroundImage:`url(${post})`}}
+          style={{ backgroundImage: `url(${posts[0].acf.aboutbannerimg})` }}
         >
           <h2 /*style={style}*/ className="bannerH">{posts[0].acf.aboutheading}</h2>
           <p className="bannerP">
@@ -54,7 +54,7 @@ function About({ posts, founder }) {
                 setContent(0);
               }}
             >
-              <p className="tabName">History</p>
+              <p className="tabName">{posts[0].acf.abouttabs.firsttab.tabheading}</p>
             </div>
 
             <div
@@ -64,7 +64,7 @@ function About({ posts, founder }) {
                 setContent(1);
               }}
             >
-              <p className="tabName">Architecture</p>
+              <p className="tabName">{posts[0].acf.abouttabs.secondtab.tabheading}</p>
             </div>
             <div
               className="about-button hoverable"
@@ -73,7 +73,7 @@ function About({ posts, founder }) {
                 setContent(2);
               }}
             >
-              <p className="tabName">Location</p>
+              <p className="tabName">{posts[0].acf.abouttabs.thirdtab.tabheading}</p>
             </div>
           </div>
         </div>
