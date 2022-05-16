@@ -7,6 +7,7 @@ import facebook from "../../../images/facebook.png";
 import instagram from "../../../images/instagram.png";
 import dukagjinilogofooter from "../../../images/logooffooter.png";
 import twitter from "../../../images/twitter.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const [setCounter] = useState(0);
@@ -44,17 +45,23 @@ function Footer() {
             </div>
             <div className="about-footer">
               <h2 className="footer-link-heading">About</h2>
-              <ul className="footerLists">
-                <li>About Us</li>
-              </ul>
+
+              <Link to="/about">
+                <ul className="footerLists">
+                  <li>About Us</li>
+                </ul>
+              </Link>
             </div>
             <div className="contact-footer">
               <h2 className="footer-link-heading">Rooms</h2>
 
               <ul className="footerLists">
-                <li>Our rooms</li>
-                <li>Lobby</li>
-                <li>Restaurant</li>
+                <Link to="/rooms">
+                  <li>Our rooms</li>
+                </Link>
+                <Link to="/about">
+                  <li>Restaurant</li>
+                </Link>
               </ul>
             </div>
             <div className="contact-footer">
@@ -62,7 +69,11 @@ function Footer() {
 
               <ul className="footerLists">
                 <li>Our offers</li>
-                <li>Contact us</li>
+
+                <Link to="contact">
+                  <li>Contact us</li>
+                </Link>
+
                 {/* <li>About Us</li> */}
               </ul>
             </div>
@@ -70,8 +81,13 @@ function Footer() {
               <h2 className="footer-link-heading">Social</h2>
 
               <ul className="footerLists">
-                <li>Facebook</li>
-                <li>Twitter </li>
+                <Link to="https://www.facebook.com/hoteldukagjini/">
+                  <li>Facebook </li>
+                </Link>
+                <Link to="https://www.instagram.com/hoteldukagjini/?hl=en">
+                  <li>Instagram </li>
+                </Link>
+
                 <li>Linkedin</li>
               </ul>
             </div>

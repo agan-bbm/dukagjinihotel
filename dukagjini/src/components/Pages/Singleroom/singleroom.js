@@ -47,9 +47,9 @@ function Singleroom() {
             </h2>
           </div>
 
-          <div className="review-single-room">
+          {/* <div className="review-single-room">
             <p>Review</p>
-          </div>
+          </div> */}
 
           <div className="single-room-grid">
             <div className="grid-left-side">
