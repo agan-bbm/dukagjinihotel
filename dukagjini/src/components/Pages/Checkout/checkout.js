@@ -47,9 +47,7 @@ function Checkout() {
             {" "}
             <h2>Customer Details</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor inc ut <br></br>labore et dolore magna aliqua. Ut
-              enim ad minim veniam,Lorem ipsum dolor sit ame.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc ut <br></br>labore et dolore magna aliqua. Ut enim ad minim veniam,Lorem ipsum dolor sit ame.
             </p>
           </>
         );
@@ -57,12 +55,8 @@ function Checkout() {
         return (
           <>
             {" "}
-            <h2>About us</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor inc ut <br></br>labore et dolore magna aliqua. Ut
-              enim ad minim veniam,Lorem ipsum dolor sit ame.
-            </p>
+            <h2>Complete reservation</h2>
+            <p>Choose payment method and if you have, leave a comment about your reservation.</p>
           </>
         );
       case 2:
@@ -116,12 +110,7 @@ function Checkout() {
               // } else {
               //   setPage(page + 1);
               // }
-              if (
-                formData.name === "" ||
-                formData.lastName === "" ||
-                formData.email === "" ||
-                formData.number === ""
-              ) {
+              if (formData.name === "" || formData.lastName === "" || formData.email === "" || formData.number === "") {
                 setRequired(true);
               } else {
                 setRequired(false);

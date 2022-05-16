@@ -1,144 +1,151 @@
-.checkout{
-    padding-top: 100px;
-    text-align: center;
-    margin: 0 auto;
-    
+.checkout {
+  padding-top: 100px;
+  text-align: center;
+  margin: 0 auto;
 }
-.checkout h2{
-    font-size: 28px;
-    font-weight: 400;
+.checkout h2 {
+  font-size: 28px;
+  font-weight: 400;
 }
-.checkout-form
-{
-   /* padding-top: 50px; */
- 
+.checkout-form {
+  /* padding-top: 50px; */
 }
 .form {
- width: 100% !important;
-    
+  width: 100% !important;
 }
-.inputs{
-    display: flex;
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+.userdtl-inputrow {
+  display: flex;
+}
+.input-field {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 20px;
+}
+.input-field input {
+  border-radius: 5px;
+
+  text-indent: 10px;
+  padding: 15px;
+  border: 1px solid #cfcfcf;
+}
+.input-field label {
+  margin: 10px 0px;
+  font-weight: 500;
+}
+.checkout-btns {
+  display: flex;
+  flex-direction: column;
+}
+.form-button {
+  width: 95%;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  font-size: 18px;
+  background: #3c55d9;
+  color: white;
+  margin-top: 40px;
+  cursor: pointer;
+  margin: 40px auto 0px auto;
+}
+.back-button {
+  margin: 10px auto 0px auto;
+  border: none;
+  background: transparent;
+  /* border-bottom: 1px solid black; */
+}
+.payment-single-choice {
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: #fcfcfc;
+  margin: 10px 0px;
+  display: flex;
+  justify-content: flex-start;
+}
+.payment-p {
+  font-size: 22px;
+  margin: auto 0;
+}
+#checkout-singleroom-style {
+  padding: 20px;
+  background: #fcfcfc;
+  border-radius: 20px;
+  border: 1px solid #dfdfdf;
+}
+#checkout-roomdescinfo {
+  border: none;
+  background-color: #fcfcfc;
+  padding: 0px 30px;
+  padding-right: 0px;
+}
+
+.radioButton {
+  border: black solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 0px 20px;
+  border-radius: 10px;
+}
+.paymentCash {
+  display: contents;
+}
+@media (min-width: 768px) {
+  .checkout {
+    width: 768px;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .userdtl-inputrow {
     flex-direction: column;
-}
-.userdtl-inputrow{
-    display: flex;
-}
-.input-field{
+  }
+  .checkout {
     width: 90%;
+    padding-top: 100px;
+    margin: 0 5%;
+  }
+  .input-field {
+    width: 80%;
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin: 20px;
-}
-.input-field input{
-    border-radius: 5px;
-  
-    text-indent: 10px;
-    padding: 15px;
-    border: 1px solid #CFCFCF;
-}
-.input-field label{
-    margin: 10px 0px;
-    font-weight: 500;
-}
-.checkout-btns{
-    display: flex;
-    flex-direction: column;
-}
-.form-button{
-    width: 95%;
-    padding: 15px;
-    border-radius: 20px;
-    border: none;
-    font-size: 18px;
-    background: #3C55D9;
-    color: white;
-    margin-top: 40px;
-    cursor: pointer;
-    margin: 40px auto 0px auto;
-}
-.back-button{
-    margin: 10px auto 0px auto;
-    border: none;
-    background: transparent;
-    /* border-bottom: 1px solid black; */
-  
-}
-.payment-single-choice{
-    border: 1px solid black;
-    border-radius: 8px;
-    background-color: #FCFCFC;
-    margin: 10px 0px;
-    display: flex;
-    justify-content: flex-start;
-}
-.payment-p{
-    font-size: 22px;
-    margin: auto 0;
-}
-#checkout-singleroom-style{
-    padding: 20px;
-    background: #FCFCFC;
-    border-radius: 20px;
-    border: 1px solid #DFDFDF;
-}
-#checkout-roomdescinfo{
-        border: none;
-        background-color: #FCFCFC;
-        padding: 0px 30px;
-        padding-right: 0px;
-}
-@media(min-width:768px){
-    .checkout{
-        width: 768px;
-        padding-bottom: 100px;
-    }
-}
-@media(max-width:767px){
-    .userdtl-inputrow{
-        flex-direction: column;
-    }
-    .checkout{
-        width: 90%;
-        padding-top: 100px;
-        margin: 0 5%;
-       
-    }
-    .input-field{
-        width: 80%;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-     margin: 0px
-}
-.inputs{
+    margin: 0px;
+  }
+  .inputs {
     display: flex;
     /* grid-template-columns: repeat(2 ,1fr); */
     flex-direction: column;
     justify-content: center;
-}
-.input-field {
+  }
+  .input-field {
     width: 80%;
     display: flex;
     flex-direction: column;
     text-align: left;
     margin: 0px auto;
-}
-.back-button{
+  }
+  .back-button {
     margin-bottom: 50px;
-}
-.payment-single-choice {
+  }
+  .payment-single-choice {
     border: 1px solid black;
     border-radius: 8px;
-    background-color: #FCFCFC;
+    background-color: #fcfcfc;
     margin: 10px 0px;
     display: flex;
     justify-content: flex-start;
     width: 80%;
     margin: 10px auto;
-}
-/* .single-room {
+  }
+  /* .single-room {
     width: 90%;
     margin: 0 auto;
 } */
