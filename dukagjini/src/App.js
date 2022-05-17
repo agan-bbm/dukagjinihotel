@@ -12,10 +12,7 @@ import Checkout from "./components/Pages/Checkout/checkout";
 import Contact from "./components/Pages/Contact/index";
 import Thankyou from "./components/Pages/Thankyou/Thankyou";
 
-console.log(
-  "%c Developed by: Black Bird Marketing https://blackbird.marketing",
-  "padding:9px 5px; background:black; line-height:25px;color: white"
-);
+console.log("%c Developed by: Black Bird Marketing https://blackbird.marketing", "padding:9px 5px; background:black; line-height:25px;color: white");
 function App() {
   const [state, setState] = useState({
     posts: [],
@@ -67,7 +64,7 @@ function App() {
           <Route path="/about" element={<About posts={state.posts} />} />
           <Route path="/rooms" element={<Rooms />} />
           <Route path="/single-room/:id" element={<Singleroom />} />
-          <Route path="/checkout/:id" element={<Checkout />} />
+          <Route path="/checkout/:id" element={<Checkout posts={state.posts} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/thankyou" element={<Thankyou />}></Route>
         </Routes>

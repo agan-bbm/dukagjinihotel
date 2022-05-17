@@ -24,7 +24,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { borderRadius } from "@mui/system";
 
-export function Summary() {
+export function Summary({ posts }) {
   const params = useParams();
   console.log(params);
 
@@ -134,12 +134,12 @@ export function Summary() {
       </div>
 
       <div className="payments">
-        <h2>Available Payment Methods:</h2>
+        <h2>{posts.paymentmethod}</h2>
 
         <div className="payment-choices">
           <div className="payment-single-choice">
             <img src={cash} alt="" />
-            <p className="payment-p">Cash on arrival</p>
+            <p className="payment-p">{posts.paymentmethod}</p>
           </div>
           <div className="reservation-comment payment-choices">
             <label for="comment">Comment</label>
@@ -152,7 +152,7 @@ export function Summary() {
               <input type="radio" name="payment-method " />
               <label className="paymentCash" for="payment-method">
                 <img src={cash} />
-                Cash on arrival
+                {posts.cash}
               </label>
             </div>
           </div>
