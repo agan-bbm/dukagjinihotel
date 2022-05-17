@@ -200,7 +200,8 @@
     width: 100%;
   }
   .single-room-rec .icon-info {
-    display: flex;
+    display: grid !important;
+    grid-template-columns: 49% 49%;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;

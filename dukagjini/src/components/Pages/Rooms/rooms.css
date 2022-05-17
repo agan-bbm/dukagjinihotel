@@ -106,7 +106,8 @@ hr {
   margin-left: 10px;
 }
 .icon-info {
-  display: flex;
+  display: grid;
+  grid-template-columns: 49% 49%;
   flex-direction: row;
   width: 80%;
   justify-content: space-between;

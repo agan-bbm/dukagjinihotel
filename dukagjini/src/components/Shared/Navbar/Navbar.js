@@ -130,21 +130,26 @@ function Navbar() {
                 <img src={imgllogo} alt="" />
               </Link>
             </div>
-            <div className="mobile-menu-div">
+            <div
+              className="mobile-menu-div"
+              onClick={() => {
+                setVisible(!visible);
+              }}
+            >
               <p className="mobile-menu-link">
-                <Link to="/about">Rooms</Link>
+                <Link to="/rooms">Rooms</Link>
               </p>
               <p className="mobile-menu-link">
-                <Link to="/rooms">Restaurant</Link>
+                <Link to="/about">Restaurant</Link>
               </p>
               <p className="mobile-menu-link">
-                <Link to="/restaurant">About</Link>
+                <Link to="/about">About</Link>
               </p>
               <p className="mobile-menu-link">
-                <Link to="/about">Contact</Link>
+                <Link to="/contact">Contact</Link>
               </p>
               <p className="mobile-menu-link">
-                <Link to="/about">Rooms</Link>
+                <Link to="/booking">BOOK NOW</Link>
               </p>
             </div>
           </div>
