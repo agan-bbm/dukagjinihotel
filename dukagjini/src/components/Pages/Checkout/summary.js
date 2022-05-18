@@ -144,7 +144,7 @@ export function Summary({ posts }) {
             <input name="payment-method" type="radio" />
           </label>
           <br />
-          <label class="radioLabel">
+          {/* <label class="radioLabel">
             <div className="imgAndText">
               <img src={cash} />
               <p>{posts.cash}</p>
@@ -155,7 +155,7 @@ export function Summary({ posts }) {
           <h2>Additional comments</h2>
           <div class="commentLabel">
             <textarea className="messageBox" name="message" required />
-          </div>
+          </div> */}
         </div>
       </div>
     </>
