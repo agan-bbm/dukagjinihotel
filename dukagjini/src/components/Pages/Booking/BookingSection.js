@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 
 import DatePicker from "react-datepicker";
@@ -24,7 +24,7 @@ import balcony from "../../../images/balcony.png";
 import Daterange from "../../Shared/DatePicker/daterange";
 import { Rooms } from "../Rooms";
 
-function BookingSection() {
+function BookingSection({ dates, setDates }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
 
@@ -32,13 +32,19 @@ function BookingSection() {
     rooms: [],
     isLoaded: false,
   });
+  const [loader, setLoader] = useState(false);
+  console.log(dates);
 
   const onChange = (date) => {
     const [start, end] = date;
     setStartDate(start);
     setEndDate(end);
-    console.log(start);
-    console.log(end);
+    setDates({ ...dates, from: start, to: end });
+    localStorage.setItem("checkin", start);
+    localStorage.setItem("checkout", end);
+
+    // console.log(start);
+    // console.log(end);
   };
   async function getRooms() {
     await axios
@@ -54,12 +60,13 @@ function BookingSection() {
           rooms: res.data.filter((e) => e.IsFree),
           isLoaded: true,
         });
+        setLoader(false);
       })
       .catch((err) => console.log(err));
   }
   // console.log(rooms.rooms.filter((e) => e.IsFree));
-  console.log(startDate);
-  console.log(endDate);
+  // console.log(startDate);
+  // console.log(endDate);
 
   const formatDate = (date) => {
     let d = new Date(date);
@@ -74,18 +81,12 @@ function BookingSection() {
     }
     return [year, month, day].join("/");
   };
-  var today = new Date().toISOString().split("T")[0];
-  const [visible, setVisible] = useState({
-    1: false,
-    2: false,
-    3: false,
-    4: false,
-  });
 
-  // console.log(formatDate(startDate));
-  // console.log(formatDate(endDate));
-  // console.log(rooms.rooms.filter((e) => e.IsFree));
   console.log(rooms.rooms);
+
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+  const myRef = useRef(null);
+  const executeScroll = () => myRef.current.scrollIntoView();
 
   return (
     <>
@@ -115,6 +116,8 @@ function BookingSection() {
                 id="check-avl-rooms"
                 onClick={() => {
                   getRooms();
+                  setLoader(true);
+                  executeScroll();
                 }}
               >
                 Check Rooms
@@ -122,7 +125,7 @@ function BookingSection() {
             </div>
           </div>
 
-          <Rooms freeRooms={rooms} />
+          <Rooms freeRooms={rooms} loader={loader} ref={myRef} />
         </div>
       </div>
     </>

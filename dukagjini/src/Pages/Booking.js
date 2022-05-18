@@ -1,10 +1,10 @@
 import React from "react";
 import BookingSection from "../components/Pages/Booking/BookingSection";
 
-function Booking() {
+function Booking({ dates, setDates }) {
   return (
     <>
-      <BookingSection />
+      <BookingSection dates={dates} setDates={setDates} />
     </>
   );
 }

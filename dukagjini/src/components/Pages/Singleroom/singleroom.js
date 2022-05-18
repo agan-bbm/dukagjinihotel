@@ -11,7 +11,7 @@ import balcony from "../../../images/wifi.svg";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
-function Singleroom() {
+function Singleroom({ dates, setDates }) {
   const params = useParams();
   console.log(params);
 
@@ -35,6 +35,20 @@ function Singleroom() {
       .catch((err) => console.log(err));
   }, []);
   rooms.isLoaded ? console.log(rooms.rooms.acf) : console.log("sadsa");
+
+  const formatDate = (date) => {
+    let d = new Date(date);
+    let month = (d.getMonth() + 1).toString();
+    let day = d.getDate().toString();
+    let year = d.getFullYear();
+    if (month.length < 2) {
+      month = "0" + month;
+    }
+    if (day.length < 2) {
+      day = "0" + day;
+    }
+    return [year, month, day].join("-");
+  };
 
   return rooms.isLoaded ? (
     <>
@@ -92,30 +106,6 @@ function Singleroom() {
                   </div>
                 </div>
               </div>
-
-              {/* <p className="room-features-p">Hotel Features</p>
-              <div className="ikonat-single-room">
-                <div className="icon-info" id="single-room-iconinfo2">
-                  <div className="icon-singleroom-page">
-                    <img src={seaview} alt="" />
-                    <p>Sea view</p>
-                  </div>
-                  <div className="icon-singleroom-page">
-                    <img src={balcony} alt="" />
-                    <p>Balcony </p>
-                  </div>
-
-                  <div className="icon-singleroom-page">
-                    <img src={bath} alt="" />
-                    <p>Bath</p>
-                  </div>
-
-                  <div className="icon-singleroom-page">
-                    <img src={livingroom} alt="" />
-                    <p>Living Room</p>
-                  </div>
-                </div>
-              </div> */}
             </div>
             <div className="sr-info-right">
               <div className="cart">
@@ -128,11 +118,23 @@ function Singleroom() {
                   <div className="sr-dates-flex">
                     <div className="select-dates">
                       <label htmlFor="checkin">Check In Date</label>
-                      <input type="date" name="checkin" />
+                      {/* <input
+                        type="date"
+                        name="checkin"
+                        defaultValue={formatDate(dates.from)}
+                      /> */}
+                      <p>{formatDate(localStorage.getItem("checkin"))}</p>
+                      <p>{formatDate(dates.from)}</p>
                     </div>
                     <div className="select-dates">
                       <label htmlFor="checkin">Check out Date</label>
-                      <input type="date" name="checkin" />
+                      {/* <input
+                        type="date"
+                        name="checkin"
+                        defaultValue={formatDate(dates.to)}
+                      /> */}
+                      <p>{formatDate(localStorage.getItem("checkout"))}</p>
+                      <p>{formatDate(dates.to)}</p>
                     </div>
                   </div>
 

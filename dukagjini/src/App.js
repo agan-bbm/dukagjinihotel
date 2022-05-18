@@ -16,11 +16,14 @@ console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
   "padding:9px 5px; background:black; line-height:25px;color: white"
 );
+// console.warn = console.error = () => {};
+
 function App() {
   const [state, setState] = useState({
     posts: [],
     isLoaded: false,
   });
+  const [dates, setDates] = useState({ from: "", to: "" });
   useEffect(() => {
     axios
       .get("http://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/pages/")
@@ -54,6 +57,7 @@ function App() {
         break;
     }
   });
+  console.log(dates);
   if (state.isLoaded === false) return null;
   else {
     return (
@@ -63,10 +67,16 @@ function App() {
         {/* <div className="homepage"> */}
         <Routes>
           <Route path="/" exact element={<Homepage posts={state.posts} />} />
-          <Route path="/booking" element={<Booking />} />
+          <Route
+            path="/booking"
+            element={<Booking dates={dates} setDates={setDates} />}
+          />
           <Route path="/about" element={<About posts={state.posts} />} />
           <Route path="/rooms" element={<Rooms />} />
-          <Route path="/single-room/:id" element={<Singleroom />} />
+          <Route
+            path="/single-room/:id"
+            element={<Singleroom dates={dates} setDates={setDates} />}
+          />
           <Route path="/checkout/:id" element={<Checkout />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/thankyou" element={<Thankyou />}></Route>

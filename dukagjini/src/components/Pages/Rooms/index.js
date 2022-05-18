@@ -8,35 +8,21 @@ import "swiper/css";
 //styling
 import "./rooms.css";
 
-//images
-import standard from "../../../images/standard.jpg";
-import deluxequeen from "../../../images/deluxequeen.jpg";
-import deluxetwin from "../../../images/deluxetwin.jpg";
-import penthouse from "../../../images/penthouse.jpg";
-
 //icons
 
-import livingroom from "../../../images/user.svg";
-import bath from "../../../images/bed.svg";
-import seaview from "../../../images/dashboard.svg";
-import balcony from "../../../images/wifi.svg";
 import axios from "axios";
-import Singleroom from "../Singleroom/singleroom";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import Loader from "../../Utils/Loader";
+import Loader2 from "../../Utils/Loader";
 
-export function Rooms({ freeRooms }) {
-  const [state, setState] = useState({
-    posts: [],
-    isLoaded: false,
-  });
-  // freeRooms.rooms.map((e) => {
-  //   // console.log(e.RoomTypeName);
-  // });
+export function Rooms({ freeRooms, loader, ref }) {
+  console.log(loader);
   const [rooms, setRooms] = useState({
     rooms: [],
     isLoaded: false,
   });
-  const [showRooms, setShowRooms] = useState({
+
+  const [onlyFreeRooms, setOnlyFreeRooms] = useState({
     rooms: [],
     isLoaded: false,
   });
@@ -85,45 +71,52 @@ export function Rooms({ freeRooms }) {
     }
   });
 
-  // useEffect(()=>{
-  //   for (var i = 0; i < freeRooms.rooms.length; i++) {
-  //     if (freeRooms.rooms[i].RoomTypeName === "SDQR") {
-  //       // return sixthRoomId;
-  //       console.log(sixthRoomId);
-  //       setShowRooms({ ...showRooms, rooms: sixthRoomId });
-  //     } else if (freeRooms.rooms[i].RoomTypeName === "DDQR") {
-  //       // return secondRoomId;
+  var myArr = [];
 
-  //       console.log(secondRoomId);
+  console.log("array", myArr);
 
-  //       setShowRooms({ ...showRooms, rooms: secondRoomId });
-  //     } else if (freeRooms.rooms[i].RoomTypeName === "PRST") {
-  //       // return fourthRoomId;
-  //       console.log(fourthRoomId);
-  //       setShowRooms({ ...showRooms, rooms: fourthRoomId });
-  //     } else if (freeRooms.rooms[i].RoomTypeName === "PENT") {
-  //       // return thidRoomId;
-  //       console.log(thirdRoomId);
-  //       setShowRooms({ ...showRooms, rooms: thirdRoomId });
-  //     } else if (freeRooms.rooms[i].RoomTypeName === "DDTR") {
-  //       // return fifthRoomId;
-  //       console.log(fifthRoomId);
-  //       setShowRooms({ ...showRooms, rooms: fifthRoomId });
-  //     } else {
-  //       console.log("ska maaa");
-  //     }
-  //   }
-  // },[])
-  console.log(showRooms);
-  // };
-  rooms.isLoaded ? console.log(rooms.rooms.acf) : console.log("sadsa");
+  for (var i = 0; i < freeRooms.rooms.length; i++) {
+    if (freeRooms.rooms[i].RoomTypeName === "SDQR") {
+      myArr.push(sixthRoomId);
+    }
+
+    if (freeRooms.rooms[i].RoomTypeName === "PRST") {
+      myArr.push(fourthRoomId);
+    }
+    if (freeRooms.rooms[i].RoomTypeName === "PENT") {
+      myArr.push(thirdRoomId);
+    }
+    if (freeRooms.rooms[i].RoomTypeName === "DDQR") {
+      myArr.push(secondRoomId);
+    }
+    if (freeRooms.rooms[i].RoomTypeName === "DDTR") {
+      myArr.push(fifthRoomId);
+    }
+  }
+
+  if (loader) {
+    document.getElementById("scrollTo").scrollIntoView();
+  }
+
+  console.log(rooms);
+  console.log(freeRooms);
+  useEffect(() => {
+    let myArr2 = [...new Set(myArr)];
+    console.log("array2", myArr2);
+    setOnlyFreeRooms({ ...onlyFreeRooms, rooms: myArr2, isLoaded: true });
+  }, [freeRooms.rooms]);
+  console.log("free rooooooooooooooms", onlyFreeRooms.rooms);
+
   return rooms.isLoaded ? (
     <>
       <div className="containerWrapper">
         <div className="rooms">
-          <h2 className="all-rooms-heading">Our Rooms</h2>
-          {rooms.rooms.map((e) => (
-            <div className="single-room">
+          <h2 className="all-rooms-heading" id="scrollTo">
+            Our Rooms
+          </h2>
+          {/* {showFreeRooms()} */}
+          {onlyFreeRooms.rooms.map((e) => (
+            <div className="single-room" key={e.id}>
               <div className="singleroom-flex">
                 <div className="room-img-gallery">
                   <Swiper
@@ -131,8 +124,6 @@ export function Rooms({ freeRooms }) {
                     spaceBetween={50}
                     slidesPerView={1}
                     navigation
-                    // onSlideChange={() => console.log("slide change")}
-                    // onSwiper={(swiper) => console.log(swiper)}
                   >
                     {e.acf.room.images
                       ? e.acf.room.images.map((img) => (
@@ -141,15 +132,6 @@ export function Rooms({ freeRooms }) {
                           </SwiperSlide>
                         ))
                       : ""}
-                    {/* <SwiperSlide>
-                      <img src={rooms.rooms[5].acf.room.images[0].image1.url} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src={rooms.rooms[5].acf.room.images[0].image1.url} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src={e.acf.room.images[0].image3.url} />
-                    </SwiperSlide> */}
                   </Swiper>
                 </div>
                 <div className="room-desc-info">
@@ -160,7 +142,6 @@ export function Rooms({ freeRooms }) {
                     </div>
                     <div className="price-night-desktop">
                       <h4 id="price">{e.acf.room.room_price}</h4>
-                      {/* <img src={e.acf.room.images[0].image1.url} /> */}
 
                       <p id="nights">{e.acf.room.personnight}</p>
                     </div>
@@ -194,18 +175,16 @@ export function Rooms({ freeRooms }) {
                         </button>
                       </Link>
                     </div>
-                    {/* <div className="details-button">
-                    <a href="">View</a>
-                  </div> */}
                   </div>
                 </div>
               </div>
             </div>
           ))}
+          <div>{loader ? <Loader2 /> : null}</div>
         </div>
       </div>
     </>
   ) : (
-    <p>sdasdsaads</p>
+    <Loader />
   );
 }
