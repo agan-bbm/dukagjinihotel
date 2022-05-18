@@ -6,7 +6,7 @@ import "./checkout.css";
 import { Summary } from "./summary";
 import { Userdetails } from "./userdetails";
 
-function Checkout() {
+function Checkout({ posts }) {
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -28,10 +28,10 @@ function Checkout() {
       case 0:
         return <Userdetails formData={formData} setFormData={setFormData} />;
       case 1:
-        return <Summary />;
+        return <Summary posts={posts[0].acf.checkout.secondtstep} />;
 
       case 2:
-        return <Thankyou />;
+        return <Thankyou posts={posts[0].acf.checkout.thankyou} />;
     }
   };
   const [style, setStyle] = useState("cont");
@@ -45,18 +45,16 @@ function Checkout() {
         return (
           <>
             {" "}
-            <h2>Customer Details</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc ut <br></br>labore et dolore magna aliqua. Ut enim ad minim veniam,Lorem ipsum dolor sit ame.
-            </p>
+            <h2>{posts[0].acf.checkout.firststep.heading}</h2>
+            <p>{posts[0].acf.checkout.firststep.paragraph}</p>
           </>
         );
       case 1:
         return (
           <>
             {" "}
-            <h2>Complete reservation</h2>
-            <p>Choose payment method and if you have, leave a comment about your reservation.</p>
+            <h2>{posts[0].acf.checkout.secondtstep.heading}</h2>
+            <p>{posts[0].acf.checkout.secondtstep.paragraph}</p>
           </>
         );
       case 2:

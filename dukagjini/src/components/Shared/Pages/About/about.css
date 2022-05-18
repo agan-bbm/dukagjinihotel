@@ -59,6 +59,12 @@
 }
 
 @media (max-width: 767px) {
+  .aboutBanner{
+    padding: 50px 0px;
+  }
+  .bannerH{
+    margin-bottom: 0px ;
+  }
   #about-active {
     font-weight: 600;
   }

@@ -50,12 +50,10 @@ function ThirdSection({ posts }) {
         <div className="thirdSection1">
           <div className="thirdsectionDesc">
             <h2>{posts[2].acf.thirdbanner.thirdheading}</h2>
-            <p>{posts[2].acf.thirdbanner.thirdheading}</p>
+            <p>{posts[2].acf.thirdbanner.thirdparagraph}</p>
 
             <Link to="/rooms">
-              <button className="bookingThirdButton  default-button">
-                View our rooms
-              </button>
+              <button className="bookingThirdButton  default-button">View our rooms</button>
             </Link>
           </div>
         </div>

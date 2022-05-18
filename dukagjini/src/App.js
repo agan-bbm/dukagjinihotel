@@ -73,11 +73,11 @@ function App() {
           />
           <Route path="/about" element={<About posts={state.posts} />} />
           <Route path="/rooms" element={<Rooms />} />
+          <Route path="/single-room/:id" element={<Singleroom />} />
           <Route
-            path="/single-room/:id"
-            element={<Singleroom dates={dates} setDates={setDates} />}
+            path="/checkout/:id"
+            element={<Checkout posts={state.posts} />}
           />
-          <Route path="/checkout/:id" element={<Checkout />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/thankyou" element={<Thankyou />}></Route>
         </Routes>

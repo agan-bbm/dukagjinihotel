@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { AddressMap, Map } from "../About/map";
 import "./contact.css";
 
-function Contact({ posts }) {
+function Contact() {
+  const [submitting, setSubmitting] = useState(false);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setSubmitting(true);
+
+    setTimeout(() => {
+      setSubmitting(false);
+    }, 5000);
+  };
+
   return (
     <>
       <div className="contactWrapper">
@@ -13,7 +23,7 @@ function Contact({ posts }) {
               <p className="paragraf">
                 Contact us if you need any help or have any questions
               </p>
-              <form className="contactform">
+              <form className="contactform" onSubmit={handleSubmit}>
                 <div className="nameLabel">
                   <label for="fullName">Full name</label>
                 </div>
@@ -55,6 +65,9 @@ function Contact({ posts }) {
                 </div>
                 <div>
                   <input type="submit" value="Send" className="sendButton" />
+                </div>
+                <div className="wrapper">
+                  {submitting && <div>Submtting Form...</div>}
                 </div>
               </form>
             </div>

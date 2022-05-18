@@ -24,7 +24,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { borderRadius } from "@mui/system";
 
-export function Summary() {
+export function Summary({ posts }) {
   const params = useParams();
   console.log(params);
 
@@ -134,28 +134,28 @@ export function Summary() {
       </div>
 
       <div className="payments">
-        <h2>Available Payment Methods:</h2>
-
+        <h2>{posts.paymentmethod}</h2>
         <div className="payment-choices">
-          <div className="payment-single-choice">
-            <img src={cash} alt="" />
-            <p className="payment-p">Cash on arrival</p>
-          </div>
-          <div className="reservation-comment payment-choices">
-            <label for="comment">Comment</label>
-            <br></br>
-            <input type="text" name="commnet" placeholder="Comment" />
-            <br></br>
-            <label for="payment-method">Available Payment Methods:</label>
-            <br></br>
-            <div className="radioButton">
-              <input type="radio" name="payment-method " />
-              <label className="paymentCash" for="payment-method">
-                <img src={cash} />
-                Cash on arrival
-              </label>
+          <label class="radioLabel">
+            <div className="imgAndText">
+              <img src={cash} />
+              <p>{posts.cash}</p>
             </div>
-          </div>
+            <input name="payment-method" type="radio" />
+          </label>
+          <br />
+          {/* <label class="radioLabel">
+            <div className="imgAndText">
+              <img src={cash} />
+              <p>{posts.cash}</p>
+            </div>
+            <input name="payment-method" type="radio" />
+          </label>
+          <br />
+          <h2>Additional comments</h2>
+          <div class="commentLabel">
+            <textarea className="messageBox" name="message" required />
+          </div> */}
         </div>
       </div>
     </>
