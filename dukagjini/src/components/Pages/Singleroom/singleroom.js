@@ -124,7 +124,7 @@ function Singleroom({ dates, setDates }) {
                         defaultValue={formatDate(dates.from)}
                       /> */}
                       <p>{formatDate(localStorage.getItem("checkin"))}</p>
-                      <p>{formatDate(dates.from)}</p>
+                      {/* <p>{formatDate(dates.from)}</p> */}
                     </div>
                     <div className="select-dates">
                       <label htmlFor="checkin">Check out Date</label>
@@ -134,7 +134,7 @@ function Singleroom({ dates, setDates }) {
                         defaultValue={formatDate(dates.to)}
                       /> */}
                       <p>{formatDate(localStorage.getItem("checkout"))}</p>
-                      <p>{formatDate(dates.to)}</p>
+                      {/* <p>{formatDate(dates.to)}</p> */}
                     </div>
                   </div>
 
