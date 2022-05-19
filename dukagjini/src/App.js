@@ -11,6 +11,7 @@ import Singleroom from "./components/Pages/Singleroom/singleroom";
 import Checkout from "./components/Pages/Checkout/checkout";
 import Contact from "./components/Pages/Contact/index";
 import Thankyou from "./components/Pages/Thankyou/Thankyou";
+import { StaticRooms } from "./components/Pages/StaticRooms/StaticRooms";
 
 console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
@@ -73,6 +74,7 @@ function App() {
           />
           <Route path="/about" element={<About posts={state.posts} />} />
           <Route path="/rooms" element={<Rooms />} />
+          <Route path="our-rooms" element={<StaticRooms />} />
           <Route path="/single-room/:id" element={<Singleroom />} />
           <Route
             path="/checkout/:id"
