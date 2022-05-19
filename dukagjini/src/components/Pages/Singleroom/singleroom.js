@@ -13,7 +13,6 @@ import axios from "axios";
 
 function Singleroom({ dates, setDates }) {
   const params = useParams();
-  console.log(params);
 
   const [rooms, setRooms] = useState({
     rooms: [],
@@ -34,7 +33,10 @@ function Singleroom({ dates, setDates }) {
       })
       .catch((err) => console.log(err));
   }, []);
-  rooms.isLoaded ? console.log(rooms.rooms.acf) : console.log("sadsa");
+
+  if (rooms.isLoaded) {
+    console.log(rooms.rooms.acf.room.short_room_name);
+  }
 
   const formatDate = (date) => {
     let d = new Date(date);
@@ -141,8 +143,14 @@ function Singleroom({ dates, setDates }) {
                   <div className="sr-selects-flex">
                     <div className="select-dates select">
                       <label htmlFor="checkin">Adult</label>
-                      <select name="checkin" id="">
-                        <option value="0">0</option>
+                      <select
+                        name="checkin"
+                        id=""
+                        onChange={(e) => {
+                          localStorage.setItem("adult", e.target.value);
+                        }}
+                      >
+                        {/* <option value="0">0</option> */}
                         <option value="1">1</option>
 
                         <option value="2">2</option>
@@ -156,7 +164,13 @@ function Singleroom({ dates, setDates }) {
                     </div>
                     <div className="select-dates select">
                       <label htmlFor="checkin">Children</label>
-                      <select name="checkin" id="">
+                      <select
+                        name="checkin"
+                        id=""
+                        onChange={(e) => {
+                          localStorage.setItem("children", e.target.value);
+                        }}
+                      >
                         <option value="0">0</option>
                         <option value="1">1</option>
 
@@ -179,7 +193,15 @@ function Singleroom({ dates, setDates }) {
                     </p>
                   </div>
                   <div className="single-page-button">
-                    <Link to={"/checkout/" + params.id}>
+                    <Link
+                      to={"/checkout/" + params.id}
+                      onClick={() => {
+                        localStorage.setItem(
+                          "roomName",
+                          rooms.rooms.acf.room.short_room_name
+                        );
+                      }}
+                    >
                       <button className="default-button">Book</button>
                     </Link>
                   </div>

@@ -15,7 +15,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import Loader from "../../Utils/Loader";
 import Loader2 from "../../Utils/Loader";
 
-export function Rooms({ freeRooms, loader, ref }) {
+export function Rooms({ freeRooms, loader }) {
   console.log(loader);
   const [rooms, setRooms] = useState({
     rooms: [],
@@ -74,6 +74,7 @@ export function Rooms({ freeRooms, loader, ref }) {
   var myArr = [];
 
   console.log("array", myArr);
+  console.log(freeRooms.isLoaded);
 
   if (freeRooms) {
     for (var i = 0; i < freeRooms.rooms.length; i++) {
@@ -96,7 +97,7 @@ export function Rooms({ freeRooms, loader, ref }) {
     }
   }
 
-  if (loader) {
+  if (onlyFreeRooms.rooms.length > 0) {
     document.getElementById("scrollTo").scrollIntoView();
   }
 
@@ -106,16 +107,17 @@ export function Rooms({ freeRooms, loader, ref }) {
     let myArr2 = [...new Set(myArr)];
     console.log("array2", myArr2);
     setOnlyFreeRooms({ ...onlyFreeRooms, rooms: myArr2, isLoaded: true });
-  }, [freeRooms ? freeRooms.rooms : ""]);
+  }, [freeRooms.rooms]);
   console.log("free rooooooooooooooms", onlyFreeRooms.rooms);
 
-  return rooms.isLoaded ? (
+  return freeRooms.rooms.length > 0 ? (
     <>
       <div className="containerWrapper">
         <div className="rooms">
           <h2 className="all-rooms-heading" id="scrollTo">
-            Our Rooms
+            Our Free Rooms
           </h2>
+
           {/* {showFreeRooms()} */}
           {onlyFreeRooms.rooms.map((e) => (
             <div className="single-room" key={e.id}>
@@ -182,11 +184,10 @@ export function Rooms({ freeRooms, loader, ref }) {
               </div>
             </div>
           ))}
-          <div>{loader ? <Loader2 /> : null}</div>
         </div>
       </div>
     </>
   ) : (
-    <Loader />
+    <div>{loader ? <Loader2 /> : null}</div>
   );
 }

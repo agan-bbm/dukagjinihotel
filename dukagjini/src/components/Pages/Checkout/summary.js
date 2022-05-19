@@ -34,7 +34,10 @@ export function Summary({ posts }) {
   });
   useEffect(() => {
     axios
-      .get("http://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/Rooms/" + params.id)
+      .get(
+        "http://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/Rooms/" +
+          params.id
+      )
       .then((res) => {
         setRooms({
           ...rooms,
@@ -45,6 +48,7 @@ export function Summary({ posts }) {
       .catch((err) => console.log(err));
   }, []);
   console.log(rooms.rooms.acf);
+
   return rooms.isLoaded ? (
     <>
       <div className="single-room">
@@ -61,7 +65,10 @@ export function Summary({ posts }) {
               {rooms.rooms.acf.room.images
                 ? rooms.rooms.acf.room.images.map((img) => (
                     <SwiperSlide>
-                      <img src={img.length > 0 ? img : ""} style={{ borderRadius: "20px" }} />
+                      <img
+                        src={img.length > 0 ? img : ""}
+                        style={{ borderRadius: "20px" }}
+                      />
                     </SwiperSlide>
                   ))
                 : ""}
@@ -82,7 +89,9 @@ export function Summary({ posts }) {
                 <h2 className="room-title" style={{ textAlign: "left" }}>
                   {rooms.rooms.acf.room.name}
                 </h2>
-                <p className="room-short-desc">{rooms.rooms.acf.room.shortdesc}</p>
+                <p className="room-short-desc">
+                  {rooms.rooms.acf.room.shortdesc}
+                </p>
               </div>
               <div className="price-night-desktop">
                 {/* <h4 id="price">{rooms.rooms.acf.room.room_price}</h4> */}
@@ -117,7 +126,9 @@ export function Summary({ posts }) {
 
             <div className="checkoutroom-buttons">
               <div className="price-night" style={{ textAlign: "left" }}>
-                <h4 style={{ fontSize: "26px", fontWeight: "400" }}>{rooms.rooms.acf.room.room_price}</h4>
+                <h4 style={{ fontSize: "26px", fontWeight: "400" }}>
+                  {rooms.rooms.acf.room.room_price}
+                </h4>
                 {/* <p>{rooms.rooms.acf.room.personnight}</p> */}
               </div>
               <div className="book-button">

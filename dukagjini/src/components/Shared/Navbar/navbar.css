@@ -12,6 +12,7 @@
   transition: all 0.4s ease-in-out;
   z-index: 999999;
 }
+
 .white-line {
   margin: 0 auto;
   border: 1px solid white;
@@ -20,6 +21,7 @@
   width: 95%;
   transition: all 0.4s ease-in-out;
 }
+
 .navbar-main-container {
   width: 95%;
   max-width: 1850px;
@@ -31,13 +33,16 @@
   align-items: center;
   padding: 0px 0px;
 }
+
 .logo-link img {
   transition: all 0.4s ease-in-out;
 }
+
 .navbar-main-container img {
   width: 100px;
   fill: black;
 }
+
 .white-button {
   background-color: white;
   border: 1px solid #CA9E72;
@@ -46,8 +51,8 @@
   cursor: pointer;
   align-self: center;
   padding: 15px 0px !important;
-    width: 150px !important;
-    font-size: 14px !important;
+  width: 150px !important;
+  font-size: 14px !important;
   align-self: center;
   align-items: center;
   text-align: center;
@@ -56,6 +61,7 @@
   text-transform: uppercase;
   transition: all 0.4s ease-in-out;
 }
+
 .navbar-links {
   padding: 10px 0;
   max-width: 1850px;
@@ -75,6 +81,7 @@
   margin: 0 20px;
   transition: all 0.4s ease-in-out;
 }
+
 .white-links {
   text-decoration: none;
   color: #c3996c;
@@ -88,8 +95,9 @@
   background-color: white;
   transition: all 0.4s ease-in-out;
 }
+
 .black-button {
-  background-color: black;
+  background-color: #1f1f1f;
   color: white;
   /* border-radius: 8px; */
   transition: all 0.4s ease-in-out;
@@ -101,11 +109,13 @@
   background-color: black;
   transition: all 0.4s ease-in-out;
 }
+
 .black-links {
   transition: all 0.4s ease-in-out;
 
   color: black;
 }
+
 .black-dots {
   background-color: black;
   transition: all 0.4s ease-in-out;
@@ -125,57 +135,68 @@ g.left-group {
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
 }
+
 g.right-group {
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
   transform: scale(1) rotate(0);
 }
+
 path.top-group {
   transform: scale(1) rotate(0);
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
 }
+
 g.bottom-right-group {
   transform: scale(1) rotate(0);
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
 }
+
 path.center-group {
   transform: scale(1) rotate(0);
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
 }
+
 g.bottom-left-group {
   transform: scale(1) rotate(0);
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
 }
+
 /* scrolled log */
 g.left-group.scrolled {
   transform: scale(0);
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
 }
+
 g.right-group.scrolled {
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
   transform: scale(0);
 }
+
 path.top-group.scrolled {
   transform: scale(0);
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
 }
+
 g.bottom-right-group.scrolled {
   transform: scale(0);
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
 }
+
 path.center-group.scrolled {
   transform: scale(3);
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
 }
+
 g.bottom-left-group.scrolled {
   transform: scale(0);
   transform-origin: bottom center;
@@ -186,49 +207,59 @@ g.bottom-left-group.scrolled {
   width: 100px;
   height: auto;
 }
-#logomobile-burger{
+
+#logomobile-burger {
   margin: 0 auto;
   margin-top: 20px;
 }
+
 .SvgLogo.scrolled {
   transform: scale(0);
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
-}.burger-icon{
+}
+
+.burger-icon {
   display: none;
 }
-@media(max-width:600px){
-  .navbar-links{
+
+@media(max-width:600px) {
+  .navbar-links {
     display: none;
   }
-  .mobile-menu-link{
+
+  .mobile-menu-link {
     margin-bottom: 40px;
     font-size: 18px;
   }
-  .mobile-menu-div{
+
+  .mobile-menu-div {
     padding-top: 80px;
   }
-  .mobile-menu-link a{
+
+  .mobile-menu-link a {
     text-decoration: none;
     /* background-color: yellow; */
     color: black;
   }
-  
-  .burger-icon{
+
+  .burger-icon {
     display: block;
     background-color: transparent;
     border: none;
   }
-  
-  .mobile-menu{
+
+  .mobile-menu {
     background-color: white;
     width: 100%;
   }
-  .navbar-active{
+
+  .navbar-active {
     display: flex;
     justify-content: center;
   }
-  .mobile-menu{
+
+  .mobile-menu {
     position: absolute;
     left: 0;
     top: 0;
@@ -236,7 +267,8 @@ g.bottom-left-group.scrolled {
     height: 100vh;
     overflow: hidden;
   }
-  .white-button{
+
+  .white-button {
     display: none;
   }
 }

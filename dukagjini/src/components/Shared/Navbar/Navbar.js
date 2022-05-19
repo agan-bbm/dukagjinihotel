@@ -77,7 +77,7 @@ function Navbar() {
 
         <div className="navbar-links">
           <Link
-            to="/rooms"
+            to="/our-rooms"
             className={!navbar ? "white-links" : " black-links white-links "}
           >
             Rooms
@@ -137,7 +137,7 @@ function Navbar() {
               }}
             >
               <p className="mobile-menu-link">
-                <Link to="/rooms">Rooms</Link>
+                <Link to="/our-rooms">Rooms</Link>
               </p>
               <p className="mobile-menu-link">
                 <Link to="/about">Restaurant</Link>

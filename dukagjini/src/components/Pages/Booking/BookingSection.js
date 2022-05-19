@@ -27,6 +27,7 @@ import { Rooms } from "../Rooms";
 function BookingSection({ dates, setDates }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
+  const todayDate = new Date();
 
   const [rooms, setRooms] = useState({
     rooms: [],
@@ -84,10 +85,6 @@ function BookingSection({ dates, setDates }) {
 
   console.log(rooms.rooms);
 
-  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
-  const myRef = useRef(null);
-  const executeScroll = () => myRef.current.scrollIntoView();
-
   return (
     <>
       <div className="booking-container">
@@ -108,7 +105,7 @@ function BookingSection({ dates, setDates }) {
               monthsShown={2}
               selectsRange
               inline
-              // minDate={todayDate}
+              minDate={todayDate}
             />
             <div>
               <button
@@ -117,7 +114,6 @@ function BookingSection({ dates, setDates }) {
                 onClick={() => {
                   getRooms();
                   setLoader(true);
-                  executeScroll();
                 }}
               >
                 Check Rooms
@@ -125,7 +121,7 @@ function BookingSection({ dates, setDates }) {
             </div>
           </div>
 
-          <Rooms freeRooms={rooms} loader={loader} ref={myRef} />
+          <Rooms freeRooms={rooms} loader={loader} />
         </div>
       </div>
     </>

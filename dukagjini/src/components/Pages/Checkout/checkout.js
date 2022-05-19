@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Thankyou from "../Thankyou/Thankyou";
@@ -34,6 +35,7 @@ function Checkout({ posts }) {
         return <Thankyou posts={posts[0].acf.checkout.thankyou} />;
     }
   };
+
   const [style, setStyle] = useState("cont");
   const changeStyle = () => {
     setStyle("none");
@@ -72,6 +74,49 @@ function Checkout({ posts }) {
     }
   };
   const [required, setRequired] = useState(false);
+  const formatDate = (date) => {
+    let d = new Date(date);
+    let month = (d.getMonth() + 1).toString();
+    let day = d.getDate().toString();
+    let year = d.getFullYear();
+    if (month.length < 2) {
+      month = "0" + month;
+    }
+    if (day.length < 2) {
+      day = "0" + day;
+    }
+    return [year, month, day].join("/");
+  };
+
+  console.log(
+    parseInt(localStorage.getItem("adult")) +
+      parseInt(localStorage.getItem("children"))
+  );
+  const handleSubmit = (e) => {
+    const f = new FormData();
+    f.append(
+      "Guests",
+      parseInt(localStorage.getItem("adult")) +
+        parseInt(localStorage.getItem("children"))
+    );
+    f.append("Adults", localStorage.getItem("adult"));
+    f.append("Children", localStorage.getItem("children"));
+    f.append("CheckInDate", formatDate(localStorage.getItem("checkin")));
+    f.append("CheckOutDate", formatDate(localStorage.getItem("checkout")));
+    f.append("RoomName", "SDQR");
+
+    axios
+      .post(
+        "http://cmsdukagjini.blackbird.marketing/wp-content/reservation.php",
+        f
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <>
@@ -108,11 +153,20 @@ function Checkout({ posts }) {
               // } else {
               //   setPage(page + 1);
               // }
-              if (formData.name === "" || formData.lastName === "" || formData.email === "" || formData.number === "") {
+              if (
+                formData.name === "" ||
+                formData.lastName === "" ||
+                formData.email === "" ||
+                formData.number === ""
+              ) {
                 setRequired(true);
               } else {
                 setRequired(false);
-                setPage(page + 1);
+                if (page === 1) {
+                  handleSubmit();
+                } else {
+                  setPage(page + 1);
+                }
               }
             }}
           >
