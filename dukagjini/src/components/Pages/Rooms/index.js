@@ -75,22 +75,24 @@ export function Rooms({ freeRooms, loader, ref }) {
 
   console.log("array", myArr);
 
-  for (var i = 0; i < freeRooms.rooms.length; i++) {
-    if (freeRooms.rooms[i].RoomTypeName === "SDQR") {
-      myArr.push(sixthRoomId);
-    }
+  if (freeRooms) {
+    for (var i = 0; i < freeRooms.rooms.length; i++) {
+      if (freeRooms.rooms[i].RoomTypeName === "SDQR") {
+        myArr.push(sixthRoomId);
+      }
 
-    if (freeRooms.rooms[i].RoomTypeName === "PRST") {
-      myArr.push(fourthRoomId);
-    }
-    if (freeRooms.rooms[i].RoomTypeName === "PENT") {
-      myArr.push(thirdRoomId);
-    }
-    if (freeRooms.rooms[i].RoomTypeName === "DDQR") {
-      myArr.push(secondRoomId);
-    }
-    if (freeRooms.rooms[i].RoomTypeName === "DDTR") {
-      myArr.push(fifthRoomId);
+      if (freeRooms.rooms[i].RoomTypeName === "PRST") {
+        myArr.push(fourthRoomId);
+      }
+      if (freeRooms.rooms[i].RoomTypeName === "PENT") {
+        myArr.push(thirdRoomId);
+      }
+      if (freeRooms.rooms[i].RoomTypeName === "DDQR") {
+        myArr.push(secondRoomId);
+      }
+      if (freeRooms.rooms[i].RoomTypeName === "DDTR") {
+        myArr.push(fifthRoomId);
+      }
     }
   }
 
@@ -104,7 +106,7 @@ export function Rooms({ freeRooms, loader, ref }) {
     let myArr2 = [...new Set(myArr)];
     console.log("array2", myArr2);
     setOnlyFreeRooms({ ...onlyFreeRooms, rooms: myArr2, isLoaded: true });
-  }, [freeRooms.rooms]);
+  }, [freeRooms ? freeRooms.rooms : ""]);
   console.log("free rooooooooooooooms", onlyFreeRooms.rooms);
 
   return rooms.isLoaded ? (
