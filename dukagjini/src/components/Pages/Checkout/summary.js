@@ -141,7 +141,7 @@ export function Summary({ posts }) {
               <img src={cash} />
               <p>{posts.cash}</p>
             </div>
-            <input name="payment-method" type="radio" />
+            <input name="payment-method" type="radio" checked="checked" />
           </label>
           <br />
           {/* <label class="radioLabel">
