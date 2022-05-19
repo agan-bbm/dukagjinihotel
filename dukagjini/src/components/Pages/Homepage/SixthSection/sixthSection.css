@@ -1,12 +1,12 @@
 .sixthSection {
   color: #3c3a34;
-  padding-bottom: 40px;
+  padding-bottom: 25px;
 }
 
 .sixthHeader {
  
   justify-content: center;
-  padding: 50px 0;
+  padding: 25px 0;
   text-align: center;
 }
 
@@ -107,6 +107,14 @@
 }
 .chill {
   padding-bottom: 40px;
+}
+@media(min-width:768px) and (max-width:998px){
+  .sixthslidegallery .swiper-slide{
+    margin: 0px 24px !important;
+  }
+  .testimonialContainer{
+    padding: 10px !important;
+  }
 }
 @media (max-width: 767px) {
   .sixthHeader h2 {

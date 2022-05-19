@@ -10,6 +10,9 @@
 .checkout-form {
   /* padding-top: 50px; */
 }
+.checkout .icon-info{
+  width: 100% !important;
+}
 .form {
   width: 100% !important;
 }
@@ -149,6 +152,9 @@ input[name="payment-method"] {
   font-size: 22px;
   font-weight: 400;
 }
+.checkout .room-short-desc{
+  text-align: left;
+}
 @media (min-width: 768px) {
   .checkout {
     width: 768px;
@@ -156,6 +162,11 @@ input[name="payment-method"] {
   }
 }
 @media (max-width: 767px) {
+
+  #checkout-roomdescinfo{
+    padding: 0;
+  }
+ 
   .userdtl-inputrow {
     flex-direction: column;
   }

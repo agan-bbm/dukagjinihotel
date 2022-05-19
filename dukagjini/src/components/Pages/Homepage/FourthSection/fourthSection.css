@@ -11,18 +11,18 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
 }
 
 .fourthSectionPart {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
     justify-content: space-between;
 }
 .fourthContainer {
-    padding: 50px 0;
+    padding: 25px 0;
     align-items: center;
     width: 100%;
 }
@@ -85,6 +85,7 @@
     margin-bottom: 0px;
     margin-top: 50px;
 }
+
 .recomendations .swiper{
     padding-bottom: 40px;
 }
@@ -101,7 +102,7 @@
 .single-room-rec{
    
     /* width: 30%; */
-    box-shadow: 0 15px 12px rgb(0 0 0 / 8%);
+    box-shadow: 15px 15px 15px rgb(0 0 0 / 3%);
     padding: 15px;
     background-color: white;
 }
@@ -221,8 +222,42 @@
     padding-left: 0 !important;
     padding-right: 50px;
 }
+#tabletRoomRec{
+    display: none;
+}
+@media(min-width:768px) and (max-width:998px){
+    .pcmobRec{
+        display: none;
+    }
+    #tabletRoomRec{
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+    #tabletRoomRec .single-room-rec{
+        margin: 20px 0px;
+    }
+    #recomendations4u{
+        text-align: center;
+    }
+    #recommendationParagraph {
+        width: 55%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .fourthSectionPart{
+        width: 95% !important;
+        margin: 0 auto;
+    }
+    .fourthSectionFliped{
+        width: 95%;
+        margin: 0 auto;
+    }
+  }
 @media (max-width: 767px) {
-
+    .fourthContainer{
+        padding-top: 0px;
+    }
     .recomendations .icon{
         width: 130px;
     }
@@ -233,7 +268,9 @@
         font-size: 22px;
         padding: 20px;
     }
-  
+   #recomendations4u{
+        padding-top: 50px;
+    }
     #recommendationParagraph {
         width: 100%;
         text-align: center;
@@ -257,7 +294,8 @@
         flex-direction: column;
     }
     .fourthSection h2{
-        padding-top: 20px;
+        padding: 0;
+        padding-top: 25px;
     }
     .offerLeft{
         width: 100%;
@@ -265,6 +303,7 @@
     }
     .fourthSectionPart{
         flex-direction: column;
+        padding: 25px 0px;
     }.fourthSectionLeft{
         width: 100%;
     }
@@ -273,13 +312,13 @@
         height: auto;
         /* background-color: white; */
         padding-left: 0px;
-        padding-top: 20px;
+        /* padding-top: 20px; */
         text-align: center;
     }.fourthSectionFliped{
         flex-direction: column;
     }.fourthSectionFliped .fourthSectionRight{
         padding: 0;
-        padding-top: 20px;
+        /* padding-top: 20px; */
     }
     .fourthSection img {
       

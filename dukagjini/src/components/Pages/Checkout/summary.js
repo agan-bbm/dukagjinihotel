@@ -126,7 +126,14 @@ export function Summary({ posts }) {
 
             <div className="checkoutroom-buttons">
               <div className="price-night" style={{ textAlign: "left" }}>
-                <h4 style={{ fontSize: "26px", fontWeight: "400" }}>
+                <h4
+                  style={{
+                    fontSize: "26px",
+                    fontWeight: "400",
+                    marginBottom: "0",
+                  }}
+                >
+                  <span style={{ fontSize: "22px" }}>Total:</span>{" "}
                   {rooms.rooms.acf.room.room_price}
                 </h4>
                 {/* <p>{rooms.rooms.acf.room.personnight}</p> */}

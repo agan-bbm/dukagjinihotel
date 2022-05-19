@@ -58,9 +58,9 @@ function Singleroom({ dates, setDates }) {
         <div className="containerWrapper">
           <div>
             {/* <h2 className="single-room-title">Standard Room</h2> */}
-            <h2 style={{ marginBottom: "0px" }} className="single-room-title">
+            {/* <h2 style={{ marginBottom: "0px" }} className="single-room-title">
               {rooms.rooms.acf.room.name}
-            </h2>
+            </h2> */}
           </div>
 
           {/* <div className="review-single-room">
@@ -83,7 +83,7 @@ function Singleroom({ dates, setDates }) {
           <div className="title-and-location">
             <h2 className="single-room-title">{rooms.rooms.acf.room.name}</h2>
 
-            <p id="lokacioni-dhomes">Prishtine, Kosove</p>
+            <p id="lokacioni-dhomes">Pejë, Kosove</p>
           </div>
 
           <div className="single-room-informations">

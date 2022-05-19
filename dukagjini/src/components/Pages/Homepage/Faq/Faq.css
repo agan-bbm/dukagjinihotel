@@ -1,6 +1,7 @@
 
 .faqs{
-    padding: 50px 0px;
+    padding: 25px 0px;
+    padding-bottom: 50px;
 }
 .accordion {
     max-width: 600px;
@@ -31,7 +32,7 @@
     color: #CA9E72;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     height: 20px;
     text-align: center;
       
@@ -41,13 +42,19 @@
       margin: 0;
       width: 100%;
   }
-  #minus{
+  #minus {
     margin: 0;
     width: 100%;
     background-color: #CA9E72;
     border-radius: 50%;
     color: white;
-  }
+    height: 20px;
+    width: 20px;
+    align-items: unset;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
     #plus{
     
     margin: 0;
@@ -55,3 +62,9 @@
   .accordion-content {
     
   }
+  @media (max-width:767px){
+    
+    .faqs{
+    padding-bottom: 50px;
+  }
+}
