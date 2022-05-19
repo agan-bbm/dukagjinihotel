@@ -5,6 +5,7 @@ import ImageMasonry from "../../Masonry";
 import AboutTab from "./aboutTab";
 
 import { Link } from "react-router-dom";
+import { AddressMap } from "../../../Pages/About/map";
 
 function About({ posts, founder }) {
   console.log(window.innerWidth);
@@ -34,8 +35,13 @@ function About({ posts, founder }) {
   return (
     <div>
       <div className="aboutBanner">
-        <div className="containerWrapper" style={{ backgroundImage: `url(${posts[0].acf.aboutbannerimg})` }}>
-          <h2 /*style={style}*/ className="bannerH">{posts[0].acf.aboutheading}</h2>
+        <div
+          className="containerWrapper"
+          style={{ backgroundImage: `url(${posts[0].acf.aboutbannerimg})` }}
+        >
+          <h2 /*style={style}*/ className="bannerH">
+            {posts[0].acf.aboutheading}
+          </h2>
           <p className="bannerP">{posts[0].acf.aboutparagraph}</p>
         </div>
       </div>
@@ -49,7 +55,9 @@ function About({ posts, founder }) {
                 setContent(0);
               }}
             >
-              <p className="tabName">{posts[0].acf.abouttabs.firsttab.tabheading}</p>
+              <p className="tabName">
+                {posts[0].acf.abouttabs.firsttab.tabheading}
+              </p>
             </div>
 
             <div
@@ -59,7 +67,9 @@ function About({ posts, founder }) {
                 setContent(1);
               }}
             >
-              <p className="tabName">{posts[0].acf.abouttabs.secondtab.tabheading}</p>
+              <p className="tabName">
+                {posts[0].acf.abouttabs.secondtab.tabheading}
+              </p>
             </div>
             <div
               className="about-button hoverable"
@@ -68,7 +78,9 @@ function About({ posts, founder }) {
                 setContent(2);
               }}
             >
-              <p className="tabName">{posts[0].acf.abouttabs.thirdtab.tabheading}</p>
+              <p className="tabName">
+                {posts[0].acf.abouttabs.thirdtab.tabheading}
+              </p>
             </div>
           </div>
         </div>

@@ -48,9 +48,9 @@ function SixthSection({ posts }) {
             <SwiperSlide>
               <div className="testimonial">
                 <div className="testimonialContainer">
-                  <div className="profilePic">
+                  {/* <div className="profilePic">
                     <img src={posts[2].acf.testimonials[0].clientimg} />
-                  </div>
+                  </div> */}
                   <p className="userDscr">
                     {posts[2].acf.testimonials[0].clienttype}
                   </p>
@@ -68,9 +68,9 @@ function SixthSection({ posts }) {
             <SwiperSlide>
               <div className="testimonial">
                 <div className="testimonialContainer">
-                  <div className="profilePic">
+                  {/* <div className="profilePic">
                     <img src={posts[2].acf.testimonials[1].clientimg} />
-                  </div>
+                  </div> */}
                   <p className="userDscr">
                     {posts[2].acf.testimonials[1].clienttype}
                   </p>
@@ -88,9 +88,9 @@ function SixthSection({ posts }) {
             <SwiperSlide>
               <div className="testimonial">
                 <div className="testimonialContainer">
-                  <div className="profilePic">
+                  {/* <div className="profilePic">
                     <img src={posts[2].acf.testimonials[2].clientimg} />
-                  </div>
+                  </div> */}
                   <p className="userDscr">
                     {posts[2].acf.testimonials[2].clienttype}
                   </p>
@@ -108,9 +108,9 @@ function SixthSection({ posts }) {
             <SwiperSlide>
               <div className="testimonial">
                 <div className="testimonialContainer">
-                  <div className="profilePic">
+                  {/* <div className="profilePic">
                     <img src={posts[2].acf.testimonials[3].clientimg} />
-                  </div>
+                  </div> */}
                   <p className="userDscr">
                     {posts[2].acf.testimonials[3].clienttype}
                   </p>
@@ -128,9 +128,9 @@ function SixthSection({ posts }) {
             <SwiperSlide>
               <div className="testimonial">
                 <div className="testimonialContainer">
-                  <div className="profilePic">
+                  {/* <div className="profilePic">
                     <img src={posts[2].acf.testimonials[4].clientimg} />
-                  </div>
+                  </div> */}
                   <p className="userDscr">
                     {posts[2].acf.testimonials[4].clienttype}
                   </p>

@@ -25,6 +25,9 @@
   object-fit: cover;
 }
 @media only screen and (max-width: 1299px) and (min-width: 768px) {
+  .leftSide{
+    width: 100%;
+  }
 #datepickerihome{
   display: none !important;
 }
@@ -85,6 +88,35 @@
 #mobile {
   display: none;
 }
+@media(min-width:768px) and (max-width:998px){
+  .firstSection{
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .leftContainer{
+    padding: 0px 50px;
+    text-align: center;
+    
+  }
+  .bookingFirstBanner {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ead9c7;
+    /* border: 1px solid #CA9E72; */
+    padding: 50px;
+    position: relative;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    width: auto;
+}
+.firstButtonRes{
+  margin-top: 20px;
+  width: 100% !important;
+  text-align: center;
+}
+}
 @media (max-width: 767px) {
   .firstSection {
     height: auto;
@@ -124,7 +156,8 @@
     padding: 0;
     padding-top: 30px;
     position: relative;
-    margin-top: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     align-items: center;
     width: auto;
     flex-direction: column;

@@ -1,5 +1,5 @@
 .single-room-page{
-    padding-top: 100px;
+    padding-top: 150px;
 }
 .single-room-title{
     font-size: 46px;
@@ -18,9 +18,7 @@
     display: flex;
     padding-bottom: 50px;
 }
-.sr-info-right{
-    padding-top: 50px;
-}
+
 .cart{
     border: 1px solid #D8D8D8;
     border-radius: 20px;
@@ -64,6 +62,9 @@
     border: none;
     margin-top: 10px;
     flex-direction: row-reverse;
+}
+.rightside-div img{
+height: 247.5px;   
 }
 .select-dates select{
     width: 50px;
@@ -154,6 +155,14 @@ hr{
     font-weight: 400;
 }
 @media(min-width:768px){
+    .rightside-div{
+     height: 247.5px;   
+    }
+    .sr-info-right{
+        /* padding-top: 50px; */
+        padding: 0;
+        margin-top: -100px;
+    }
     .grid-left-side{
         height: 500px;
     }
@@ -164,12 +173,17 @@ hr{
         height: 500px;
     }
     .grid-right-side img{
-        height: 250px;
+        height: 247.5px;
         width: 100%;
     }
 
 }
 @media(max-width:767px){
+    .sr-info-right{
+        padding-top: 50px;
+        /* padding: 0;
+        margin-top: -100px; */
+    }
     .single-room-title{
         font-size: 28px;
     }
@@ -203,6 +217,7 @@ hr{
     .rightside-div{
         width: 49%;
         margin-top: .5%;
+        
     }
     
     .rightside-div img{

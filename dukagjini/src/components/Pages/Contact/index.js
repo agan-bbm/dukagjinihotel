@@ -17,7 +17,7 @@ function Contact() {
     <>
       <div className="contactWrapper">
         <div className="containerWrapper">
-          <div className="formAndMap">
+          <div className="formAndMap" style={{ padding: "50px 0px;" }}>
             <div className="formDiv">
               <h1 className="titulli">Contact us</h1>
               <p className="paragraf">
@@ -70,9 +70,6 @@ function Contact() {
                   {submitting && <div>Submtting Form...</div>}
                 </div>
               </form>
-            </div>
-            <div className="mapDiv">
-              <AddressMap />
             </div>
           </div>
         </div>

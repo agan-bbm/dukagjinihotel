@@ -42,13 +42,13 @@ function FourthSection({ posts }) {
     <div className="fourthSection">
       <div className="containerWrapper">
         <div className="recomendations">
-          <h2>Rekomandimet tona për ju!</h2>
+          <h2 id="recomendations4u">Rekomandimet tona për ju!</h2>
           <p id="recommendationParagraph">
             Të gjitha dhomat tona janë unike me një stil të veçantë dhe luksoz.
             Hotel Dukagjini sjell për ju magjinë e të ndjehurit rehat në dhomat
             e përgatitura për komoditetin tuaj!
           </p>
-          <div style={{ padding: "20px 0px" }}>
+          <div className="pcmobRec" style={{ padding: "25px 0px" }}>
             <Swiper
               // slidesPerView={1}
               // centeredSlides={true}
@@ -108,8 +108,43 @@ function FourthSection({ posts }) {
               </div>
             </Swiper>
           </div>
+          <div id="tabletRoomRec" className="roomRecomendations">
+            {rooms.rooms.map((e) => (
+              <div className="single-room-rec">
+                <div className="mainSingleImg">
+                  <img src={e.acf.room.images[0]} alt="" />
+                </div>
 
-          <div className="bookOffer">
+                <h4>{e.acf.room.name}</h4>
+                <p className="recpar">{e.acf.room.shortdesc}</p>
+                <div className="icon-info">
+                  {e.acf.room.icons
+                    ? e.acf.room.icons.map((icons) => (
+                        <div className="icon">
+                          <div className="icon-flex">
+                            <img src={icons.icon} alt="" />
+
+                            <p>{icons.text}</p>
+                          </div>
+                        </div>
+                      ))
+                    : ""}
+                </div>
+                <div className="price-book">
+                  <p className="price">
+                    {e.acf.room.room_price}{" "}
+                    <span className="pernight">/Night</span>
+                  </p>
+                  <Link to={"/single-room/" + e.id}>
+                    <button className="default-button">
+                      {e.acf.room.button}
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* <div className="bookOffer">
             <div className="offerLeft">
               <h2>{posts[2].acf.bookOffer.bookheading}</h2>
               <p>{posts[2].acf.bookOffer.bookparagraph}</p>
@@ -120,7 +155,7 @@ function FourthSection({ posts }) {
                 <button className="default-button">Check Rooms</button>
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="fourthContainer">
           {/* <div className="fourthHeader">
