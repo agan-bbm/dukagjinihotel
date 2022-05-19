@@ -1,7 +1,7 @@
 import React from "react";
 import QuiltedImageList from "../../../components/Shared/Gallery/index";
 import "./about.css";
-import ImageMasonry from "../../../components/Shared/Masonry/index";
+// import ImageMasonry from "../../../components/Shared/Masonry/index";
 
 function About() {
   const style = {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import QuiltedImageList from "../../Gallery";
 import "./about.css";
-import ImageMasonry from "../../Masonry";
+// import ImageMasonry from "../../Masonry";
 import AboutTab from "./aboutTab";
 
 import { Link } from "react-router-dom";
