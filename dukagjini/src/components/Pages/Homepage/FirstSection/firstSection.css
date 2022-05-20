@@ -25,6 +25,11 @@
   background-color: #ca9e72 !important;
   color: white;
 }
+#firstBtnChRooms:hover{
+  background-color: white !important;
+  border: 1px solid #ca9e72;
+  color: #ca9e72;
+}
 /* .rightSide {
   display: contents;
 
@@ -112,7 +117,7 @@
 .choosing-option {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  /* width: 20%; */
 }
 .choosing-option p {
   color: #a07346;

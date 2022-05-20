@@ -101,10 +101,12 @@ function FirstSection({ posts }) {
                   </div>
                 </div>
                 <div className="firstButtonRes">
-                  <button id="firstBtnChRooms" className="default-button">
-                    {" "}
-                    Check rooms
-                  </button>
+                  <Link to="/Booking">
+                    <button id="firstBtnChRooms" className="default-button">
+                      {" "}
+                      Check rooms
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
