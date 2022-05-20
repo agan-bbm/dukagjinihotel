@@ -101,7 +101,10 @@ function FirstSection({ posts }) {
                   </div>
                 </div>
                 <div className="firstButtonRes">
-                  <button className="default-button"> Check rooms</button>
+                  <button id="firstBtnChRooms" className="default-button">
+                    {" "}
+                    Check rooms
+                  </button>
                 </div>
               </div>
             </div>

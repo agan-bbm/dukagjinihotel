@@ -16,8 +16,15 @@
   padding: 150px 80px;
   padding-right: 25%;
 }
-
-
+.choosing-option label {
+  color: #A07346;
+  text-align: left;
+  font-weight: 600;
+}
+#firstBtnChRooms{
+  background-color: #ca9e72 !important;
+  color: white;
+}
 /* .rightSide {
   display: contents;
 
