@@ -148,7 +148,7 @@ top: 0 !important;}
     /* #root > div > div.homepage > div > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(4){
         margin-top: 50px;;
     } */
-    .react-datepicker .react-datepicker__month-container:nth-of-type(2){
+    .react-datepicker .react-datepicker__month-container:nth-of-type(3){
         display: none;
     }
 }
