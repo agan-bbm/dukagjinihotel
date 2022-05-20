@@ -103,7 +103,7 @@ function Checkout({ posts }) {
     f.append("Children", localStorage.getItem("children"));
     f.append("CheckInDate", formatDate(localStorage.getItem("checkin")));
     f.append("CheckOutDate", formatDate(localStorage.getItem("checkout")));
-    f.append("RoomName", "SDQR");
+    f.append("RoomName", localStorage.getItem("roomName"));
 
     axios
       .post(
@@ -112,6 +112,7 @@ function Checkout({ posts }) {
       )
       .then((res) => {
         console.log(res);
+        setPage(page + 1);
       })
       .catch((err) => {
         console.log(err);
