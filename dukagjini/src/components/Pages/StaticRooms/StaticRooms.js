@@ -42,7 +42,7 @@ export function StaticRooms({}) {
   return rooms.isLoaded ? (
     <>
       <div className="containerWrapper">
-        <div className="rooms">
+        <div className="rooms" style={{ paddingTop: "100px" }}>
           <h2 className="all-rooms-heading" id="scrollTo">
             Our Rooms
           </h2>

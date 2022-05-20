@@ -3,11 +3,12 @@ import { React, useState } from "react";
 //styles
 import "./footer.css";
 //images
-import facebook from "../../../images/facebook.png";
 import instagram from "../../../images/instagram.png";
 import dukagjinilogofooter from "../../../images/logooffooter.png";
-import twitter from "../../../images/twitter.png";
 import { Link } from "react-router-dom";
+import linkedin from "../../../images/Linkedin.svg";
+import facebook from "../../../images/facebook.svg";
+import twitter from "../../../images/Twitter.svg";
 
 function Footer() {
   const [setCounter] = useState(0);
@@ -27,16 +28,10 @@ function Footer() {
             <div className="logo-container">
               <div className="footer-logo">
                 <img src={dukagjinilogofooter} alt="" />
-                <p style={{ marginBottom: "0" }}>Dukagjini Hotel</p>
-                <p style={{ marginTop: "0" }}>
-                  The place you need to be when in Peja
-                </p>
+                <p style={{ marginBottom: "0" }}></p>
               </div>
 
-              <div className="footer-info">
-                <p>dukagjini@hotmail.com</p>
-                <p>049-149-835</p>
-              </div>
+              <div className="footer-info"></div>
 
               {/* <div>
                 <h2>Subscribe to our newsletter</h2>
@@ -44,56 +39,76 @@ function Footer() {
               </div> */}
             </div>
             <div className="about-footer">
-              <h2 className="footer-link-heading">About</h2>
-
               <ul className="footerLists">
-                <Link to="/about">
-                  <li>About Us</li>
+                <Link to="/">
+                  <h2 style={{ color: "white" }}>Dukagjini Hotel</h2>
                 </Link>
+                <p style={{ marginTop: "0" }}>
+                  The place you need to be when in Peja
+                </p>
+                <p>dukagjini@hotmail.com</p>
+                <p>049-149-835</p>
               </ul>
             </div>
             <div className="contact-footer">
               <h2 className="footer-link-heading">Rooms</h2>
-
               <ul className="footerLists">
-                <Link to="/rooms">
-                  <li>Our rooms</li>
+                <Link to="/our-rooms">
+                  <li>Our Rooms</li>
                 </Link>
-                <Link to="/about">
-                  <li>Restaurant</li>
-                </Link>
-              </ul>
-            </div>
-            <div className="contact-footer">
-              <h2 className="footer-link-heading">Offers</h2>
 
-              <ul className="footerLists">
-                <li>Our offers</li>
-
-                <Link to="contact">
-                  <li>Contact us</li>
+                <Link to="/booking">
+                  <li>Booking</li>
                 </Link>
 
                 {/* <li>About Us</li> */}
               </ul>
             </div>
             <div className="contact-footer">
-              <h2 className="footer-link-heading">Social</h2>
+              <h2 className="footer-link-heading">Get In Touch</h2>
+              <ul className="footerLists">
+                <Link to="/contact">
+                  <li>Contact</li>
+                </Link>
+              </ul>
+            </div>
+            <div className="contact-footer">
+              <h2 className="footer-link-heading">Company</h2>
 
               <ul className="footerLists">
-                <Link to="https://www.facebook.com/hoteldukagjini/">
-                  <li>Facebook </li>
+                <Link to="/about">
+                  <li>About Us</li>
                 </Link>
-                <Link to="https://www.instagram.com/hoteldukagjini/?hl=en">
-                  <li>Instagram </li>
+                <Link to="/about">
+                  <li>History</li>
                 </Link>
-
-                <li>Linkedin</li>
+                <Link to="/about">
+                  <li>Location</li>
+                </Link>
               </ul>
+            </div>
+          </div>
+          <div className="socials-rights">
+            <div className="soc-med">
+              <ul>
+                <li>
+                  <img src={linkedin} alt="" />
+                </li>
+                <li>
+                  <img src={facebook} alt="" />
+                </li>
+                <li>
+                  <img src={twitter} alt="" />
+                </li>
+              </ul>
+            </div>
+            <div className="alr-res">
+              © 2022 Hotel Dukagjini. All Rights Reserved.
             </div>
           </div>
         </div>
       </div>
+
       <div className="bbm">
         <div className="">
           Made with <span className="love">❤</span> by{" "}

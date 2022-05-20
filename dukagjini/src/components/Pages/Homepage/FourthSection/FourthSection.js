@@ -173,7 +173,7 @@ function FourthSection({ posts }) {
                 </h2>
                 <p>{posts[2].acf.fifthbanner[0].fifthparagraph}</p>
 
-                <Link to="/rooms">
+                <Link to="/our-rooms">
                   <button className="gridBtn default-button">
                     View our rooms
                   </button>
@@ -192,7 +192,7 @@ function FourthSection({ posts }) {
                   {posts[2].acf.fifthbanner[1].fifthheading}
                 </h2>
                 <p>{posts[2].acf.fifthbanner[1].fifthparagraph}</p>
-                <Link to="/rooms">
+                <Link to="/our-rooms">
                   <button className="gridBtn default-button">
                     View our rooms
                   </button>
