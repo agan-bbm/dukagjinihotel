@@ -96,7 +96,7 @@ function FourthSection({ posts }) {
                           {e.acf.room.room_price}{" "}
                           <span className="pernight">/Night</span>
                         </p>
-                        <Link to={"/single-room/" + e.id}>
+                        <Link to={"/booking/"}>
                           <button className="default-button">
                             {e.acf.room.button}
                           </button>

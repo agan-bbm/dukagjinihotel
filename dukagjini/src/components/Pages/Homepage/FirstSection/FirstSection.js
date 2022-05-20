@@ -23,7 +23,13 @@ import DatePicker from "react-datepicker";
 import { Link } from "react-router-dom";
 function FirstSection({ posts }) {
   const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(null);
+  const todayDate = new Date();
+  const onChange = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
 
   return (
     // <div className="hompage-first-section">
@@ -46,12 +52,14 @@ function FirstSection({ posts }) {
                 <div className="choosing-option">
                   <label htmlFor="checkin">Check In</label>
                   <DatePicker
-                    selected={startDate}
-                    onChange={(date) => setStartDate(date)}
-                    selectsStart
+                    // selected={startDate}
+                    onChange={onChange}
                     startDate={startDate}
                     endDate={endDate}
-                    minDate={startDate}
+                    selectsRange
+                    minDate={todayDate}
+                    // isClearable={true}
+                    // inline
                   />
                 </div>
                 {/* <div className="choosing-option">

@@ -178,7 +178,7 @@ function Checkout({ posts }) {
             className="back-button default-button"
             onClick={() => {
               if (page === 0) {
-                window.location = "/checkout";
+                window.location = "/booking";
               } else {
                 setPage(page - 1);
               }
