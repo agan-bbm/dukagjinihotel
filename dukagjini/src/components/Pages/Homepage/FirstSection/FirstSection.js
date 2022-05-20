@@ -29,14 +29,11 @@ function FirstSection({ posts }) {
     const [start, end] = dates;
     setStartDate(start);
     setEndDate(end);
+    localStorage.setItem("checkin", start);
+    localStorage.setItem("checkout", end);
   };
 
   return (
-    // <div className="hompage-first-section">
-    //   <div className="coverImage">
-    //     <img src={Img1} />
-    //   </div>
-
     <>
       <div className="firstSection">
         <div className="leftSide">
@@ -58,27 +55,19 @@ function FirstSection({ posts }) {
                     endDate={endDate}
                     selectsRange
                     minDate={todayDate}
-                    // isClearable={true}
-                    // inline
                   />
                 </div>
-                {/* <div className="choosing-option">
-                  <label htmlFor="checkin">Check Out</label>
-                  <DatePicker
-                    selected={endDate}
-                    onChange={(date) => setEndDate(date)}
-                    selectsEnd
-                    startDate={startDate}
 
-                    endDate={endDate}
-                    minDate={startDate}
-                  />
-                </div> */}
                 <div className="choosing-option">
                   <div className="select-dates-home select">
                     <label htmlFor="checkin">Adults</label>
-                    <select name="checkin" id="">
-                      <option value="0">0</option>
+                    <select
+                      name="checkin"
+                      id=""
+                      onChange={(e) => {
+                        localStorage.setItem("adult", e.target.value);
+                      }}
+                    >
                       <option value="1">1</option>
 
                       <option value="2">2</option>
@@ -94,7 +83,13 @@ function FirstSection({ posts }) {
                 <div className="choosing-option">
                   <div className="select-dates-home select">
                     <label htmlFor="checkin">Children</label>
-                    <select name="checkin" id="">
+                    <select
+                      name="checkin"
+                      id=""
+                      onChange={(e) => {
+                        localStorage.setItem("children", e.target.value);
+                      }}
+                    >
                       <option value="0">0</option>
                       <option value="1">1</option>
 

@@ -165,6 +165,11 @@ function Checkout({ posts }) {
                 setRequired(false);
                 if (page === 1) {
                   handleSubmit();
+                  localStorage.removeItem("checkout");
+                  localStorage.removeItem("children");
+                  localStorage.removeItem("adult");
+                  localStorage.removeItem("checkin");
+                  localStorage.removeItem("roomName");
                 } else {
                   setPage(page + 1);
                 }

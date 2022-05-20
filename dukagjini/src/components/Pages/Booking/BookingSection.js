@@ -99,11 +99,13 @@ function BookingSection({ dates, setDates }) {
 
             <DatePicker
               selected={startDate}
+              // selectsStart={new Date(localStorage.getItem("checkin"))}
+              // selectsEnd={new Date(localStorage.getItem("checkout"))}
+              selectsRange={true}
               onChange={onChange}
               startDate={startDate}
               endDate={endDate}
               monthsShown={2}
-              selectsRange
               inline
               minDate={todayDate}
             />
