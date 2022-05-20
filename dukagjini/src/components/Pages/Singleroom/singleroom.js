@@ -58,12 +58,7 @@ function Singleroom({ dates, setDates }) {
     }
     return [year, month, day].join("-");
   };
-  console.log(formatDate(localStorage.getItem("checkin")).substring(8, 10));
-  console.log(formatDate(localStorage.getItem("checkout")).substring(8, 10));
-  console.log(
-    parseInt(formatDate(localStorage.getItem("checkout")).substring(8, 10)) -
-      parseInt(formatDate(localStorage.getItem("checkin")).substring(8, 10))
-  );
+
   const nights =
     parseInt(formatDate(localStorage.getItem("checkout")).substring(8, 10)) -
     parseInt(formatDate(localStorage.getItem("checkin")).substring(8, 10));
