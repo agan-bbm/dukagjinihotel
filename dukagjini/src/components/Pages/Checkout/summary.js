@@ -101,24 +101,15 @@ export function Summary({ posts }) {
               </div>
             </div>
             <div className="icon-info">
-              <div className="icon-rooms-page">
-                <img src={seaview} alt="" />
-                <p>Sea view</p>
-              </div>
-              <div className="icon-rooms-page">
-                <img src={balcony} alt="" />
-                <p>Balcony </p>
-              </div>
+              {rooms.rooms.acf.room.icons
+                ? rooms.rooms.acf.room.icons.map((icons) => (
+                    <div className="icon-rooms-page">
+                      <img src={icons.icon} alt="" />
 
-              <div className="icon-rooms-page">
-                <img src={bath} alt="" />
-                <p>Bath</p>
-              </div>
-
-              <div className="icon-rooms-page">
-                <img src={livingroom} alt="" />
-                <p>Living Room</p>
-              </div>
+                      <p>{icons.text}</p>
+                    </div>
+                  ))
+                : ""}
             </div>
             {/* <p className="rooms-p-desc" style={{ color: "#575757" }}>
               {rooms.rooms.acf.room.longdesc}
