@@ -54,18 +54,18 @@ function FirstSection({ posts }) {
                     minDate={startDate}
                   />
                 </div>
-                <div className="choosing-option">
+                {/* <div className="choosing-option">
                   <label htmlFor="checkin">Check Out</label>
                   <DatePicker
                     selected={endDate}
                     onChange={(date) => setEndDate(date)}
                     selectsEnd
-                    // startDate={startDate}
+                    startDate={startDate}
 
                     endDate={endDate}
                     minDate={startDate}
                   />
-                </div>
+                </div> */}
                 <div className="choosing-option">
                   <div className="select-dates-home select">
                     <label htmlFor="checkin">Adults</label>

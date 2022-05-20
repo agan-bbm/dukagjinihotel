@@ -24,6 +24,43 @@
   width: 100%;
   object-fit: cover;
 }
+@media (min-width:999px){
+  .firstSection{
+    height: auto;
+    flex-direction: column;
+  }
+  .leftSide {
+    width: 100%;
+}
+.leftContainer {
+  padding: 100px 0px !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+  text-align: center;
+}
+.bookingFirstBanner{
+display: flex;
+    justify-content: space-between;
+    background-color: #ead9c7;
+    /* border: 1px solid #CA9E72; */
+    padding: 50px;
+    position: absolute;
+    margin-top: 50px;
+    align-items: center;
+    width: 70%;
+    text-align: left;
+    right: 12%;
+}
+.leftContainer p {
+  font-size: 16px;
+  width: 50%;
+  margin: 10px auto;
+}
+.leftContainer button {
+
+  margin-top: 20px;
+}
+}
 @media only screen and (max-width: 1299px) and (min-width: 768px) {
   .leftSide{
     width: 100%;
