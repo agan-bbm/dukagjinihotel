@@ -141,7 +141,7 @@ export function Summary({ posts }) {
                   }}
                 >
                   <span style={{ fontSize: "22px" }}>Total:</span>{" "}
-                  {rooms.rooms.acf.room.room_price}
+                  {parseInt(rooms.rooms.acf.room.room_price) * nights}€
                 </h4>
                 {/* <p>{rooms.rooms.acf.room.personnight}</p> */}
               </div>
