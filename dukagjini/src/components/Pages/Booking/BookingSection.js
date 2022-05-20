@@ -47,6 +47,8 @@ function BookingSection({ dates, setDates }) {
     // console.log(start);
     // console.log(end);
   };
+  console.log("start datee", startDate);
+  console.log("end datee", endDate);
   async function getRooms() {
     await axios
       .get(

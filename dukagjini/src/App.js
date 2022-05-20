@@ -12,6 +12,7 @@ import Checkout from "./components/Pages/Checkout/checkout";
 import Contact from "./components/Pages/Contact/index";
 import Thankyou from "./components/Pages/Thankyou/Thankyou";
 import { StaticRooms } from "./components/Pages/StaticRooms/StaticRooms";
+import ScrollToTop from "./components/Shared/ScrollToTop";
 
 console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
@@ -63,28 +64,30 @@ function App() {
   else {
     return (
       <div className="App">
-        <Navbar />
+        <ScrollToTop>
+          <Navbar />
 
-        {/* <div className="homepage"> */}
-        <Routes>
-          <Route path="/" exact element={<Homepage posts={state.posts} />} />
-          <Route
-            path="/booking"
-            element={<Booking dates={dates} setDates={setDates} />}
-          />
-          <Route path="/about" element={<About posts={state.posts} />} />
-          <Route path="/rooms" element={<Rooms />} />
-          <Route path="our-rooms" element={<StaticRooms />} />
-          <Route path="/single-room/:id" element={<Singleroom />} />
-          <Route
-            path="/checkout/:id"
-            element={<Checkout posts={state.posts} />}
-          />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/thankyou" element={<Thankyou />}></Route>
-        </Routes>
-        {/* </div> */}
-        <Footer />
+          {/* <div className="homepage"> */}
+          <Routes>
+            <Route path="/" exact element={<Homepage posts={state.posts} />} />
+            <Route
+              path="/booking"
+              element={<Booking dates={dates} setDates={setDates} />}
+            />
+            <Route path="/about" element={<About posts={state.posts} />} />
+            <Route path="/rooms" element={<Rooms />} />
+            <Route path="our-rooms" element={<StaticRooms />} />
+            <Route path="/single-room/:id" element={<Singleroom />} />
+            <Route
+              path="/checkout/:id"
+              element={<Checkout posts={state.posts} />}
+            />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/thankyou" element={<Thankyou />}></Route>
+          </Routes>
+          {/* </div> */}
+          <Footer />
+        </ScrollToTop>
       </div>
     );
   }

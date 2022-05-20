@@ -101,7 +101,7 @@ export function StaticRooms({}) {
                       </p>
                     </div>
                     <div className="book-button">
-                      <Link to={"/single-room/" + e.id}>
+                      <Link to={"/booking"}>
                         <button className="default-button">
                           {e.acf.room.button}
                         </button>
