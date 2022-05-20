@@ -16,10 +16,12 @@
   padding: 150px 80px;
   padding-right: 25%;
 }
-.rightSide {
+
+
+/* .rightSide {
   display: contents;
 
-}
+} */
 .rightSide .desktopVisibility{
   width: 100%;
   object-fit: cover;
@@ -36,20 +38,17 @@
   padding: 100px 0px !important;
   padding-right: 0 !important;
   width: 100% !important;
+  padding-bottom: 0 !important;
   text-align: center;
 }
-.bookingFirstBanner{
-display: flex;
-    justify-content: space-between;
-    background-color: #ead9c7;
-    /* border: 1px solid #CA9E72; */
-    padding: 50px;
-    position: absolute;
-    margin-top: 50px;
-    align-items: center;
-    width: 70%;
-    text-align: left;
-    right: 12%;
+.rightSide {
+  width: 100% !important;
+  margin-top: -60px;
+  /* z-index: 3 !important; */
+}
+.leftSide {
+  width: 100%;
+  z-index: 8;
 }
 .leftContainer p {
   font-size: 16px;
@@ -59,9 +58,21 @@ display: flex;
 .leftContainer button {
 
   margin-top: 20px;
+}.bookingFirstBanner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ead9c7;
+  /* border: 1px solid #CA9E72; */
+  padding: 50px;
+  position: relative !important;
+  margin-top: 50px;
+  align-items: center;
+  /* width: 65%; */
+  /* margin-bottom: -50px; */
+  z-index: 10000 !important;
 }
 }
-@media only screen and (max-width: 1299px) and (min-width: 768px) {
+@media only screen and (max-width: 998px) and (min-width: 768px) {
   .leftSide{
     width: 100%;
   }
@@ -90,17 +101,7 @@ display: flex;
   color: #ca9e72;
 }
 
-.bookingFirstBanner {
-  display: flex;
-  justify-content: space-between;
-  background-color: #ead9c7;
-  /* border: 1px solid #CA9E72; */
-  padding: 50px;
-  position: absolute;
-  margin-top: 50px;
-  align-items: center;
-  width: 65%;
-}
+
 .choosing-option {
   display: flex;
   flex-direction: column;
@@ -136,6 +137,12 @@ display: flex;
     text-align: center;
     
   }
+  .rightSide {
+    width: 100% !important;
+}
+.rightSide img{
+  width: 100%;
+}
   .bookingFirstBanner {
     display: flex;
     justify-content: space-between;
@@ -155,6 +162,10 @@ display: flex;
 }
 }
 @media (max-width: 767px) {
+  .mobileVisibility {
+    display: block;
+    width: 100% !important;
+}
   .firstSection {
     height: auto;
   }
