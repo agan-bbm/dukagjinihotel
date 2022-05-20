@@ -14,6 +14,11 @@ import axios from "axios";
 function Singleroom({ dates, setDates }) {
   const params = useParams();
 
+  const [reservation, setReservation] = useState({
+    adult: 1,
+    children: 0,
+  });
+
   const [rooms, setRooms] = useState({
     rooms: [],
     isLoaded: false,
@@ -32,6 +37,8 @@ function Singleroom({ dates, setDates }) {
         });
       })
       .catch((err) => console.log(err));
+    localStorage.removeItem("adult");
+    localStorage.removeItem("children");
   }, []);
 
   if (rooms.isLoaded) {
@@ -51,6 +58,15 @@ function Singleroom({ dates, setDates }) {
     }
     return [year, month, day].join("-");
   };
+  console.log(formatDate(localStorage.getItem("checkin")).substring(8, 10));
+  console.log(formatDate(localStorage.getItem("checkout")).substring(8, 10));
+  console.log(
+    parseInt(formatDate(localStorage.getItem("checkout")).substring(8, 10)) -
+      parseInt(formatDate(localStorage.getItem("checkin")).substring(8, 10))
+  );
+  const nights =
+    parseInt(formatDate(localStorage.getItem("checkout")).substring(8, 10)) -
+    parseInt(formatDate(localStorage.getItem("checkin")).substring(8, 10));
 
   return rooms.isLoaded ? (
     <>
@@ -147,7 +163,10 @@ function Singleroom({ dates, setDates }) {
                         name="checkin"
                         id=""
                         onChange={(e) => {
-                          localStorage.setItem("adult", e.target.value);
+                          setReservation({
+                            ...reservation,
+                            adult: e.target.value,
+                          });
                         }}
                       >
                         {/* <option value="0">0</option> */}
@@ -168,7 +187,10 @@ function Singleroom({ dates, setDates }) {
                         name="checkin"
                         id=""
                         onChange={(e) => {
-                          localStorage.setItem("children", e.target.value);
+                          setReservation({
+                            ...reservation,
+                            children: e.target.value,
+                          });
                         }}
                       >
                         <option value="0">0</option>
@@ -189,7 +211,7 @@ function Singleroom({ dates, setDates }) {
                   <div className="price-single-page">
                     <p className="total">Total</p>
                     <p className="total-price">
-                      {rooms.rooms.acf.room.room_price}
+                      {parseInt(rooms.rooms.acf.room.room_price) * nights}€
                     </p>
                   </div>
                   <div className="single-page-button">
@@ -200,6 +222,8 @@ function Singleroom({ dates, setDates }) {
                           "roomName",
                           rooms.rooms.acf.room.short_room_name
                         );
+                        localStorage.setItem("adult", reservation.adult);
+                        localStorage.setItem("children", reservation.children);
                       }}
                     >
                       <button className="default-button">Book</button>
