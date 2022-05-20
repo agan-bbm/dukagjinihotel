@@ -52,7 +52,7 @@ function ThirdSection({ posts }) {
             <h2>{posts[2].acf.thirdbanner.thirdheading}</h2>
             <p>{posts[2].acf.thirdbanner.thirdparagraph}</p>
 
-            <Link to="/rooms">
+            <Link to="/our-rooms">
               <button className="bookingThirdButton  default-button">
                 View our rooms
               </button>

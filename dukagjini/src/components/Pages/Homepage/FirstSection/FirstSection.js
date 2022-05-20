@@ -44,7 +44,7 @@ function FirstSection({ posts }) {
             <div className="leftContainer">
               <h2>{posts[2].acf.first.firstheading}</h2>
               <p>{posts[2].acf.first.firstparagraph}</p>
-              <Link to="/rooms">
+              <Link to="/our-rooms">
                 <button className="default-button"> View our rooms</button>
               </Link>
 

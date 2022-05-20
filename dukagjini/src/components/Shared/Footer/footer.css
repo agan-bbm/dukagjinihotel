@@ -1,14 +1,36 @@
 .footer {
   padding: 50px 0px;
-  background-color: #1F1F1F;
+  background-color: #121212;
   z-index: 1;
   color: white;
 
 
 }
+.socials-rights{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
 .footer-link-heading{
   font-weight: 500;
   font-size: 18px;
+}
+.footerLists p{
+  color: #BFBFBF;
+}
+
+.footer-container{
+  border-bottom: 1px solid #707070 ;
+  padding-bottom: 50px;
+}
+.socials-rights{
+  background-color: #121212;
+}
+.soc-med ul{
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
 }
 .sticky{
   position: sticky;
