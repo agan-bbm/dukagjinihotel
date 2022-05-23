@@ -10,12 +10,12 @@ import SixthSection from "../components/Pages/Homepage/SixthSection/SixthSection
 import "./homepage.css";
 import Faq from "../components/Pages/Homepage/Faq/Faq";
 
-function Homepage({ posts }) {
+function Homepage({ posts, book, setBook }) {
   // console.log(posts);
   return (
     <>
       <div className="homepage">
-        <FirstSection posts={posts} />
+        <FirstSection posts={posts} book={book} setBook={setBook} />
         <SecondSection posts={posts} />
         <ThirdSection posts={posts} />
 

@@ -24,7 +24,7 @@ import balcony from "../../../images/balcony.png";
 import Daterange from "../../Shared/DatePicker/daterange";
 import { Rooms } from "../Rooms";
 
-function BookingSection({ dates, setDates }) {
+function BookingSection({ dates, setDates, book, setBook }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
   const todayDate = new Date();
@@ -41,8 +41,9 @@ function BookingSection({ dates, setDates }) {
     setStartDate(start);
     setEndDate(end);
     setDates({ ...dates, from: start, to: end });
-    localStorage.setItem("checkin", start);
-    localStorage.setItem("checkout", end);
+    setBook({ ...book, checkin: start, checkout: end });
+    // localStorage.setItem("checkin", start);
+    // localStorage.setItem("checkout", end);
 
     // console.log(start);
     // console.log(end);
@@ -86,6 +87,7 @@ function BookingSection({ dates, setDates }) {
   };
 
   console.log(rooms.rooms);
+  console.log(book.checkin);
 
   return (
     <>
@@ -100,13 +102,13 @@ function BookingSection({ dates, setDates }) {
             </div>
 
             <DatePicker
-              selected={startDate}
-              // selectsStart={new Date(localStorage.getItem("checkin"))}
-              // selectsEnd={new Date(localStorage.getItem("checkout"))}
+              selected={book.checkin}
+              // selectsStart={new Date(book.checkin)}
+              // selectsEnd={new Date(book.checkout)}
               selectsRange={true}
               onChange={onChange}
-              startDate={startDate}
-              endDate={endDate}
+              startDate={book.checkin ? book.checkin : startDate}
+              endDate={book.checkout}
               monthsShown={2}
               inline
               minDate={todayDate}
