@@ -3,12 +3,11 @@ import { React, useState } from "react";
 //styles
 import "./footer.css";
 //images
-import instagram from "../../../images/instagram.png";
 import dukagjinilogofooter from "../../../images/logooffooter.png";
 import { Link } from "react-router-dom";
-import linkedin from "../../../images/Linkedin.svg";
+import instagram from "../../../images/instagram.svg";
 import facebook from "../../../images/facebook.svg";
-import twitter from "../../../images/Twitter.svg";
+// import twitter from "../../../images/Twitter.svg";
 
 function Footer() {
   const [setCounter] = useState(0);
@@ -91,15 +90,23 @@ function Footer() {
           <div className="socials-rights">
             <div className="soc-med">
               <ul>
-                <li>
-                  <img src={linkedin} alt="" />
-                </li>
-                <li>
-                  <img src={facebook} alt="" />
-                </li>
-                <li>
+                <a href="https://www.instagram.com/hoteldukagjini/?hl=en">
+                  <li>
+                    <img
+                      src={instagram}
+                      style={{ width: "37px", height: "37px" }}
+                      alt=""
+                    />
+                  </li>
+                </a>
+                <a href="https://www.facebook.com/hoteldukagjini/">
+                  <li>
+                    <img src={facebook} alt="" />
+                  </li>
+                </a>
+                {/* <li>
                   <img src={twitter} alt="" />
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="alr-res">

@@ -29,8 +29,8 @@
 }
 .soc-med ul{
   display: flex;
-  width: 150px;
-  justify-content: space-between;
+  width: 100px;
+  justify-content: space-around;
 }
 .sticky{
   position: sticky;
