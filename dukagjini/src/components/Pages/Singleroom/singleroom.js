@@ -60,9 +60,8 @@ function Singleroom({ dates, setDates, book, setBook }) {
     return [year, month, day].join("-");
   };
 
-  const nights =
-    parseInt(formatDate(book.checkout).substring(8, 10)) -
-    parseInt(formatDate(book.checkin).substring(8, 10));
+  const diffTime = Math.abs(book.checkout - book.checkin);
+  const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
   return rooms.isLoaded ? (
     <>
