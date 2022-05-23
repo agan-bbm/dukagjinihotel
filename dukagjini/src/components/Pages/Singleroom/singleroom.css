@@ -154,20 +154,7 @@ hr{
     font-size: 38px;
     font-weight: 400;
 }
-@media(min-width:768px) and (max-width:998px){
-    .single-room-grid{
-        flex-direction: column;
-
-    }
-    .single-room-page {
-        width: 90%;
-        padding-top: 150px;
-        margin: 0 auto;
-    }
-    .single-room-grid img{
-        width: 100%;
-        object-fit: cover;
-    }
+@media(min-width:768px){
     .rightside-div{
      height: 247.5px;   
     }
