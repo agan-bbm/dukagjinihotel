@@ -24,7 +24,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { borderRadius } from "@mui/system";
 
-export function Summary({ posts }) {
+export function Summary({ posts, book, setBook }) {
   const params = useParams();
   console.log(params);
 
@@ -62,8 +62,8 @@ export function Summary({ posts }) {
     return [year, month, day].join("-");
   };
   const nights =
-    parseInt(formatDate(localStorage.getItem("checkout")).substring(8, 10)) -
-    parseInt(formatDate(localStorage.getItem("checkin")).substring(8, 10));
+    parseInt(formatDate(book.checkout).substring(8, 10)) -
+    parseInt(formatDate(book.checkin).substring(8, 10));
 
   return rooms.isLoaded ? (
     <>

@@ -7,7 +7,7 @@ import "./checkout.css";
 import { Summary } from "./summary";
 import { Userdetails } from "./userdetails";
 
-function Checkout({ posts }) {
+function Checkout({ posts, book, setBook }) {
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -23,13 +23,20 @@ function Checkout({ posts }) {
     numberValid: true,
   });
   const [page, setPage] = useState(0);
+  console.log(book);
 
   const showForm = () => {
     switch (page) {
       case 0:
         return <Userdetails formData={formData} setFormData={setFormData} />;
       case 1:
-        return <Summary posts={posts[0].acf.checkout.secondtstep} />;
+        return (
+          <Summary
+            posts={posts[0].acf.checkout.secondtstep}
+            book={book}
+            setBook={setBook}
+          />
+        );
 
       case 2:
         return <Thankyou posts={posts[0].acf.checkout.thankyou} />;
@@ -88,22 +95,15 @@ function Checkout({ posts }) {
     return [year, month, day].join("/");
   };
 
-  console.log(
-    parseInt(localStorage.getItem("adult")) +
-      parseInt(localStorage.getItem("children"))
-  );
+  console.log(book);
   const handleSubmit = (e) => {
     const f = new FormData();
-    f.append(
-      "Guests",
-      parseInt(localStorage.getItem("adult")) +
-        parseInt(localStorage.getItem("children"))
-    );
-    f.append("Adults", localStorage.getItem("adult"));
-    f.append("Children", localStorage.getItem("children"));
-    f.append("CheckInDate", formatDate(localStorage.getItem("checkin")));
-    f.append("CheckOutDate", formatDate(localStorage.getItem("checkout")));
-    f.append("RoomName", localStorage.getItem("roomName"));
+    f.append("Guests", book.guests);
+    f.append("Adults", book.adult);
+    f.append("Children", book.children);
+    f.append("CheckInDate", formatDate(book.checkin));
+    f.append("CheckOutDate", formatDate(book.checkout));
+    f.append("RoomName", book.roomName);
 
     axios
       .post(

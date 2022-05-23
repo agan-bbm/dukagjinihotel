@@ -11,7 +11,7 @@ import balcony from "../../../images/wifi.svg";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
-function Singleroom({ dates, setDates }) {
+function Singleroom({ dates, setDates, book, setBook }) {
   const params = useParams();
 
   const [reservation, setReservation] = useState({
@@ -37,9 +37,10 @@ function Singleroom({ dates, setDates }) {
         });
       })
       .catch((err) => console.log(err));
-    localStorage.removeItem("adult");
-    localStorage.removeItem("children");
+    // localStorage.removeItem("adult");
+    // localStorage.removeItem("children");
   }, []);
+  console.log(book);
 
   if (rooms.isLoaded) {
     console.log(rooms.rooms.acf.room.short_room_name);
@@ -60,8 +61,8 @@ function Singleroom({ dates, setDates }) {
   };
 
   const nights =
-    parseInt(formatDate(localStorage.getItem("checkout")).substring(8, 10)) -
-    parseInt(formatDate(localStorage.getItem("checkin")).substring(8, 10));
+    parseInt(formatDate(book.checkout).substring(8, 10)) -
+    parseInt(formatDate(book.checkin).substring(8, 10));
 
   return rooms.isLoaded ? (
     <>
@@ -136,7 +137,7 @@ function Singleroom({ dates, setDates }) {
                         name="checkin"
                         defaultValue={formatDate(dates.from)}
                       /> */}
-                      <p>{formatDate(localStorage.getItem("checkin"))}</p>
+                      <p>{formatDate(book.checkin)}</p>
                       {/* <p>{formatDate(dates.from)}</p> */}
                     </div>
                     <div className="select-dates">
@@ -146,7 +147,7 @@ function Singleroom({ dates, setDates }) {
                         name="checkin"
                         defaultValue={formatDate(dates.to)}
                       /> */}
-                      <p>{formatDate(localStorage.getItem("checkout"))}</p>
+                      <p>{formatDate(book.checkout)}</p>
                       {/* <p>{formatDate(dates.to)}</p> */}
                     </div>
                   </div>
@@ -160,6 +161,10 @@ function Singleroom({ dates, setDates }) {
                         onChange={(e) => {
                           setReservation({
                             ...reservation,
+                            adult: e.target.value,
+                          });
+                          setBook({
+                            ...book,
                             adult: e.target.value,
                           });
                         }}
@@ -183,6 +188,10 @@ function Singleroom({ dates, setDates }) {
                         onChange={(e) => {
                           setReservation({
                             ...reservation,
+                            children: e.target.value,
+                          });
+                          setBook({
+                            ...book,
                             children: e.target.value,
                           });
                         }}
@@ -218,6 +227,13 @@ function Singleroom({ dates, setDates }) {
                         );
                         localStorage.setItem("adult", reservation.adult);
                         localStorage.setItem("children", reservation.children);
+                        setBook({
+                          ...book,
+                          roomName: rooms.rooms.acf.room.short_room_name,
+                          guests:
+                            parseInt(reservation.adult) +
+                            parseInt(reservation.children),
+                        });
                       }}
                     >
                       <button className="default-button">Book</button>

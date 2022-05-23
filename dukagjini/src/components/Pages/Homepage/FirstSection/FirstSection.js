@@ -21,7 +21,7 @@ import Img4 from "../../../../images/4.jpg";
 
 import DatePicker from "react-datepicker";
 import { Link } from "react-router-dom";
-function FirstSection({ posts }) {
+function FirstSection({ posts, book, setBook }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
   const todayDate = new Date();
@@ -29,10 +29,11 @@ function FirstSection({ posts }) {
     const [start, end] = dates;
     setStartDate(start);
     setEndDate(end);
+    setBook({ ...book, checkin: start, checkout: end });
     localStorage.setItem("checkin", start);
     localStorage.setItem("checkout", end);
   };
-
+  console.log(book);
   return (
     <>
       <div className="firstSection">
@@ -66,6 +67,7 @@ function FirstSection({ posts }) {
                       id=""
                       onChange={(e) => {
                         localStorage.setItem("adult", e.target.value);
+                        setBook({ ...book, adult: e.target.value });
                       }}
                     >
                       <option value="1">1</option>
@@ -88,6 +90,7 @@ function FirstSection({ posts }) {
                       id=""
                       onChange={(e) => {
                         localStorage.setItem("children", e.target.value);
+                        setBook({ ...book, children: e.target.value });
                       }}
                     >
                       <option value="0">0</option>

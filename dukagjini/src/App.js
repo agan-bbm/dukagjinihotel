@@ -26,6 +26,15 @@ function App() {
     isLoaded: false,
   });
   const [dates, setDates] = useState({ from: "", to: "" });
+
+  const [book, setBook] = useState({
+    checkin: "",
+    checkout: "",
+    adult: 1,
+    children: 0,
+    roomName: "",
+    guests: 1,
+  });
   useEffect(() => {
     axios
       .get("http://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/pages/")
@@ -59,7 +68,10 @@ function App() {
         break;
     }
   });
-  console.log(dates);
+  console.log("-----------------------------");
+  console.log("BOOKING INFOOO", book);
+  console.log("-----------------------------");
+
   if (state.isLoaded === false) return null;
   else {
     return (
@@ -69,18 +81,36 @@ function App() {
 
           {/* <div className="homepage"> */}
           <Routes>
-            <Route path="/" exact element={<Homepage posts={state.posts} />} />
+            <Route
+              path="/"
+              exact
+              element={
+                <Homepage posts={state.posts} book={book} setBook={setBook} />
+              }
+            />
             <Route
               path="/booking"
-              element={<Booking dates={dates} setDates={setDates} />}
+              element={
+                <Booking
+                  dates={dates}
+                  setDates={setDates}
+                  book={book}
+                  setBook={setBook}
+                />
+              }
             />
             <Route path="/about" element={<About posts={state.posts} />} />
             <Route path="/rooms" element={<Rooms />} />
             <Route path="our-rooms" element={<StaticRooms />} />
-            <Route path="/single-room/:id" element={<Singleroom />} />
+            <Route
+              path="/single-room/:id"
+              element={<Singleroom book={book} setBook={setBook} />}
+            />
             <Route
               path="/checkout/:id"
-              element={<Checkout posts={state.posts} />}
+              element={
+                <Checkout posts={state.posts} book={book} setBook={setBook} />
+              }
             />
             <Route path="/contact" element={<Contact />} />
             <Route path="/thankyou" element={<Thankyou />}></Route>
