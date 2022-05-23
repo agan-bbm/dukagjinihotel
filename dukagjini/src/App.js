@@ -13,6 +13,8 @@ import Contact from "./components/Pages/Contact/index";
 import Thankyou from "./components/Pages/Thankyou/Thankyou";
 import { StaticRooms } from "./components/Pages/StaticRooms/StaticRooms";
 import ScrollToTop from "./components/Shared/ScrollToTop";
+import UpdateReservation from "./components/Pages/UpdateReservation/UpdateReservation";
+import DeleteReservation from "./components/Pages/DeleteReservation";
 
 console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
@@ -114,6 +116,14 @@ function App() {
             />
             <Route path="/contact" element={<Contact />} />
             <Route path="/thankyou" element={<Thankyou />}></Route>
+            <Route
+              path="/update-reservation"
+              element={<UpdateReservation />}
+            ></Route>
+            <Route
+              path="/delete-reservation"
+              element={<DeleteReservation />}
+            ></Route>
           </Routes>
           {/* </div> */}
           <Footer />

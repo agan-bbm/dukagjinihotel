@@ -95,12 +95,12 @@ function Navbar() {
           {/* <span
             className={!navbar ? "white-dots" : " black-dots white-dots "}
           ></span> */}
-          <Link
+          {/* <Link
             to="/"
             className={!navbar ? "white-links" : " black-links white-links "}
           >
             Restaurant
-          </Link>
+          </Link> */}
 
           {/* <span
             className={!navbar ? "white-dots" : " black-dots white-dots "}
