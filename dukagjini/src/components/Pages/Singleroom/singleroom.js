@@ -26,7 +26,7 @@ function Singleroom({ dates, setDates, book, setBook }) {
   useEffect(() => {
     axios
       .get(
-        "http://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/Rooms/" +
+        "https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/Rooms/" +
           params.id
       )
       .then((res) => {

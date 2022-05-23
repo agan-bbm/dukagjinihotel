@@ -107,7 +107,7 @@ function Checkout({ posts, book, setBook }) {
 
     axios
       .post(
-        "http://cmsdukagjini.blackbird.marketing/wp-content/reservation.php",
+        "https://cmsdukagjini.blackbird.marketing/wp-content/reservation.php",
         f
       )
       .then((res) => {

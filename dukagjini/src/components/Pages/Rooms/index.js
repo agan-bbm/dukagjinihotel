@@ -28,7 +28,7 @@ export function Rooms({ freeRooms, loader }) {
   });
   useEffect(() => {
     axios
-      .get("http://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/Rooms")
+      .get("https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/Rooms")
       .then((res) => {
         setRooms({
           ...rooms,

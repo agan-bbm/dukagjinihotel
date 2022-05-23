@@ -53,7 +53,7 @@ function BookingSection({ dates, setDates, book, setBook }) {
   async function getRooms() {
     await axios
       .get(
-        `http://cmsdukagjini.blackbird.marketing/wp-content/fetch.php?fromDate=${formatDate(
+        `https://cmsdukagjini.blackbird.marketing/wp-content/fetch.php?fromDate=${formatDate(
           startDate
         )}&toDate=${formatDate(endDate)}`,
         {}

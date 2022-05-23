@@ -54,7 +54,7 @@ function UpdateReservation() {
 
     axios
       .post(
-        "http://cmsdukagjini.blackbird.marketing/wp-content/updateReservation.php",
+        "https://cmsdukagjini.blackbird.marketing/wp-content/updateReservation.php",
         f
       )
       .then((res) => {

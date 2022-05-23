@@ -50,7 +50,7 @@ function DeleteReservation() {
 
     axios
       .post(
-        "http://cmsdukagjini.blackbird.marketing/wp-content/deleteReservation.php",
+        "https://cmsdukagjini.blackbird.marketing/wp-content/deleteReservation.php",
         f
       )
       .then((res) => {

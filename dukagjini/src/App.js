@@ -39,7 +39,7 @@ function App() {
   });
   useEffect(() => {
     axios
-      .get("http://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/pages/")
+      .get("https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/pages/")
       .then((res) => {
         // console.log(res);
         setState({
@@ -51,7 +51,7 @@ function App() {
       .catch((err) => console.log(err));
 
     // axios
-    //   .get("http://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/posts")
+    //   .get("https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/posts")
     //   .then((res) =>
     //     setPeekInside({
     //       inside: res.data,
