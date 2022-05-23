@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AddressMap, Map } from "../About/map";
 import "./contact.css";
+import { Link } from "react-router-dom";
 
 function Contact() {
   const [submitting, setSubmitting] = useState(false);
@@ -8,9 +9,9 @@ function Contact() {
     event.preventDefault();
     setSubmitting(true);
 
-    setTimeout(() => {
-      setSubmitting(false);
-    }, 5000);
+    // setTimeout(() => {
+    //   setSubmitting(false);
+    // }, 5000);
   };
 
   return (
@@ -18,7 +19,10 @@ function Contact() {
       <div className="contactWrapper">
         <div className="containerWrapper">
           <div className="formAndMap" style={{ padding: "50px 0px;" }}>
-            <div className="formDiv">
+            <div
+              className="formDiv"
+              style={submitting ? { display: "none" } : { display: "block" }}
+            >
               <h1 className="titulli">Contact us</h1>
               <p className="paragraf">
                 Contact us if you need any help or have any questions
@@ -70,6 +74,25 @@ function Contact() {
                   {submitting && <div>Submtting Form...</div>}
                 </div>
               </form>
+            </div>
+            <div
+              style={
+                submitting
+                  ? {
+                      display: "block",
+                      margin: "0 auto",
+                      textAlign: "center",
+                      marginTop: "100px",
+                    }
+                  : { display: "none" }
+              }
+            >
+              <p className="submitted-msg">
+                Thank you for contacting us ! We'll contact you shortly.
+              </p>
+              <p>
+                <Link to="/">Back to Homepage</Link>
+              </p>
             </div>
           </div>
         </div>

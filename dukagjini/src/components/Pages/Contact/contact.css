@@ -1,5 +1,6 @@
 .contactWrapper {
   padding-top: 100px;
+  height: 70vh;
 }
 
 .titulli {
@@ -22,6 +23,8 @@
 .formDiv {
   width: 50%;
   margin: 0 auto;
+  padding-bottom: 100px;
+  
 }
 
 .contactform label {
