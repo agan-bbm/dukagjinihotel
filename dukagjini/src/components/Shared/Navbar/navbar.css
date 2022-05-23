@@ -236,6 +236,14 @@ g.bottom-left-group.scrolled {
 }
 
 @media(max-width:600px) {
+  #bookBtnMob{
+    border: 1px solid #c3996c;
+    color: #c3996c !important ;
+    font-weight: 500;
+    padding: 15px 25px;
+    width: 100px;
+    margin: 0 auto;
+  }
   .navbar-links {
     display: none;
   }

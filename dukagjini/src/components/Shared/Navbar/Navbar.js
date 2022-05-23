@@ -148,7 +148,7 @@ function Navbar() {
               <p className="mobile-menu-link">
                 <Link to="/contact">Contact</Link>
               </p>
-              <p className="mobile-menu-link">
+              <p className="mobile-menu-link" id="bookBtnMob">
                 <Link to="/booking">BOOK NOW</Link>
               </p>
             </div>
