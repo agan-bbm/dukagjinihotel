@@ -141,7 +141,7 @@ function Checkout({ posts, book, setBook }) {
         <div
           className="checkout-btns"
           style={{
-            display: page === 2 ? "none" : "block",
+            display: page === 2 ? "none" : "flex",
           }}
         >
           <button
