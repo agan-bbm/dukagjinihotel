@@ -202,13 +202,13 @@ g.bottom-right-group.scrolled {
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
 }
-
 path.center-group.scrolled {
-  transform: scale(3);
+  -webkit-transform: scale(3);
+  transform: scale(3) translateX(4px);
+  -webkit-transform-origin: bottom center;
   transform-origin: bottom center;
-  transition: all 0.2s ease-in-out;
+  transition: all .15s ease-in-out;
 }
-
 g.bottom-left-group.scrolled {
   transform: scale(0);
   transform-origin: bottom center;

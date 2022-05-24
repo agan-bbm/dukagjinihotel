@@ -8,9 +8,7 @@ function FifthSection({ posts }) {
     <div className="fifthSection">
       <div className="containerWrapper">
         <h2>{posts[2].acf.sixthbanner.sixthheading}</h2>
-        <p>
-          {posts[2].acf.sixthbanner.sixthparagraph}
-        </p>
+        <p>{posts[2].acf.sixthbanner.sixthparagraph}</p>
         <div className="fifthImgs">
           <img src={posts[2].acf.sixthbanner.sixthimageone} />
           <img src={posts[2].acf.sixthbanner.sixthimagetwo} />
