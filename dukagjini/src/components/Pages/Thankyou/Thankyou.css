@@ -1,26 +1,38 @@
 .tu-container{
     text-align: center;
-   padding: 50px 25px;
+   padding: 50px ;
     border: 1px solid #c3996c;
     margin: 200px auto;
     width: 500px;
-    border-radius: 20px;
+    border-radius: 8px;
+    box-shadow: 3px 8px 15px rgb(0 0 0 / 10%);
 }
 .tu-heading{
-
+color: #c3996c;
 }
 .tu-paragraph{
-
+    width: 85%;
+    margin: 0 auto;
 }
 .tu-contact{
 
 }
 .tu-back{
     list-style: none;
+    background: #c3996c;
+    width: 160px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    text-decoration: none !important;
 }
 @media(max-width:787px){
     .tu-container{
         margin: 50px auto;
-        width: 80%;
+        width: auto;
+        padding: 30px;
+        
+    }
+    .tu-back{
+        margin-top: 30px;
     }
 }
