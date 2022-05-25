@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "./checkout.css";
-export function Userdetails({ formData, setFormData, book }) {
+export function Userdetails({ formData, setFormData, book, al }) {
   const formatDate = (date) => {
     let d = new Date(date);
     let month = (d.getMonth() + 1).toString();
@@ -60,7 +60,7 @@ export function Userdetails({ formData, setFormData, book }) {
           <div className="inputs">
             <div className="userdtl-inputrow">
               <div class="input-field">
-                <label for="name">Name</label>
+                <label for="name">{!al ? "Name" : "Emri"}</label>
                 <input
                   type="text"
                   required
@@ -82,7 +82,7 @@ export function Userdetails({ formData, setFormData, book }) {
                 </p>
               </div>
               <div class="input-field">
-                <label for="surname">Last name</label>
+                <label for="surname">{!al ? "Last Name" : "Mbiemri"}</label>
                 <input
                   type="text"
                   required
@@ -109,7 +109,7 @@ export function Userdetails({ formData, setFormData, book }) {
 
             <div className="userdtl-inputrow">
               <div class="input-field">
-                <label for="number">Number</label>
+                <label for="number">{!al ? "Number" : "Numri"}</label>
                 <input
                   type="text"
                   required
@@ -133,7 +133,7 @@ export function Userdetails({ formData, setFormData, book }) {
                 </p>
               </div>
               <div class="input-field">
-                <label for="email">Email</label>
+                <label for="email">{!al ? "Email" : "Email"}</label>
                 <input
                   type="email"
                   value={formData.email}
@@ -153,7 +153,9 @@ export function Userdetails({ formData, setFormData, book }) {
                       width: "300px",
                     }}
                   >
-                    Ju lutem shënoni një email valid
+                    {!al
+                      ? "Please enter a valid email"
+                      : "Ju lutem shënoni një email valid"}
                   </p>
                 ) : null}
               </div>

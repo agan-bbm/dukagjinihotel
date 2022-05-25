@@ -11,7 +11,7 @@ import balcony from "../../../images/wifi.svg";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
-function Singleroom({ dates, setDates, book, setBook }) {
+function Singleroom({ dates, setDates, book, setBook, al }) {
   const params = useParams();
 
   const [reservation, setReservation] = useState({
@@ -69,9 +69,15 @@ function Singleroom({ dates, setDates, book, setBook }) {
         <div className="containerWrapper">
           <div>
             {/* <h2 className="single-room-title">Standard Room</h2> */}
-            {/* <h2 style={{ marginBottom: "0px" }} className="single-room-title">
-              {rooms.rooms.acf.room.name}
-            </h2> */}
+            {!al ? (
+              <h2 style={{ marginBottom: "0px" }} className="single-room-title">
+                {rooms.rooms.acf.room.name}
+              </h2>
+            ) : (
+              <h2 style={{ marginBottom: "0px" }} className="single-room-title">
+                {rooms.rooms.acf.roomal.name}{" "}
+              </h2>
+            )}
           </div>
 
           {/* <div className="review-single-room">
@@ -80,35 +86,74 @@ function Singleroom({ dates, setDates, book, setBook }) {
 
           <div className="single-room-grid">
             <div className="grid-left-side">
-              <img src={rooms.rooms.acf.room.images[0]} alt="" />
+              {!al ? (
+                <img src={rooms.rooms.acf.room.images[0]} alt="" />
+              ) : (
+                <img src={rooms.rooms.acf.roomal.images[0]} alt="" />
+              )}
             </div>
             <div className="grid-right-side">
               <div className="rightside-div">
-                <img src={rooms.rooms.acf.room.images[1]} alt="" />
+                {!al ? (
+                  <img src={rooms.rooms.acf.room.images[1]} alt="" />
+                ) : (
+                  <img src={rooms.rooms.acf.roomal.images[1]} alt="" />
+                )}
               </div>
               <div className="rightside-div">
-                <img src={rooms.rooms.acf.room.images[2]} alt="" />
+                {!al ? (
+                  <img src={rooms.rooms.acf.room.images[2]} alt="" />
+                ) : (
+                  <img src={rooms.rooms.acf.room.images[2]} alt="" />
+                )}
               </div>
             </div>
           </div>
           <div className="title-and-location">
             <h2 className="single-room-title">{rooms.rooms.acf.room.name}</h2>
-
-            <p id="lokacioni-dhomes">Pejë, Kosovo</p>
+            {!al ? (
+              <p id="lokacioni-dhomes">Peja, Kosovo</p>
+            ) : (
+              <p id="lokacioni-dhomes">Pejë, Kosovë</p>
+            )}
           </div>
 
           <div className="single-room-informations">
             <div className="sr-info-left">
-              <p className="single-room-description">Description</p>
-              <p className="pershkrimi-p">{rooms.rooms.acf.room.longdesc}</p>
+              {!al ? (
+                <p className="single-room-description">Description</p>
+              ) : (
+                <p className="single-room-description">Pershkrimi</p>
+              )}
 
+              {!al ? (
+                <p className="pershkrimi-p">{rooms.rooms.acf.room.longdesc}</p>
+              ) : (
+                <p className="pershkrimi-p">
+                  {rooms.rooms.acf.roomal.longdesc}
+                </p>
+              )}
               <div className="room-features-wrapper">
-                <p className="room-features-p">Hotel Features</p>
+                {!al ? (
+                  <p className="room-features-p">Room Features</p>
+                ) : (
+                  <p className="room-features-p">Veçoritë e dhomës</p>
+                )}
 
                 <div className="ikonat-single-room">
                   <div className="icon-info" id="single-room-iconinfo1">
-                    {rooms.rooms.acf.room.icons
-                      ? rooms.rooms.acf.room.icons.map((icons) => (
+                    {!al
+                      ? rooms.rooms.acf.room.icons
+                        ? rooms.rooms.acf.room.icons.map((icons) => (
+                            <div className="icon-singleroom-page">
+                              <img src={icons.icon} alt="" />
+
+                              <p>{icons.text}</p>
+                            </div>
+                          ))
+                        : ""
+                      : rooms.rooms.acf.roomal.icons
+                      ? rooms.rooms.acf.roomal.icons.map((icons) => (
                           <div className="icon-singleroom-page">
                             <img src={icons.icon} alt="" />
 
@@ -124,7 +169,7 @@ function Singleroom({ dates, setDates, book, setBook }) {
               <div className="cart">
                 <p className="cmimi-dhomes">
                   {rooms.rooms.acf.room.room_price}
-                  <span>/Night</span>
+                  {!al ? <span>/Night</span> : <span>/Natë</span>}
                 </p>
                 <hr />
                 <div className="date-inputs">
@@ -153,7 +198,12 @@ function Singleroom({ dates, setDates, book, setBook }) {
 
                   <div className="sr-selects-flex">
                     <div className="select-dates select">
-                      <label htmlFor="checkin">Adult</label>
+                      {!al ? (
+                        <label htmlFor="checkin">Adult</label>
+                      ) : (
+                        <label htmlFor="checkin">Të rritur</label>
+                      )}
+
                       <select
                         name="checkin"
                         id=""
@@ -180,7 +230,11 @@ function Singleroom({ dates, setDates, book, setBook }) {
                       </select>
                     </div>
                     <div className="select-dates select">
-                      <label htmlFor="checkin">Children</label>
+                      {!al ? (
+                        <label htmlFor="checkin">Children</label>
+                      ) : (
+                        <label htmlFor="checkin">Fëmijë</label>
+                      )}
                       <select
                         name="checkin"
                         id=""
@@ -235,7 +289,11 @@ function Singleroom({ dates, setDates, book, setBook }) {
                         });
                       }}
                     >
-                      <button className="default-button">Book</button>
+                      {!al ? (
+                        <button className="default-button">Book</button>
+                      ) : (
+                        <button className="default-button">Rezervo</button>
+                      )}
                     </Link>
                   </div>
                 </div>

@@ -7,7 +7,7 @@ import "./checkout.css";
 import { Summary } from "./summary";
 import { Userdetails } from "./userdetails";
 
-function Checkout({ posts, book, setBook }) {
+function Checkout({ posts, book, setBook, al }) {
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -34,19 +34,25 @@ function Checkout({ posts, book, setBook }) {
             formData={formData}
             setFormData={setFormData}
             reservationId={reservationId}
+            al={al}
           />
         );
       case 1:
         return (
           <Summary
-            posts={posts[0].acf.checkout.secondtstep}
+            posts={
+              !al
+                ? posts.acf.checkout.secondtstep
+                : posts.acf.checkout.secondtstep
+            }
             book={book}
             setBook={setBook}
+            al={al}
           />
         );
 
       case 2:
-        return <Thankyou posts={posts[0].acf.checkout.thankyou} />;
+        return <Thankyou posts={posts.acf.checkout.thankyou} />;
     }
   };
 
@@ -61,16 +67,16 @@ function Checkout({ posts, book, setBook }) {
         return (
           <>
             {" "}
-            <h2>{posts[0].acf.checkout.firststep.heading}</h2>
-            <p>{posts[0].acf.checkout.firststep.paragraph}</p>
+            <h2>{posts.acf.checkout.firststep.heading}</h2>
+            <p>{posts.acf.checkout.firststep.paragraph}</p>
           </>
         );
       case 1:
         return (
           <>
             {" "}
-            <h2>{posts[0].acf.checkout.secondtstep.heading}</h2>
-            <p>{posts[0].acf.checkout.secondtstep.paragraph}</p>
+            <h2>{posts.acf.checkout.secondtstep.heading}</h2>
+            <p>{posts.acf.checkout.secondtstep.paragraph}</p>
           </>
         );
       case 2:

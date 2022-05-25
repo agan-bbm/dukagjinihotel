@@ -134,16 +134,21 @@ function App() {
             />
             {/* <Route path="/rooms" element={<Rooms />} /> */}
             <Route path="our-rooms" element={<StaticRooms al={al} />} />
-            {/* <Route
+            <Route
               path="/single-room/:id"
-              element={<Singleroom book={book} setBook={setBook} />}
-            /> */}
-            {/* <Route
+              element={<Singleroom book={book} setBook={setBook} al={al} />}
+            />
+            <Route
               path="/checkout/:id"
               element={
-                <Checkout posts={state.posts} book={book} setBook={setBook} />
+                <Checkout
+                  posts={!al ? about : aboutAl}
+                  book={book}
+                  setBook={setBook}
+                  al={al}
+                />
               }
-            /> */}
+            />
             <Route path="/contact" element={<Contact />} />
             {/* <Route path="/thankyou" element={<Thankyou />}></Route> */}
             {/* <Route
