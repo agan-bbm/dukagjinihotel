@@ -116,7 +116,7 @@ function App() {
                 />
               }
             />
-            {/* <Route
+            <Route
               path="/booking"
               element={
                 <Booking
@@ -124,9 +124,10 @@ function App() {
                   setDates={setDates}
                   book={book}
                   setBook={setBook}
+                  al={al}
                 />
               }
-            /> */}
+            />
             <Route
               path="/about"
               element={<About posts={!al ? about : aboutAl} />}

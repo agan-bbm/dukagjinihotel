@@ -62,8 +62,16 @@ export function StaticRooms({ al }) {
                     slidesPerView={1}
                     navigation
                   >
-                    {e.acf.room.images
-                      ? e.acf.room.images.map((img) => (
+                    {!al
+                      ? e.acf.room.images
+                        ? e.acf.room.images.map((img) => (
+                            <SwiperSlide>
+                              <img src={img.length > 0 ? img : ""} />
+                            </SwiperSlide>
+                          ))
+                        : ""
+                      : e.acf.roomal.images
+                      ? e.acf.roomal.images.map((img) => (
                           <SwiperSlide>
                             <img src={img.length > 0 ? img : ""} />
                           </SwiperSlide>
@@ -74,18 +82,48 @@ export function StaticRooms({ al }) {
                 <div className="room-desc-info">
                   <div className="main-room-infos">
                     <div className="room-name-shortdesc">
-                      <h2 className="room-title">{e.acf.room.name}</h2>
-                      <p className="room-short-desc">{e.acf.room.shortdesc}</p>
+                      {!al ? (
+                        <h2 className="room-title">{e.acf.room.name}</h2>
+                      ) : (
+                        <h2 className="room-title">{e.acf.roomal.name}</h2>
+                      )}
+                      {!al ? (
+                        <p className="room-short-desc">
+                          {e.acf.room.shortdesc}
+                        </p>
+                      ) : (
+                        <p className="room-short-desc">
+                          {e.acf.roomal.shortdesc}
+                        </p>
+                      )}
                     </div>
                     <div className="price-night-desktop">
-                      <h4 id="price">{e.acf.room.room_price}</h4>
+                      {!al ? (
+                        <h4 id="price">{e.acf.room.room_price}</h4>
+                      ) : (
+                        <h4 id="price">{e.acf.roomal.room_price}</h4>
+                      )}
 
-                      <p id="nights">{e.acf.room.personnight}</p>
+                      {!al ? (
+                        <p id="nights">{e.acf.room.personnight}</p>
+                      ) : (
+                        <p id="nights">{e.acf.roomal.personnight}</p>
+                      )}
                     </div>
                   </div>
                   <div className="icon-info">
-                    {e.acf.room.icons
-                      ? e.acf.room.icons.map((icons) => (
+                    {!al
+                      ? e.acf.room.icons
+                        ? e.acf.room.icons.map((icons) => (
+                            <div className="icon-rooms-page">
+                              <img src={icons.icon} alt="" />
+
+                              <p>{icons.text}</p>
+                            </div>
+                          ))
+                        : ""
+                      : e.acf.roomal.icons
+                      ? e.acf.roomal.icons.map((icons) => (
                           <div className="icon-rooms-page">
                             <img src={icons.icon} alt="" />
 
@@ -95,20 +133,26 @@ export function StaticRooms({ al }) {
                       : ""}
                   </div>
                   <p className="rooms-p-desc" style={{ color: "#575757" }}>
-                    {e.acf.room.longdesc}
+                    {!al ? e.acf.room.longdesc : e.acf.roomal.longdesc}
                   </p>
 
                   <div className="room-buttons">
                     <div className="price-night-mobile">
-                      <h4 id="price">{e.acf.room.room_price}</h4>
+                      {!al ? (
+                        <h4 id="price">{e.acf.room.room_price}</h4>
+                      ) : (
+                        <h4 id="price">{e.acf.roomal.room_price}</h4>
+                      )}
                       <p style={{ marginTop: "0px", color: "#575757" }}>
-                        {e.acf.room.personnight}
+                        {!al
+                          ? e.acf.room.personnight
+                          : e.acf.roomal.personnight}
                       </p>
                     </div>
                     <div className="book-button">
                       <Link to={"/booking"}>
                         <button className="default-button">
-                          {e.acf.room.button}
+                          {!al ? e.acf.room.button : e.acf.roomal.button}
                         </button>
                       </Link>
                     </div>

@@ -15,7 +15,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import Loader from "../../Utils/Loader";
 import Loader2 from "../../Utils/Loader";
 
-export function Rooms({ freeRooms, loader }) {
+export function Rooms({ freeRooms, loader, al }) {
   console.log(loader);
   const [rooms, setRooms] = useState({
     rooms: [],
@@ -110,6 +110,8 @@ export function Rooms({ freeRooms, loader }) {
   }, [freeRooms.rooms]);
   console.log("free rooooooooooooooms", onlyFreeRooms.rooms);
 
+  console.log(rooms.rooms);
+
   return freeRooms.rooms.length > 0 ? (
     <>
       <div className="containerWrapper">
@@ -129,8 +131,16 @@ export function Rooms({ freeRooms, loader }) {
                     slidesPerView={1}
                     navigation
                   >
-                    {e.acf.room.images
-                      ? e.acf.room.images.map((img) => (
+                    {!al
+                      ? e.acf.room.images
+                        ? e.acf.room.images.map((img) => (
+                            <SwiperSlide>
+                              <img src={img.length > 0 ? img : ""} />
+                            </SwiperSlide>
+                          ))
+                        : ""
+                      : e.acf.roomal.images
+                      ? e.acf.roomal.images.map((img) => (
                           <SwiperSlide>
                             <img src={img.length > 0 ? img : ""} />
                           </SwiperSlide>
@@ -141,18 +151,38 @@ export function Rooms({ freeRooms, loader }) {
                 <div className="room-desc-info">
                   <div className="main-room-infos">
                     <div className="room-name-shortdesc">
-                      <h2 className="room-title">{e.acf.room.name}</h2>
-                      <p className="room-short-desc">{e.acf.room.shortdesc}</p>
+                      <h2 className="room-title">
+                        {!al ? e.acf.room.name : e.acf.roomal.name}
+                      </h2>
+                      <p className="room-short-desc">
+                        {!al ? e.acf.room.shortdesc : e.acf.roomal.shortdesc}
+                      </p>
                     </div>
                     <div className="price-night-desktop">
-                      <h4 id="price">{e.acf.room.room_price}</h4>
+                      <h4 id="price">
+                        {!al ? e.acf.room.room_price : e.acf.roomal.room_price}
+                      </h4>
 
-                      <p id="nights">{e.acf.room.personnight}</p>
+                      <p id="nights">
+                        {!al
+                          ? e.acf.room.personnight
+                          : e.acf.roomal.personnight}
+                      </p>
                     </div>
                   </div>
                   <div className="icon-info">
-                    {e.acf.room.icons
-                      ? e.acf.room.icons.map((icons) => (
+                    {!al
+                      ? e.acf.room.icons
+                        ? e.acf.room.icons.map((icons) => (
+                            <div className="icon-rooms-page">
+                              <img src={icons.icon} alt="" />
+
+                              <p>{icons.text}</p>
+                            </div>
+                          ))
+                        : ""
+                      : e.acf.roomal.icons
+                      ? e.acf.roomal.icons.map((icons) => (
                           <div className="icon-rooms-page">
                             <img src={icons.icon} alt="" />
 
@@ -162,20 +192,24 @@ export function Rooms({ freeRooms, loader }) {
                       : ""}
                   </div>
                   <p className="rooms-p-desc" style={{ color: "#575757" }}>
-                    {e.acf.room.longdesc}
+                    {!al ? e.acf.room.longdesc : e.acf.roomal.longdesc}
                   </p>
 
                   <div className="room-buttons">
                     <div className="price-night-mobile">
-                      <h4 id="price">{e.acf.room.room_price}</h4>
+                      <h4 id="price">
+                        {!al ? e.acf.room.room_price : e.acf.roomal.room_price}
+                      </h4>
                       <p style={{ marginTop: "0px", color: "#575757" }}>
-                        {e.acf.room.personnight}
+                        {!al
+                          ? e.acf.room.personnight
+                          : e.acf.roomal.personnight}
                       </p>
                     </div>
                     <div className="book-button">
                       <Link to={"/single-room/" + e.id}>
                         <button className="default-button">
-                          {e.acf.room.button}
+                          {!al ? e.acf.room.button : e.acf.roomal.button}
                         </button>
                       </Link>
                     </div>

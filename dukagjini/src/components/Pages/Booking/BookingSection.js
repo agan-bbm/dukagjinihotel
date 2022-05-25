@@ -24,7 +24,7 @@ import balcony from "../../../images/balcony.png";
 import Daterange from "../../Shared/DatePicker/daterange";
 import { Rooms } from "../Rooms";
 
-function BookingSection({ dates, setDates, book, setBook }) {
+function BookingSection({ dates, setDates, book, setBook, al }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
   const todayDate = new Date();
@@ -95,10 +95,20 @@ function BookingSection({ dates, setDates, book, setBook }) {
         <div className="booking-main">
           <div>
             <div className="select-dates-txt">
-              <h2 className="range-h2">Select Dates</h2>
-              <p className="range-p">
-                Book directly with us. Best Rates Generated
-              </p>
+              {!al ? (
+                <h2 className="range-h2">Select Dates</h2>
+              ) : (
+                <h2 className="range-h2">Zgjedh Datat</h2>
+              )}
+              {!al ? (
+                <p className="range-p">
+                  Book directly with us. Best Rates Generated
+                </p>
+              ) : (
+                <p className="range-p">
+                  Rezervoni direkt me ne. Çmimet më të mira të krijuara
+                </p>
+              )}
             </div>
 
             <DatePicker
@@ -122,12 +132,12 @@ function BookingSection({ dates, setDates, book, setBook }) {
                   setLoader(true);
                 }}
               >
-                Check Rooms
+                {al ? "Shiko Dhomat" : "Check Rooms"}
               </button>
             </div>
           </div>
 
-          <Rooms freeRooms={rooms} loader={loader} />
+          <Rooms freeRooms={rooms} loader={loader} al={al} />
         </div>
       </div>
     </>
