@@ -27,6 +27,40 @@ body {
   display: none;
 }
 
+.error-page {
+  padding: 150px 0;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-page h1 {
+  margin: 0;
+  color: #ca9e72;
+}
+
+.error-page h2 {
+  margin: 0 0 20px 0;
+
+}
+
+.error-page a {
+  text-decoration: none;
+  color: white;
+  margin: 10px 0;
+  padding: 10px 30px;
+  background-color: #ca9e72;
+  border: 1px solid black;
+}
+
+.error-page a:hover {
+  background-color: black;
+  border-color: #ca9e72;
+}
+
 input,
 select {
   outline: none;
