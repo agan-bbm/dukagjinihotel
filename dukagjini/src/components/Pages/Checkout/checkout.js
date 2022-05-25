@@ -22,6 +22,7 @@ function Checkout({ posts, book, setBook }) {
     lastNameValid: true,
     numberValid: true,
   });
+  const [reservationId, setReservationId] = useState("");
   const [page, setPage] = useState(0);
   console.log(book);
 
@@ -112,6 +113,7 @@ function Checkout({ posts, book, setBook }) {
       )
       .then((res) => {
         console.log(res);
+        setReservationId(res.data);
         setPage(page + 1);
       })
       .catch((err) => {
@@ -119,6 +121,7 @@ function Checkout({ posts, book, setBook }) {
       });
   };
 
+  console.log(reservationId.slice(0, -1));
   return (
     <>
       <div className="checkout">
