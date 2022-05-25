@@ -12,7 +12,9 @@ export function Userdetails({ formData, setFormData }) {
     }
   };
   const validateNumber = (number) => {
-    const strongRegex = new RegExp("^[+]*[(]{0,1}[0-9_ ]{9,25}[)]{0,1}[-s./0-9]*$");
+    const strongRegex = new RegExp(
+      "^[+]*[(]{0,1}[0-9_ ]{9,25}[)]{0,1}[-s./0-9]*$"
+    );
 
     if (strongRegex.test(number) === false) {
       setFormData({ ...formData, numberValid: false, number: number });
@@ -49,6 +51,7 @@ export function Userdetails({ formData, setFormData }) {
                 <input
                   type="text"
                   required
+                  name="name"
                   value={formData.name}
                   onChange={(e) => {
                     validateUsername(e.target.value);
@@ -70,6 +73,7 @@ export function Userdetails({ formData, setFormData }) {
                 <input
                   type="text"
                   required
+                  name="lastName"
                   value={formData.lastName}
                   onChange={(e) => {
                     validateLastname(e.target.value);
@@ -83,7 +87,9 @@ export function Userdetails({ formData, setFormData }) {
                     width: "300px",
                   }}
                 >
-                  {formData.lastNameValid ? "" : "Ju lutem shënoni një mbiemër valid"}
+                  {formData.lastNameValid
+                    ? ""
+                    : "Ju lutem shënoni një mbiemër valid"}
                 </p>
               </div>
             </div>
@@ -94,6 +100,7 @@ export function Userdetails({ formData, setFormData }) {
                 <input
                   type="text"
                   required
+                  name="number"
                   value={formData.number}
                   onChange={(e) => {
                     validateNumber(e.target.value);
@@ -107,7 +114,9 @@ export function Userdetails({ formData, setFormData }) {
                     width: "300px",
                   }}
                 >
-                  {formData.numberValid ? "" : "Ju lutem shënoni një numër telefoni valid"}
+                  {formData.numberValid
+                    ? ""
+                    : "Ju lutem shënoni një numër telefoni valid"}
                 </p>
               </div>
               <div class="input-field">
@@ -116,6 +125,7 @@ export function Userdetails({ formData, setFormData }) {
                   type="email"
                   value={formData.email}
                   required
+                  name="email"
                   // className={emailError ? "" : "error"}
                   onChange={(e) => {
                     validateEmail(e.target.value);
