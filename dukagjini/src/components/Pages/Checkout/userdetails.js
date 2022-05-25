@@ -161,15 +161,6 @@ export function Userdetails({ formData, setFormData, book }) {
           </div>
         </form>
       </div>
-      <form>
-        <input type="text" name="name" />
-        <input type="text" name="lastName" />
-        <input type="text" name="number" />
-        <input type="email" name="email" />
-        <input type="date" name="CheckInDate" />
-        <input type="text" name="CheckOutDate" />
-        <input type="text" name="ReservationId" />
-      </form>
     </>
   );
 }

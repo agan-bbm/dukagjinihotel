@@ -29,7 +29,13 @@ function Checkout({ posts, book, setBook }) {
   const showForm = () => {
     switch (page) {
       case 0:
-        return <Userdetails formData={formData} setFormData={setFormData} />;
+        return (
+          <Userdetails
+            formData={formData}
+            setFormData={setFormData}
+            reservationId={reservationId}
+          />
+        );
       case 1:
         return (
           <Summary
@@ -81,6 +87,7 @@ function Checkout({ posts, book, setBook }) {
         );
     }
   };
+  console.log(window.location.origin + "/error");
   const [required, setRequired] = useState(false);
   const formatDate = (date) => {
     let d = new Date(date);
@@ -114,14 +121,17 @@ function Checkout({ posts, book, setBook }) {
       .then((res) => {
         console.log(res);
         setReservationId(res.data);
+        document.getElementById("confirmReservationEmail").click();
+
         setPage(page + 1);
       })
       .catch((err) => {
         console.log(err);
+        window.location.href = window.location.origin + "/error";
       });
   };
 
-  console.log(reservationId.slice(0, -1));
+  console.log(book);
   return (
     <>
       <div className="checkout">
@@ -196,6 +206,28 @@ function Checkout({ posts, book, setBook }) {
           </button>
         </div>
       </div>
+      <form
+        method="POST"
+        action="https://cmsdukagjini.blackbird.marketing/wp-content/sendEmailReservation.php"
+        style={{ display: "none" }}
+      >
+        <input type="hidden" name="name" value={formData.name} />
+        <input type="hidden" name="lastName" value={formData.lastName} />
+        <input type="hidden" name="number" value={formData.number} />
+        <input type="hidden" name="email" value={formData.email} />
+        <input type="hidden" name="CheckInDate" value={book.checkin} />
+        <input type="hidden" name="CheckOutDate" value={book.checkout} />
+        <input type="hidden" name="type" value="create" />
+        <input
+          type="hidden"
+          name="ReservationId"
+          value={reservationId.slice(0, -1)}
+        />
+        <button formTarget="sendEmail" id="confirmReservationEmail">
+          submit
+        </button>
+      </form>
+      <iframe name="sendEmail" style={{ display: "none" }} />
     </>
   );
 }

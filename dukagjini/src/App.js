@@ -15,6 +15,7 @@ import { StaticRooms } from "./components/Pages/StaticRooms/StaticRooms";
 import ScrollToTop from "./components/Shared/ScrollToTop";
 import UpdateReservation from "./components/Pages/UpdateReservation/UpdateReservation";
 import DeleteReservation from "./components/Pages/DeleteReservation";
+import ReservationError from "./components/Pages/ReservationError";
 
 console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
@@ -124,6 +125,7 @@ function App() {
               path="/delete-reservation"
               element={<DeleteReservation />}
             ></Route>
+            <Route path="/error" element={<ReservationError />}></Route>
           </Routes>
           {/* </div> */}
           <Footer />
