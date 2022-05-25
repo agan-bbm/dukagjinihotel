@@ -94,12 +94,12 @@ function Singleroom({ dates, setDates, book, setBook }) {
           <div className="title-and-location">
             <h2 className="single-room-title">{rooms.rooms.acf.room.name}</h2>
 
-            <p id="lokacioni-dhomes">Pejë, Kosove</p>
+            <p id="lokacioni-dhomes">Pejë, Kosovo</p>
           </div>
 
           <div className="single-room-informations">
             <div className="sr-info-left">
-              <p className="single-room-description">Përshkrimi</p>
+              <p className="single-room-description">Description</p>
               <p className="pershkrimi-p">{rooms.rooms.acf.room.longdesc}</p>
 
               <div className="room-features-wrapper">

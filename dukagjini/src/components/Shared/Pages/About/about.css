@@ -64,6 +64,9 @@
 }
 
 @media (max-width: 767px) {
+  .containerWrapper .aboutTab h2{
+    margin: 0;
+  }
   .aboutBanner {
     padding: 50px 0px;
   }
