@@ -48,7 +48,7 @@ function FirstSection({ posts, book, setBook }) {
 
               <div className="bookingFirstBanner">
                 <div className="choosing-option">
-                  <label htmlFor="checkin">Check In</label>
+                  <label htmlFor="checkin">Check In - Check Out</label>
                   <DatePicker
                     // selected={startDate}
                     onChange={onChange}
