@@ -1,6 +1,6 @@
 .contactWrapper {
   padding-top: 100px;
-  height: 90vh;
+  height: auto;
 }
 
 .titulli {
@@ -95,6 +95,10 @@
 }
 
 @media (max-width: 767px) {
+  .contactWrapper{
+    padding-top: 100px;
+    height: auto !important;
+  }
   .formAndMap {
     display: flex;
     flex-direction: column;
