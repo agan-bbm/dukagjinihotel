@@ -1,7 +1,20 @@
 import React, { useState } from "react";
 
 import "./checkout.css";
-export function Userdetails({ formData, setFormData }) {
+export function Userdetails({ formData, setFormData, book }) {
+  const formatDate = (date) => {
+    let d = new Date(date);
+    let month = (d.getMonth() + 1).toString();
+    let day = d.getDate().toString();
+    let year = d.getFullYear();
+    if (month.length < 2) {
+      month = "0" + month;
+    }
+    if (day.length < 2) {
+      day = "0" + day;
+    }
+    return [year, month, day].join("-");
+  };
   const validateEmail = (email) => {
     const emailRegex = new RegExp(/\S+@\S+\.\S+/);
 
@@ -148,6 +161,15 @@ export function Userdetails({ formData, setFormData }) {
           </div>
         </form>
       </div>
+      <form>
+        <input type="text" name="name" />
+        <input type="text" name="lastName" />
+        <input type="text" name="number" />
+        <input type="email" name="email" />
+        <input type="date" name="CheckInDate" />
+        <input type="text" name="CheckOutDate" />
+        <input type="text" name="ReservationId" />
+      </form>
     </>
   );
 }
