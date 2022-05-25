@@ -10,6 +10,7 @@ function DeleteReservation() {
     errorId: true,
     id: "",
   });
+  const [email, setEmail] = useState("");
 
   console.log(idError.errorId);
   const validateId = (id) => {
@@ -55,17 +56,30 @@ function DeleteReservation() {
       )
       .then((res) => {
         console.log(res);
+        document.getElementById("deleteReservationEmail").click();
+        window.location.href = window.location.origin + "/";
       })
       .catch((err) => {
         console.log(err);
+        window.location.href = window.location.origin + "/error";
       });
   };
   return (
     <div className="main-update">
       <h1 className="update-title">
-        Enter reservation ID to cancel reservation
+        Please write below your email and reservation ID received <br></br> in
+        your confirmation email.
       </h1>
       <form className="update-form">
+        <input
+          type="email"
+          placeholder="Enter your email address"
+          required
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
+        <br></br>
         <input
           type="text"
           placeholder="Enter reservetion ID"
@@ -77,10 +91,7 @@ function DeleteReservation() {
           }}
         />
         {!idError.errorId ? (
-          <p className="update-error">
-            Please write 5 digits of the ID. <br></br>ID should contain only
-            numbers!
-          </p>
+          <p className="update-error">ID should contain only numbers!</p>
         ) : (
           ""
         )}
@@ -90,7 +101,7 @@ function DeleteReservation() {
             handleSubmit();
           }}
         >
-          Update
+          Delete
         </button>
       </form>
       <iframe
@@ -98,6 +109,20 @@ function DeleteReservation() {
         style={{ display: "none", width: "0", height: "0" }}
         title="dummyframe"
       ></iframe>
+      <form
+        method="POST"
+        action="https://cmsdukagjini.blackbird.marketing/wp-content/sendEmailReservation.php"
+        style={{ display: "none" }}
+      >
+        <input type="email" name="email" value={email} />
+
+        <input type="hidden" name="type" value="delete" />
+        <input type="text" name="ReservationId" value={idError.id} />
+        <button formTarget="sendEmail" id="deleteReservationEmail">
+          submit
+        </button>
+      </form>
+      <iframe name="sendEmail" style={{ display: "none" }} />
     </div>
   );
 }
