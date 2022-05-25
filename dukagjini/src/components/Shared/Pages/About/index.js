@@ -6,6 +6,7 @@ import HistoryTab from "./historyTab";
 import LocationTab from "./locationTab";
 
 function About({ posts, founder }) {
+  console.log(posts);
   console.log(window.innerWidth);
   const style = {
     color: "white",
@@ -20,22 +21,27 @@ function About({ posts, founder }) {
     } else if (content === 1) {
       return (
         <div>
-          <HistoryTab posts={posts[0].acf.abouttabs.secondtab} />
+          <HistoryTab posts={posts.acf.abouttabs.secondtab} />
         </div>
       );
     } else
       return (
         <div>
-          <LocationTab posts={posts[0].acf.abouttabs.thirdtab} />
+          <LocationTab posts={posts.acf.abouttabs.thirdtab} />
         </div>
       );
   };
   return (
     <div>
       <div className="aboutBanner">
-        <div className="containerWrapper" style={{ backgroundImage: `url(${posts[0].acf.aboutbannerimg})` }}>
-          <h2 /*style={style}*/ className="bannerH">{posts[0].acf.aboutheading}</h2>
-          <p className="bannerP">{posts[0].acf.aboutparagraph}</p>
+        <div
+          className="containerWrapper"
+          style={{ backgroundImage: `url(${posts.acf.aboutbannerimg})` }}
+        >
+          <h2 /*style={style}*/ className="bannerH">
+            {posts.acf.aboutheading}
+          </h2>
+          <p className="bannerP">{posts.acf.aboutparagraph}</p>
         </div>
       </div>
       <div className="containerWrapper">
@@ -48,7 +54,9 @@ function About({ posts, founder }) {
                 setContent(0);
               }}
             >
-              <p className="tabName">{posts[0].acf.abouttabs.firsttab.tabheading}</p>
+              <p className="tabName">
+                {posts.acf.abouttabs.firsttab.tabheading}
+              </p>
             </div>
 
             <div
@@ -58,7 +66,9 @@ function About({ posts, founder }) {
                 setContent(1);
               }}
             >
-              <p className="tabName">{posts[0].acf.abouttabs.secondtab.tabheading}</p>
+              <p className="tabName">
+                {posts.acf.abouttabs.secondtab.tabheading}
+              </p>
             </div>
             <div
               className="about-button hoverable"
@@ -67,7 +77,9 @@ function About({ posts, founder }) {
                 setContent(2);
               }}
             >
-              <p className="tabName">{posts[0].acf.abouttabs.thirdtab.tabheading}</p>
+              <p className="tabName">
+                {posts.acf.abouttabs.thirdtab.tabheading}
+              </p>
             </div>
           </div>
         </div>

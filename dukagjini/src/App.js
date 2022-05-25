@@ -16,6 +16,9 @@ import ScrollToTop from "./components/Shared/ScrollToTop";
 import UpdateReservation from "./components/Pages/UpdateReservation/UpdateReservation";
 import DeleteReservation from "./components/Pages/DeleteReservation";
 import ReservationError from "./components/Pages/ReservationError";
+import Loader2 from "./components/Utils/Loader";
+import Al from "./images/AL.svg";
+import En from "./images/EN.svg";
 
 console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
@@ -28,6 +31,7 @@ function App() {
     posts: [],
     isLoaded: false,
   });
+  const [al, setAl] = useState(false);
   const [dates, setDates] = useState({ from: "", to: "" });
 
   const [book, setBook] = useState({
@@ -63,11 +67,26 @@ function App() {
     //   .catch((err) => console.log(err));
   }, []);
 
-  var homepageId, formId;
+  var homepage, homepageAl, about, aboutAl, rooms, roomsAl;
   state.posts.map((e) => {
     switch (e.id) {
       case 8:
-        formId = e;
+        homepage = e;
+        break;
+      case 327:
+        homepageAl = e;
+        break;
+      case 61:
+        about = e;
+        break;
+      case 324:
+        aboutAl = e;
+        break;
+      case 44:
+        rooms = e;
+        break;
+      case 329:
+        roomsAl = e;
         break;
     }
   });
@@ -75,23 +94,29 @@ function App() {
   console.log("BOOKING INFOOO", book);
   console.log("-----------------------------");
 
-  if (state.isLoaded === false) return null;
+  console.log(state.posts);
+
+  if (state.isLoaded === false) return <Loader2 />;
   else {
     return (
       <div className="App">
         <ScrollToTop>
-          <Navbar />
+          <Navbar al={al} setAl={setAl} />
 
-          {/* <div className="homepage"> */}
           <Routes>
             <Route
               path="/"
               exact
               element={
-                <Homepage posts={state.posts} book={book} setBook={setBook} />
+                <Homepage
+                  posts={al ? homepageAl : homepage}
+                  book={book}
+                  setBook={setBook}
+                  al={al}
+                />
               }
             />
-            <Route
+            {/* <Route
               path="/booking"
               element={
                 <Booking
@@ -101,33 +126,35 @@ function App() {
                   setBook={setBook}
                 />
               }
-            />
-            <Route path="/about" element={<About posts={state.posts} />} />
-            <Route path="/rooms" element={<Rooms />} />
-            <Route path="our-rooms" element={<StaticRooms />} />
+            /> */}
             <Route
+              path="/about"
+              element={<About posts={!al ? about : aboutAl} />}
+            />
+            {/* <Route path="/rooms" element={<Rooms />} /> */}
+            <Route path="our-rooms" element={<StaticRooms al={al} />} />
+            {/* <Route
               path="/single-room/:id"
               element={<Singleroom book={book} setBook={setBook} />}
-            />
-            <Route
+            /> */}
+            {/* <Route
               path="/checkout/:id"
               element={
                 <Checkout posts={state.posts} book={book} setBook={setBook} />
               }
-            />
+            /> */}
             <Route path="/contact" element={<Contact />} />
-            <Route path="/thankyou" element={<Thankyou />}></Route>
-            <Route
+            {/* <Route path="/thankyou" element={<Thankyou />}></Route> */}
+            {/* <Route
               path="/update-reservation"
               element={<UpdateReservation />}
-            ></Route>
-            <Route
+            ></Route> */}
+            {/* <Route
               path="/delete-reservation"
               element={<DeleteReservation />}
-            ></Route>
-            <Route path="/error" element={<ReservationError />}></Route>
+            ></Route> */}
+            {/* <Route path="/error" element={<ReservationError />}></Route> */}
           </Routes>
-          {/* </div> */}
           <Footer />
         </ScrollToTop>
       </div>

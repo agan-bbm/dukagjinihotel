@@ -19,8 +19,9 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import axios from "axios";
+import Loader2 from "../../../Utils/Loader";
 
-function FourthSection({ posts }) {
+function FourthSection({ posts, al }) {
   const [rooms, setRooms] = useState({
     rooms: [],
     isLoaded: false,
@@ -37,17 +38,13 @@ function FourthSection({ posts }) {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(rooms);
+  console.log(rooms.rooms);
   return (
     <div className="fourthSection">
       <div className="containerWrapper">
         <div className="recomendations">
-          <h2 id="recomendations4u">Rekomandimet tona për ju!</h2>
-          <p id="recommendationParagraph">
-            Të gjitha dhomat tona janë unike me një stil të veçantë dhe luksoz.
-            Hotel Dukagjini sjell për ju magjinë e të ndjehurit rehat në dhomat
-            e përgatitura për komoditetin tuaj!
-          </p>
+          <h2 id="recomendations4u">{posts.acf.fourthbanner.fourthheading}</h2>
+          <p id="recommendationParagraph">{posts.acf.fourthbanner.paragraph}</p>
           <div className="pcmobRec" style={{ padding: "25px 0px" }}>
             <Swiper
               // slidesPerView={1}
@@ -73,14 +70,30 @@ function FourthSection({ posts }) {
                   <SwiperSlide>
                     <div className="single-room-rec">
                       <div className="mainSingleImg">
-                        <img src={e.acf.room.images[0]} alt="" />
+                        {al ? (
+                          <img src={e.acf.roomal.images[0]} alt="" />
+                        ) : (
+                          <img src={e.acf.room.images[0]} alt="" />
+                        )}
                       </div>
 
-                      <h4>{e.acf.room.name}</h4>
+                      <h4>{!al ? e.acf.room.name : e.acf.roomal.name}</h4>
                       <p className="recpar">{e.acf.room.shortdesc}</p>
                       <div className="icon-info">
-                        {e.acf.room.icons
-                          ? e.acf.room.icons.map((icons) => (
+                        {!al
+                          ? e.acf.room.icons
+                            ? e.acf.room.icons.map((icons) => (
+                                <div className="icon">
+                                  <div className="icon-flex">
+                                    <img src={icons.icon} alt="" />
+
+                                    <p>{icons.text}</p>
+                                  </div>
+                                </div>
+                              ))
+                            : ""
+                          : e.acf.roomal.icons
+                          ? e.acf.roomal.icons.map((icons) => (
                               <div className="icon">
                                 <div className="icon-flex">
                                   <img src={icons.icon} alt="" />
@@ -93,7 +106,9 @@ function FourthSection({ posts }) {
                       </div>
                       <div className="price-book">
                         <p className="price">
-                          {e.acf.room.room_price}{" "}
+                          {!al
+                            ? e.acf.room.room_price
+                            : e.acf.roomal.room_price}{" "}
                           <span className="pernight">/Night</span>
                         </p>
                         <Link to={"/booking/"}>
@@ -112,14 +127,30 @@ function FourthSection({ posts }) {
             {rooms.rooms.map((e) => (
               <div className="single-room-rec">
                 <div className="mainSingleImg">
-                  <img src={e.acf.room.images[0]} alt="" />
+                  {al ? (
+                    <img src={e.acf.roomal.images[0]} alt="" />
+                  ) : (
+                    <img src={e.acf.room.images[0]} alt="" />
+                  )}
                 </div>
 
-                <h4>{e.acf.room.name}</h4>
+                <h4>{!al ? e.acf.room.name : e.acf.roomal.name}</h4>
                 <p className="recpar">{e.acf.room.shortdesc}</p>
                 <div className="icon-info">
-                  {e.acf.room.icons
-                    ? e.acf.room.icons.map((icons) => (
+                  {!al
+                    ? e.acf.room.icons
+                      ? e.acf.room.icons.map((icons) => (
+                          <div className="icon">
+                            <div className="icon-flex">
+                              <img src={icons.icon} alt="" />
+
+                              <p>{icons.text}</p>
+                            </div>
+                          </div>
+                        ))
+                      : ""
+                    : e.acf.roomal.icons
+                    ? e.acf.roomal.icons.map((icons) => (
                         <div className="icon">
                           <div className="icon-flex">
                             <img src={icons.icon} alt="" />
@@ -144,34 +175,18 @@ function FourthSection({ posts }) {
               </div>
             ))}
           </div>
-          {/* <div className="bookOffer">
-            <div className="offerLeft">
-              <h2>{posts[2].acf.bookOffer.bookheading}</h2>
-              <p>{posts[2].acf.bookOffer.bookparagraph}</p>
-            </div>
-            <div className="offerRight">
-              <Link to="booking">
-                {" "}
-                <button className="default-button">Check Rooms</button>
-              </Link>
-            </div>
-          </div> */}
         </div>
         <div className="fourthContainer">
-          {/* <div className="fourthHeader">
-            <h2>Joyful experiences for you and your family</h2>
-          </div> */}
-
           <div className="fourthSectionPart">
             <div className="fourthSectionLeft">
-              <img src={posts[2].acf.fifthbanner[0].fifthimage} />
+              <img src={posts.acf.fifthbanner[0].fifthimage} />
             </div>
             <div className="fourthSectionRight">
               <div className="fourthSectionBox">
                 <h2 className="fourthSectionHeader">
-                  {posts[2].acf.fifthbanner[0].fifthheading}
+                  {posts.acf.fifthbanner[0].fifthheading}
                 </h2>
-                <p>{posts[2].acf.fifthbanner[0].fifthparagraph}</p>
+                <p>{posts.acf.fifthbanner[0].fifthparagraph}</p>
 
                 <Link to="/our-rooms">
                   <button className="gridBtn default-button">
@@ -184,14 +199,14 @@ function FourthSection({ posts }) {
 
           <div className="fourthSectionFliped">
             <div className="fourthSectionLeft">
-              <img src={posts[2].acf.fifthbanner[1].fifthimage} />
+              <img src={posts.acf.fifthbanner[1].fifthimage} />
             </div>
             <div className="fourthSectionRight">
               <div className="fourthSectionBox">
                 <h2 className="fourthSectionHeader">
-                  {posts[2].acf.fifthbanner[1].fifthheading}
+                  {posts.acf.fifthbanner[1].fifthheading}
                 </h2>
-                <p>{posts[2].acf.fifthbanner[1].fifthparagraph}</p>
+                <p>{posts.acf.fifthbanner[1].fifthparagraph}</p>
                 <Link to="/our-rooms">
                   <button className="gridBtn default-button">
                     View our rooms
@@ -200,24 +215,6 @@ function FourthSection({ posts }) {
               </div>
             </div>
           </div>
-
-          {/* <div className="fourthSectionPart">
-            <div className="fourthSectionLeft">
-              <img src={Img3} />
-            </div>
-            <div className="fourthSectionRight">
-              <div className="fourthSectionBox">
-                <h2 className="fourthSectionHeader">
-                  A world-class restaurant
-                </h2>
-                <p>
-                  Ochean de View extends along a private, quiet and beautiful
-                  tropical beach. Stay away from the crowd and enjoy the beauty
-                  and lust.
-                </p>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

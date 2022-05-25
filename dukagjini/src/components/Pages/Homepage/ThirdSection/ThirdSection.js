@@ -34,23 +34,23 @@ function ThirdSection({ posts }) {
         }}
       >
         <SwiperSlide>
-          <img src={posts[2].acf.thirdbanner.thirdslider.firstsliderimg} />
+          <img src={posts.thirdslider.firstsliderimg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={posts[2].acf.thirdbanner.thirdslider.secondslideimg} />
+          <img src={posts.thirdslider.secondslideimg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={posts[2].acf.thirdbanner.thirdslider.thirdslideimg} />
+          <img src={posts.thirdslider.thirdslideimg} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={posts[2].acf.thirdbanner.thirdslider.fourthslideimg} />
+          <img src={posts.thirdslider.fourthslideimg} />
         </SwiperSlide>
       </Swiper>
       <div className="containerWrapper">
         <div className="thirdSection1">
           <div className="thirdsectionDesc">
-            <h2>{posts[2].acf.thirdbanner.thirdheading}</h2>
-            <p>{posts[2].acf.thirdbanner.thirdparagraph}</p>
+            <h2>{posts.thirdheading}</h2>
+            <p>{posts.thirdparagraph}</p>
 
             <Link to="/our-rooms">
               <button className="bookingThirdButton  default-button">

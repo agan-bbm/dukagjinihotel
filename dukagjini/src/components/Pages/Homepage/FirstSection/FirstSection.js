@@ -40,8 +40,8 @@ function FirstSection({ posts, book, setBook }) {
         <div className="leftSide">
           <div className="containerWrapper">
             <div className="leftContainer">
-              <h2>{posts[2].acf.first.firstheading}</h2>
-              <p>{posts[2].acf.first.firstparagraph}</p>
+              <h2>{posts.firstheading}</h2>
+              <p>{posts.firstparagraph}</p>
               <Link to="/our-rooms">
                 <button className="default-button"> View our rooms</button>
               </Link>
@@ -124,20 +124,11 @@ function FirstSection({ posts, book, setBook }) {
             srcSet={`${posts[2].acf.first.firstbannerimgmobile} 768w, ${posts[2].acf.first.firstbannerimgtablet} 1240w, ${posts[2].acf.first.firstbannerimg} 1280w`}
           /> */}
 
-          <img
-            className="desktopVisibility"
-            src={posts[2].acf.first.firstbannerimg}
-          />
+          <img className="desktopVisibility" src={posts.firstbannerimg} />
 
-          <img
-            className="tabletVisibility"
-            src={posts[2].acf.first.firstbannerimgtablet}
-          />
+          <img className="tabletVisibility" src={posts.firstbannerimgtablet} />
 
-          <img
-            className="mobileVisibility"
-            src={posts[2].acf.first.firstbannerimgmobile}
-          />
+          <img className="mobileVisibility" src={posts.firstbannerimgmobile} />
         </div>
       </div>
     </>

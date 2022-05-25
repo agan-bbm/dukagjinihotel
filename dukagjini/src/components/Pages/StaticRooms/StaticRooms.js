@@ -13,7 +13,7 @@ import "../Rooms/rooms.css";
 import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-export function StaticRooms({}) {
+export function StaticRooms({ al }) {
   const [rooms, setRooms] = useState({
     rooms: [],
     isLoaded: false,
@@ -35,7 +35,6 @@ export function StaticRooms({}) {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(rooms);
 
   console.log(rooms);
 
@@ -43,9 +42,15 @@ export function StaticRooms({}) {
     <>
       <div className="containerWrapper">
         <div className="rooms" style={{ paddingTop: "100px" }}>
-          <h2 className="all-rooms-heading" id="scrollTo">
-            Our Rooms
-          </h2>
+          {al ? (
+            <h2 className="all-rooms-heading" id="scrollTo">
+              Dhomat
+            </h2>
+          ) : (
+            <h2 className="all-rooms-heading" id="scrollTo">
+              Our Rooms
+            </h2>
+          )}
           {/* {showFreeRooms()} */}
           {rooms.rooms.map((e) => (
             <div className="single-room" key={e.id}>

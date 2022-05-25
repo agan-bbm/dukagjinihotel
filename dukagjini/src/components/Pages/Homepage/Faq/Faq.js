@@ -4,20 +4,20 @@ import "./Faq.css";
 function Faq({ posts }) {
   const accordionData = [
     {
-      title: posts[2].acf.faqs[0].question,
-      content: posts[2].acf.faqs[0].answer,
+      title: posts[0].question,
+      content: posts[0].answer,
     },
     {
-      title: posts[2].acf.faqs[1].question,
-      content: posts[2].acf.faqs[1].answer,
+      title: posts[1].question,
+      content: posts[1].answer,
     },
     {
-      title: posts[2].acf.faqs[2].question,
-      content: posts[2].acf.faqs[2].answer,
+      title: posts[2].question,
+      content: posts[2].answer,
     },
     {
-      title: posts[2].acf.faqs[3].question,
-      content: posts[2].acf.faqs[3].answer,
+      title: posts[3].question,
+      content: posts[3].answer,
     },
   ];
   return (

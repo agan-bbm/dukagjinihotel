@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Turn as Hamburger } from "hamburger-react";
+import Dropdown from "react-dropdown";
+import { US, AL } from "country-flag-icons/react/3x2";
+import Al from "../../../images/AL.svg";
+import En from "../../../images/EN.svg";
 //  ICONS
 
 // CSS
 import "./navbar.css";
+import "react-dropdown/style.css";
 
 // IMAGES
 
 import logo_2 from "../../Utils/logo_2";
 import imgllogo from "../../../images/mobilellogo.png";
 
-function Navbar() {
+function Navbar({ al, setAl }) {
+  console.log(al);
   const [navbar, setNavbar] = useState(false);
   const [visible, setVisible] = React.useState(false);
   const [style, setStyle] = useState("cont");
@@ -30,6 +36,8 @@ function Navbar() {
       );
     }
   }, []);
+  const options = [al ? "ENG" : "AL"];
+  const defaultOption = "ENG";
   const button = () => {
     if (visible) {
       return (
@@ -82,45 +90,13 @@ function Navbar() {
           >
             Rooms
           </Link>
-          {/* <span
-            className={!navbar ? "white-dots" : " black-dots white-dots "}
-          ></span> */}
-          {/* 
-          <Link
-            to="/"
-            className={!navbar ? "white-links" : " black-links white-links "}
-          >
-            Lobby
-          </Link> */}
-          {/* <span
-            className={!navbar ? "white-dots" : " black-dots white-dots "}
-          ></span> */}
-          {/* <Link
-            to="/"
-            className={!navbar ? "white-links" : " black-links white-links "}
-          >
-            Restaurant
-          </Link> */}
 
-          {/* <span
-            className={!navbar ? "white-dots" : " black-dots white-dots "}
-          ></span> */}
           <Link
             to="/about"
             className={!navbar ? "white-links" : " black-links white-links "}
           >
             About
           </Link>
-
-          {/* <span
-            className={!navbar ? "white-dots" : " black-dots white-dots "}
-          ></span> */}
-          {/* <Link
-            to="/"
-            className={!navbar ? "white-links" : " black-links white-links "}
-          >
-            Offers
-          </Link> */}
         </div>
 
         {visible && (
@@ -160,6 +136,14 @@ function Navbar() {
         >
           Book Now
         </Link>
+        <Dropdown
+          options={options}
+          onChange={() => {
+            setAl(!al);
+          }}
+          value={defaultOption}
+          placeholder={defaultOption}
+        />
         <div className="burger-icon-button">{button()}</div>
       </div>
       {/* <hr className={!navbar ? "white-line" : "black-line white-line"} /> */}

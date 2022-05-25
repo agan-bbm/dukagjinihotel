@@ -1,72 +1,73 @@
-import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-
+import * as React from "react";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${size * rows
-      }&fit=crop&auto=format&dpr=2 2x`,
+    srcSet: `${image}?w=${size * cols}&h=${
+      size * rows
+    }&fit=crop&auto=format&dpr=2 2x`,
   };
 }
 
 function QuiltedImageList({ posts }) {
+  console.log(posts);
   const itemData = [
     {
-      img: posts[0].acf.aboutgallery[4].galleryimg,
+      img: posts.acf.aboutgallery[4].galleryimg,
       rows: 2,
       cols: 4,
     },
     {
-      img: posts[0].acf.aboutgallery[0].galleryimg,
+      img: posts.acf.aboutgallery[0].galleryimg,
       rows: 2,
       cols: 2,
     },
     {
-      img: posts[0].acf.aboutgallery[2].galleryimg,
+      img: posts.acf.aboutgallery[2].galleryimg,
       rows: 2,
       cols: 2,
     },
     {
-      img: posts[0].acf.aboutgallery[3].galleryimg,
+      img: posts.acf.aboutgallery[3].galleryimg,
       cols: 3,
-      rows: 2
+      rows: 2,
     },
     {
-      img: posts[0].acf.aboutgallery[1].galleryimg,
+      img: posts.acf.aboutgallery[1].galleryimg,
       cols: 1,
-      rows: 2
+      rows: 2,
     },
     {
-      img: posts[0].acf.aboutgallery[5].galleryimg,
+      img: posts.acf.aboutgallery[5].galleryimg,
 
       cols: 1,
       rows: 2,
     },
     {
-      img: posts[0].acf.aboutgallery[6].galleryimg,
+      img: posts.acf.aboutgallery[6].galleryimg,
       cols: 3,
-      rows: 1
+      rows: 1,
     },
     {
-      img: posts[0].acf.aboutgallery[7].galleryimg,
+      img: posts.acf.aboutgallery[7].galleryimg,
       cols: 3,
-      rows: 1
+      rows: 1,
     },
     {
-      img: posts[0].acf.aboutgallery[8].galleryimg,
+      img: posts.acf.aboutgallery[8].galleryimg,
       rows: 2,
       cols: 2,
     },
     {
-      img: posts[0].acf.aboutgallery[9].galleryimg,
+      img: posts.acf.aboutgallery[9].galleryimg,
     },
     {
-      img: posts[0].acf.aboutgallery[10].galleryimg,
+      img: posts.acf.aboutgallery[10].galleryimg,
     },
     {
-      img: posts[0].acf.aboutgallery[11].galleryimg,
+      img: posts.acf.aboutgallery[11].galleryimg,
       cols: 2,
     },
   ];
@@ -77,10 +78,14 @@ function QuiltedImageList({ posts }) {
       width="100%"
       variant="quilted"
       cols={4}
-    //rowHeight={300}
+      //rowHeight={300}
     >
       {itemData.map((item) => (
-        <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+        <ImageListItem
+          key={item.img}
+          cols={item.cols || 1}
+          rows={item.rows || 1}
+        >
           <img
             {...srcset(item.img, 121, item.rows, item.cols)}
             alt={item.title}
@@ -92,6 +97,3 @@ function QuiltedImageList({ posts }) {
   );
 }
 export default QuiltedImageList;
-
-
-
