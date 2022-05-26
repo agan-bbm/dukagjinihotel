@@ -155,7 +155,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route
               path="/update-reservation"
-              element={<UpdateReservation />}
+              element={<UpdateReservation book={book} />}
             ></Route>
             <Route
               path="/delete-reservation"

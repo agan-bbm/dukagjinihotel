@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
+import { useLocation } from "react-router-dom";
 
 import "./updateReservation.css";
 
-function UpdateReservation() {
+function UpdateReservation({ book }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
 
@@ -68,12 +69,19 @@ function UpdateReservation() {
       });
   };
   console.log(idError);
+  const search = useLocation().search;
+  const id = new URLSearchParams(search).get("reservationId");
+  const emailUrl = new URLSearchParams(search).get("email");
+  const price = new URLSearchParams(search).get("price");
+  const roomName = new URLSearchParams(search).get("roomName");
+  const children = new URLSearchParams(search).get("children");
+  const adults = new URLSearchParams(search).get("adults");
+  const nights = new URLSearchParams(search).get("nights");
+  console.log(emailUrl);
+
   return (
     <div className="main-update">
-      <h1 className="update-title">
-        Update dates, email below and enter reservetion ID received in your
-        confirmation email to update reservation
-      </h1>
+      <h1 className="update-title">Update dates below to update reservation</h1>
       <DatePicker
         selected={startDate}
         onChange={onChange}
@@ -87,29 +95,29 @@ function UpdateReservation() {
 
       <form className="update-form">
         <input
-          type="email"
+          type="hidden"
           placeholder="Your email address"
           required
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
+          // onChange={(e) => {
+          //   setEmail(e.target.value);
+          // }}
+          value={emailUrl}
         />
         <br></br>
         <input
-          type="text"
+          type="hidden"
           placeholder="Enter reservetion ID"
           required
-          maxLength={5}
-          minLength={5}
-          onChange={(e) => {
-            validateId(e.target.value);
-          }}
+          // onChange={(e) => {
+          //   validateId(e.target.value);
+          // }}
+          value={id}
         />
-        {!idError.errorId ? (
+        {/* {!idError.errorId ? (
           <p className="update-error">ID should contain only numbers!</p>
         ) : (
           ""
-        )}
+        )} */}
         <button
           formTarget="dummyframe"
           // disabled={idError.errorId === false}
@@ -137,13 +145,18 @@ function UpdateReservation() {
       <form
         method="POST"
         action="https://cmsdukagjini.blackbird.marketing/wp-content/sendEmailReservation.php"
-        style={{ display: "none" }}
+        // style={{ display: "none" }}
       >
-        <input type="text" name="email" value={email} />
+        <input type="text" name="email" value={emailUrl} />
         <input type="text" name="CheckInDate" value={startDate} />
         <input type="text" name="CheckOutDate" value={endDate} />
         <input type="text" name="type" value="edit" />
-        <input type="text" name="ReservationId" value={idError.id} />
+        <input type="text" name="ReservationId" value={id} />
+        <input type="text" name="roomName" value={roomName} />
+        <input type="text" name="nights" value={nights} />
+        <input type="text" name="adults" value={adults} />
+        <input type="text" name="children" value={children} />
+        <input type="text" name="price" value={price} />
         <button formTarget="sendEmail" id="editReservationEmail">
           submit
         </button>
