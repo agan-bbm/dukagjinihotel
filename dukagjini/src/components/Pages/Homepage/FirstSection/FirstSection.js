@@ -21,7 +21,7 @@ import Img4 from "../../../../images/4.jpg";
 
 import DatePicker from "react-datepicker";
 import { Link } from "react-router-dom";
-function FirstSection({ posts, book, setBook }) {
+function FirstSection({ posts, book, setBook, al }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
   const todayDate = new Date();
@@ -43,7 +43,9 @@ function FirstSection({ posts, book, setBook }) {
               <h2>{posts.firstheading}</h2>
               <p>{posts.firstparagraph}</p>
               <Link to="/our-rooms">
-                <button className="default-button"> View our rooms</button>
+                <button className="default-button">
+                  {al ? "Shiko Dhomat " : "View Our Rooms"}
+                </button>
               </Link>
 
               <div className="bookingFirstBanner">
@@ -61,7 +63,9 @@ function FirstSection({ posts, book, setBook }) {
 
                 <div className="choosing-option">
                   <div className="select-dates-home select">
-                    <label htmlFor="checkin">Adults</label>
+                    <label htmlFor="checkin">
+                      {al ? "Të rritur" : "Adults"}
+                    </label>
                     <select
                       name="checkin"
                       id=""
@@ -84,7 +88,9 @@ function FirstSection({ posts, book, setBook }) {
                 </div>
                 <div className="choosing-option">
                   <div className="select-dates-home select">
-                    <label htmlFor="checkin">Children</label>
+                    <label htmlFor="checkin">
+                      {al ? "Fëmijë" : "Children"}
+                    </label>
                     <select
                       name="checkin"
                       id=""
@@ -110,7 +116,7 @@ function FirstSection({ posts, book, setBook }) {
                   <Link to="/Booking">
                     <button id="firstBtnChRooms" className="default-button">
                       {" "}
-                      Check rooms
+                      {al ? "Shiko dhomat" : "Check rooms"}
                     </button>
                   </Link>
                 </div>

@@ -109,7 +109,9 @@ function FourthSection({ posts, al }) {
                           {!al
                             ? e.acf.room.room_price
                             : e.acf.roomal.room_price}{" "}
-                          <span className="pernight">/Night</span>
+                          <span className="pernight">
+                            {al ? "/Natë" : "/Night"}
+                          </span>
                         </p>
                         <Link to={"/booking/"}>
                           <button className="default-button">
@@ -164,7 +166,7 @@ function FourthSection({ posts, al }) {
                 <div className="price-book">
                   <p className="price">
                     {e.acf.room.room_price}{" "}
-                    <span className="pernight">/Night</span>
+                    <span className="pernight">{al ? "/Natë" : "/Night"}</span>
                   </p>
                   <Link to={"/single-room/" + e.id}>
                     <button className="default-button">
@@ -190,7 +192,7 @@ function FourthSection({ posts, al }) {
 
                 <Link to="/our-rooms">
                   <button className="gridBtn default-button">
-                    View our rooms
+                    {al ? "Shiko dhomat" : "View our rooms"}
                   </button>
                 </Link>
               </div>
@@ -209,7 +211,7 @@ function FourthSection({ posts, al }) {
                 <p>{posts.acf.fifthbanner[1].fifthparagraph}</p>
                 <Link to="/our-rooms">
                   <button className="gridBtn default-button">
-                    View our rooms
+                    {al ? "Shiko dhomat" : "View our rooms"}
                   </button>
                 </Link>
               </div>
