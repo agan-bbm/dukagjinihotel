@@ -264,6 +264,9 @@ g.bottom-left-group.scrolled {
   margin-left: 20px;
 }
 
+.burger-icon-button > button > div > div{
+  background-color: black !important;
+}
 @media screen and (max-width:998px) {
 
   .navbar-links,
