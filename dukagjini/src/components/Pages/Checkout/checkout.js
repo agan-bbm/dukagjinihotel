@@ -24,7 +24,7 @@ function Checkout({ posts, book, setBook, al }) {
   });
   const [reservationId, setReservationId] = useState("");
   const [page, setPage] = useState(0);
-  console.log(book);
+  console.log(posts);
 
   const showForm = () => {
     switch (page) {

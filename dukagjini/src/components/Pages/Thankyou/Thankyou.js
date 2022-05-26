@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Thankyou.css";
 import tick from "../../../images/Tick.svg";
-function Thankyou({ posts }) {
+function Thankyou({ posts, al }) {
   console.log(posts);
   return (
     <>

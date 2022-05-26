@@ -24,7 +24,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { borderRadius } from "@mui/system";
 
-export function Summary({ posts, book, setBook }) {
+export function Summary({ posts, book, setBook, al }) {
   const params = useParams();
   console.log(params);
 
@@ -78,8 +78,19 @@ export function Summary({ posts, book, setBook }) {
               // onSlideChange={() => console.log("slide change")}
               // onSwiper={(swiper) => console.log(swiper)}
             >
-              {rooms.rooms.acf.room.images
-                ? rooms.rooms.acf.room.images.map((img) => (
+              {!al
+                ? rooms.rooms.acf.room.images
+                  ? rooms.rooms.acf.room.images.map((img) => (
+                      <SwiperSlide>
+                        <img
+                          src={img.length > 0 ? img : ""}
+                          style={{ borderRadius: "20px" }}
+                        />
+                      </SwiperSlide>
+                    ))
+                  : ""
+                : rooms.rooms.acf.roomal.images
+                ? rooms.rooms.acf.roomal.images.map((img) => (
                     <SwiperSlide>
                       <img
                         src={img.length > 0 ? img : ""}
@@ -103,10 +114,14 @@ export function Summary({ posts, book, setBook }) {
             <div className="main-room-infos">
               <div className="room-name-shortdesc">
                 <h2 className="room-title" style={{ textAlign: "left" }}>
-                  {rooms.rooms.acf.room.name}
+                  {!al
+                    ? rooms.rooms.acf.room.name
+                    : rooms.rooms.acf.roomal.name}
                 </h2>
                 <p className="room-short-desc">
-                  {rooms.rooms.acf.room.shortdesc}
+                  {!al
+                    ? rooms.rooms.acf.room.shortdesc
+                    : rooms.rooms.acf.roomal.shortdesc}
                 </p>
               </div>
               <div className="price-night-desktop">
@@ -117,8 +132,18 @@ export function Summary({ posts, book, setBook }) {
               </div>
             </div>
             <div className="icon-info">
-              {rooms.rooms.acf.room.icons
-                ? rooms.rooms.acf.room.icons.map((icons) => (
+              {!al
+                ? rooms.rooms.acf.room.icons
+                  ? rooms.rooms.acf.room.icons.map((icons) => (
+                      <div className="icon-rooms-page">
+                        <img src={icons.icon} alt="" />
+
+                        <p>{icons.text}</p>
+                      </div>
+                    ))
+                  : ""
+                : rooms.rooms.acf.roomal.icons
+                ? rooms.rooms.acf.roomal.icons.map((icons) => (
                     <div className="icon-rooms-page">
                       <img src={icons.icon} alt="" />
 
@@ -133,16 +158,29 @@ export function Summary({ posts, book, setBook }) {
 
             <div className="checkoutroom-buttons">
               <div className="price-night" style={{ textAlign: "left" }}>
-                <h4
-                  style={{
-                    fontSize: "26px",
-                    fontWeight: "400",
-                    marginBottom: "0",
-                  }}
-                >
-                  <span style={{ fontSize: "22px" }}>Total:</span>{" "}
-                  {parseInt(rooms.rooms.acf.room.room_price) * nights}€
-                </h4>
+                {!al ? (
+                  <h4
+                    style={{
+                      fontSize: "26px",
+                      fontWeight: "400",
+                      marginBottom: "0",
+                    }}
+                  >
+                    <span style={{ fontSize: "22px" }}>Total:</span>{" "}
+                    {parseInt(rooms.rooms.acf.room.room_price) * nights}€
+                  </h4>
+                ) : (
+                  <h4
+                    style={{
+                      fontSize: "26px",
+                      fontWeight: "400",
+                      marginBottom: "0",
+                    }}
+                  >
+                    <span style={{ fontSize: "22px" }}>Total:</span>{" "}
+                    {parseInt(rooms.rooms.acf.roomal.room_price) * nights}€
+                  </h4>
+                )}
                 {/* <p>{rooms.rooms.acf.room.personnight}</p> */}
               </div>
               <div className="book-button">

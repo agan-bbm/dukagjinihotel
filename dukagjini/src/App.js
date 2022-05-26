@@ -150,7 +150,6 @@ function App() {
               }
             />
             <Route path="/contact" element={<Contact />} />
-            {/* <Route path="/thankyou" element={<Thankyou />}></Route> */}
             {/* <Route
               path="/update-reservation"
               element={<UpdateReservation />}
