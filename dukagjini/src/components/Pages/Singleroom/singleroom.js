@@ -114,7 +114,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
               {!al ? (
                 <p className="single-room-description">Description</p>
               ) : (
-                <p className="single-room-description">Pershkrimi</p>
+                <p className="single-room-description">Përshkrimi</p>
               )}
 
               {!al ? (
