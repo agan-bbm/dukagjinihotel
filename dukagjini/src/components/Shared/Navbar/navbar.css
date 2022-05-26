@@ -23,10 +23,9 @@
 }
 
 .navbar-main-container {
-  width: 95%;
+  width: 90%;
   max-width: 1850px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -64,7 +63,7 @@
 
 .navbar-links {
   padding: 10px 0;
-  max-width: 1850px;
+  max-width: 1200px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -103,6 +102,7 @@
   /* border-radius: 8px; */
   transition: all 0.4s ease-in-out;
 }
+
 /* .white-button:hover{
   background-color: #1f1f1f;
   color: white;
@@ -114,6 +114,13 @@
   color: black;
   border: 1px solid black;
 } */
+
+.translate-desktop {
+  width: 75px !important;
+  position: absolute !important;
+  right: 10px;
+  border: 1px solid #c3996c !important;
+}
 
 .black-line {
   border-color: black;
@@ -202,6 +209,7 @@ g.bottom-right-group.scrolled {
   transform-origin: bottom center;
   transition: all 0.2s ease-in-out;
 }
+
 path.center-group.scrolled {
   -webkit-transform: scale(3);
   transform: scale(3) translateX(4px);
@@ -209,6 +217,7 @@ path.center-group.scrolled {
   transform-origin: bottom center;
   transition: all .15s ease-in-out;
 }
+
 g.bottom-left-group.scrolled {
   transform: scale(0);
   transform-origin: bottom center;
@@ -235,15 +244,76 @@ g.bottom-left-group.scrolled {
   display: none;
 }
 
-@media(max-width:600px) {
-  #bookBtnMob{
+
+
+
+@media screen and (max-width:998px) {
+
+  .navbar-links,
+  .book-now-btn,
+  .translate-desktop {
+    display: none;
+  }
+
+  .Dropdown-root.translate-mobile {
+    margin: 30px auto;
+    width: 100px;
+  }
+
+  .burger-icon {
+    display: block;
+    background-color: transparent;
+    border: none;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+
+    background-color: white;
+    width: 100%;
+
+  }
+
+  .mobile-menu-link {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+
+  .mobile-menu-div {
+    padding-top: 80px;
+  }
+
+  .mobile-menu-link a {
+    text-decoration: none;
+    /* background-color: yellow; */
+    color: black;
+  }
+
+  #bookBtnMob {
     border: 1px solid #c3996c;
-    color: #c3996c !important ;
+    color: #c3996c !important;
     font-weight: 500;
     padding: 15px 25px;
     width: 100px;
     margin: 0 auto;
   }
+}
+
+@media(max-width:600px) {
+  #bookBtnMob {
+    border: 1px solid #c3996c;
+    color: #c3996c !important;
+    font-weight: 500;
+    padding: 15px 25px;
+    width: 100px;
+    margin: 0 auto;
+  }
+
   .navbar-links {
     display: none;
   }

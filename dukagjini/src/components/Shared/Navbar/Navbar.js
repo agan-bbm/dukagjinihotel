@@ -127,12 +127,26 @@ function Navbar({ al, setAl }) {
               <p className="mobile-menu-link" id="bookBtnMob">
                 <Link to="/booking">BOOK NOW</Link>
               </p>
+
+              <Dropdown
+                options={options}
+                onChange={() => {
+                  setAl(!al);
+                }}
+                value={defaultOption}
+                placeholder={defaultOption}
+                className="translate-mobile"
+              />
             </div>
           </div>
         )}
         <Link
           to="/booking"
-          className={!navbar ? "white-button" : "white-button black-button"}
+          className={
+            !navbar
+              ? "white-button book-now-btn"
+              : "white-button black-button book-now-btn"
+          }
         >
           Book Now
         </Link>
@@ -143,6 +157,7 @@ function Navbar({ al, setAl }) {
           }}
           value={defaultOption}
           placeholder={defaultOption}
+          className="translate-desktop"
         />
         <div className="burger-icon-button">{button()}</div>
       </div>
