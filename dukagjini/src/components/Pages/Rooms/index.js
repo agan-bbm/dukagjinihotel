@@ -117,7 +117,7 @@ export function Rooms({ freeRooms, loader, al }) {
       <div className="containerWrapper">
         <div className="rooms">
           <h2 className="all-rooms-heading" id="scrollTo">
-            Our Free Rooms
+            {al ? "Dhomat tona të lira" : "Our Free Rooms"}
           </h2>
 
           {/* {showFreeRooms()} */}

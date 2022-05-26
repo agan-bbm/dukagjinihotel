@@ -90,14 +90,14 @@ function Navbar({ al, setAl }) {
             to="/our-rooms"
             className={!navbar ? "white-links" : " black-links white-links "}
           >
-            Rooms
+            {al ? "Dhomat" : "Rooms"}
           </Link>
 
           <Link
             to="/about"
             className={!navbar ? "white-links" : " black-links white-links "}
           >
-            About
+            {al ? "Rreth nesh" : "About"}
           </Link>
         </div>
 
@@ -157,7 +157,7 @@ function Navbar({ al, setAl }) {
               : "white-button black-button book-now-btn"
           }
         >
-          Book Now
+          {al ? "Rezervo" : "Book Now"}
         </Link>
         <Dropdown
           options={options}
