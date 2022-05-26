@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Turn as Hamburger } from "hamburger-react";
 import Dropdown from "react-dropdown";
+
 import { US, AL } from "country-flag-icons/react/3x2";
 import Al from "../../../images/AL.svg";
 import En from "../../../images/EN.svg";
@@ -36,8 +37,9 @@ function Navbar({ al, setAl }) {
       );
     }
   }, []);
-  const options = [al ? "ENG" : "AL"];
-  const defaultOption = "ENG";
+
+  const options = [al ? <img src={En}></img> : <img src={Al}></img>];
+  const defaultOption = <img src={En}></img>;
   const button = () => {
     if (visible) {
       return (
@@ -155,7 +157,6 @@ function Navbar({ al, setAl }) {
           onChange={() => {
             setAl(!al);
           }}
-          value={defaultOption}
           placeholder={defaultOption}
           className="translate-desktop"
         />

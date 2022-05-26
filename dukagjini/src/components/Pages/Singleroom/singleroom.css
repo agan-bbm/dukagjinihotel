@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
 }
 .single-room-informations{
     display: flex;
@@ -210,7 +211,7 @@ hr{
     }
     .grid-left-side img{
         width: 100%;
-        height: 300px;
+        /* height: 300px; */
     }
     .grid-right-side{
         flex-direction: row;

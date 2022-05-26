@@ -244,8 +244,22 @@ g.bottom-left-group.scrolled {
   display: none;
 }
 
-
-
+/*flag dropdown */
+.navbar-main-container img{
+  width: 25px;
+}
+.Dropdown-control{
+    border: 1px solid rgba(219, 5, 41, 0.2) !important;
+    border-radius: 8px !important;
+    background-color: rgba(219, 5, 41, 0.04) !important;
+}
+.translate-desktop {
+  width: 60px !important;
+  position: relative !important;
+  right: 0;
+  border: none !important;
+  margin-left: 20px;
+}
 
 @media screen and (max-width:998px) {
 
