@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./UpdateReservation/updateReservation.css";
 
 function DeleteReservation() {
@@ -64,44 +65,38 @@ function DeleteReservation() {
         window.location.href = window.location.origin + "/error";
       });
   };
+  const search = useLocation().search;
+  const id = new URLSearchParams(search).get("reservationId");
+  const emailUrl = new URLSearchParams(search).get("email");
+  const price = new URLSearchParams(search).get("price");
+  const roomName = new URLSearchParams(search).get("roomName");
+  const children = new URLSearchParams(search).get("children");
+  const adults = new URLSearchParams(search).get("adults");
+  const nights = new URLSearchParams(search).get("nights");
+  const checkin = new URLSearchParams(search).get("checkIn");
+  const checkOut = new URLSearchParams(search).get("checkOut");
   return (
     <div className="main-update">
       <h1 className="update-title">
-        Please write below your email and reservation ID received <br></br> in
-        your confirmation email.
+        Please confirm that you want to cancel this reservation.
       </h1>
       <form className="update-form">
         <input
-          type="email"
+          type="hidden"
           placeholder="Enter your email address"
           required
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
+          value={emailUrl}
         />
         <br></br>
-        <input
-          type="text"
-          placeholder="Enter reservetion ID"
-          required
-          maxLength={5}
-          minLength={5}
-          onChange={(e) => {
-            validateId(e.target.value);
-          }}
-        />
-        {!idError.errorId ? (
-          <p className="update-error">ID should contain only numbers!</p>
-        ) : (
-          ""
-        )}
+        <input type="hidden" placeholder="Enter reservetion ID" value={id} />
+
         <button
           formTarget="dummyframe"
           onClick={() => {
             handleSubmit();
           }}
         >
-          Delete
+          Confirm
         </button>
       </form>
       <iframe
@@ -114,10 +109,17 @@ function DeleteReservation() {
         action="https://cmsdukagjini.blackbird.marketing/wp-content/sendEmailReservation.php"
         style={{ display: "none" }}
       >
-        <input type="email" name="email" value={email} />
+        <input type="text" name="email" value={emailUrl} />
+        <input type="text" name="CheckInDate" value={checkin} />
+        <input type="text" name="CheckOutDate" value={checkOut} />
+        <input type="text" name="type" value="delete" />
+        <input type="text" name="ReservationId" value={id} />
+        <input type="text" name="roomName" value={roomName} />
+        <input type="text" name="nights" value={nights} />
+        <input type="text" name="adults" value={adults} />
+        <input type="text" name="children" value={children} />
+        <input type="text" name="price" value={price} />
 
-        <input type="hidden" name="type" value="delete" />
-        <input type="text" name="ReservationId" value={idError.id} />
         <button formTarget="sendEmail" id="deleteReservationEmail">
           submit
         </button>

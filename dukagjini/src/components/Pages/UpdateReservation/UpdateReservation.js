@@ -60,7 +60,9 @@ function UpdateReservation({ book }) {
       )
       .then((res) => {
         console.log(res);
-        document.getElementById("editReservationEmail").click();
+        document.getElementById("editReservationEmail").click(() => {
+          console.log("clicked");
+        });
         window.location.href = window.location.origin + "/";
       })
       .catch((err) => {
@@ -97,7 +99,7 @@ function UpdateReservation({ book }) {
         <input
           type="hidden"
           placeholder="Your email address"
-          required
+          // required
           // onChange={(e) => {
           //   setEmail(e.target.value);
           // }}
@@ -107,7 +109,7 @@ function UpdateReservation({ book }) {
         <input
           type="hidden"
           placeholder="Enter reservetion ID"
-          required
+          // required
           // onChange={(e) => {
           //   validateId(e.target.value);
           // }}
@@ -122,16 +124,7 @@ function UpdateReservation({ book }) {
           formTarget="dummyframe"
           // disabled={idError.errorId === false}
           onClick={() => {
-            if (
-              idError.errorId === false ||
-              startDate === null ||
-              endDate === null ||
-              email.length === 0
-            ) {
-              console.log("mushi");
-            } else {
-              handleSubmit();
-            }
+            handleSubmit();
           }}
         >
           Update
@@ -145,7 +138,7 @@ function UpdateReservation({ book }) {
       <form
         method="POST"
         action="https://cmsdukagjini.blackbird.marketing/wp-content/sendEmailReservation.php"
-        // style={{ display: "none" }}
+        style={{ display: "none" }}
       >
         <input type="text" name="email" value={emailUrl} />
         <input type="text" name="CheckInDate" value={startDate} />
