@@ -5,19 +5,19 @@ function Faq({ posts }) {
   const accordionData = [
     {
       title: posts[0].question,
-      content: posts[0].answer,
+      content: <p dangerouslySetInnerHTML={{ __html: posts[0].answer }}></p>,
     },
     {
       title: posts[1].question,
-      content: posts[1].answer,
+      content: <p dangerouslySetInnerHTML={{ __html: posts[1].answer }}></p>,
     },
     {
       title: posts[2].question,
-      content: posts[2].answer,
+      content: <p dangerouslySetInnerHTML={{ __html: posts[2].answer }}></p>,
     },
     {
       title: posts[3].question,
-      content: posts[3].answer,
+      content: <p dangerouslySetInnerHTML={{ __html: posts[3].answer }}></p>,
     },
   ];
   return (
