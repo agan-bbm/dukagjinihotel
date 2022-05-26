@@ -212,12 +212,6 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                         <option value="1">1</option>
 
                         <option value="2">2</option>
-
-                        <option value="3">3</option>
-
-                        <option value="4">4</option>
-
-                        <option value="5">5</option>
                       </select>
                     </div>
                     <div className="select-dates select">
@@ -244,12 +238,6 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                         <option value="1">1</option>
 
                         <option value="2">2</option>
-
-                        <option value="3">3</option>
-
-                        <option value="4">4</option>
-
-                        <option value="5">5</option>
                       </select>
                     </div>
                   </div>
