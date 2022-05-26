@@ -217,15 +217,20 @@ function Checkout({ posts, book, setBook, al }) {
         action="https://cmsdukagjini.blackbird.marketing/wp-content/sendEmailReservation.php"
         style={{ display: "none" }}
       >
-        <input type="hidden" name="name" value={formData.name} />
-        <input type="hidden" name="lastName" value={formData.lastName} />
-        <input type="hidden" name="number" value={formData.number} />
-        <input type="hidden" name="email" value={formData.email} />
-        <input type="hidden" name="CheckInDate" value={book.checkin} />
-        <input type="hidden" name="CheckOutDate" value={book.checkout} />
-        <input type="hidden" name="type" value="create" />
+        <input type="text" name="name" value={formData.name} />
+        <input type="text" name="lastName" value={formData.lastName} />
+        <input type="text" name="number" value={formData.number} />
+        <input type="text" name="email" value={formData.email} />
+        <input type="text" name="CheckInDate" value={book.checkin} />
+        <input type="text" name="CheckOutDate" value={book.checkout} />
+        <input type="text" name="type" value="create" />
+        <input type="text" name="roomName" value={book.longRoomName} />
+        <input type="text" name="nights" value={book.nights} />
+        <input type="text" name="adults" value={book.adult} />
+        <input type="text" name="children" value={book.children} />
+        <input type="text" name="price" value={book.price} />
         <input
-          type="hidden"
+          type="text"
           name="ReservationId"
           value={reservationId.slice(0, -1)}
         />

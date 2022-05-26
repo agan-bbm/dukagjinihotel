@@ -283,6 +283,10 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                         setBook({
                           ...book,
                           roomName: rooms.rooms.acf.room.short_room_name,
+                          longRoomName: rooms.rooms.acf.room.name,
+                          nights: nights,
+                          price:
+                            parseInt(rooms.rooms.acf.room.room_price) * nights,
                           guests:
                             parseInt(reservation.adult) +
                             parseInt(reservation.children),

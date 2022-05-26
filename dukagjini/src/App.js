@@ -41,6 +41,9 @@ function App() {
     children: 0,
     roomName: "",
     guests: 1,
+    longRoomName: "",
+    nights: 1,
+    price: 0,
   });
   useEffect(() => {
     axios
@@ -150,15 +153,15 @@ function App() {
               }
             />
             <Route path="/contact" element={<Contact />} />
-            {/* <Route
+            <Route
               path="/update-reservation"
               element={<UpdateReservation />}
-            ></Route> */}
-            {/* <Route
+            ></Route>
+            <Route
               path="/delete-reservation"
               element={<DeleteReservation />}
-            ></Route> */}
-            {/* <Route path="/error" element={<ReservationError />}></Route> */}
+            ></Route>
+            <Route path="/error" element={<ReservationError />}></Route>
           </Routes>
           <Footer />
         </ScrollToTop>
