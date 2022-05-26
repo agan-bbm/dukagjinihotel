@@ -245,7 +245,10 @@ g.bottom-left-group.scrolled {
 }
 
 /*flag dropdown */
-.navbar-main-container img{
+.Dropdown-placeholder img{
+  width: 25px !important;
+}
+.Dropdown-option img {
   width: 25px;
 }
 .Dropdown-control{
