@@ -163,7 +163,7 @@ function App() {
             ></Route>
             <Route path="/error" element={<ReservationError />}></Route>
           </Routes>
-          <Footer />
+          <Footer al={al} setAl={setAl} />
         </ScrollToTop>
       </div>
     );

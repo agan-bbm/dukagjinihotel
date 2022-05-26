@@ -67,7 +67,7 @@ function Checkout({ posts, book, setBook, al }) {
         return (
           <>
             {" "}
-            <h2>{posts.acf.checkout.firststep.heading}</h2>
+            <h2>{al ? "Të dhënat e konsumatorit" : "Customer Details"}</h2>
             <p>{posts.acf.checkout.firststep.paragraph}</p>
           </>
         );

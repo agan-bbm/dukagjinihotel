@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Turn as Hamburger } from "hamburger-react";
 import Dropdown from "react-dropdown";
+
 import { US, AL } from "country-flag-icons/react/3x2";
 import Al from "../../../images/AL.svg";
 import En from "../../../images/EN.svg";
@@ -36,8 +37,9 @@ function Navbar({ al, setAl }) {
       );
     }
   }, []);
-  const options = [al ? "ENG" : "AL"];
-  const defaultOption = "ENG";
+
+  const options = [al ? <img src={En}></img> : <img src={Al}></img>];
+  const defaultOption = <img src={En}></img>;
   const button = () => {
     if (visible) {
       return (
@@ -113,22 +115,29 @@ function Navbar({ al, setAl }) {
               }}
             >
               <p className="mobile-menu-link">
-                <Link to="/our-rooms">Rooms</Link>
+                <Link to="/our-rooms">{al ? "Dhomat" : "Rooms"}</Link>
               </p>
               <p className="mobile-menu-link">
-                <Link to="/about">Restaurant</Link>
+                <Link to="/about">{al ? "Restaurant" : "Restaurant"}</Link>
               </p>
               <p className="mobile-menu-link">
-                <Link to="/about">About</Link>
+                <Link to="/about">{al ? "Rreth nesh" : "About"}</Link>
               </p>
               <p className="mobile-menu-link">
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact">{al ? "Kontaki" : "Contact"}</Link>
               </p>
               <p className="mobile-menu-link" id="bookBtnMob">
-                <Link to="/booking">BOOK NOW</Link>
+                <Link to="/booking">{al ? "REZERVO" : "BOOK NOW"} </Link>
               </p>
-
               <Dropdown
+                options={options}
+                onChange={() => {
+                  setAl(!al);
+                }}
+                placeholder={defaultOption}
+                className="translate-mobile"
+              />
+              {/* <Dropdown
                 options={options}
                 onChange={() => {
                   setAl(!al);
@@ -136,7 +145,7 @@ function Navbar({ al, setAl }) {
                 value={defaultOption}
                 placeholder={defaultOption}
                 className="translate-mobile"
-              />
+              /> */}
             </div>
           </div>
         )}
@@ -155,7 +164,6 @@ function Navbar({ al, setAl }) {
           onChange={() => {
             setAl(!al);
           }}
-          value={defaultOption}
           placeholder={defaultOption}
           className="translate-desktop"
         />

@@ -85,26 +85,7 @@ function SixthSection({ posts }) {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
-              <div className="testimonial">
-                <div className="testimonialContainer">
-                  {/* <div className="profilePic">
-                    <img src={posts.acf.testimonials.clientimg} />
-                  </div> */}
-                  <p className="userDscr">
-                    {posts.acf.testimonials.clienttype}
-                  </p>
-                  <h2>{posts.acf.testimonials.testimonialheding}</h2>
-                  <p>{posts.acf.testimonials.testimonialparagraph}</p>
-                  {/* <div className="user">
-                    <div className="userName">
-                      <span>Name Surname</span>
-                      <p>Designer at Colorlib</p>
-                    </div>
-                  </div> */}
-                </div>
-              </div>
-            </SwiperSlide>
+
             <SwiperSlide>
               <div className="testimonial">
                 <div className="testimonialContainer">
@@ -132,10 +113,10 @@ function SixthSection({ posts }) {
                     <img src={posts.acf.testimonials[4].clientimg} />
                   </div> */}
                   <p className="userDscr">
-                    {posts.acf.testimonials[4].clienttype}
+                    {posts.acf.testimonials[2].clienttype}
                   </p>
-                  <h2>{posts.acf.testimonials[4].testimonialheding}</h2>
-                  <p>{posts.acf.testimonials[4].testimonialparagraph}</p>
+                  <h2>{posts.acf.testimonials[2].testimonialheding}</h2>
+                  <p>{posts.acf.testimonials[2].testimonialparagraph}</p>
                   {/* <div className="user">
                     <div className="userName">
                       <span>Name Surname</span>

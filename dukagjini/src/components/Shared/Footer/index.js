@@ -9,7 +9,7 @@ import instagram from "../../../images/instagram.svg";
 import facebook from "../../../images/facebook.svg";
 // import twitter from "../../../images/Twitter.svg";
 
-function Footer() {
+function Footer({ al }) {
   const [setCounter] = useState(0);
   const increase = () => {
     setCounter((count) => count + 1);
@@ -43,46 +43,52 @@ function Footer() {
                   <h2 style={{ color: "white" }}>Dukagjini Hotel</h2>
                 </Link>
                 <p style={{ marginTop: "0" }}>
-                  The place you need to be when in Peja
+                  {al
+                    ? "Vendi ku duhet të vini kur jeni në Pejë"
+                    : "The place you need to be when in Peja"}
                 </p>
                 <p>dukagjini@hotmail.com</p>
                 <p>049-149-835</p>
               </ul>
             </div>
             <div className="contact-footer">
-              <h2 className="footer-link-heading">Rooms</h2>
+              <h2 className="footer-link-heading">{al ? "Dhomat" : "Rooms"}</h2>
               <ul className="footerLists">
                 <Link to="/our-rooms">
-                  <li>Our Rooms</li>
+                  <li>{al ? "Dhomat tona" : "Our Rooms"}</li>
                 </Link>
 
                 <Link to="/booking">
-                  <li>Booking</li>
+                  <li>{al ? "Rezervimi" : "Booking"}</li>
                 </Link>
 
                 {/* <li>About Us</li> */}
               </ul>
             </div>
             <div className="contact-footer">
-              <h2 className="footer-link-heading">Get In Touch</h2>
+              <h2 className="footer-link-heading">
+                {al ? "Kontakti" : "Get in touch"}
+              </h2>
               <ul className="footerLists">
                 <Link to="/contact">
-                  <li>Contact</li>
+                  <li>{al ? "Na kontaktoni" : "Contact us"}</li>
                 </Link>
               </ul>
             </div>
             <div className="contact-footer">
-              <h2 className="footer-link-heading">Company</h2>
+              <h2 className="footer-link-heading">
+                {al ? "Kompania" : "Company"}
+              </h2>
 
               <ul className="footerLists">
                 <Link to="/about">
-                  <li>About Us</li>
+                  <li>{al ? "Rreth nesh" : "About us"}</li>
                 </Link>
                 <Link to="/about">
-                  <li>History</li>
+                  <li>{al ? "Historia" : "History"}</li>
                 </Link>
                 <Link to="/about">
-                  <li>Location</li>
+                  <li>{al ? "Lokacioni" : "Location"}</li>
                 </Link>
               </ul>
             </div>

@@ -15,9 +15,14 @@ function Homepage({ posts, book, setBook, al }) {
   return (
     <>
       <div className="homepage">
-        <FirstSection posts={posts.acf.first} book={book} setBook={setBook} />
+        <FirstSection
+          posts={posts.acf.first}
+          book={book}
+          setBook={setBook}
+          al={al}
+        />
         <SecondSection posts={posts.acf.secondbanner} />
-        <ThirdSection posts={posts.acf.thirdbanner} />
+        <ThirdSection posts={posts.acf.thirdbanner} al={al} />
 
         <FourthSection posts={posts} al={al} />
         <FifthSection posts={posts.acf.sixthbanner} />

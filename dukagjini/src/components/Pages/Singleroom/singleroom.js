@@ -69,15 +69,6 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         <div className="containerWrapper">
           <div>
             {/* <h2 className="single-room-title">Standard Room</h2> */}
-            {!al ? (
-              <h2 style={{ marginBottom: "0px" }} className="single-room-title">
-                {rooms.rooms.acf.room.name}
-              </h2>
-            ) : (
-              <h2 style={{ marginBottom: "0px" }} className="single-room-title">
-                {rooms.rooms.acf.roomal.name}{" "}
-              </h2>
-            )}
           </div>
 
           {/* <div className="review-single-room">
@@ -123,7 +114,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
               {!al ? (
                 <p className="single-room-description">Description</p>
               ) : (
-                <p className="single-room-description">Pershkrimi</p>
+                <p className="single-room-description">Përshkrimi</p>
               )}
 
               {!al ? (

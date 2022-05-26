@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
 
-function ThirdSection({ posts }) {
+function ThirdSection({ posts, al }) {
   console.log(posts);
   return (
     <div className="thirdSection">
@@ -54,7 +54,7 @@ function ThirdSection({ posts }) {
 
             <Link to="/our-rooms">
               <button className="bookingThirdButton  default-button">
-                View our rooms
+                {al ? "Shiko dhomat" : "Check rooms"}
               </button>
             </Link>
           </div>
