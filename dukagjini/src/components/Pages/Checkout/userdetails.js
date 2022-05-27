@@ -196,18 +196,11 @@ export function Userdetails({ formData, setFormData, book, al }) {
                   {" "}
                   {!al ? "I agree to the " : "Pajtohem me "}
                   <span>
-                    <Link to="">
+                    <a href="https://dukagjini.blackbird.marketing/temrs-and-conditions">
                       {" "}
                       {!al ? "Terms of Use " : "Termet e përdorimit "}
-                    </Link>
+                    </a>
                   </span>{" "}
-                  {!al ? "and " : "dhe "}
-                  <span>
-                    {" "}
-                    <Link to="">
-                      {!al ? "Privacy Policy" : "Politikat e privatësisë "}
-                    </Link>
-                  </span>
                 </p>
               </div>
             </div>

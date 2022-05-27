@@ -1,11 +1,13 @@
 .termsClass{
     padding: 100px 0px;
-    width: 80%;
+    width: 50%;
     margin: 0 auto ;
+    text-align: center;
 }
 .termsClass h2{
     color: #CA9E72;
     font-size: 46px;
+    text-align: center;
 }
 .termsClass h6{
  
@@ -18,4 +20,12 @@
 .p-normal-t{
     font-size: 16px;
     
+}
+@media(max-width:767px){
+    .termsClass{
+        padding: 50px 0px;
+        width: 80%;
+        margin: 0 auto ;
+        text-align: center;
+    }
 }
