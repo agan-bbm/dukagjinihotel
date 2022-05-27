@@ -41,11 +41,18 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
     // localStorage.removeItem("children");
   }, []);
   console.log(book);
-
+  var maxPersons = 0;
   if (rooms.isLoaded) {
     console.log(rooms.rooms.acf.room.short_room_name);
+    maxPersons = rooms.rooms.acf.room.max_persons;
   }
 
+  const maxPPl = 4;
+  const People = () => {
+    for (var i = 1; i <= maxPPl; i++) {
+      return <option value={i}>{i}</option>;
+    }
+  };
   const formatDate = (date) => {
     let d = new Date(date);
     let month = (d.getMonth() + 1).toString();
@@ -60,6 +67,21 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
     return [year, month, day].join("-");
   };
 
+  let adultList = [];
+  let childList = [];
+  const renderChildrenOptions = () => {
+    for (var i = 1; i <= maxPersons - reservation.adult; i++) {
+      childList.push(<option value={i}>{i}</option>);
+    }
+
+    return childList;
+  };
+  const renderAdultOptions = () => {
+    for (var i = 1; i <= maxPersons; i++) {
+      adultList.push(<option value={i}>{i}</option>);
+    }
+    return adultList;
+  };
   const diffTime = Math.abs(book.checkout - book.checkin);
   const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
@@ -209,9 +231,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                           });
                         }}
                       >
-                        <option value="1">1</option>
-
-                        <option value="2">2</option>
+                        {renderAdultOptions()}
                       </select>
                     </div>
                     <div className="select-dates select">
@@ -223,6 +243,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                       <select
                         name="checkin"
                         id=""
+                        defaultChecked={{ label: 0, value: 0 }}
                         onChange={(e) => {
                           setReservation({
                             ...reservation,
@@ -234,10 +255,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                           });
                         }}
                       >
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-
-                        <option value="2">2</option>
+                        <option value={0}>0</option>;{renderChildrenOptions()}
                       </select>
                     </div>
                   </div>
