@@ -164,6 +164,13 @@ function Checkout({ posts, book, setBook, al }) {
           }}
         >
           <button
+            disabled={
+              formData.accepted === false ||
+              formData.name === "" ||
+              formData.lastName === "" ||
+              formData.email === "" ||
+              formData.number === ""
+            }
             id="finalBtn"
             className="form-button "
             type="submit"

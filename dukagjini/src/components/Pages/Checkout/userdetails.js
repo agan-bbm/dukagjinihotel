@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./checkout.css";
 export function Userdetails({ formData, setFormData, book, al }) {
@@ -14,6 +15,14 @@ export function Userdetails({ formData, setFormData, book, al }) {
       day = "0" + day;
     }
     return [year, month, day].join("-");
+  };
+  const [acceptedT, setAcceptedT] = useState(false);
+  const clickAgreement = () => {
+    if (acceptedT === false) {
+      setAcceptedT(true);
+    } else {
+      setAcceptedT(false);
+    }
   };
   const validateEmail = (email) => {
     const emailRegex = new RegExp(/\S+@\S+\.\S+/);
@@ -158,6 +167,48 @@ export function Userdetails({ formData, setFormData, book, al }) {
                       : "Ju lutem shënoni një email valid"}
                   </p>
                 ) : null}
+              </div>
+            </div>
+            <div>
+              <div
+                className="agreement"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <input
+                  type="checkbox"
+                  name="termsPrivacy"
+                  className="checkbox"
+                  required
+                  onClick={clickAgreement}
+                  value={false}
+                  disabled={formData.email === null}
+                  checked={formData.accepted}
+                  // defaultValue={true}
+                  onChange={() => {
+                    setFormData({ ...formData, accepted: !acceptedT });
+                  }}
+                />
+                <p>
+                  {" "}
+                  {!al ? "I agree to the " : "Pajtohem me "}
+                  <span>
+                    <Link to="">
+                      {" "}
+                      {!al ? "Terms of Use " : "Termet e përdorimit "}
+                    </Link>
+                  </span>{" "}
+                  {!al ? "and " : "dhe "}
+                  <span>
+                    {" "}
+                    <Link to="">
+                      {!al ? "Privacy Policy" : "Politikat e privatësisë "}
+                    </Link>
+                  </span>
+                </p>
               </div>
             </div>
           </div>
