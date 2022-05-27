@@ -19,6 +19,7 @@ import ReservationError from "./components/Pages/ReservationError";
 import Loader2 from "./components/Utils/Loader";
 import Al from "./images/AL.svg";
 import En from "./images/EN.svg";
+import { Terms } from "./components/Pages/TOC/terms";
 
 console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
@@ -135,6 +136,7 @@ function App() {
               path="/about"
               element={<About posts={!al ? about : aboutAl} />}
             />
+            <Route path="/terms-and-conditions" element={<Terms al={al} />} />
             {/* <Route path="/rooms" element={<Rooms />} /> */}
             <Route path="our-rooms" element={<StaticRooms al={al} />} />
             <Route

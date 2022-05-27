@@ -84,8 +84,8 @@ function Footer({ al }) {
                 <Link to="/about">
                   <li>{al ? "Rreth nesh" : "About us"}</li>
                 </Link>
-                <Link to="/about">
-                  <li>{al ? "Historia" : "History"}</li>
+                <Link to="/terms-and-conditions">
+                  <li>{al ? "Termet e përdorimit" : "Terms & Conditions"}</li>
                 </Link>
                 <Link to="/about">
                   <li>{al ? "Lokacioni" : "Location"}</li>
