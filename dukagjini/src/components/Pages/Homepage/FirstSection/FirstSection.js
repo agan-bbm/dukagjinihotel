@@ -34,6 +34,41 @@ function FirstSection({ posts, book, setBook, al }) {
     localStorage.setItem("checkout", end);
   };
   // console.log(book);
+  const [rooms, setRooms] = useState({
+    rooms: [],
+    isLoaded: false,
+  });
+  const [reservation, setReservation] = useState({
+    adult: 1,
+    children: 0,
+  });
+  var maxPersons = 4;
+  // if (rooms.isLoaded) {
+  //   // console.log(rooms.rooms.acf.room.short_room_name);
+  //   maxPersons = rooms.rooms.acf.room.max_persons;
+  // }
+
+  const maxPPl = 4;
+  const People = () => {
+    for (var i = 1; i <= maxPPl; i++) {
+      return <option value={i}>{i}</option>;
+    }
+  };
+  let adultList = [];
+  let childList = [];
+  const renderChildrenOptions = () => {
+    for (var i = 1; i <= maxPersons - reservation.adult; i++) {
+      childList.push(<option value={i}>{i}</option>);
+    }
+
+    return childList;
+  };
+  const renderAdultOptions = () => {
+    for (var i = 1; i <= maxPersons; i++) {
+      adultList.push(<option value={i}>{i}</option>);
+    }
+    return adultList;
+  };
   return (
     <>
       <div className="firstSection">
@@ -71,16 +106,14 @@ function FirstSection({ posts, book, setBook, al }) {
                       id=""
                       onChange={(e) => {
                         localStorage.setItem("adult", e.target.value);
+                        setReservation({
+                          ...reservation,
+                          adult: e.target.value,
+                        });
                         setBook({ ...book, adult: e.target.value });
                       }}
                     >
-                      <option value="1">1</option>
-
-                      <option value="2">2</option>
-
-                      <option value="3">3</option>
-
-                      <option value="4">4</option>
+                      {renderAdultOptions()}
                     </select>
                   </div>
                 </div>
@@ -92,15 +125,17 @@ function FirstSection({ posts, book, setBook, al }) {
                     <select
                       name="checkin"
                       id=""
+                      defaultChecked={{ label: 0, value: 0 }}
                       onChange={(e) => {
+                        setReservation({
+                          ...reservation,
+                          children: e.target.value,
+                        });
                         localStorage.setItem("children", e.target.value);
                         setBook({ ...book, children: e.target.value });
                       }}
                     >
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-
-                      <option value="2">2</option>
+                      <option value={0}>0</option>;{renderChildrenOptions()}
                     </select>
                   </div>
                 </div>
