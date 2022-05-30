@@ -192,6 +192,20 @@ hr{
     }
 
 }
+@media(min-width:768px) and (max-width:998px){
+    .single-room-page{
+        padding-left: 5%;
+        padding-right: 5%;
+    
+    }
+    .single-room-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    .single-room-page .grid-right-side img{
+        object-fit: cover;
+    }
+  }
 @media(max-width:767px){
     .sr-info-right{
         padding-top: 50px;
