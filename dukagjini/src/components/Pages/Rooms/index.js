@@ -209,7 +209,7 @@ export function Rooms({ freeRooms, loader, al }) {
                     <div className="book-button">
                       <Link to={"/single-room/" + e.id}>
                         <button className="default-button">
-                          {!al ? e.acf.room.button : e.acf.roomal.button}
+                          {!al ? "Reserve" : "Rezervo"}
                         </button>
                       </Link>
                     </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Turn as Hamburger } from "hamburger-react";
 import Dropdown from "react-dropdown";
 
@@ -86,27 +86,42 @@ function Navbar({ al, setAl }) {
         </Link>
 
         <div className="navbar-links">
-          <Link
+          <NavLink
             to="/our-rooms"
             className={!navbar ? "white-links" : " black-links white-links "}
+            style={({ isActive }) =>
+              isActive
+                ? { color: "black", borderBottom: "1px solid black" }
+                : { color: "" }
+            }
           >
-            {al ? "Dhomat" : "Rooms"}
-          </Link>
+            {" "}
+            <span>{al ? "Dhomat" : "Rooms"}</span>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/about"
             className={!navbar ? "white-links" : " black-links white-links "}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    color: "black",
+                    borderBottom: "1px solid black",
+                  }
+                : { color: "" }
+            }
           >
-            {al ? "Rreth nesh" : "About"}
-          </Link>
+            {" "}
+            <span>{al ? "Rreth nesh" : "About"}</span>
+          </NavLink>
         </div>
 
         {visible && (
           <div className="mobile-menu">
             <div className="SvgLogo" id="logomobile-burger">
-              <Link to="/" className="logo-link">
+              <NavLink to="/" className="logo-link">
                 <img src={imgllogo} alt="" />
-              </Link>
+              </NavLink>
             </div>
             <div
               className="mobile-menu-div"
@@ -115,19 +130,21 @@ function Navbar({ al, setAl }) {
               }}
             >
               <p className="mobile-menu-link">
-                <Link to="/our-rooms">{al ? "Dhomat" : "Rooms"}</Link>
+                <NavLink to="/our-rooms">{al ? "Dhomat" : "Rooms"}</NavLink>
               </p>
               <p className="mobile-menu-link">
-                <Link to="/about">{al ? "Restaurant" : "Restaurant"}</Link>
+                <NavLink to="/about">
+                  {al ? "Restaurant" : "Restaurant"}
+                </NavLink>
               </p>
               <p className="mobile-menu-link">
-                <Link to="/about">{al ? "Rreth nesh" : "About"}</Link>
+                <NavLink to="/about">{al ? "Rreth nesh" : "About"}</NavLink>
               </p>
               <p className="mobile-menu-link">
-                <Link to="/contact">{al ? "Kontaki" : "Contact"}</Link>
+                <NavLink to="/contact">{al ? "Kontaki" : "Contact"}</NavLink>
               </p>
               <p className="mobile-menu-link" id="bookBtnMob">
-                <Link to="/booking">{al ? "REZERVO" : "BOOK NOW"} </Link>
+                <NavLink to="/booking">{al ? "REZERVO" : "BOOK NOW"} </NavLink>
               </p>
               <Dropdown
                 options={options}

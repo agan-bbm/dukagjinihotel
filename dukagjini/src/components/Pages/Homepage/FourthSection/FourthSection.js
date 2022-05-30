@@ -170,7 +170,7 @@ function FourthSection({ posts, al }) {
                   </p>
                   <Link to={"/single-room/" + e.id}>
                     <button className="default-button">
-                      {e.acf.room.button}
+                      {!al ? "Reserve" : "Rezervo"}
                     </button>
                   </Link>
                 </div>
