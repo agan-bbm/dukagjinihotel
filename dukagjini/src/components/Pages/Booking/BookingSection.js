@@ -137,7 +137,13 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
             </div>
           </div>
 
-          <Rooms freeRooms={rooms} loader={loader} al={al} />
+          <Rooms
+            freeRooms={rooms}
+            loader={loader}
+            al={al}
+            book={book}
+            setBook={setBook}
+          />
         </div>
       </div>
     </>
