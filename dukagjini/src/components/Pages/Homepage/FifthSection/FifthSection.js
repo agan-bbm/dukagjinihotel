@@ -10,28 +10,28 @@ function FifthSection({ posts }) {
         <h2>{posts.sixthheading}</h2>
         <p>{posts.sixthparagraph}</p>
         <div className="fifthImgs">
-          <div class="fifthSingleImg">
-            <img class="image" src={posts.sixthimageone} />
-            <div class="middle">
-              <h3 class="middletext">Food</h3>
+          <div className="fifthSingleImg">
+            <img className="image" src={posts.sixthimageone} />
+            <div className="middle">
+              <h3 className="middletext">Food</h3>
             </div>
           </div>
-          <div class="fifthSingleImg">
-            <img class="image" src={posts.sixthimagetwo} />
-            <div class="middle">
-              <h3 class="middletext">Restaurant</h3>
+          <div className="fifthSingleImg">
+            <img className="image" src={posts.sixthimagetwo} />
+            <div className="middle">
+              <h3 className="middletext">Restaurant</h3>
             </div>
           </div>
-          <div class="fifthSingleImg">
-            <img class="image" src={posts.sixthimagethree} />
-            <div class="middle">
-              <h3 class="middletext">Hotel</h3>
+          <div className="fifthSingleImg">
+            <img className="image" src={posts.sixthimagethree} />
+            <div className="middle">
+              <h3 className="middletext">Hotel</h3>
             </div>
           </div>
-          <div class="fifthSingleImg">
-            <img class="image" src={posts.sixthimagefour} />
-            <div class="middle">
-              <h3 class="middletext">SPA</h3>
+          <div className="fifthSingleImg">
+            <img className="image" src={posts.sixthimagefour} />
+            <div className="middle">
+              <h3 className="middletext">SPA</h3>
             </div>
           </div>
         </div>
