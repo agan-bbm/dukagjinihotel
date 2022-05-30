@@ -222,6 +222,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                       <select
                         name="checkin"
                         id=""
+                        value={book.adult}
                         onChange={(e) => {
                           setReservation({
                             ...reservation,
@@ -245,6 +246,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                       <select
                         name="checkin"
                         id=""
+                        value={book.children}
                         defaultChecked={{ label: 0, value: 0 }}
                         onChange={(e) => {
                           setReservation({
@@ -266,7 +268,10 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                   <div className="price-single-page">
                     <p className="total">Total</p>
                     <p className="total-price">
-                      {parseInt(rooms.rooms.acf.room.room_price) * nights}€
+                      {nights === 0
+                        ? rooms.rooms.acf.room.room_price
+                        : parseInt(rooms.rooms.acf.room.room_price) * nights}
+                      €
                     </p>
                   </div>
                   <div className="single-page-button">
