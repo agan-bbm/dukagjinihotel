@@ -40,10 +40,10 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
     // localStorage.removeItem("adult");
     // localStorage.removeItem("children");
   }, []);
-  console.log(book);
+  // console.log(book);
   var maxPersons = 0;
   if (rooms.isLoaded) {
-    console.log(rooms.rooms.acf.room.short_room_name);
+    // console.log(rooms.rooms.acf.room.short_room_name);
     maxPersons = rooms.rooms.acf.room.max_persons;
   }
 
@@ -194,7 +194,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                         name="checkin"
                         defaultValue={formatDate(dates.from)}
                       /> */}
-                      <p>{formatDate(book.checkin)}</p>
+                      <p className="sr-dates-txt">{formatDate(book.checkin)}</p>
                       {/* <p>{formatDate(dates.from)}</p> */}
                     </div>
                     <div className="select-dates">
@@ -204,7 +204,9 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                         name="checkin"
                         defaultValue={formatDate(dates.to)}
                       /> */}
-                      <p>{formatDate(book.checkout)}</p>
+                      <p className="sr-dates-txt">
+                        {formatDate(book.checkout)}
+                      </p>
                       {/* <p>{formatDate(dates.to)}</p> */}
                     </div>
                   </div>

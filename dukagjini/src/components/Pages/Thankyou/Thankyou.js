@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Thankyou.css";
 import tick from "../../../images/Tick.svg";
 function Thankyou({ posts, al }) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <>
       <div className="tu-container">

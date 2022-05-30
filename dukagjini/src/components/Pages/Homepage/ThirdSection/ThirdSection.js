@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import { Link } from "react-router-dom";
 
 function ThirdSection({ posts, al }) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <div className="thirdSection">
       <Swiper

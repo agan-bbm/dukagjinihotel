@@ -94,11 +94,11 @@ function App() {
         break;
     }
   });
-  console.log("-----------------------------");
-  console.log("BOOKING INFOOO", book);
-  console.log("-----------------------------");
+  // console.log("-----------------------------");
+  // console.log("BOOKING INFOOO", book);
+  // console.log("-----------------------------");
 
-  console.log(state.posts);
+  // console.log(state.posts);
 
   if (state.isLoaded === false) return <Loader2 />;
   else {

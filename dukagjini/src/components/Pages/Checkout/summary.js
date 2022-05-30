@@ -26,7 +26,7 @@ import { borderRadius } from "@mui/system";
 
 export function Summary({ posts, book, setBook, al }) {
   const params = useParams();
-  console.log(params);
+  // console.log(params);
 
   const [rooms, setRooms] = useState({
     rooms: [],
@@ -44,8 +44,8 @@ export function Summary({ posts, book, setBook, al }) {
           rooms: res.data,
           isLoaded: true,
         });
-      })
-      .catch((err) => console.log(err));
+      });
+    // .catch((err) => console.log(err));
   }, []);
   console.log(rooms.rooms.acf);
   const formatDate = (date) => {

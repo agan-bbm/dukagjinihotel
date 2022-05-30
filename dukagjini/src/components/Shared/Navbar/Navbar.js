@@ -18,7 +18,7 @@ import logo_2 from "../../Utils/logo_2";
 import imgllogo from "../../../images/mobilellogo.png";
 
 function Navbar({ al, setAl }) {
-  console.log(al);
+  // console.log(al);
   const [navbar, setNavbar] = useState(false);
   const [visible, setVisible] = React.useState(false);
   const [style, setStyle] = useState("cont");

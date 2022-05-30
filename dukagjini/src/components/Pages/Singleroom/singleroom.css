@@ -27,6 +27,15 @@
     width: 350px;
     padding-top: 10px;
 }
+.sr-dates-txt{
+    background: #faf5f0;
+    border: none;
+    border-radius: 20px;
+    color: #a07346;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+}
 .cmimi-dhomes{
     font-size: 38px;
     margin: 0;

@@ -12,7 +12,7 @@ function srcset(image, size, rows = 1, cols = 1) {
 }
 
 function QuiltedImageList({ posts }) {
-  console.log(posts);
+  // console.log(posts);
   const itemData = [
     {
       img: posts.acf.aboutgallery[4].galleryimg,

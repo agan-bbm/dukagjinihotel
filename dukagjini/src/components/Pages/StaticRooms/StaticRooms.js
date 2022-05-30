@@ -36,7 +36,7 @@ export function StaticRooms({ al }) {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(rooms);
+  // console.log(rooms);
 
   return rooms.isLoaded ? (
     <>

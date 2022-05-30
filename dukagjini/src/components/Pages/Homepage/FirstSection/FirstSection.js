@@ -33,7 +33,7 @@ function FirstSection({ posts, book, setBook, al }) {
     localStorage.setItem("checkin", start);
     localStorage.setItem("checkout", end);
   };
-  console.log(book);
+  // console.log(book);
   return (
     <>
       <div className="firstSection">

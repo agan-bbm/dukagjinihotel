@@ -38,7 +38,7 @@ function FourthSection({ posts, al }) {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(rooms.rooms);
+  // console.log(rooms.rooms);
   return (
     <div className="fourthSection">
       <div className="containerWrapper">

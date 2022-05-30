@@ -16,7 +16,7 @@ import Loader from "../../Utils/Loader";
 import Loader2 from "../../Utils/Loader";
 
 export function Rooms({ freeRooms, loader, al }) {
-  console.log(loader);
+  // console.log(loader);
   const [rooms, setRooms] = useState({
     rooms: [],
     isLoaded: false,
@@ -38,7 +38,7 @@ export function Rooms({ freeRooms, loader, al }) {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(rooms);
+  // console.log(rooms);
 
   var firstRoomId,
     secondRoomId,
@@ -51,7 +51,7 @@ export function Rooms({ freeRooms, loader, al }) {
     switch (e.id) {
       case 87:
         firstRoomId = e;
-        console.log(e);
+        // console.log(e);
         break;
       case 106:
         secondRoomId = e;
@@ -73,8 +73,8 @@ export function Rooms({ freeRooms, loader, al }) {
 
   var myArr = [];
 
-  console.log("array", myArr);
-  console.log(freeRooms.isLoaded);
+  // console.log("array", myArr);
+  // console.log(freeRooms.isLoaded);
 
   if (freeRooms) {
     for (var i = 0; i < freeRooms.rooms.length; i++) {
@@ -101,16 +101,16 @@ export function Rooms({ freeRooms, loader, al }) {
     document.getElementById("scrollTo").scrollIntoView();
   }
 
-  console.log(rooms);
-  console.log(freeRooms);
+  // console.log(rooms);
+  // console.log(freeRooms);
   useEffect(() => {
     let myArr2 = [...new Set(myArr)];
-    console.log("array2", myArr2);
+    // console.log("array2", myArr2);
     setOnlyFreeRooms({ ...onlyFreeRooms, rooms: myArr2, isLoaded: true });
   }, [freeRooms.rooms]);
-  console.log("free rooooooooooooooms", onlyFreeRooms.rooms);
+  // console.log("free rooooooooooooooms", onlyFreeRooms.rooms);
 
-  console.log(rooms.rooms);
+  // console.log(rooms.rooms);
 
   return freeRooms.rooms.length > 0 ? (
     <>

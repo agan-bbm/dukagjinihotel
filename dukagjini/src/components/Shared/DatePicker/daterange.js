@@ -15,8 +15,8 @@ function Daterange({ dates, setDates }) {
     const [start, end] = date;
     setStartDate(start);
     setEndDate(end);
-    console.log(start);
-    console.log(end);
+    // console.log(start);
+    // console.log(end);
     setDates({ ...dates, from: startDate, to: endDate });
   };
   const todayDate = Date.now();
@@ -33,8 +33,8 @@ function Daterange({ dates, setDates }) {
     }
     return [year, month, day].join("/");
   };
-  console.log(startDate);
-  console.log(endDate);
+  // console.log(startDate);
+  // console.log(endDate);
   return (
     <>
       <div className="select-dates-txt">

@@ -11,7 +11,7 @@ import "./homepage.css";
 import Faq from "../components/Pages/Homepage/Faq/Faq";
 
 function Homepage({ posts, book, setBook, al }) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <>
       <div className="homepage">

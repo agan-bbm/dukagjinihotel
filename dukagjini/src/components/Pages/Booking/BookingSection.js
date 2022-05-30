@@ -34,7 +34,7 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
     isLoaded: false,
   });
   const [loader, setLoader] = useState(false);
-  console.log(dates);
+  // console.log(dates);
 
   const onChange = (date) => {
     const [start, end] = date;
@@ -48,8 +48,8 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
     // console.log(start);
     // console.log(end);
   };
-  console.log("start datee", startDate);
-  console.log("end datee", endDate);
+  // console.log("start datee", startDate);
+  // console.log("end datee", endDate);
   async function getRooms() {
     await axios
       .get(
@@ -86,8 +86,8 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
     return [year, month, day].join("/");
   };
 
-  console.log(rooms.rooms);
-  console.log(book.checkin);
+  // console.log(rooms.rooms);
+  // console.log(book.checkin);
 
   return (
     <>

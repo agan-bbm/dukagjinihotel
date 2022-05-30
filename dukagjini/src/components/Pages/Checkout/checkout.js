@@ -24,7 +24,7 @@ function Checkout({ posts, book, setBook, al }) {
   });
   const [reservationId, setReservationId] = useState("");
   const [page, setPage] = useState(0);
-  console.log(posts);
+  // console.log(posts);
 
   const showForm = () => {
     switch (page) {
@@ -93,7 +93,7 @@ function Checkout({ posts, book, setBook, al }) {
         );
     }
   };
-  console.log(window.location.origin + "/error");
+  // console.log(window.location.origin + "/error");
   const [required, setRequired] = useState(false);
   const formatDate = (date) => {
     let d = new Date(date);
@@ -109,7 +109,7 @@ function Checkout({ posts, book, setBook, al }) {
     return [year, month, day].join("/");
   };
 
-  console.log(book);
+  // console.log(book);
   const handleSubmit = (e) => {
     const f = new FormData();
     f.append("Guests", book.guests);
@@ -125,19 +125,19 @@ function Checkout({ posts, book, setBook, al }) {
         f
       )
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setReservationId(res.data);
         document.getElementById("confirmReservationEmail").click();
 
         setPage(page + 1);
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
         window.location.href = window.location.origin + "/error";
       });
   };
 
-  console.log(book);
+  // console.log(book);
   return (
     <>
       <div className="checkout">
