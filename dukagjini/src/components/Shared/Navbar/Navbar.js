@@ -91,7 +91,10 @@ function Navbar({ al, setAl }) {
             className={!navbar ? "white-links" : " black-links white-links "}
             style={({ isActive }) =>
               isActive
-                ? { color: "black", borderBottom: "1px solid black" }
+                ? {
+                    borderBottom: "2px solid #c3996c",
+                    fontWeight: "500",
+                  }
                 : { color: "" }
             }
           >
@@ -105,8 +108,8 @@ function Navbar({ al, setAl }) {
             style={({ isActive }) =>
               isActive
                 ? {
-                    color: "black",
-                    borderBottom: "1px solid black",
+                    borderBottom: "3px solid #c3996c",
+                    fontWeight: "500",
                   }
                 : { color: "" }
             }
