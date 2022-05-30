@@ -152,7 +152,7 @@ export function StaticRooms({ al }) {
                     <div className="book-button">
                       <Link to={"/booking"}>
                         <button className="default-button">
-                          {!al ? e.acf.room.button : e.acf.roomal.button}
+                          {!al ? "Reserve" : "Rezervo"}
                         </button>
                       </Link>
                     </div>

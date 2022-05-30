@@ -84,7 +84,8 @@
 .white-links {
   text-decoration: none;
   color: #c3996c;
-  padding: 0 10px;
+  padding: 24px 10px;
+  margin: 0px 20px;
   width: 100px;
   text-align: center;
   transition: all 0.4s ease-in-out;
@@ -267,6 +268,13 @@ g.bottom-left-group.scrolled {
 .burger-icon-button > button > div > div{
   background-color: black !important;
 }
+/* .navbar-links a:focus{
+  color: black;
+  border-bottom: 3px solid black;
+  
+  display: inline-block;
+  width: auto;
+} */
 @media screen and (max-width:998px) {
 
   .navbar-links,
