@@ -13,25 +13,25 @@ function FifthSection({ posts }) {
           <div class="fifthSingleImg">
             <img class="image" src={posts.sixthimageone} />
             <div class="middle">
-              <h3 class="middletext">SPA</h3>
+              <h3 class="middletext">Food</h3>
             </div>
           </div>
           <div class="fifthSingleImg">
             <img class="image" src={posts.sixthimagetwo} />
             <div class="middle">
-              <h3 class="middletext">Hotel</h3>
+              <h3 class="middletext">Restaurant</h3>
             </div>
           </div>
           <div class="fifthSingleImg">
             <img class="image" src={posts.sixthimagethree} />
             <div class="middle">
-              <h3 class="middletext">Restaurant</h3>
+              <h3 class="middletext">Hotel</h3>
             </div>
           </div>
           <div class="fifthSingleImg">
             <img class="image" src={posts.sixthimagefour} />
             <div class="middle">
-              <h3 class="middletext">Conferences</h3>
+              <h3 class="middletext">SPA</h3>
             </div>
           </div>
         </div>
