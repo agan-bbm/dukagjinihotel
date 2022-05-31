@@ -12,6 +12,9 @@ import "../Rooms/rooms.css";
 
 import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import Loader2 from "../../Utils/Loader";
+import { Loader } from "rsuite";
+import { height } from "@mui/system";
 
 export function StaticRooms({ al }) {
   const [rooms, setRooms] = useState({
@@ -165,6 +168,16 @@ export function StaticRooms({ al }) {
       </div>
     </>
   ) : (
-    ""
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Loader2 />
+    </div>
   );
 }
