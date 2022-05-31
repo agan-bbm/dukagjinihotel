@@ -115,6 +115,10 @@
   }
 }
 @media (max-width: 767px) {
+  .home-gallery img {
+    width: 390px;
+    height: 250px;
+}
   .thirdSection{
     padding-top: 25px;
   }

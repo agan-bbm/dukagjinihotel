@@ -13,7 +13,7 @@ export function Terms(props) {
           Rates and promotions are on an occupancy available basis. Reservation
           requests must include: client(s) name, room category, rate, arrival
           and departure dates and if available arrival time. Bookings will be
-          made directly with the Hotel, writing to dukagjini@hotmail.com.
+          made directly with the Hotel, writing to info@hoteldukagjini.com .
         </p>
         <p className="p-bold-t">Credit Policy</p>
         <p className="p-normal-t">
@@ -25,7 +25,7 @@ export function Terms(props) {
         <p className="p-bold-t">Cancellation Policy</p>
         <p className="p-normal-t">
           Notice for the cancellation of booking must be sent directly to
-          dukagjini@hotmail.com. The guest can cancel free of charge until 7
+          info@hoteldukagjini.com . The guest can cancel free of charge until 7
           days before arrival. For cancellations within 6 days before arrival,
           the guest will be charged for the first night. Cancellation Policy for
           no show in a one-night charge.
@@ -44,10 +44,10 @@ export function Terms(props) {
           their stay, and this amount will be considered not refundable. They
           will pay the remaining amount upon check-out. Notice for the
           cancellation of booking must be sent directly to the following e-mail
-          address dukagjini@hotmail.com. Cancellation Policy for no show is 30%
-          of their stay. For any exception or special requests, you can address
-          to dukagjini@hotmail.com. or for bigger groups you can contact
-          dukagjini@hotmail.com.
+          address info@hoteldukagjini.com . Cancellation Policy for no show is
+          30% of their stay. For any exception or special requests, you can
+          address to info@hoteldukagjini.com . or for bigger groups you can
+          contact info@hoteldukagjini.com .
         </p>
         <p className="p-bold-t">Credit Card Payments</p>
         <p className="p-normal-t">Accepted credit cards: Visa and Mastercard</p>
