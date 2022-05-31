@@ -24,8 +24,11 @@ export function Userdetails({ formData, setFormData, book, al }) {
       setAcceptedT(false);
     }
   };
+
   const validateEmail = (email) => {
-    const emailRegex = new RegExp(/\S+@\S+\.\S+/);
+    const emailRegex = new RegExp(
+      /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+    );
 
     if (emailRegex.test(email) === false) {
       setFormData({ ...formData, mailError: false, email: email });
@@ -35,7 +38,7 @@ export function Userdetails({ formData, setFormData, book, al }) {
   };
   const validateNumber = (number) => {
     const strongRegex = new RegExp(
-      "^[+]*[(]{0,1}[0-9_ ]{9,25}[)]{0,1}[-s./0-9]*$"
+      /^\(?([0-9]{3})\)?[-. ]?([0-9]{3,6})[-. ]?([0-9]{3,8})$/
     );
 
     if (strongRegex.test(number) === false) {
@@ -45,7 +48,9 @@ export function Userdetails({ formData, setFormData, book, al }) {
     }
   };
   const validateUsername = (username) => {
-    const strongRegex = new RegExp("^[A-Za-z]{3,20}$");
+    const strongRegex = new RegExp(
+      "(^[A-Za-z]{2,16})([ ]{0,1})([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})"
+    );
 
     if (!strongRegex.test(username)) {
       setFormData({ ...formData, nameValid: false, name: username });
@@ -54,7 +59,9 @@ export function Userdetails({ formData, setFormData, book, al }) {
     }
   };
   const validateLastname = (username) => {
-    const strongRegex = new RegExp("^[A-Za-z]{3,20}$");
+    const strongRegex = new RegExp(
+      "(^[A-Za-z]{2,16})([ ]{0,1})([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})"
+    );
 
     if (!strongRegex.test(username)) {
       setFormData({ ...formData, lastNameValid: false, lastName: username });
