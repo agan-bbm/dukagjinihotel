@@ -65,7 +65,9 @@ input,
 select {
   outline: none;
 }
-
+.custom-pages{
+  padding: 50px 0px;
+}
 @media (min-width: 768px) and (max-width: 998px) {
   .containerWrapper {
     width: 100% !important;

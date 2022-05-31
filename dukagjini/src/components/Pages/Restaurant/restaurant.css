@@ -1,0 +1,31 @@
+.restaurant-banner{
+    
+        width: 100% !important;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+.cp-textfield{
+    display: flex;
+    justify-content: space-between;
+
+}
+.cp-images{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.img-top{
+    margin-top: -180px;
+}
+.cp-heading {
+    text-align: center;
+    color: #CA9E72;
+    margin: 50px 0px;
+    font-size: 40px;
+    font-weight: 400 !important;
+}
+.cp-bottom-p{
+    text-align: center;
+    padding-top: 50px;
+}

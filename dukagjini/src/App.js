@@ -20,6 +20,10 @@ import Loader2 from "./components/Utils/Loader";
 import Al from "./images/AL.svg";
 import En from "./images/EN.svg";
 import { Terms } from "./components/Pages/TOC/terms";
+import { Spa } from "./components/Pages/SPA page/spa";
+import Restaurant from "./components/Pages/Restaurant/restaurant";
+import { Sallat } from "./components/Pages/Sallat e dasmave/sallat";
+import { Peja } from "./components/Pages/Peja City/peja";
 
 console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
@@ -71,7 +75,15 @@ function App() {
     //   .catch((err) => console.log(err));
   }, []);
 
-  var homepage, homepageAl, about, aboutAl, rooms, roomsAl;
+  var homepage,
+    homepageAl,
+    about,
+    aboutAl,
+    rooms,
+    roomsAl,
+    restaurant,
+    spa,
+    wedding;
   state.posts.map((e) => {
     switch (e.id) {
       case 8:
@@ -92,13 +104,19 @@ function App() {
       case 329:
         roomsAl = e;
         break;
+      case 578:
+        wedding = e;
+      case 572:
+        restaurant = e;
+      case 574:
+        spa = e;
     }
   });
   // console.log("-----------------------------");
   // console.log("BOOKING INFOOO", book);
   // console.log("-----------------------------");
 
-  // console.log(state.posts);
+  console.log(state.posts);
 
   if (state.isLoaded === false) return <Loader2 />;
   else {
@@ -154,11 +172,20 @@ function App() {
                 />
               }
             />
+
             <Route path="/contact" element={<Contact />} />
             <Route
               path="/update-reservation"
               element={<UpdateReservation book={book} />}
             ></Route>
+            <Route path="/spa" element={<Spa posts={spa}></Spa>}></Route>
+            <Route
+              path="/restaurant"
+              element={<Restaurant posts={restaurant}></Restaurant>}
+            ></Route>
+            <Route path="/sallat" element={<Sallat></Sallat>}></Route>
+            <Route path="/peja" element={<Peja></Peja>}></Route>
+
             <Route
               path="/delete-reservation"
               element={<DeleteReservation />}

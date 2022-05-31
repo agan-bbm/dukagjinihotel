@@ -80,13 +80,16 @@
   margin: 0 20px;
   transition: all 0.4s ease-in-out;
 }
-
+.white-links:hover{
+  border-bottom: 3px solid #c3996c;
+  transition: all 0.1s ease-in-out;
+}
 .white-links {
   text-decoration: none;
   color: #c3996c;
   padding: 24px 10px;
   margin: 0px 20px;
-  width: 100px;
+  width: auto;
   text-align: center;
   transition: all 0.4s ease-in-out;
 }

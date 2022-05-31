@@ -102,7 +102,7 @@ function Navbar({ al, setAl }) {
             <span>{al ? "Dhomat" : "Rooms"}</span>
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             to="/about"
             className={!navbar ? "white-links" : " black-links white-links "}
             style={({ isActive }) =>
@@ -116,6 +116,66 @@ function Navbar({ al, setAl }) {
           >
             {" "}
             <span>{al ? "Rreth nesh" : "About"}</span>
+          </NavLink> */}
+          <NavLink
+            to="/Sallat"
+            className={!navbar ? "white-links" : " black-links white-links "}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    borderBottom: "3px solid #c3996c",
+                    fontWeight: "500",
+                  }
+                : { color: "" }
+            }
+          >
+            {" "}
+            <span>{al ? "Sallat e dasmave" : "Wedding Rooms"}</span>
+          </NavLink>
+          <NavLink
+            to="/peja"
+            className={!navbar ? "white-links" : " black-links white-links "}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    borderBottom: "3px solid #c3996c",
+                    fontWeight: "500",
+                  }
+                : { color: "" }
+            }
+          >
+            {" "}
+            <span>{al ? "Peja" : "Peja"}</span>
+          </NavLink>
+          <NavLink
+            to="/Spa"
+            className={!navbar ? "white-links" : " black-links white-links "}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    borderBottom: "3px solid #c3996c",
+                    fontWeight: "500",
+                  }
+                : { color: "" }
+            }
+          >
+            {" "}
+            <span>{al ? "Spa & Pishina" : "Spa & Pool"}</span>
+          </NavLink>
+          <NavLink
+            to="/restaurant"
+            className={!navbar ? "white-links" : " black-links white-links "}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    borderBottom: "3px solid #c3996c",
+                    fontWeight: "500",
+                  }
+                : { color: "" }
+            }
+          >
+            {" "}
+            <span>{al ? "Restaurant" : "Restaurant"}</span>
           </NavLink>
         </div>
 
