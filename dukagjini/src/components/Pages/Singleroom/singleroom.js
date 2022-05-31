@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./singleroom.css";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 import fullrightimg from "../../../images/fullrightimg.png";
 import lefttopimg from "../../../images/lefttopimg.png";
@@ -13,6 +15,10 @@ import axios from "axios";
 
 function Singleroom({ dates, setDates, book, setBook, al }) {
   const params = useParams();
+  const [popup, setPopup] = useState({
+    isOpen: false,
+    photoIndex: 0,
+  });
 
   const [reservation, setReservation] = useState({
     adult: 1,
@@ -84,6 +90,12 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
   };
   const diffTime = Math.abs(book.checkout - book.checkin);
   const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  const images = [
+    rooms.isLoaded ? rooms.rooms.acf.room.images[0] : "",
+    rooms.isLoaded ? rooms.rooms.acf.room.images[1] : "",
+
+    rooms.isLoaded ? rooms.rooms.acf.room.images[2] : "",
+  ];
 
   return rooms.isLoaded ? (
     <>
@@ -96,8 +108,37 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           {/* <div className="review-single-room">
             <p>Review</p>
           </div> */}
+          {popup.isOpen && (
+            <Lightbox
+              mainSrc={images[popup.photoIndex]}
+              nextSrc={images[(popup.photoIndex + 1) % images.length]}
+              prevSrc={
+                images[(popup.photoIndex + images.length - 1) % images.length]
+              }
+              onCloseRequest={() => setPopup({ ...popup, isOpen: false })}
+              onMovePrevRequest={() =>
+                setPopup({
+                  ...popup,
+                  photoIndex:
+                    (popup.photoIndex + images.length - 1) % images.length,
+                })
+              }
+              enableZoom={false}
+              onMoveNextRequest={() =>
+                setPopup({
+                  ...popup,
+                  photoIndex: (popup.photoIndex + 1) % images.length,
+                })
+              }
+            />
+          )}
 
-          <div className="single-room-grid">
+          <div
+            className="single-room-grid"
+            onClick={() => {
+              setPopup({ ...popup, isOpen: true });
+            }}
+          >
             <div className="grid-left-side">
               {!al ? (
                 <img src={rooms.rooms.acf.room.images[0]} alt="" />

@@ -27,9 +27,14 @@ function FirstSection({ posts, book, setBook, al }) {
   const todayDate = new Date();
   const onChange = (dates) => {
     const [start, end] = dates;
-    setStartDate(start);
-    setEndDate(end);
-    setBook({ ...book, checkin: start, checkout: end });
+    if (end === start) {
+      console.log();
+    } else {
+      setStartDate(start);
+      setEndDate(end);
+      setBook({ ...book, checkin: start, checkout: end });
+    }
+
     localStorage.setItem("checkin", start);
     localStorage.setItem("checkout", end);
   };

@@ -38,10 +38,14 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
 
   const onChange = (date) => {
     const [start, end] = date;
+    const diffTime = Math.abs(start - end);
+    const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
     setStartDate(start);
     setEndDate(end);
     setDates({ ...dates, from: start, to: end });
     setBook({ ...book, checkin: start, checkout: end });
+
     // localStorage.setItem("checkin", start);
     // localStorage.setItem("checkout", end);
 
@@ -88,6 +92,11 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
 
   // console.log(rooms.rooms);
   // console.log(book.checkin);
+  const diffTime = Math.abs(endDate - startDate);
+  const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  console.log(startDate);
+  console.log(endDate);
+  console.log(nights);
 
   return (
     <>
@@ -127,6 +136,7 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
               <button
                 className="default-button"
                 id="check-avl-rooms"
+                disabled={nights === 0}
                 onClick={() => {
                   getRooms();
                   setLoader(true);

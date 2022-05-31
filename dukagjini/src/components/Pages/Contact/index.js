@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import { AddressMap, Map } from "../About/map";
 import "./contact.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Contact() {
   const [submitting, setSubmitting] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitting(true);
@@ -13,7 +19,30 @@ function Contact() {
     //   setSubmitting(false);
     // }, 5000);
   };
+  console.log(form);
+  const sendEmail = (e) => {
+    const f = new FormData();
+    f.append("name", form.name);
+    f.append("email", form.email);
+    f.append("message", form.message);
 
+    axios
+      .post(
+        "https://cmsdukagjini.blackbird.marketing/wp-content/contactForm.php",
+        f
+      )
+      .then((res) => {
+        console.log(res);
+        // setReservationId(res.data);
+        // document.getElementById("confirmReservationEmail").click();
+
+        // setPage(page + 1);
+      })
+      .catch((err) => {
+        console.log(err);
+        window.location.href = window.location.origin + "/error";
+      });
+  };
   return (
     <>
       <div className="contactWrapper">
@@ -39,6 +68,9 @@ function Contact() {
                     placeholder="Full name"
                     className="nameEmail"
                     tabIndex="1"
+                    onChange={(e) => {
+                      setForm({ ...form, name: e.target.value });
+                    }}
                   />
                 </div>
                 <div>
@@ -53,6 +85,9 @@ function Contact() {
                     className="nameEmail"
                     placeholder="example@email.com"
                     tabIndex="3"
+                    onChange={(e) => {
+                      setForm({ ...form, email: e.target.value });
+                    }}
                   />
                 </div>
 
@@ -65,10 +100,20 @@ function Contact() {
                     className="message"
                     name="message"
                     required
+                    onChange={(e) => {
+                      setForm({ ...form, message: e.target.value });
+                    }}
                   />
                 </div>
                 <div>
-                  <input type="submit" value="Send" className="sendButton" />
+                  <input
+                    type="submit"
+                    value="Send"
+                    className="sendButton"
+                    onClick={() => {
+                      sendEmail();
+                    }}
+                  />
                 </div>
                 <div className="wrapper">
                   {submitting && <div>Submtting Form...</div>}
