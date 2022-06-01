@@ -195,16 +195,24 @@ function Navbar({ al, setAl }) {
               <p className="mobile-menu-link">
                 <NavLink to="/our-rooms">{al ? "Dhomat" : "Rooms"}</NavLink>
               </p>
+
               <p className="mobile-menu-link">
-                <NavLink to="/about">
+                <NavLink to="/restaurant">
                   {al ? "Restaurant" : "Restaurant"}
                 </NavLink>
               </p>
               <p className="mobile-menu-link">
-                <NavLink to="/about">{al ? "Rreth nesh" : "About"}</NavLink>
+                <NavLink to="/peja">{al ? "Peja" : "Peja"}</NavLink>
               </p>
               <p className="mobile-menu-link">
-                <NavLink to="/contact">{al ? "Kontaki" : "Contact"}</NavLink>
+                <NavLink to="/spa">
+                  {al ? "SPA & Pishina" : "SPA & Pool"}
+                </NavLink>
+              </p>
+              <p className="mobile-menu-link">
+                <NavLink to="/wedding">
+                  {al ? "Sallat e dasmave" : "Wedding hall"}
+                </NavLink>
               </p>
               <p className="mobile-menu-link" id="bookBtnMob">
                 <NavLink to="/booking">{al ? "REZERVO" : "BOOK NOW"} </NavLink>

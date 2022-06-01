@@ -64,6 +64,9 @@
     .cp-bottom-p {
         padding: 10px;
     }
+    .single-gallery img {
+        margin: 20px 0px;
+    }
 }
 @media (max-width: 767px) {
     
@@ -93,5 +96,8 @@
     }
     .restaurant-banner{
         height: 400px;
+    }
+    .single-gallery img {
+        margin: 20px 0px;
     }
 }

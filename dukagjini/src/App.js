@@ -191,7 +191,7 @@ function App() {
               path="/restaurant"
               element={<Restaurant posts={restaurant}></Restaurant>}
             ></Route>
-            <Route path="/sallat" element={<Sallat></Sallat>}></Route>
+            <Route path="/wedding" element={<Sallat></Sallat>}></Route>
             <Route path="/peja" element={<Peja posts={peja}></Peja>}></Route>
 
             <Route
