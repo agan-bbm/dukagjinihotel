@@ -39,7 +39,7 @@ body {
 
 .error-page h1 {
   margin: 0;
-  color: #ca9e72;
+  color: #CA9E72;
 }
 
 .error-page h2 {
@@ -52,13 +52,13 @@ body {
   color: white;
   margin: 10px 0;
   padding: 10px 30px;
-  background-color: #ca9e72;
+  background-color: #CA9E72;
   border: 1px solid black;
 }
 
 .error-page a:hover {
   background-color: black;
-  border-color: #ca9e72;
+  border-color: #CA9E72;
 }
 
 input,
@@ -68,6 +68,7 @@ select {
 .custom-pages{
   padding: 50px 0px;
 }
+
 @media (min-width: 768px) and (max-width: 998px) {
   .containerWrapper {
     width: 100% !important;
@@ -87,6 +88,9 @@ select {
 }
 
 @media (max-width: 767px) {
+  .custom-pages-container{
+    padding: 50px 20px;
+  }
   .containerWrapper {
     width: 90%;
     margin: 0 5%;
@@ -113,7 +117,7 @@ select {
 }
 
 .default-button:hover {
-  background: #ca9e72;
+  background: #CA9E72;
   color: white;
   /* border: white; */
   cursor: pointer;
@@ -127,4 +131,5 @@ select {
 h2 {
   font-weight: 600 !important;
   /* font-size: 38px !important; */
+ 
 }

@@ -1,42 +1,82 @@
 import React from "react";
+import { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./peja.css";
+import { Navigation } from "swiper";
 
-export function Peja() {
+function Peja({ posts }) {
+  console.log(posts);
   return (
     <>
       <div className="custom-pages">
         <div
           className="peja-banner"
           style={{
-            backgroundImage: `url("https://cmsdukagjini.blackbird.marketing/wp-content/uploads/2022/05/IMG_4919-2-1-1.webp")`,
+            backgroundImage: `url(${posts.acf.peja.banner})`,
           }}
         ></div>
-        <div className="containerWrapper">
-          <h2 className="cp-heading">WHAT TO DO IN PEJA</h2>
+        <div className="custom-pages-container">
+          <h2 id="pejaheading" className="cp-heading">
+            {posts.acf.peja.heading}
+          </h2>
 
-          <div className="single-gallery">
-            <div className="cp-textfield">
-              <div className="cp-paragraph">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est
-                  ornare non elementum, placerat. Sapien mattis dui risus
-                  tristique natoque nunc sed pellentesque congue. Praesent et
-                  elit at ullamcorper cursus eros arcu. Risus ipsum aliquet
-                  lacus amet, quam augue. Nisl vitae eu quis aenean proin ornare
-                  pellentesque mauris. Eleifend elementum, at bibendum dui
-                  curabitur quis eu magna.
-                </p>
+          <div>
+            <Swiper
+              // slidesPerView={1}
+              // centeredSlides={true}
+              // spaceBetween={0}
+              spaceBetween={15}
+              slidesPerView={1}
+              roundLengths={true}
+              loop={true}
+              pagination={true}
+              arrows={true}
+              draggable={true}
+              navigation={true}
+              modules={[Navigation]}
+              loopAdditionalSlides={30}
+              className="peja-slider"
+              breakpoints={{
+                600: {
+                  slidesPerView: 2.2,
+                },
+              }}
+            >
+              <div className="pejaRecommended">
+                {posts.acf.peja.slider.map((e) => (
+                  <SwiperSlide>
+                    <div className="peja-singleRecommended">
+                      <div className="peja-sliderimg">
+                        <img src={e.image} alt="" />
+                      </div>
+                      <div className="peja-slider-texts">
+                        <h2>{e.heading}</h2>
+                        <p>{e.paragraph}</p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
               </div>
-              <div className="cp-singleimage">
-                <img src="" alt="" />
-              </div>
-            </div>
-            <div className="cp-images">
-              <div className="cp-img mtop">
-                <img src="" alt="" />
-              </div>
-              <div className="cp-img">
-                <img src="" alt="" />
+            </Swiper>
+            <div className="containerWrapper" id="peja-imagesdiv">
+              <p className="peja-paragraph-4imgs">{posts.acf.peja.text}</p>
+              <div className="peja-images">
+                <div className="img-peja">
+                  {" "}
+                  <img src={posts.acf.peja.image1} alt="" id="peja1" />
+                </div>
+                <div className="img-peja">
+                  {" "}
+                  <img src={posts.acf.peja.image2} alt="" id="peja2" />
+                </div>
+                <div className="img-peja">
+                  {" "}
+                  <img src={posts.acf.peja.image3} alt="" id="peja3" />
+                </div>
+                <div className="img-peja">
+                  {" "}
+                  <img src={posts.acf.peja.image4} alt="" id="peja4" />
+                </div>
               </div>
             </div>
           </div>
@@ -45,3 +85,4 @@ export function Peja() {
     </>
   );
 }
+export default Peja;

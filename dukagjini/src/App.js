@@ -23,7 +23,7 @@ import { Terms } from "./components/Pages/TOC/terms";
 import { Spa } from "./components/Pages/SPA page/spa";
 import Restaurant from "./components/Pages/Restaurant/restaurant";
 import { Sallat } from "./components/Pages/Sallat e dasmave/sallat";
-import { Peja } from "./components/Pages/Peja City/peja";
+import Peja from "./components/Pages/Peja City/peja";
 
 console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
@@ -71,6 +71,7 @@ function App() {
     roomsAl,
     restaurant,
     spa,
+    peja,
     wedding;
   state.posts.map((e) => {
     switch (e.id) {
@@ -94,12 +95,24 @@ function App() {
         break;
       case 578:
         wedding = e;
+        break;
       case 572:
         restaurant = e;
+        break;
       case 574:
         spa = e;
+        break;
+      case 576:
+        peja = e;
+        break;
     }
   });
+  // console.log("-----------------------------");
+  // console.log("BOOKING INFOOO", book);
+  // console.log("-----------------------------");
+
+  console.log(state.posts);
+  console.log(peja);
 
   if (state.isLoaded === false) return <Loader2 />;
   else {
@@ -166,8 +179,8 @@ function App() {
               path="/restaurant"
               element={<Restaurant posts={restaurant}></Restaurant>}
             ></Route>
-            <Route path="/sallat" element={<Sallat></Sallat>}></Route>
-            <Route path="/peja" element={<Peja></Peja>}></Route>
+            <Route path="/wedding" element={<Sallat></Sallat>}></Route>
+            <Route path="/peja" element={<Peja posts={peja}></Peja>}></Route>
 
             <Route
               path="/delete-reservation"
