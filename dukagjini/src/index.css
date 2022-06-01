@@ -68,6 +68,7 @@ select {
 .custom-pages{
   padding: 50px 0px;
 }
+
 @media (min-width: 768px) and (max-width: 998px) {
   .containerWrapper {
     width: 100% !important;
@@ -87,6 +88,9 @@ select {
 }
 
 @media (max-width: 767px) {
+  .custom-pages-container{
+    padding: 50px 20px;
+  }
   .containerWrapper {
     width: 90%;
     margin: 0 5%;
