@@ -37,9 +37,23 @@
     border: none;
     border-radius: 20px;
     color: #a07346;
-    width: 100px;
+    width: 120px;
     text-align: center;
     padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.sr-dates-txt img {
+    margin-right: 5px;
+}
+
+
+.childrens-age-dropdowns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .cmimi-dhomes {

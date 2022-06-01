@@ -6,8 +6,6 @@ import HistoryTab from "./historyTab";
 import LocationTab from "./locationTab";
 
 function About({ posts, founder }) {
-  // console.log(posts);
-  // console.log(window.innerWidth);
   const style = {
     color: "white",
     // backgroundColor: "red",

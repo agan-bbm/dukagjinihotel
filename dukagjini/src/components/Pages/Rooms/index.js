@@ -16,7 +16,6 @@ import Loader from "../../Utils/Loader";
 import Loader2 from "../../Utils/Loader";
 
 export function Rooms({ freeRooms, loader, al, book, setBook }) {
-  // console.log(loader);
   const [rooms, setRooms] = useState({
     rooms: [],
     isLoaded: false,
@@ -38,7 +37,6 @@ export function Rooms({ freeRooms, loader, al, book, setBook }) {
       })
       .catch((err) => console.log(err));
   }, []);
-  // console.log(rooms);
 
   var firstRoomId,
     secondRoomId,
@@ -51,7 +49,6 @@ export function Rooms({ freeRooms, loader, al, book, setBook }) {
     switch (e.id) {
       case 87:
         firstRoomId = e;
-        // console.log(e);
         break;
       case 106:
         secondRoomId = e;
@@ -72,9 +69,6 @@ export function Rooms({ freeRooms, loader, al, book, setBook }) {
   });
 
   var myArr = [];
-
-  // console.log("array", myArr);
-  // console.log(freeRooms.isLoaded);
 
   if (freeRooms) {
     for (var i = 0; i < freeRooms.rooms.length; i++) {

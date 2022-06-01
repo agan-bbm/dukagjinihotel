@@ -34,7 +34,6 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
     isLoaded: false,
   });
   const [loader, setLoader] = useState(false);
-  // console.log(dates);
 
   const onChange = (date) => {
     const [start, end] = date;
@@ -45,15 +44,8 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
     setEndDate(end);
     setDates({ ...dates, from: start, to: end });
     setBook({ ...book, checkin: start, checkout: end });
-
-    // localStorage.setItem("checkin", start);
-    // localStorage.setItem("checkout", end);
-
-    // console.log(start);
-    // console.log(end);
   };
-  // console.log("start datee", startDate);
-  // console.log("end datee", endDate);
+
   async function getRooms() {
     await axios
       .get(
@@ -72,9 +64,6 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
       })
       .catch((err) => console.log(err));
   }
-  // console.log(rooms.rooms.filter((e) => e.IsFree));
-  // console.log(startDate);
-  // console.log(endDate);
 
   const formatDate = (date) => {
     let d = new Date(date);
@@ -90,13 +79,8 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
     return [year, month, day].join("/");
   };
 
-  // console.log(rooms.rooms);
-  // console.log(book.checkin);
   const diffTime = Math.abs(endDate - startDate);
   const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  console.log(startDate);
-  console.log(endDate);
-  console.log(nights);
 
   return (
     <>

@@ -1,7 +1,6 @@
 import React from "react";
 
 export function Spa(posts) {
-  console.log(posts);
   return (
     <>
       <div className="custom-pages">

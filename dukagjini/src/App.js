@@ -54,7 +54,6 @@ function App() {
     axios
       .get("https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/pages/")
       .then((res) => {
-        // console.log(res);
         setState({
           posts: res.data,
           isLoaded: true,
@@ -62,17 +61,6 @@ function App() {
       })
 
       .catch((err) => console.log(err));
-
-    // axios
-    //   .get("https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/posts")
-    //   .then((res) =>
-    //     setPeekInside({
-    //       inside: res.data,
-    //       isLoaded: true,
-    //       refresh: 0,
-    //     })
-    //   )
-    //   .catch((err) => console.log(err));
   }, []);
 
   var homepage,
@@ -112,11 +100,6 @@ function App() {
         spa = e;
     }
   });
-  // console.log("-----------------------------");
-  // console.log("BOOKING INFOOO", book);
-  // console.log("-----------------------------");
-
-  console.log(state.posts);
 
   if (state.isLoaded === false) return <Loader2 />;
   else {

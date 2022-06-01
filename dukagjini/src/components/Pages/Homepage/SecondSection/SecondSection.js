@@ -7,7 +7,6 @@ import "./secondSection.css";
 import secondBanner from "../../../../images/secondsectionbanner.png";
 
 function SecondSection({ posts }) {
-  // console.log(posts);
   return (
     <div className="secondSection">
       <div className="containerWrapper">

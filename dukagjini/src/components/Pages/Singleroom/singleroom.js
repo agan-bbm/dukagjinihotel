@@ -10,8 +10,10 @@ import livingroom from "../../../images/user.svg";
 import bath from "../../../images/bed.svg";
 import seaview from "../../../images/dashboard.svg";
 import balcony from "../../../images/wifi.svg";
+import dateIcon from "../../../images/Date_fill.png";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import { parse } from "rsuite/esm/utils/dateUtils";
 
 function Singleroom({ dates, setDates, book, setBook, al }) {
   const params = useParams();
@@ -23,6 +25,10 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
   const [reservation, setReservation] = useState({
     adult: 1,
     children: 0,
+  });
+  const [guests, setGuests] = useState(1);
+  const [childAges, setChildAges] = useState({
+    ages: [],
   });
 
   const [rooms, setRooms] = useState({
@@ -43,15 +49,16 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         });
       })
       .catch((err) => console.log(err));
-    // localStorage.removeItem("adult");
-    // localStorage.removeItem("children");
   }, []);
-  // console.log(book);
+  useEffect(() => {
+    setGuests(parseInt(book.adult) + parseInt(book.children));
+  }, [book]);
   var maxPersons = 0;
   if (rooms.isLoaded) {
-    // console.log(rooms.rooms.acf.room.short_room_name);
     maxPersons = rooms.rooms.acf.room.max_persons;
   }
+  // console.log(guests);
+  // console.log(book);
 
   const maxPPl = 4;
   const People = () => {
@@ -75,6 +82,9 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
 
   let adultList = [];
   let childList = [];
+  let ages = [];
+  let ages1 = [];
+  let ages2 = [];
   const renderChildrenOptions = () => {
     for (var i = 1; i <= maxPersons - reservation.adult; i++) {
       childList.push(<option value={i}>{i}</option>);
@@ -88,6 +98,25 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
     }
     return adultList;
   };
+  const renderChildrenAge = () => {
+    for (var i = 1; i <= 18; i++) {
+      ages.push(<option value={i}>{i}</option>);
+    }
+
+    return ages;
+  };
+  const renderChildrenAge1 = () => {
+    for (var i = 1; i <= 18; i++) {
+      ages1.push(<option value={i}>{i}</option>);
+    }
+    return ages1;
+  };
+  const renderChildrenAge2 = () => {
+    for (var i = 1; i <= 18; i++) {
+      ages2.push(<option value={i}>{i}</option>);
+    }
+    return ages2;
+  };
   const diffTime = Math.abs(book.checkout - book.checkin);
   const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   const images = [
@@ -96,18 +125,98 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
 
     rooms.isLoaded ? rooms.rooms.acf.room.images[2] : "",
   ];
+  console.log("---------------------------------");
+  console.log(childAges);
+  console.log("---------------------------------");
+
+  // console.log(childAges.filter((e) => e.child1));
+  for (var i = 0; i < childAges.ages.length; i++) {
+    // console.log(childAges.ages[i]);
+  }
+
+  const childrensAgeDropdown = (children) => {
+    if (children === "1") {
+      return (
+        <select
+          name="checkin"
+          id=""
+          onChange={(e) => {
+            setChildAges({ ...childAges, ages: [...ages, e.target.value] });
+          }}
+        >
+          {renderChildrenAge()}
+        </select>
+      );
+    } else if (children === "2") {
+      return (
+        <>
+          <select
+            name="checkin"
+            id=""
+            onChange={(e) => {
+              childages.push(e.target.value);
+              setChildAges({ ...childAges, ages: [...ages, e.target.value] });
+            }}
+          >
+            {renderChildrenAge()}
+          </select>
+          <select
+            name="checkin"
+            id=""
+            onChange={(e) => {
+              childages.push(e.target.value);
+
+              setChildAges({ ...childAges, ages: [...ages, e.target.value] });
+            }}
+          >
+            {renderChildrenAge1()}
+          </select>
+        </>
+      );
+    } else if (book.children) {
+      return (
+        <>
+          <select
+            name="checkin"
+            id=""
+            onChange={(e) => {
+              setChildAges({ ...childAges, ages: [...ages, e.target.value] });
+            }}
+          >
+            {renderChildrenAge()}
+          </select>
+          <select
+            name="checkin"
+            id=""
+            onChange={(e) => {
+              setChildAges({ ...childAges, ages: [...ages, e.target.value] });
+            }}
+          >
+            {renderChildrenAge1()}
+          </select>
+          <select
+            name="checkin"
+            id=""
+            onChange={(e) => {
+              setChildAges({ ...childAges, ages: [...ages, e.target.value] });
+            }}
+          >
+            {renderChildrenAge2()}
+          </select>
+        </>
+      );
+    }
+  };
+  // console.log(guests);
+  // console.log("ADULT: ", book.adult);
+  // console.log("MAXPERSONS", parseInt(maxPersons));
+  // console.log("RESERVATION", reservation);
+  var childages = [];
 
   return rooms.isLoaded ? (
     <>
       <div className="single-room-page">
         <div className="containerWrapper">
-          <div>
-            {/* <h2 className="single-room-title">Standard Room</h2> */}
-          </div>
-
-          {/* <div className="review-single-room">
-            <p>Review</p>
-          </div> */}
           {popup.isOpen && (
             <Lightbox
               mainSrc={images[popup.photoIndex]}
@@ -230,25 +339,17 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                   <div className="sr-dates-flex">
                     <div className="select-dates">
                       <label htmlFor="checkin">Check In Date</label>
-                      {/* <input
-                        type="date"
-                        name="checkin"
-                        defaultValue={formatDate(dates.from)}
-                      /> */}
-                      <p className="sr-dates-txt">{formatDate(book.checkin)}</p>
-                      {/* <p>{formatDate(dates.from)}</p> */}
+
+                      <p className="sr-dates-txt">
+                        <img src={dateIcon} /> {formatDate(book.checkin)}
+                      </p>
                     </div>
                     <div className="select-dates">
                       <label htmlFor="checkin">Check out Date</label>
-                      {/* <input
-                        type="date"
-                        name="checkin"
-                        defaultValue={formatDate(dates.to)}
-                      /> */}
+
                       <p className="sr-dates-txt">
-                        {formatDate(book.checkout)}
+                        <img src={dateIcon} /> {formatDate(book.checkout)}
                       </p>
-                      {/* <p>{formatDate(dates.to)}</p> */}
                     </div>
                   </div>
 
@@ -265,14 +366,30 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                         id=""
                         value={book.adult}
                         onChange={(e) => {
+                          // console.log(reservation);
                           setReservation({
                             ...reservation,
                             adult: e.target.value,
+                            children:
+                              e.target.value === "4" ? 0 : book.children,
                           });
                           setBook({
                             ...book,
                             adult: e.target.value,
+
+                            children:
+                              e.target.value === "4" ? 0 : book.children,
+                            guests:
+                              parseInt(reservation.adult) +
+                              parseInt(reservation.children),
                           });
+                          setGuests(
+                            parseInt(reservation.adult) +
+                              parseInt(reservation.children)
+                          );
+                          // if (parseInt(maxPersons) === parseInt(book.adult)) {
+                          //   setBook({ ...book, children: 0 });
+                          // }
                         }}
                       >
                         {renderAdultOptions()}
@@ -287,8 +404,8 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                       <select
                         name="checkin"
                         id=""
-                        value={book.children}
-                        defaultChecked={{ label: 0, value: 0 }}
+                        // value={book.children}
+                        // defaultChecked={{ label: 0, value: 0 }}
                         onChange={(e) => {
                           setReservation({
                             ...reservation,
@@ -297,13 +414,40 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                           setBook({
                             ...book,
                             children: e.target.value,
+                            guests:
+                              parseInt(reservation.adult) +
+                              parseInt(reservation.children),
                           });
+                          setGuests(
+                            parseInt(book.adult) + parseInt(book.children)
+                          );
                         }}
                       >
                         <option value={0}>0</option>;{renderChildrenOptions()}
                       </select>
                     </div>
                   </div>
+                  {book.children > 0 ? (
+                    <div className="sr-selects-flex">
+                      <div className="select-dates select childrensAge">
+                        {!al ? (
+                          parseInt(book.children) > 1 ? (
+                            <label htmlFor="checkin">Age of Children’s</label>
+                          ) : (
+                            <label htmlFor="checkin">Age of Child</label>
+                          )
+                        ) : parseInt(book.children) > 1 ? (
+                          <label htmlFor="checkin">Mosha e fëmijëve</label>
+                        ) : (
+                          <label htmlFor="checkin">Mosha e fëmiut</label>
+                        )}
+
+                        <div className="childrens-age-dropdowns">
+                          {childrensAgeDropdown(book.children)}
+                        </div>
+                      </div>
+                    </div>
+                  ) : null}
                 </div>
                 <div className="price-wrapper">
                   <div className="price-single-page">
@@ -311,8 +455,10 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                     <p className="total-price">
                       {nights === 0
                         ? rooms.rooms.acf.room.room_price
-                        : parseInt(rooms.rooms.acf.room.room_price) * nights}
-                      €
+                        : parseInt(rooms.rooms.acf.room.room_price) *
+                            nights *
+                            guests +
+                          "€"}
                     </p>
                   </div>
                   <div className="single-page-button">
@@ -330,11 +476,13 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                           roomName: rooms.rooms.acf.room.short_room_name,
                           longRoomName: rooms.rooms.acf.room.name,
                           nights: nights,
-                          price:
-                            parseInt(rooms.rooms.acf.room.room_price) * nights,
                           guests:
                             parseInt(reservation.adult) +
                             parseInt(reservation.children),
+                          price:
+                            parseInt(rooms.rooms.acf.room.room_price) *
+                            nights *
+                            guests,
                         });
                       }}
                     >

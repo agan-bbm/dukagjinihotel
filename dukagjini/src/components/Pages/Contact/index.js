@@ -19,7 +19,6 @@ function Contact() {
     //   setSubmitting(false);
     // }, 5000);
   };
-  console.log(form);
   const sendEmail = (e) => {
     const f = new FormData();
     f.append("name", form.name);
@@ -32,14 +31,10 @@ function Contact() {
         f
       )
       .then((res) => {
-        console.log(res);
-        // setReservationId(res.data);
-        // document.getElementById("confirmReservationEmail").click();
-
-        // setPage(page + 1);
+        // console.log(res);
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
         window.location.href = window.location.origin + "/error";
       });
   };

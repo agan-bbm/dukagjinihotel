@@ -26,7 +26,6 @@ import { borderRadius } from "@mui/system";
 
 export function Summary({ posts, book, setBook, al }) {
   const params = useParams();
-  // console.log(params);
 
   const [rooms, setRooms] = useState({
     rooms: [],
@@ -44,10 +43,9 @@ export function Summary({ posts, book, setBook, al }) {
           rooms: res.data,
           isLoaded: true,
         });
-      });
-    // .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
   }, []);
-  console.log(rooms.rooms.acf);
   const formatDate = (date) => {
     let d = new Date(date);
     let month = (d.getMonth() + 1).toString();
@@ -75,8 +73,6 @@ export function Summary({ posts, book, setBook, al }) {
               spaceBetween={50}
               slidesPerView={1}
               navigation
-              // onSlideChange={() => console.log("slide change")}
-              // onSwiper={(swiper) => console.log(swiper)}
             >
               {!al
                 ? rooms.rooms.acf.room.images

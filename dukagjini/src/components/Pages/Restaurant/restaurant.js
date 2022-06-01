@@ -1,7 +1,6 @@
 import React from "react";
 import "./restaurant.css";
 function Restaurant({ posts }) {
-  console.log(posts);
   return (
     <>
       <div className="custom-pages">

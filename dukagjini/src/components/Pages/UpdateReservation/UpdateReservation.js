@@ -14,7 +14,6 @@ function UpdateReservation({ book }) {
     id: "",
   });
   const [email, setEmail] = useState("");
-  // console.log(idError.errorId);
   const validateId = (id) => {
     const idRegex = new RegExp("^[+]*[(]{0,1}[0-9_ ]{5,25}[)]{0,1}[-s./0-9]*$");
 
@@ -29,8 +28,6 @@ function UpdateReservation({ book }) {
     const [start, end] = date;
     setStartDate(start);
     setEndDate(end);
-    // console.log(start);
-    // console.log(end);
   };
   const todayDate = Date.now();
   const formatDate = (date) => {
@@ -46,7 +43,6 @@ function UpdateReservation({ book }) {
     }
     return [year, month, day].join("/");
   };
-  // console.log(startDate);
   const handleSubmit = (e) => {
     const f = new FormData();
     f.append("CheckInDate", formatDate(startDate));
@@ -59,18 +55,13 @@ function UpdateReservation({ book }) {
         f
       )
       .then((res) => {
-        // console.log(res);
-        document.getElementById("editReservationEmail").click(() => {
-          // console.log("clicked");
-        });
+        document.getElementById("editReservationEmail").click(() => {});
         window.location.href = window.location.origin + "/";
       })
       .catch((err) => {
-        // console.log(err);
         window.location.href = window.location.origin + "/error";
       });
   };
-  // console.log(idError);
   const search = useLocation().search;
   const id = new URLSearchParams(search).get("reservationId");
   const emailUrl = new URLSearchParams(search).get("email");
@@ -79,7 +70,6 @@ function UpdateReservation({ book }) {
   const children = new URLSearchParams(search).get("children");
   const adults = new URLSearchParams(search).get("adults");
   const nights = new URLSearchParams(search).get("nights");
-  // console.log(emailUrl);
 
   return (
     <div className="main-update">

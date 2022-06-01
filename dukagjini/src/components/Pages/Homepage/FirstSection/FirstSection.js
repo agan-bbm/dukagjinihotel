@@ -38,7 +38,6 @@ function FirstSection({ posts, book, setBook, al }) {
     localStorage.setItem("checkin", start);
     localStorage.setItem("checkout", end);
   };
-  // console.log(book);
   const [rooms, setRooms] = useState({
     rooms: [],
     isLoaded: false,
@@ -48,10 +47,6 @@ function FirstSection({ posts, book, setBook, al }) {
     children: 0,
   });
   var maxPersons = 4;
-  // if (rooms.isLoaded) {
-  //   // console.log(rooms.rooms.acf.room.short_room_name);
-  //   maxPersons = rooms.rooms.acf.room.max_persons;
-  // }
 
   const maxPPl = 4;
   const People = () => {

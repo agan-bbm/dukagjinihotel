@@ -19,7 +19,6 @@ function QuiltedImageList({ posts }) {
     isOpen: false,
     photoIndex: 0,
   });
-  // console.log(posts);
   const itemData = [
     {
       img: posts.acf.aboutgallery[4].galleryimg,
