@@ -63,6 +63,14 @@
 #pejaheading{
     margin: 80px 0px !important;
 }
+@media(min-width:999px){
+    .img-peja{
+        width: 24%;
+    }
+    .img-peja img{
+        width: 100%;
+    }
+}
 @media (min-width: 768px) and (max-width: 998px) {
     .peja-images{
         flex-direction: column;
@@ -87,7 +95,7 @@
         padding: 50px 0px;
     }
     .custom-pages-container{
-        padding: 20px;
+        padding: 0px !important;
     }
     #pejaheading
     {
@@ -96,7 +104,7 @@
         font-size: 30px;
     }
     .peja-banner{
-        height: 250px;
+        height: 400px;
 
     }
 }

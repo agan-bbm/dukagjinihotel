@@ -8,8 +8,8 @@
 .select-dates-home select {
   border: none !important;
   background: transparent !important;
-  border-bottom: 1px solid #ca9e72 !important;
-  color: #ca9e72 !important;
+  border-bottom: 1px solid #CA9E72 !important;
+  color: #CA9E72 !important;
   width: 100px;
   font-size: 18px;
 }
@@ -23,13 +23,13 @@
   font-weight: 600;
 }
 #firstBtnChRooms{
-  background-color: #ca9e72 !important;
+  background-color: #CA9E72 !important;
   color: white;
 }
 #firstBtnChRooms:hover{
   background-color: white !important;
-  border: 1px solid #ca9e72;
-  color: #ca9e72;
+  border: 1px solid #CA9E72;
+  color: #CA9E72;
 }
 /* .rightSide {
   display: contents;
@@ -110,8 +110,8 @@
 .leftContainer button {
   padding: 10px 15px;
   background-color: transparent;
-  border: 1px solid #ca9e72;
-  color: #ca9e72;
+  border: 1px solid #CA9E72;
+  color: #CA9E72;
 }
 
 
@@ -127,8 +127,8 @@
 .choosing-option input {
   border: none;
   background: transparent;
-  border-bottom: 1px solid #ca9e72;
-  color: #ca9e72;
+  border-bottom: 1px solid #CA9E72;
+  color: #CA9E72;
   font-size: 18px;
 }
 .rightSide {
@@ -184,7 +184,7 @@
   top: 10px;
 }
 #firstBtnChRooms {
-  background-color: #ca9e72 !important;
+  background-color: #CA9E72 !important;
   color: white;
   width: 100% !important;
   font-size: 20px !important;
@@ -290,7 +290,7 @@
     width: 100% !important;
   }
   .firstButtonRes button {
-    background-color: #ca9e72;
+    background-color: #CA9E72;
     width: 100% !important;
     color: white;
     padding: 0 !important;

@@ -52,6 +52,7 @@
     }
     .cp-p-cont{
         width: 100%;
+        text-align: center;
     }
     .cp-textfield{
         flex-direction: column;
@@ -72,10 +73,13 @@
         padding: 0;
     }
     .cp-heading{
-        margin: 20px 0px;
+        margin: 0px;
+        margin-top: 20px;
+        font-size: 30px ;
     }
     .cp-p-cont{
         width: 100%;
+        text-align: center;
     }
     .cp-textfield{
         flex-direction: column;
@@ -88,6 +92,6 @@
         padding: 10px;
     }
     .restaurant-banner{
-        height: 250px;
+        height: 400px;
     }
 }

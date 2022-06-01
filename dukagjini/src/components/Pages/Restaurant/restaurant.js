@@ -48,13 +48,15 @@ function Restaurant({ posts }) {
               </div>
             </div>
           </div>
+        </div>
 
-          <div
-            className="restaurant-banner"
-            style={{
-              backgroundImage: `url(${posts.acf.restaurant.panorama.banner})`,
-            }}
-          ></div>
+        <div
+          className="restaurant-banner"
+          style={{
+            backgroundImage: `url(${posts.acf.restaurant.panorama.banner})`,
+          }}
+        ></div>
+        <div className="custom-pages-container">
           <div className="containerWrapper">
             <h2 className="cp-heading">
               {posts.acf.restaurant.panorama.title}
@@ -91,13 +93,15 @@ function Restaurant({ posts }) {
               </div>
             </div>
           </div>
+        </div>
 
-          <div
-            className="restaurant-banner"
-            style={{
-              backgroundImage: `url(${posts.acf.restaurant.sallabardhe.banner})`,
-            }}
-          ></div>
+        <div
+          className="restaurant-banner"
+          style={{
+            backgroundImage: `url(${posts.acf.restaurant.sallabardhe.banner})`,
+          }}
+        ></div>
+        <div className="custom-pages-container">
           <div className="containerWrapper">
             <h2 className="cp-heading">
               {posts.acf.restaurant.sallabardhe.title}
@@ -134,13 +138,15 @@ function Restaurant({ posts }) {
               </div>
             </div>
           </div>
+        </div>
 
-          <div
-            className="restaurant-banner"
-            style={{
-              backgroundImage: `url(${posts.acf.restaurant.shisha.banner})`,
-            }}
-          ></div>
+        <div
+          className="restaurant-banner"
+          style={{
+            backgroundImage: `url(${posts.acf.restaurant.shisha.banner})`,
+          }}
+        ></div>
+        <div className="custom-pages-container">
           <div className="containerWrapper">
             <h2 className="cp-heading">{posts.acf.restaurant.shisha.title}</h2>
 
@@ -175,13 +181,15 @@ function Restaurant({ posts }) {
               </div>
             </div>
           </div>
+        </div>
 
-          <div
-            className="restaurant-banner"
-            style={{
-              backgroundImage: `url(${posts.acf.restaurant.treni.banner})`,
-            }}
-          ></div>
+        <div
+          className="restaurant-banner"
+          style={{
+            backgroundImage: `url(${posts.acf.restaurant.treni.banner})`,
+          }}
+        ></div>
+        <div className="custom-pages-container">
           <div className="containerWrapper">
             <h2 className="cp-heading">{posts.acf.restaurant.treni.title}</h2>
 
@@ -216,13 +224,15 @@ function Restaurant({ posts }) {
               </div>
             </div>
           </div>
+        </div>
 
-          <div
-            className="restaurant-banner"
-            style={{
-              backgroundImage: `url(${posts.acf.restaurant.veranda.banner})`,
-            }}
-          ></div>
+        <div
+          className="restaurant-banner"
+          style={{
+            backgroundImage: `url(${posts.acf.restaurant.veranda.banner})`,
+          }}
+        ></div>
+        <div className="custom-pages-container">
           <div className="containerWrapper">
             <h2 className="cp-heading">{posts.acf.restaurant.veranda.title}</h2>
 
