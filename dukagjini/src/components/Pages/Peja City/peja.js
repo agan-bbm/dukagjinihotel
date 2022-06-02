@@ -59,7 +59,10 @@ function Peja({ posts }) {
               </div>
             </Swiper>
             <div className="containerWrapper" id="peja-imagesdiv">
-              <p className="peja-paragraph-4imgs">{posts.acf.peja.text}</p>
+              <p className="peja-paragraph-4imgs" id="peja-deskt-paragraph">
+                {posts.acf.peja.text}
+              </p>
+
               <div className="peja-images">
                 <div className="img-peja">
                   {" "}
@@ -77,6 +80,59 @@ function Peja({ posts }) {
                   {" "}
                   <img src={posts.acf.peja.image4} alt="" id="peja4" />
                 </div>
+              </div>
+            </div>
+            <div className="containerWrapper" id="peja-mobileimagesdiv">
+              <div className="peja-mobileimages">
+                <p className="peja-paragraph-4imgs">{posts.acf.peja.text}</p>
+
+                <Swiper
+                  spaceBetween={15}
+                  slidesPerView={1}
+                  roundLengths={true}
+                  loop={true}
+                  pagination={true}
+                  arrows={true}
+                  draggable={true}
+                  navigation={true}
+                  modules={[Navigation]}
+                  loopAdditionalSlides={30}
+                  className="peja-slider"
+                  breakpoints={{
+                    600: {
+                      slidesPerView: 2.2,
+                    },
+                  }}
+                >
+                  <SwiperSlide>
+                    {" "}
+                    <div className="img-peja">
+                      {" "}
+                      <img src={posts.acf.peja.image1} alt="" id="peja1" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="img-peja">
+                      {" "}
+                      <img src={posts.acf.peja.image2} alt="" id="peja2" />
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    {" "}
+                    <div className="img-peja">
+                      {" "}
+                      <img src={posts.acf.peja.image3} alt="" id="peja3" />
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="img-peja">
+                      {" "}
+                      <img src={posts.acf.peja.image4} alt="" id="peja4" />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
               </div>
             </div>
           </div>

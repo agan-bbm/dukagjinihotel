@@ -117,7 +117,7 @@ function Navbar({ al, setAl }) {
             <span>{al ? "Rreth nesh" : "About"}</span>
           </NavLink> */}
           <NavLink
-            to="/Sallat"
+            to="/wedding"
             className={!navbar ? "white-links" : " black-links white-links "}
             style={({ isActive }) =>
               isActive
