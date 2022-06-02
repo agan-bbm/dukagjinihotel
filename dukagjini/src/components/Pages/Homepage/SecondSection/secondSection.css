@@ -1,6 +1,6 @@
 .secondSection {
     width: 100%;
-    background-color: whitesmoke;
+    background-color: #F8F2EC;
     align-items: center;
     padding-top: 20px;
     margin: 0 auto;
@@ -10,40 +10,44 @@
     align-items: center;
     width: 100%;
 }
-.secondSectionLeft{
+
+.secondSectionLeft {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px;
 }
-.secondSectionLeft h2{
+
+.secondSectionLeft h2 {
     width: 40%;
     font-size: 46px;
     color: #2D2D2D;
     font-weight: 300;
 }
-.secondSectionLeft p{
+
+.secondSectionLeft p {
     width: 35%;
 }
+
 .secondImgContainer {
     width: 100%;
 }
 
 .secondImg img {
     width: 100%;
-   
     object-fit: cover;
 }
-@media(min-width:768px) and (max-width:998px){
-    .secondSection{
+
+@media(min-width:768px) and (max-width:998px) {
+    .secondSection {
         background-color: white;
     }
-    .secondSectionLeft{
+    .secondSectionLeft {
         flex-direction: column;
         text-align: center;
         padding: 0px 25px;
     }
-    .secondSectionHeader{
+    .secondSectionHeader {
         width: 100% !important;
     }
     .secondSectionLeft h2 {
@@ -58,25 +62,23 @@
         margin-bottom: 50px;
     }
 }
+
 @media (max-width: 767px) {
-    .secondSection{
+    .secondSection {
         padding-top: 0;
     }
     .secondSectionLeft {
-
         flex-direction: column;
-    
         background: #ead9c750;
-    border-radius: 10px 10px 2px 0px;
-    padding: 20px 20px;
-      }
-      .seconSectionTop {
-      
+        border-radius: 10px 10px 2px 0px;
+        padding: 20px 20px;
+    }
+    .seconSectionTop {
         flex-direction: column;
-        padding:25px 0;
+        padding: 25px 0;
         padding-bottom: 0;
-      }
-      .secondSectionLeft h2 {
+    }
+    .secondSectionLeft h2 {
         width: 100%;
         font-size: 22px;
         color: #2D2D2D;
@@ -84,10 +86,10 @@
         text-align: center;
         margin-bottom: 10px;
         margin-top: 0;
-      }
-      .secondSectionLeft p {
+    }
+    .secondSectionLeft p {
         width: 100%;
         text-align: center;
         margin: 0;
-      }
+    }
 }
