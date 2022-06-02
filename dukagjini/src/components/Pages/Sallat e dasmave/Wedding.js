@@ -1,6 +1,7 @@
 import React from "react";
 
-export function Sallat() {
+function Wedding({ posts }) {
+  console.log(posts);
   return (
     <>
       <div className="custom-pages">
@@ -10,3 +11,4 @@ export function Sallat() {
     </>
   );
 }
+export default Wedding;

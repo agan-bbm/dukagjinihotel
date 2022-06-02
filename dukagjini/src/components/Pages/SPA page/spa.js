@@ -1,12 +1,13 @@
 import React from "react";
 
-export function Spa(posts) {
+export function Spa({ posts }) {
+  console.log(posts);
   return (
     <>
       <div className="custom-pages">
         <div className="spa-banner"></div>
         <div className="containerWrapper">
-          <h2 className="cp-heading">SPA AND POOL</h2>
+          <h2 className="cp-heading">{posts.acf.restaurant.spa.title}</h2>
           <div className="single-gallery">
             <div className="cp-textfield">
               <div>

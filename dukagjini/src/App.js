@@ -22,7 +22,7 @@ import En from "./images/EN.svg";
 import { Terms } from "./components/Pages/TOC/terms";
 import { Spa } from "./components/Pages/SPA page/spa";
 import Restaurant from "./components/Pages/Restaurant/restaurant";
-import { Sallat } from "./components/Pages/Sallat e dasmave/sallat";
+import Wedding from "./components/Pages/Sallat e dasmave/Wedding";
 import Peja from "./components/Pages/Peja City/peja";
 
 console.log(
@@ -177,9 +177,12 @@ function App() {
             <Route path="/spa" element={<Spa posts={spa}></Spa>}></Route>
             <Route
               path="/restaurant"
-              element={<Restaurant posts={restaurant}></Restaurant>}
+              element={<Restaurant posts={restaurant} al={al}></Restaurant>}
             ></Route>
-            <Route path="/wedding" element={<Sallat></Sallat>}></Route>
+            <Route
+              path="/wedding"
+              element={<Wedding posts={wedding}></Wedding>}
+            ></Route>
             <Route path="/peja" element={<Peja posts={peja}></Peja>}></Route>
 
             <Route

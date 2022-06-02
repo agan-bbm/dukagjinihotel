@@ -1,7 +1,8 @@
 import React from "react";
 import "./restaurant.css";
 
-function Restaurant({ posts }) {
+function Restaurant({ posts, al }) {
+  console.log(posts);
   return (
     <>
       <div className="custom-pages">
@@ -15,7 +16,9 @@ function Restaurant({ posts }) {
           <div className="containerWrapper">
             <h2 className="cp-heading">
               {" "}
-              {posts.acf.restaurant.restorani22.title}{" "}
+              {al
+                ? posts.acf.restaurantal.restorani22.title
+                : posts.acf.restaurant.restorani22.title}{" "}
             </h2>
             <div className="single-gallery">
               <div className="cp-textfield">
