@@ -63,6 +63,7 @@ export function Summary({ posts, book, setBook, al }) {
     parseInt(formatDate(book.checkout).substring(8, 10)) -
     parseInt(formatDate(book.checkin).substring(8, 10));
 
+  console.log(book);
   return rooms.isLoaded ? (
     <>
       <div className="single-room">
@@ -95,15 +96,6 @@ export function Summary({ posts, book, setBook, al }) {
                     </SwiperSlide>
                   ))
                 : ""}
-              {/* <SwiperSlide>
-                      <img src={rooms.rooms[5].acf.room.images[0].image1.url} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src={rooms.rooms[5].acf.room.images[0].image1.url} />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <img src={e.acf.room.images[0].image3.url} />
-                    </SwiperSlide> */}
             </Swiper>
           </div>
           <div className="room-desc-info" id="checkout-roomdescinfo">
@@ -120,12 +112,7 @@ export function Summary({ posts, book, setBook, al }) {
                     : rooms.rooms.acf.roomal.shortdesc}
                 </p>
               </div>
-              <div className="price-night-desktop">
-                {/* <h4 id="price">{rooms.rooms.acf.room.room_price}</h4> */}
-                {/* <img src={e.acf.room.images[0].image1.url} /> */}
-
-                {/* <p id="nights">{rooms.rooms.acf.room.personnight}</p> */}
-              </div>
+              <div className="price-night-desktop"></div>
             </div>
             <div className="icon-info">
               {!al
@@ -148,9 +135,6 @@ export function Summary({ posts, book, setBook, al }) {
                   ))
                 : ""}
             </div>
-            {/* <p className="rooms-p-desc" style={{ color: "#575757" }}>
-              {rooms.rooms.acf.room.longdesc}
-            </p> */}
 
             <div className="checkoutroom-buttons">
               <div className="price-night" style={{ textAlign: "left" }}>
@@ -163,7 +147,7 @@ export function Summary({ posts, book, setBook, al }) {
                     }}
                   >
                     <span style={{ fontSize: "22px" }}>Total:</span>{" "}
-                    {parseInt(rooms.rooms.acf.room.room_price) * nights}€
+                    {parseInt(book.price)}€
                   </h4>
                 ) : (
                   <h4
@@ -174,19 +158,11 @@ export function Summary({ posts, book, setBook, al }) {
                     }}
                   >
                     <span style={{ fontSize: "22px" }}>Total:</span>{" "}
-                    {parseInt(rooms.rooms.acf.roomal.room_price) * nights}€
+                    {parseInt(book.price)}€
                   </h4>
                 )}
-                {/* <p>{rooms.rooms.acf.room.personnight}</p> */}
               </div>
-              <div className="book-button">
-                {/* <button className="default-button">
-                  {rooms.rooms.acf.room.button}
-                </button> */}
-              </div>
-              {/* <div className="details-button">
-                    <a href="">View</a>
-                  </div> */}
+              <div className="book-button"></div>
             </div>
           </div>
         </div>

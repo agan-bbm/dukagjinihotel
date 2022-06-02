@@ -111,8 +111,8 @@ function App() {
   // console.log("BOOKING INFOOO", book);
   // console.log("-----------------------------");
 
-  console.log(state.posts);
-  console.log(peja);
+  // console.log(state.posts);
+  // console.log(peja);
 
   if (state.isLoaded === false) return <Loader2 />;
   else {

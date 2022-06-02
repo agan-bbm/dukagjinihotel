@@ -69,6 +69,7 @@ export function Userdetails({ formData, setFormData, book, al }) {
       setFormData({ ...formData, lastNameValid: true, lastName: username });
     }
   };
+  console.log(book);
   return (
     <>
       <div className="checkout-form">

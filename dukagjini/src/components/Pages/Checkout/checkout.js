@@ -34,6 +34,7 @@ function Checkout({ posts, book, setBook, al }) {
             setFormData={setFormData}
             reservationId={reservationId}
             al={al}
+            book={book}
           />
         );
       case 1:
@@ -122,6 +123,7 @@ function Checkout({ posts, book, setBook, al }) {
         f
       )
       .then((res) => {
+        console.log(res);
         setReservationId(res.data);
         document.getElementById("confirmReservationEmail").click();
 
