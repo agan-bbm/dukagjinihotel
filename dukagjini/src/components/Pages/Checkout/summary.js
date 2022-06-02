@@ -179,18 +179,6 @@ export function Summary({ posts, book, setBook, al }) {
             <input name="payment-method" type="radio" checked="checked" />
           </label>
           <br />
-          {/* <label class="radioLabel">
-            <div className="imgAndText">
-              <img src={cash} />
-              <p>{posts.cash}</p>
-            </div>
-            <input name="payment-method" type="radio" />
-          </label>
-          <br />
-          <h2>Additional comments</h2>
-          <div class="commentLabel">
-            <textarea className="messageBox" name="message" required />
-          </div> */}
         </div>
       </div>
     </>
