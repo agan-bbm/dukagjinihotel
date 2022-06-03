@@ -28,9 +28,9 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
   });
   const [guests, setGuests] = useState(1);
   const [childAges, setChildAges] = useState({
-    child1: "",
-    child2: "",
-    child3: "",
+    child1: 7,
+    child2: 7,
+    child3: 7,
   });
 
   const [rooms, setRooms] = useState({
@@ -59,6 +59,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
   if (rooms.isLoaded) {
     maxPersons = rooms.rooms.acf.room.max_persons;
   }
+  console.log(maxPersons);
   // console.log(guests);
   // console.log(book);
 
@@ -154,7 +155,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         <select
           name="checkin"
           id=""
-          defaultValue={childAges.child1}
+          defaultValue={7}
           onChange={(e) => {
             // newArr.push(e.target.value);
             setChildAges({ ...childAges, child1: e.target.value });
@@ -171,7 +172,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           <select
             name="checkin"
             id=""
-            defaultValue={childAges.child1}
+            defaultValue={7}
             onChange={(e) => {
               // console.log("ages array", newArr);
 
@@ -184,7 +185,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           <select
             name="checkin"
             id=""
-            defaultValue={childAges.child2}
+            defaultValue={7}
             onChange={(e) => {
               // newArr.push(e.target.value);
               setChildAges({ ...childAges, child2: e.target.value });
@@ -201,7 +202,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           <select
             name="checkin"
             id=""
-            defaultValue={childAges.child1}
+            defaultValue={7}
             onChange={(e) => {
               // newArr.push(e.target.value);
               setChildAges({ ...childAges, child1: e.target.value });
@@ -212,7 +213,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           <select
             name="checkin"
             id=""
-            defaultValue={childAges.child2}
+            defaultValue={7}
             onChange={(e) => {
               // newArr.push(e.target.value);
               setChildAges({ ...childAges, child2: e.target.value });
@@ -223,7 +224,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           <select
             name="checkin"
             id=""
-            defaultValue={childAges.child3}
+            defaultValue={7}
             onChange={(e) => {
               // newArr.push(e.target.value);
               setChildAges({ ...childAges, child3: e.target.value });
@@ -242,6 +243,22 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
   console.log(guests);
   // console.log(childAges);
 
+  const returnPrice = () => {
+    if (rooms.isLoaded) {
+      if (parseInt(book.children) > 0) {
+        return nights === 0
+          ? rooms.rooms.acf.room.room_price
+          : parseInt(rooms.rooms.acf.room.room_price) *
+              nights *
+              (guests - getChildrenUnder6()) +
+              "€";
+      } else {
+        return nights === 0
+          ? rooms.rooms.acf.room.room_price
+          : parseInt(rooms.rooms.acf.room.room_price) * nights * guests + "€";
+      }
+    }
+  };
   return rooms.isLoaded ? (
     <>
       <div className="single-room-page">
@@ -400,18 +417,25 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                             ...reservation,
                             adult: e.target.value,
                             children:
-                              e.target.value === "4" ? 0 : book.children,
+                              parseInt(e.target.value) === parseInt(maxPersons)
+                                ? 0
+                                : book.children,
                           });
                           setBook({
                             ...book,
                             adult: e.target.value,
 
                             children:
-                              e.target.value === "4" ? 0 : book.children,
+                              // parseInt(e.target.value) === parseInt(maxPersons)
+                              //   ? 0
+                              //   : book.children
+                              0,
                             guests:
                               parseInt(reservation.adult) +
                               parseInt(reservation.children),
                           });
+                          setChildAges({ child1: "", child2: "", child3: "" });
+
                           setGuests(
                             parseInt(reservation.adult) +
                               parseInt(reservation.children)
@@ -433,6 +457,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                       <select
                         name="checkin"
                         id=""
+                        value={book.children}
                         defaultValue={book.children}
                         // value={book.children}
                         // defaultChecked={{ label: 0, value: 0 }}
@@ -481,12 +506,14 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                     <p className="total">Total</p>
 
                     <p className="total-price">
-                      {nights === 0
+                      {/* {nights === 0
                         ? rooms.rooms.acf.room.room_price
                         : parseInt(rooms.rooms.acf.room.room_price) *
                             nights *
                             (guests - getChildrenUnder6()) +
-                          "€"}
+                          "€"} */}
+
+                      {returnPrice()}
                     </p>
                   </div>
                   <div className="single-page-button">
@@ -504,12 +531,9 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                           roomName: rooms.rooms.acf.room.short_room_name,
                           longRoomName: rooms.rooms.acf.room.name,
                           nights: nights,
-                          guests: parseInt(guests),
-                          price:
-                            parseInt(rooms.rooms.acf.room.room_price) *
-                              nights *
-                              (guests - getChildrenUnder6()) +
-                            "€",
+                          guests:
+                            parseInt(guests) - parseInt(getChildrenUnder6()),
+                          price: returnPrice(),
                         });
                       }}
                     >
