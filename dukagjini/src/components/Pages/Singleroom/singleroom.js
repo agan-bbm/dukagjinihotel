@@ -400,14 +400,18 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                             ...reservation,
                             adult: e.target.value,
                             children:
-                              e.target.value === "4" ? 0 : book.children,
+                              parseInt(e.target.value) === maxPersons
+                                ? 0
+                                : book.children,
                           });
                           setBook({
                             ...book,
                             adult: e.target.value,
 
                             children:
-                              e.target.value === "4" ? 0 : book.children,
+                              parseInt(e.target.value) === maxPersons
+                                ? 0
+                                : book.children,
                             guests:
                               parseInt(reservation.adult) +
                               parseInt(reservation.children),
