@@ -100,6 +100,10 @@
 {
     display: block;
 }
+.peja-slider-texts{
+    width: 80%;
+    margin: 0 auto;
+}
     .peja-images{
         display: none;
     }
@@ -109,7 +113,13 @@
     }
 
     #peja-imagesdiv{
-        padding: 50px 0px;
+        padding: 10px 0px;
+    }
+    .peja-paragraph-4imgs {
+        width: auto;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 50px;
     }
     .custom-pages-container{
         padding: 0px !important;

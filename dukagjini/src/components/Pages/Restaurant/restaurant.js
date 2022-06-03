@@ -58,7 +58,7 @@ function Restaurant({ posts, al }) {
             </div>{" "}
           </div>{" "}
         </div>
-        <div
+        {/* <div
           className="restaurant-banner"
           style={{
             backgroundImage: `url(${posts.acf.restaurant.panorama.banner})`,
@@ -103,7 +103,7 @@ function Restaurant({ posts, al }) {
               </div>{" "}
             </div>{" "}
           </div>{" "}
-        </div>
+        </div> */}
         <div
           className="restaurant-banner"
           style={{
@@ -200,13 +200,13 @@ function Restaurant({ posts, al }) {
             </div>{" "}
           </div>{" "}
         </div>
-        <div
+        {/* <div
           className="restaurant-banner"
           style={{
             backgroundImage: `url(${posts.acf.restaurant.treni.banner})`,
           }}
-        ></div>{" "}
-        <div className="custom-pages-container">
+        ></div>{" "} */}
+        {/* <div className="custom-pages-container">
           <div className="containerWrapper">
             <h2 className="cp-heading"> {posts.acf.restaurant.treni.title} </h2>
             <div className="single-gallery">
@@ -246,7 +246,7 @@ function Restaurant({ posts, al }) {
               </div>{" "}
             </div>{" "}
           </div>{" "}
-        </div>
+        </div> */}
         <div
           className="restaurant-banner"
           style={{

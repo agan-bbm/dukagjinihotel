@@ -116,7 +116,7 @@
 }
 @media (max-width: 767px) {
   .home-gallery img {
-    width: 390px;
+    width: 100% !important;
     height: 250px;
 }
   .thirdSection{

@@ -1,0 +1,30 @@
+.singlespa .single-gallery{
+    
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+.singlespa .cp-textfield p{
+    width: 70%;
+}
+#fitness {
+    margin-left: 150px;
+}
+@media (max-width:767px){
+    .singlespa .single-gallery{
+    
+        display: flex;
+    justify-content: center;
+    align-items: center;
+        flex-direction: column;
+}
+#fitness {
+    margin-left: 0;
+}
+.singlespa .cp-textfield p{
+    width: 100%;
+}
+.custom-pages{
+    margin-top: 50px;
+}
+}

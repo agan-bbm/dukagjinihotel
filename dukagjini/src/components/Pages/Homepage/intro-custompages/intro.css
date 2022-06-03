@@ -1,0 +1,266 @@
+.intro{
+
+}
+.intro h2{
+    text-align: center;
+}
+.cp-home-intro {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0px;
+}
+#landscapeImg{
+    margin-top: 60px;
+}
+.cp-intro-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.cp-intro-right{
+    margin-left: 20px;
+}
+.cp-intro-right img{
+    width: 100%;
+}
+.minibanner{
+    display: flex;
+    padding-top: 50px;
+}
+.minibanner img{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.introBtn {
+    border: 1px solid #CA9E72;
+        color: #CA9E72;
+        background-color: transparent;
+}
+.peja-intro-title{
+    font-size: 28px;
+    color: #CA9E72;
+    margin: 0;
+}
+#introwellness .cp-intro-left{
+ width: 40%;
+}
+#introwellness .cp-intro-left p{
+    width: 400px;
+    margin-bottom: 10px !important;
+}
+#introwellness .cp-intro-right{
+    
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 60%;
+    
+}
+#introwellness .cp-intro-right p{
+    width: 400px;
+    margin: 0;
+}
+
+
+
+#introwellness .cp-intro-left img{
+    height: 100%;
+    width: 400px;
+    margin: 0;
+
+}
+#intropeja .cp-intro-left{
+    width: 60%;
+    margin-left: 30px;
+}
+#intropeja .cp-intro-right img{
+margin: 0;
+}
+#intropeja .cp-intro-left img{
+    
+    width: 100%;
+    height: 450px;
+
+}
+.i-restaurant, .i-wellness, .i-peja{
+    padding: 50px 0px;
+}
+.i-restaurant .cp-intro-right img{
+    height: 600px;
+}
+.i-restaurant .cp-intro-right{
+    width: 45%;
+}
+.i-restaurant .cp-intro-left{
+    width: 50%;
+}
+@media (min-width: 768px) and (max-width: 998px) {
+    .intro{
+        padding: 0px 25px;
+    }
+    .i-restaurant, .i-wellness, .i-peja{
+        padding:  0px;
+    }
+    .cp-home-intro {
+       
+        width: 100%;
+        padding: 0px;
+        flex-direction: column;
+    }
+    .i-restaurant .cp-intro-left{
+        width: auto;
+    }
+    .i-restaurant .cp-intro-right {
+        width: auto;
+        margin: 0;
+        margin: 10px 0px;
+    }
+    .i-restaurant .cp-intro-right img {
+        height: auto;
+        width: 100% !important;
+    }
+    .minibanner {
+        display: flex;
+        padding-top: 25px;
+    }
+    .minibanner img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    #introwellness .cp-intro-left {
+        width: auto;
+    }
+    #introwellness .cp-intro-left img {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        order: 2;
+    }
+    #introwellness .cp-intro-left p {
+        width: auto;
+        margin-bottom: auto;
+    }
+    #introwellness .cp-intro-right {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: auto;
+    }
+    #introwellness .cp-intro-right p {
+        width: auto;
+        margin: 20px 0px;
+    }
+    .cp-intro-right {
+        margin-left: 0;
+    }
+    #intropeja .cp-intro-right img {
+        width: 100%;
+        margin-top: 25px !important;
+    }
+  
+    #intropeja .cp-intro-left {
+        width: auto;
+        margin-left: 0;
+    }
+    #intropeja .cp-intro-left img {
+        width: 100%;
+        height: auto;
+    }
+    #landscapeImg{
+        margin-top: 25px;
+    
+    }
+    .i-wellness .cp-intro-right img{
+        margin-top: 20px;
+    }
+}
+@media(max-width:767px){
+    .i-restaurant, .i-wellness, .i-peja{
+        padding:  0px;
+    }
+    .cp-home-intro {
+       
+        width: 100%;
+        padding: 0px;
+        flex-direction: column;
+    }
+    .i-restaurant .cp-intro-left{
+        width: auto;
+    }
+    .i-restaurant .cp-intro-right {
+        width: auto;
+        margin: 0;
+        margin: 10px 0px;
+    }
+    .i-restaurant .cp-intro-right img {
+        height: auto;
+        width: 100% !important;
+    }
+    .peja-intro-title{
+        font-size: 28px;
+        color: #CA9E72;
+        margin-top: 10px ;
+        margin-bottom: 0;
+    }
+    .minibanner {
+        display: flex;
+        padding-top: 25px;
+    }
+    .minibanner img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    #introwellness .cp-intro-left {
+        width: auto;
+    }
+    #introwellness .cp-intro-left img {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        order: 2;
+    }
+    #introwellness .cp-intro-left p {
+        width: auto;
+        margin-bottom: auto;
+    }
+    #introwellness .cp-intro-right {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: auto;
+    }
+    #introwellness .cp-intro-right p {
+        width: auto;
+        margin: 20px 0px;
+    }
+    .cp-intro-right {
+        margin-left: 0;
+    }
+    #intropeja .cp-intro-right img {
+        width: 100%;
+        margin-top: 25px !important;
+    }
+  
+    #intropeja .cp-intro-left {
+        width: auto;
+        margin-left: 0;
+    }
+    #intropeja .cp-intro-left img {
+        width: 100%;
+        height: auto;
+    }
+    .i-peja .cp-home-intro{
+        flex-direction: column-reverse;
+    }
+    #landscapeImg{
+        margin-top: 25px;
+    
+    }
+    .i-wellness .cp-intro-right img{
+        margin-top: 20px;
+    }
+}

@@ -9,8 +9,10 @@ import FifthSection from "../components/Pages/Homepage/FifthSection/FifthSection
 import SixthSection from "../components/Pages/Homepage/SixthSection/SixthSection";
 import "./homepage.css";
 import Faq from "../components/Pages/Homepage/Faq/Faq";
+import Intro from "../components/Pages/Homepage/intro-custompages/intro";
 
 function Homepage({ posts, book, setBook, al }) {
+  console.log(posts);
   return (
     <>
       <div className="homepage">
@@ -24,8 +26,10 @@ function Homepage({ posts, book, setBook, al }) {
         <ThirdSection posts={posts.acf.thirdbanner} al={al} />
 
         <FourthSection posts={posts} al={al} />
+        <Intro posts={posts} al={al}></Intro>
         <FifthSection posts={posts.acf.sixthbanner} />
         <SixthSection posts={posts} />
+
         <Faq posts={posts.acf.faqs} />
       </div>
     </>

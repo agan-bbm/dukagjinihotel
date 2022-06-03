@@ -181,7 +181,7 @@ function App() {
             ></Route>
             <Route
               path="/wedding"
-              element={<Wedding posts={wedding}></Wedding>}
+              element={<Wedding posts={wedding} al={al}></Wedding>}
             ></Route>
             <Route path="/peja" element={<Peja posts={peja}></Peja>}></Route>
 
