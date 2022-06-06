@@ -2,16 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./intro.css";
 
-function Intro({ posts }) {
+function Intro({ posts, al }) {
   return (
     <>
       <div className="intro">
         <div className="i-restaurant">
-          <h2>{posts.acf.introhome.restaurant.title}</h2>
+          {/* <h2>{posts.acf.introhome.restaurant.title}</h2> */}
           <div className="containerWrapper">
             <div className="cp-home-intro">
               <div className="cp-intro-left">
-                <p>{posts.acf.introhome.restaurant.paragraph}</p>
+                <p>
+                  {!al
+                    ? posts.acf.introhome.restaurant.paragraph
+                    : posts.acf.introhomeal.restaurant.paragraph}
+                </p>
                 <Link to="/restaurant">
                   <button className="introBtn default-button">
                     View Restaurants
@@ -20,80 +24,159 @@ function Intro({ posts }) {
 
                 <img
                   id="landscapeImg"
-                  src={posts.acf.introhome.restaurant.imagelandscape}
+                  src={
+                    !al
+                      ? posts.acf.introhome.restaurant.imagelandscape
+                      : posts.acf.introhomeal.restaurant.imagelandscap
+                  }
                   alt=""
                 />
               </div>
               <div className="cp-intro-right">
                 <img
-                  src={posts.acf.introhome.restaurant.imageportrait}
+                  src={
+                    !al
+                      ? posts.acf.introhome.restaurant.imageportrait
+                      : posts.acf.introhomeal.restaurant.imageportrait
+                  }
                   alt=""
                 />
-                <p>{posts.acf.introhome.restaurant.miniparagraph}</p>
+                <p>
+                  {!al
+                    ? posts.acf.introhome.restaurant.miniparagraph
+                    : posts.acf.introhomeal.restaurant.miniparagraph}
+                </p>
               </div>
             </div>
           </div>
           <div className="minibanner">
             {" "}
-            <img src={posts.acf.introhome.restaurant.minibanner} alt="" />
+            <img
+              src={
+                !al
+                  ? posts.acf.introhome.restaurant.minibanner
+                  : posts.acf.introhomeal.restaurant.minibanner
+              }
+              alt=""
+            />
           </div>
         </div>
 
         <div className="i-wellness">
-          <h2>{posts.acf.introhome.wellness.title}</h2>
+          <h2>
+            {!al
+              ? posts.acf.introhome.wellness.title
+              : posts.acf.introhomeal.wellness.title}
+          </h2>
           <div className="containerWrapper" id="introwellness">
             <div className="cp-home-intro">
               <div className="cp-intro-left">
                 <img
                   id="landscapeImg"
-                  src={posts.acf.introhome.wellness.imageportrait}
+                  src={
+                    !al
+                      ? posts.acf.introhome.wellness.imageportrait
+                      : posts.acf.introhomeal.wellness.imageportrait
+                  }
                   alt=""
                 />
-                <p>{posts.acf.introhome.wellness.paragraph}</p>
+                <p>
+                  {!al
+                    ? posts.acf.introhome.wellness.paragraph
+                    : posts.acf.introhomeal.wellness.paragraph}
+                </p>
               </div>
               <div className="cp-intro-right">
-                <p>{posts.acf.introhome.wellness.miniparagraph}</p>
+                <p>
+                  {!al
+                    ? posts.acf.introhome.wellness.miniparagraph
+                    : posts.acf.introhomeal.wellness.miniparagraph}
+                </p>
                 <Link to="/spa">
                   <button className="introBtn default-button">
                     Wellness Center
                   </button>
                 </Link>
 
-                <img src={posts.acf.introhome.wellness.imagelandscape} alt="" />
+                <img
+                  src={
+                    !al
+                      ? posts.acf.introhome.wellness.imagelandscape
+                      : posts.acf.introhomeal.wellness.imagelandscape
+                  }
+                  alt=""
+                />
               </div>
             </div>
           </div>
           <div className="minibanner">
             {" "}
-            <img src={posts.acf.introhome.wellness.minibanner} alt="" />
+            <img
+              src={
+                !al
+                  ? posts.acf.introhome.wellness.minibanner
+                  : posts.acf.introhomeal.wellness.minibanner
+              }
+              alt=""
+            />
           </div>
         </div>
 
         <div className="i-wellness">
-          <h2>{posts.acf.introhome.weddings.title}</h2>
+          <h2>
+            {!al
+              ? posts.acf.introhome.weddings.title
+              : posts.acf.introhomeal.weddings.title}
+          </h2>
           <div className="containerWrapper" id="introwellness">
             <div className="cp-home-intro" id="weddingintrodiv">
               <div className="cp-intro-left">
                 <img
                   id="landscapeImg"
-                  src={posts.acf.introhome.weddings.imageportrait}
+                  src={
+                    !al
+                      ? posts.acf.introhome.weddings.imageportrait
+                      : posts.acf.introhomeal.weddings.imageportrait
+                  }
                   alt=""
                 />
-                <p>{posts.acf.introhome.weddings.paragraph}</p>
+                <p>
+                  {!al
+                    ? posts.acf.introhome.weddings.paragraph
+                    : posts.acf.introhomeal.weddings.paragraph}
+                </p>
               </div>
               <div className="cp-intro-right">
-                <p>{posts.acf.introhome.weddings.miniparagraph}</p>
+                <p>
+                  {!al
+                    ? posts.acf.introhome.weddings.miniparagraph
+                    : posts.acf.introhomeal.weddings.miniparagraph}
+                </p>
                 <Link to="/wedding">
                   <button className="introBtn default-button">weddings</button>
                 </Link>
 
-                <img src={posts.acf.introhome.weddings.imagelandscape} alt="" />
+                <img
+                  src={
+                    !al
+                      ? posts.acf.introhome.weddings.imagelandscape
+                      : posts.acf.introhomeal.weddings.imagelandscape
+                  }
+                  alt=""
+                />
               </div>
             </div>
           </div>
           <div className="minibanner">
             {" "}
-            <img src={posts.acf.introhome.weddings.minibanner} alt="" />
+            <img
+              src={
+                !al
+                  ? posts.acf.introhome.weddings.minibanner
+                  : posts.acf.introhomeal.weddings.minibanner
+              }
+              alt=""
+            />
           </div>
         </div>
         <div className="i-peja">
@@ -102,7 +185,11 @@ function Intro({ posts }) {
               <div className="cp-intro-right">
                 <img
                   id="landscapeImg"
-                  src={posts.acf.introhome.peja.imageportrait}
+                  src={
+                    !al
+                      ? posts.acf.introhome.peja.imageportrait
+                      : posts.acf.introhomeal.peja.imageportrait
+                  }
                   alt=""
                 />
               </div>
@@ -116,9 +203,20 @@ function Intro({ posts }) {
                     Wellness Center
                   </button>
                 </Link>
-                <p>{posts.acf.introhome.peja.paragraph}</p>
+                <p>
+                  {!al
+                    ? posts.acf.introhome.peja.paragraph
+                    : posts.acf.introhomeal.peja.paragraph}
+                </p>
 
-                <img src={posts.acf.introhome.peja.imagelandscape} alt="" />
+                <img
+                  src={
+                    !al
+                      ? posts.acf.introhome.peja.imagelandscape
+                      : posts.acf.introhomeal.peja.imagelandscape
+                  }
+                  alt=""
+                />
               </div>
             </div>
           </div>

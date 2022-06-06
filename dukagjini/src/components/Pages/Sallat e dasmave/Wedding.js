@@ -159,7 +159,7 @@ function Wedding({ posts, al }) {
                   <img src={posts.acf.Dasmat.conferencehall.image1} alt="" />
                 </div>{" "}
               </div>{" "}
-              <div className="cp-images">
+              <div className="cp-images" id="conf-img-top">
                 <div className="cp-img">
                   <img
                     className="img-top"

@@ -129,7 +129,7 @@ function Navbar({ al, setAl }) {
             }
           >
             {" "}
-            <span>{al ? "Sallat e dasmave" : "Wedding Rooms"}</span>
+            <span>{al ? "Sallat e dasmave" : "Venues"}</span>
           </NavLink>
           <NavLink
             to="/peja"
@@ -144,7 +144,7 @@ function Navbar({ al, setAl }) {
             }
           >
             {" "}
-            <span>{al ? "Peja" : "Peja"}</span>
+            <span>{al ? "Eksploroni Pejën" : "Explore Peja"}</span>
           </NavLink>
           <NavLink
             to="/Spa"
@@ -159,7 +159,7 @@ function Navbar({ al, setAl }) {
             }
           >
             {" "}
-            <span>{al ? "Spa & Pishina" : "Spa & Pool"}</span>
+            <span>{al ? "Shëndet dhe mirëqenie" : "Wellness & Fitness"}</span>
           </NavLink>
           <NavLink
             to="/restaurant"
