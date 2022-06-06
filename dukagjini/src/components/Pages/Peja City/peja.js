@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "./peja.css";
 import { Navigation } from "swiper";
 
-function Peja({ posts }) {
+function Peja({ posts, al }) {
   console.log(posts);
   return (
     <>
@@ -17,7 +17,7 @@ function Peja({ posts }) {
         ></div>
         <div className="custom-pages-container">
           <h2 id="pejaheading" className="cp-heading">
-            {posts.acf.peja.heading}
+            {!al ? posts.acf.peja.heading : posts.acf.pejashqip.heading}
           </h2>
 
           <div>
@@ -50,8 +50,14 @@ function Peja({ posts }) {
                         <img src={e.image} alt="" />
                       </div>
                       <div className="peja-slider-texts">
-                        <h2>{e.heading}</h2>
-                        <p>{e.paragraph}</p>
+                        <h2>
+                          {!al ? e.heading : posts.acf.pejashqip.slider.heading}
+                        </h2>
+                        <p>
+                          {!al
+                            ? e.paragraph
+                            : posts.acf.pejashqip.slider.paragraph}
+                        </p>
                       </div>
                     </div>
                   </SwiperSlide>
@@ -60,7 +66,7 @@ function Peja({ posts }) {
             </Swiper>
             <div className="containerWrapper" id="peja-imagesdiv">
               <p className="peja-paragraph-4imgs" id="peja-deskt-paragraph">
-                {posts.acf.peja.text}
+                {!al ? posts.acf.peja.text : posts.acf.pejashqip.text}
               </p>
 
               <div className="peja-images">

@@ -4,3 +4,38 @@
     /* align-items: center; */
     justify-content: center;
 }
+
+#weddingid .cp-bottom-p{
+    text-align: left;
+    width: 100%;
+    padding: 0;
+}
+#weddingid .single-gallery{
+    padding: 50px 0px;
+}
+#weddingid .cp-images{
+    padding-top: 0px !important;
+}
+#weddingid .img-top{
+    margin: 0;
+}
+@media (min-width:998px){
+#weddingid .img-right-padd {
+    padding-right: 102px;
+    padding-top: 100px;
+}
+}
+#weddTitleMain{
+    margin-top: 100px;
+}
+@media(max-width:767px){
+    #weddTitleMain{
+        margin-top: 50px;
+    }
+    #weddingid .single-gallery{
+        padding: 25px 0px;
+    }
+    #weddingid .cp-bottom-p{
+        text-align: center;
+    }
+}

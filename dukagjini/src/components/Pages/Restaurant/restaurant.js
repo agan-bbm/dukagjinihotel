@@ -9,7 +9,7 @@ function Restaurant({ posts, al }) {
         <div
           className="restaurant-banner"
           style={{
-            backgroundImage: `url(${posts.acf.restaurant.restorani22.banner})`,
+            backgroundImage: `url(${posts.acf.restaurant.restorantet.banner})`,
           }}
         ></div>{" "}
         <div className="custom-pages-container">
@@ -17,34 +17,39 @@ function Restaurant({ posts, al }) {
             <h2 className="cp-heading">
               {" "}
               {al
-                ? posts.acf.restaurantal.restorani22.title
-                : posts.acf.restaurant.restorani22.title}{" "}
+                ? posts.acf.restaurantal.restorantet.title
+                : posts.acf.restaurant.restorantet.title}{" "}
             </h2>
             <div className="single-gallery">
               <div className="cp-textfield">
                 <div className="cp-p-cont">
                   <p className="cp-par-title">
                     {" "}
-                    {posts.acf.restaurant.restorani22.para_title}{" "}
+                    {posts.acf.restaurant.restorantet.para_title}{" "}
                   </p>{" "}
-                  <p> {posts.acf.restaurant.restorani22.paragraph} </p>{" "}
+                  <p>
+                    {" "}
+                    {!al
+                      ? posts.acf.restaurant.restorantet.paragraph
+                      : posts.acf.restaurantal.restorantet.paragraph}{" "}
+                  </p>{" "}
                 </div>{" "}
                 <div>
-                  <img src={posts.acf.restaurant.restorani22.image1} alt="" />
+                  <img src={posts.acf.restaurant.restorantet.image1} alt="" />
                 </div>{" "}
               </div>{" "}
               <div className="cp-images">
                 <div className="cp-img">
                   <img
                     className="img-top"
-                    src={posts.acf.restaurant.restorani22.image2}
+                    src={posts.acf.restaurant.restorantet.image2}
                     alt=""
                   />
                 </div>{" "}
                 <div className="cp-img">
                   <img
                     className="img-right-padd"
-                    src={posts.acf.restaurant.restorani22.image3}
+                    src={posts.acf.restaurant.restorantet.image3}
                     alt=""
                   />
                 </div>{" "}
@@ -52,7 +57,7 @@ function Restaurant({ posts, al }) {
               <div className="cp-bottom">
                 <p className="cp-bottom-p">
                   {" "}
-                  {posts.acf.restaurant.restorani22.undertext}{" "}
+                  {posts.acf.restaurant.restorantet.undertext}{" "}
                 </p>{" "}
               </div>{" "}
             </div>{" "}
@@ -107,40 +112,45 @@ function Restaurant({ posts, al }) {
         <div
           className="restaurant-banner"
           style={{
-            backgroundImage: `url(${posts.acf.restaurant.sallabardhe.banner})`,
+            backgroundImage: `url(${posts.acf.restaurant.restaurant22.banner})`,
           }}
         ></div>{" "}
         <div className="custom-pages-container">
           <div className="containerWrapper">
             <h2 className="cp-heading">
               {" "}
-              {posts.acf.restaurant.sallabardhe.title}{" "}
+              {posts.acf.restaurant.restaurant22.title}{" "}
             </h2>
             <div className="single-gallery">
               <div className="cp-textfield">
                 <div className="cp-p-cont">
                   <p className="cp-par-title">
                     {" "}
-                    {posts.acf.restaurant.sallabardhe.para_title}{" "}
+                    {posts.acf.restaurant.restaurant22.para_title}{" "}
                   </p>{" "}
-                  <p> {posts.acf.restaurant.sallabardhe.paragraph} </p>{" "}
+                  <p>
+                    {" "}
+                    {!al
+                      ? posts.acf.restaurant.restaurant22.paragraph
+                      : posts.acf.restaurantal.restaurant22.paragraph}{" "}
+                  </p>{" "}
                 </div>{" "}
                 <div>
-                  <img src={posts.acf.restaurant.sallabardhe.image1} alt="" />
+                  <img src={posts.acf.restaurant.restaurant22.image1} alt="" />
                 </div>{" "}
               </div>{" "}
               <div className="cp-images">
                 <div className="cp-img">
                   <img
                     className="img-top"
-                    src={posts.acf.restaurant.sallabardhe.image2}
+                    src={posts.acf.restaurant.restaurant22.image2}
                     alt=""
                   />
                 </div>{" "}
                 <div className="cp-img">
                   <img
                     className="img-right-padd"
-                    src={posts.acf.restaurant.sallabardhe.image3}
+                    src={posts.acf.restaurant.restaurant22.image3}
                     alt=""
                   />
                 </div>{" "}
@@ -148,7 +158,7 @@ function Restaurant({ posts, al }) {
               <div className="cp-bottom">
                 <p className="cp-bottom-p">
                   {" "}
-                  {posts.acf.restaurant.sallabardhe.undertext}{" "}
+                  {posts.acf.restaurant.restaurant22.undertext}{" "}
                 </p>{" "}
               </div>{" "}
             </div>{" "}
@@ -173,7 +183,12 @@ function Restaurant({ posts, al }) {
                     {" "}
                     {posts.acf.restaurant.shisha.para_title}{" "}
                   </p>{" "}
-                  <p> {posts.acf.restaurant.shisha.paragraph} </p>{" "}
+                  <p>
+                    {" "}
+                    {!al
+                      ? posts.acf.restaurant.shisha.paragraph
+                      : posts.acf.restaurantal.shisha.paragraph}{" "}
+                  </p>{" "}
                 </div>{" "}
                 <div>
                   <img src={posts.acf.restaurant.shisha.image1} alt="" />
@@ -266,7 +281,12 @@ function Restaurant({ posts, al }) {
                     {" "}
                     {posts.acf.restaurant.veranda.para_title}{" "}
                   </p>{" "}
-                  <p> {posts.acf.restaurant.veranda.paragraph} </p>{" "}
+                  <p>
+                    {" "}
+                    {!al
+                      ? posts.acf.restaurant.veranda.paragraph
+                      : posts.acf.restaurantal.veranda.paragraph}{" "}
+                  </p>{" "}
                 </div>{" "}
                 <div>
                   <img src={posts.acf.restaurant.veranda.image1} alt="" />

@@ -29,7 +29,8 @@
     padding-top: 50px;
 }
 .minibanner img{
-    max-width: 1200px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
 }
 .introBtn {
@@ -95,6 +96,20 @@ margin: 0;
 }
 .i-restaurant .cp-intro-left{
     width: 50%;
+}
+#weddingintrodiv{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+#weddingintrodiv .cp-intro-left{
+    width: auto;
+}
+#weddingintrodiv .cp-intro-right {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
 }
 @media (min-width: 768px) and (max-width: 998px) {
     .intro{
@@ -176,8 +191,13 @@ margin: 0;
     .i-wellness .cp-intro-right img{
         margin-top: 20px;
     }
+    #weddingintrodiv {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
 }
 @media(max-width:767px){
+
     .i-restaurant, .i-wellness, .i-peja{
         padding:  0px;
     }
@@ -259,6 +279,10 @@ margin: 0;
     #landscapeImg{
         margin-top: 25px;
     
+    }
+    #weddingintrodiv {
+        flex-direction: column-reverse;
+        justify-content: space-between;
     }
     .i-wellness .cp-intro-right img{
         margin-top: 20px;

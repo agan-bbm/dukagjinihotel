@@ -68,6 +68,34 @@ function Intro({ posts }) {
             <img src={posts.acf.introhome.wellness.minibanner} alt="" />
           </div>
         </div>
+
+        <div className="i-wellness">
+          <h2>{posts.acf.introhome.weddings.title}</h2>
+          <div className="containerWrapper" id="introwellness">
+            <div className="cp-home-intro" id="weddingintrodiv">
+              <div className="cp-intro-left">
+                <img
+                  id="landscapeImg"
+                  src={posts.acf.introhome.weddings.imageportrait}
+                  alt=""
+                />
+                <p>{posts.acf.introhome.weddings.paragraph}</p>
+              </div>
+              <div className="cp-intro-right">
+                <p>{posts.acf.introhome.weddings.miniparagraph}</p>
+                <Link to="/wedding">
+                  <button className="introBtn default-button">weddings</button>
+                </Link>
+
+                <img src={posts.acf.introhome.weddings.imagelandscape} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="minibanner">
+            {" "}
+            <img src={posts.acf.introhome.weddings.minibanner} alt="" />
+          </div>
+        </div>
         <div className="i-peja">
           <div className="containerWrapper" id="intropeja">
             <div className="cp-home-intro">

@@ -3,6 +3,7 @@
     display: flex;
 justify-content: center;
 align-items: center;
+padding: 50px 0px;
 }
 .singlespa .cp-textfield p{
     width: 70%;
@@ -10,12 +11,24 @@ align-items: center;
 #fitness {
     margin-left: 150px;
 }
+#spa-sauna{
+    flex-direction: row-reverse;
+   
+    
+}
+#spa-sauna .cp-textfield p{
+    margin-left: 30%;
+}
+#fitness p {
+    width: 75%;
+}
 @media (max-width:767px){
     .singlespa .single-gallery{
     
         display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0px;
         flex-direction: column;
 }
 #fitness {
@@ -25,6 +38,15 @@ align-items: center;
     width: 100%;
 }
 .custom-pages{
-    margin-top: 50px;
+    /* margin-top: 50px; */
+}
+#spa-sauna{
+    flex-direction: column;
+   
+    
+}
+#spa-sauna .cp-textfield p{
+    margin-left: 0;
+    width: 100%;
 }
 }

@@ -174,7 +174,10 @@ function App() {
               path="/update-reservation"
               element={<UpdateReservation book={book} />}
             ></Route>
-            <Route path="/spa" element={<Spa posts={spa}></Spa>}></Route>
+            <Route
+              path="/spa"
+              element={<Spa posts={spa} al={al}></Spa>}
+            ></Route>
             <Route
               path="/restaurant"
               element={<Restaurant posts={restaurant} al={al}></Restaurant>}
@@ -183,7 +186,10 @@ function App() {
               path="/wedding"
               element={<Wedding posts={wedding} al={al}></Wedding>}
             ></Route>
-            <Route path="/peja" element={<Peja posts={peja}></Peja>}></Route>
+            <Route
+              path="/peja"
+              element={<Peja posts={peja} al={al}></Peja>}
+            ></Route>
 
             <Route
               path="/delete-reservation"
