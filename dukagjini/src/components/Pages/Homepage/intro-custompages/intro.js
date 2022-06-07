@@ -196,11 +196,11 @@ function Intro({ posts, al }) {
                 />
               </div>
               <div className="cp-intro-left">
-                <p className="peja-intro-title">
+                <h2 className="peja-intro-title">
                   {!al
                     ? "Things to do in Peja"
                     : "Gjëra që mund të bëni në Pejë"}
-                </p>
+                </h2>
                 <Link to="/peja">
                   <button
                     style={{ marginTop: "10px" }}
