@@ -1,8 +1,16 @@
+@font-face {
+    font-family: "Ogg";
+    src: url("../../../Shared/Fonts/Ogg-Roman.otf") format("otf");
+}
+
 .intro{
 
 }
 .intro h2{
     text-align: center;
+    font-family: "Ogg";
+    font-weight: 400 !important;
+    font-size: 36px;
 }
 .cp-home-intro {
     display: flex;
@@ -52,11 +60,14 @@
 
 }
 #weddLandImg{
-    height: 87%;
+    height: 100%;
 }
 /* #weddingintrodiv{
     height: 650px;
 } */
+#weddingintrodiv .cp-intro-right img{
+    height: 450px !important; 
+}
 #introwellness .cp-intro-left p{
     width: 400px;
     margin-bottom: 10px !important;
@@ -101,6 +112,16 @@ margin-top: 0;
 }
 .i-restaurant, .i-wellness, .i-peja{
     padding: 50px 0px;
+}
+.i-wellness{
+    padding-top: 0;
+}
+
+.i-peja{
+    padding-top: 0;
+}
+.i-restaurant{
+    padding-top: 0;
 }
 .i-restaurant .cp-intro-right img{
     height: 600px;
@@ -220,7 +241,15 @@ margin-top: 0;
     }
 }
 @media(max-width:767px){
-
+    .intro h2{
+        text-align: center;
+        font-family: "Ogg";
+        font-weight: 400 !important;
+        font-size: 28px;
+    }
+    #wellnes-mainheading{
+        margin-bottom: 0;
+    }
     .i-restaurant, .i-wellness, .i-peja{
         padding:  0px;
     }

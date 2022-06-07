@@ -7,7 +7,7 @@ function Intro({ posts, al }) {
     <>
       <div className="intro">
         <div className="i-restaurant">
-          {/* <h2>{posts.acf.introhome.restaurant.title}</h2> */}
+          <h2>{!al ? posts.acf.introhome.restaurant.title : "RESTAURANTS"}</h2>
           <div className="containerWrapper">
             <div className="cp-home-intro">
               <div className="cp-intro-left">
@@ -27,7 +27,7 @@ function Intro({ posts, al }) {
                   src={
                     !al
                       ? posts.acf.introhome.restaurant.imagelandscape
-                      : posts.acf.introhomeal.restaurant.imagelandscap
+                      : posts.acf.introhomeal.restaurant.imagelandscape
                   }
                   alt=""
                 />
@@ -63,7 +63,7 @@ function Intro({ posts, al }) {
         </div>
 
         <div className="i-wellness">
-          <h2>
+          <h2 id="wellnes-mainheading">
             {!al
               ? posts.acf.introhome.wellness.title
               : posts.acf.introhomeal.wellness.title}
@@ -94,7 +94,7 @@ function Intro({ posts, al }) {
                 </p>
                 <Link to="/spa">
                   <button className="introBtn default-button">
-                    Wellness Center
+                    {!al ? "Wellness & Fitness" : "Mirëqenie & Shëndet"}
                   </button>
                 </Link>
 
@@ -153,7 +153,9 @@ function Intro({ posts, al }) {
                     : posts.acf.introhomeal.weddings.miniparagraph}
                 </p>
                 <Link to="/wedding">
-                  <button className="introBtn default-button">weddings</button>
+                  <button className="introBtn default-button">
+                    {!al ? "Venues" : "Sallat tona"}
+                  </button>
                 </Link>
 
                 <img
@@ -194,13 +196,17 @@ function Intro({ posts, al }) {
                 />
               </div>
               <div className="cp-intro-left">
-                <p className="peja-intro-title">Things to do in Peja</p>
+                <p className="peja-intro-title">
+                  {!al
+                    ? "Things to do in Peja"
+                    : "Gjëra që mund të bëni në Pejë"}
+                </p>
                 <Link to="/peja">
                   <button
                     style={{ marginTop: "10px" }}
                     className="introBtn default-button"
                   >
-                    Wellness Center
+                    {!al ? "Explore Peja" : "Eksploroni Pejën"}
                   </button>
                 </Link>
                 <p>

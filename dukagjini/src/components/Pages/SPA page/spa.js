@@ -91,7 +91,7 @@ export function Spa({ posts, al }) {
               <div className="cp-textfield" id="fitness">
                 <div>
                   <p className="cp-par-title">
-                    {posts.acf.spa.wellnes.mainheading}
+                    {!al ? posts.acf.spa.wellnes.mainheading : "PALESTRA"}
                   </p>
 
                   <p>

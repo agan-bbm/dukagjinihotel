@@ -129,7 +129,7 @@ function Navbar({ al, setAl }) {
             }
           >
             {" "}
-            <span>{al ? "Sallat e dasmave" : "Venues"}</span>
+            <span>{al ? "Sallat tona" : "Venues"}</span>
           </NavLink>
           <NavLink
             to="/peja"
