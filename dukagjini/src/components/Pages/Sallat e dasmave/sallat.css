@@ -33,10 +33,10 @@
 }
 @media(max-width:767px){
     #weddTitleMain{
-        margin-top: 50px;
+        margin-top: 25px;
     }
     #weddingid .single-gallery{
-        padding: 25px 0px;
+        padding: 0px;
     }
     #weddingid .cp-bottom-p{
         text-align: center;

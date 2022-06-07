@@ -23,6 +23,7 @@
 }
 .cp-intro-right img{
     width: 100%;
+    /* height: 450px; */
 }
 .minibanner{
     display: flex;
@@ -46,6 +47,16 @@
 #introwellness .cp-intro-left{
  width: 40%;
 }
+#introwellness .cp-home-intro{
+    height: 650px;
+
+}
+#weddLandImg{
+    height: 87%;
+}
+/* #weddingintrodiv{
+    height: 650px;
+} */
 #introwellness .cp-intro-left p{
     width: 400px;
     margin-bottom: 10px !important;
@@ -60,7 +71,7 @@
     
 }
 #introwellness .cp-intro-right p{
-    width: 400px;
+    /* width: 400px; */
     margin: 0;
 }
 
@@ -68,8 +79,9 @@
 
 #introwellness .cp-intro-left img{
     height: 100%;
-    width: 400px;
+    /* width: 400px; */
     margin: 0;
+
 
 }
 #intropeja .cp-intro-left{
@@ -77,7 +89,9 @@
     margin-left: 30px;
 }
 #intropeja .cp-intro-right img{
-margin: 0;
+/* margin: 0; */
+height: 100%;
+margin-top: 0;
 }
 #intropeja .cp-intro-left img{
     
@@ -100,9 +114,10 @@ margin: 0;
 #weddingintrodiv{
     flex-direction: row-reverse;
     justify-content: space-between;
+    height: 650px;
 }
-#weddingintrodiv .cp-intro-left{
-    width: auto;
+#weddingintrodiv .cp-intro-left {
+    width: 40%;
 }
 #weddingintrodiv .cp-intro-right {
     margin-right: 20px;
@@ -194,6 +209,14 @@ margin: 0;
     #weddingintrodiv {
         flex-direction: column-reverse;
         justify-content: space-between;
+        height: auto;
+    }
+    #introwellness .cp-home-intro{
+        height: auto;
+    }
+    #weddingintrodiv .cp-intro-left {
+        width: 100%;
+        margin-top: 20px;
     }
 }
 @media(max-width:767px){
@@ -283,8 +306,19 @@ margin: 0;
     #weddingintrodiv {
         flex-direction: column-reverse;
         justify-content: space-between;
+        height: auto;
     }
     .i-wellness .cp-intro-right img{
+        margin-top: 20px;
+    }
+    #introwellness .cp-home-intro{
+        height: auto;
+    }
+    #weddingintrodiv .cp-intro-right{
+        width: 100%;
+    }
+    #weddingintrodiv .cp-intro-left {
+        width: 100%;
         margin-top: 20px;
     }
 }

@@ -128,11 +128,11 @@ function Intro({ posts, al }) {
               ? posts.acf.introhome.weddings.title
               : posts.acf.introhomeal.weddings.title}
           </h2>
-          <div className="containerWrapper" id="introwellness">
+          <div className="containerWrapper">
             <div className="cp-home-intro" id="weddingintrodiv">
               <div className="cp-intro-left">
                 <img
-                  id="landscapeImg"
+                  id="weddLandImg"
                   src={
                     !al
                       ? posts.acf.introhome.weddings.imageportrait

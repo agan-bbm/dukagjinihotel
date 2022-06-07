@@ -50,14 +50,8 @@ function Peja({ posts, al }) {
                         <img src={e.image} alt="" />
                       </div>
                       <div className="peja-slider-texts">
-                        <h2>
-                          {!al ? e.heading : posts.acf.pejashqip.slider.heading}
-                        </h2>
-                        <p>
-                          {!al
-                            ? e.paragraph
-                            : posts.acf.pejashqip.slider.paragraph}
-                        </p>
+                        <h2>{!al ? e.heading : e.headingal}</h2>
+                        <p>{!al ? e.paragraph : e.paragraphal}</p>
                       </div>
                     </div>
                   </SwiperSlide>
