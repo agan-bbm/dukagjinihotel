@@ -34,7 +34,7 @@ function Restaurant({ posts, al }) {
                       : posts.acf.restaurantal.restorantet.paragraph}{" "}
                   </p>{" "}
                 </div>{" "}
-                <div>
+                <div id="restFirstImg">
                   <img src={posts.acf.restaurant.restorantet.image1} alt="" />
                 </div>{" "}
               </div>{" "}
