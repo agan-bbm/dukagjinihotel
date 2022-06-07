@@ -52,6 +52,9 @@
   text-align: left !important;
     margin: 0;
 }
+#intropejaBtn{
+    margin-bottom: 10px;
+}
 #introwellness .cp-intro-left{
  width: 40%;
 }
@@ -97,7 +100,7 @@
 }
 #intropeja .cp-intro-left{
     width: 60%;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 #intropeja .cp-intro-right img{
 /* margin: 0; */
@@ -130,7 +133,8 @@ margin-top: 0;
     width: 45%;
 }
 .i-restaurant .cp-intro-left{
-    width: 50%;
+    width: 55%;
+    /* margin-right: 20px; */
 }
 #weddingintrodiv{
     flex-direction: row-reverse;
@@ -139,9 +143,10 @@ margin-top: 0;
 }
 #weddingintrodiv .cp-intro-left {
     width: 40%;
+    margin-left: 20px;
 }
 #weddingintrodiv .cp-intro-right {
-    margin-right: 20px;
+    margin-right: 0px !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -269,6 +274,7 @@ margin-top: 0;
     }
     .i-restaurant .cp-intro-left{
         width: auto;
+        margin-left: 0;
     }
     .i-restaurant .cp-intro-right {
         width: auto;

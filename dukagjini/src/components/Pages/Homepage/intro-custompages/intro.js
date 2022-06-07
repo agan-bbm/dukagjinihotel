@@ -204,19 +204,16 @@ function Intro({ posts, al }) {
                     ? "Things to do in Peja"
                     : "Gjëra që mund të bëni në Pejë"}
                 </h2>
-                <Link to="/peja">
-                  <button
-                    style={{ marginTop: "10px" }}
-                    className="introBtn default-button"
-                  >
-                    {!al ? "Explore Peja" : "Eksploroni Pejën"}
-                  </button>
-                </Link>
                 <p>
                   {!al
                     ? posts.acf.introhome.peja.paragraph
                     : posts.acf.introhomeal.peja.paragraph}
                 </p>
+                <Link to="/peja">
+                  <button id="intropejaBtn" className="introBtn default-button">
+                    {!al ? "Explore Peja" : "Eksploroni Pejën"}
+                  </button>
+                </Link>
 
                 <img
                   src={

@@ -178,7 +178,7 @@ function FourthSection({ posts, al }) {
           </div>
         </div>
         <div className="fourthContainer">
-          <div className="fourthSectionPart">
+          <div className="fourthSectionFliped">
             <div className="fourthSectionLeft">
               <img src={posts.acf.fifthbanner[0].fifthimage} />
             </div>
@@ -198,7 +198,7 @@ function FourthSection({ posts, al }) {
             </div>
           </div>
 
-          <div className="fourthSectionFliped">
+          <div className="fourthSectionPart">
             <div className="fourthSectionLeft">
               <img src={posts.acf.fifthbanner[1].fifthimage} />
             </div>
