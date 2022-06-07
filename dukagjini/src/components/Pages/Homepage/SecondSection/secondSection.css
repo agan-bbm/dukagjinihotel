@@ -2,7 +2,6 @@
     width: 100%;
     background-color: #F8F2EC;
     align-items: center;
-    padding-top: 20px;
     margin: 0 auto;
 }
 
@@ -49,6 +48,7 @@
     }
     .secondSectionHeader {
         width: 100% !important;
+        font-family: "Ogg";
     }
     .secondSectionLeft h2 {
         width: 40%;

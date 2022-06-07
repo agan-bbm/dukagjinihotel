@@ -6,11 +6,12 @@
 .intro{
 
 }
-.intro h2{
-    text-align: center;
+.intro h2 {
+    text-align: left;
     font-family: "Ogg";
     font-weight: 400 !important;
     font-size: 36px;
+    margin: 0;
 }
 .cp-home-intro {
     display: flex;
@@ -19,7 +20,7 @@
     padding: 20px 0px;
 }
 #landscapeImg{
-    margin-top: 60px;
+    margin-top: 10px;
 }
 .cp-intro-left{
     display: flex;
@@ -31,7 +32,7 @@
 }
 .cp-intro-right img{
     width: 100%;
-    /* height: 450px; */
+    height: 450px;
 }
 .minibanner{
     display: flex;
@@ -65,7 +66,7 @@
     height: 650px;
 } */
 #weddingintrodiv .cp-intro-right img{
-    height: 450px !important; 
+    height: 420px !important; 
 }
 #introwellness .cp-intro-left p{
     width: 400px;
@@ -243,14 +244,19 @@ margin-top: 0;
     .intro img{
         object-fit: cover;
     }
-    .intro h2{
-        text-align: center;
+    .intro h2 {
+        text-align: left;
         font-family: "Ogg";
         font-weight: 400 !important;
         font-size: 28px;
-    }
-    #wellnes-mainheading{
         margin-bottom: 0;
+    }
+    #wellnes-mainheading {
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+    #venues-heading{
+        margin-top: 15px;
     }
     .i-restaurant, .i-wellness, .i-peja{
         padding:  0px;
@@ -274,7 +280,7 @@ margin-top: 0;
         width: 100% !important;
     }
     .peja-intro-title{
-       text-align: center !important;
+     
         margin-top: 10px ;
         margin-bottom: 0;
     }
@@ -351,4 +357,5 @@ margin-top: 0;
         width: 100%;
         margin-top: 20px;
     }
+    
 }

@@ -19,7 +19,9 @@ export function Spa({ posts, al }) {
           }}
         >
           <div className="containerWrapper">
-            <h2 className="cp-heading">WELLNESS CENTER</h2>
+            <h2 className="cp-heading">
+              {!al ? "WELLNESS CENTER" : "MIRËQENIE & SHËNDET"}
+            </h2>
             <p>
               {!al
                 ? posts.acf.spa.wellnes.paragraph

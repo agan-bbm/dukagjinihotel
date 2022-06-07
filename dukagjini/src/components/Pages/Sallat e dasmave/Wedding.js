@@ -26,7 +26,7 @@ function Wedding({ posts, al }) {
                 : posts.acf.Dasmat.whitehall.title}{" "}
             </h2> */}
             <h2 className="cp-heading" id="weddTitleMain">
-              WEDDING HALL
+              {!al ? "VENUES" : "SALLAT TONA"}
             </h2>
             <div className="single-gallery">
               <div className="cp-textfield">
@@ -233,7 +233,6 @@ function Wedding({ posts, al }) {
                   />
                 </div>{" "}
               </div>{" "}
-              <div className="cp-bottom"></div>{" "}
             </div>{" "}
           </div>{" "}
         </div>

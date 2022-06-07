@@ -23,12 +23,15 @@ padding: 50px 0px;
     width: 75%;
 }
 @media (max-width:767px){
+    #fitness p {
+        width: 100%;
+    }
     .singlespa .single-gallery{
     
         display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0px;
+    padding: 0;
         flex-direction: column;
 }
 #fitness {

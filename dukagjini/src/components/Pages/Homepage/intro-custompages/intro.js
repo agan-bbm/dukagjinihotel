@@ -7,10 +7,12 @@ function Intro({ posts, al }) {
     <>
       <div className="intro">
         <div className="i-restaurant">
-          <h2>{!al ? posts.acf.introhome.restaurant.title : "RESTAURANTS"}</h2>
           <div className="containerWrapper">
             <div className="cp-home-intro">
               <div className="cp-intro-left">
+                <h2>
+                  {!al ? posts.acf.introhome.restaurant.title : "RESTAURANTS"}
+                </h2>
                 <p>
                   {!al
                     ? posts.acf.introhome.restaurant.paragraph
@@ -49,7 +51,7 @@ function Intro({ posts, al }) {
               </div>
             </div>
           </div>
-          <div className="minibanner">
+          {/* <div className="minibanner">
             {" "}
             <img
               src={
@@ -59,15 +61,10 @@ function Intro({ posts, al }) {
               }
               alt=""
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="i-wellness">
-          <h2 id="wellnes-mainheading">
-            {!al
-              ? posts.acf.introhome.wellness.title
-              : posts.acf.introhomeal.wellness.title}
-          </h2>
           <div className="containerWrapper" id="introwellness">
             <div className="cp-home-intro">
               <div className="cp-intro-left">
@@ -80,6 +77,7 @@ function Intro({ posts, al }) {
                   }
                   alt=""
                 />
+
                 <p>
                   {!al
                     ? posts.acf.introhome.wellness.paragraph
@@ -87,6 +85,11 @@ function Intro({ posts, al }) {
                 </p>
               </div>
               <div className="cp-intro-right">
+                <h2 id="wellnes-mainheading">
+                  {!al
+                    ? posts.acf.introhome.wellness.title
+                    : posts.acf.introhomeal.wellness.title}
+                </h2>
                 <p>
                   {!al
                     ? posts.acf.introhome.wellness.miniparagraph
@@ -109,7 +112,7 @@ function Intro({ posts, al }) {
               </div>
             </div>
           </div>
-          <div className="minibanner">
+          {/* <div className="minibanner">
             {" "}
             <img
               src={
@@ -119,15 +122,10 @@ function Intro({ posts, al }) {
               }
               alt=""
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="i-wellness">
-          <h2>
-            {!al
-              ? posts.acf.introhome.weddings.title
-              : posts.acf.introhomeal.weddings.title}
-          </h2>
           <div className="containerWrapper">
             <div className="cp-home-intro" id="weddingintrodiv">
               <div className="cp-intro-left">
@@ -147,6 +145,11 @@ function Intro({ posts, al }) {
                 </p>
               </div>
               <div className="cp-intro-right">
+                <h2 id="venues-heading">
+                  {!al
+                    ? posts.acf.introhome.weddings.title
+                    : posts.acf.introhomeal.weddings.title}
+                </h2>
                 <p>
                   {!al
                     ? posts.acf.introhome.weddings.miniparagraph
@@ -169,7 +172,7 @@ function Intro({ posts, al }) {
               </div>
             </div>
           </div>
-          <div className="minibanner">
+          {/* <div className="minibanner">
             {" "}
             <img
               src={
@@ -179,7 +182,7 @@ function Intro({ posts, al }) {
               }
               alt=""
             />
-          </div>
+          </div> */}
         </div>
         <div className="i-peja">
           <div className="containerWrapper" id="intropeja">

@@ -9,6 +9,18 @@ body {
   position: relative;
   z-index: 1;
 }
+@font-face {
+  font-family: "Ogg";
+  src: url("./components/Shared/Fonts/Ogg-Roman.otf") format("otf");
+}
+
+.homepage h2{
+ 
+    font-family: "Ogg";
+    font-weight: 400 !important;
+    font-size: 36px !important;
+}
+
 
 .containerWrapper {
   width: 1200px;
@@ -88,6 +100,11 @@ select {
 }
 
 @media (max-width: 767px) {
+  .homepage h2{
+ 
+  
+    font-size: 28px !important;
+}
   .custom-pages-container{
     padding: 50px 20px;
   }
@@ -128,8 +145,3 @@ select {
   background: #CA9E72 !important;
 }
 
-h2 {
-  font-weight: 600 !important;
-  /* font-size: 38px !important; */
- 
-}

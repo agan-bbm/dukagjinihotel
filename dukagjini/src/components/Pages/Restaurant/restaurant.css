@@ -4,6 +4,7 @@
         height: 600px;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
 }
 .cp-textfield{
     display: flex;
@@ -72,6 +73,9 @@
     }
 }
 @media (max-width: 767px) {
+    .restaurant-banner{
+        height: 30vh !important;
+    }
     
     .single-gallery img{
         width: 100%;
