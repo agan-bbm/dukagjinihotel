@@ -70,6 +70,7 @@ function UpdateReservation({ book }) {
   const children = new URLSearchParams(search).get("children");
   const adults = new URLSearchParams(search).get("adults");
   const nights = new URLSearchParams(search).get("nights");
+  const image = new URLSearchParams(search).get("image");
 
   return (
     <div className="main-update">
@@ -140,6 +141,7 @@ function UpdateReservation({ book }) {
         <input type="text" name="adults" value={adults} />
         <input type="text" name="children" value={children} />
         <input type="text" name="price" value={price} />
+        <input type="text" name="image" value={image} />
         <button formTarget="sendEmail" id="editReservationEmail">
           submit
         </button>

@@ -69,6 +69,7 @@ function DeleteReservation() {
   const nights = new URLSearchParams(search).get("nights");
   const checkin = new URLSearchParams(search).get("checkIn");
   const checkOut = new URLSearchParams(search).get("checkOut");
+  const image = new URLSearchParams(search).get("image");
   return (
     <div className="main-update">
       <h1 className="update-title">
@@ -113,6 +114,7 @@ function DeleteReservation() {
         <input type="text" name="adults" value={adults} />
         <input type="text" name="children" value={children} />
         <input type="text" name="price" value={price} />
+        <input type="text" name="image" value={image} />
 
         <button formTarget="sendEmail" id="deleteReservationEmail">
           submit

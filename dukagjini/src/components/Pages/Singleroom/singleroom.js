@@ -14,8 +14,11 @@ import dateIcon from "../../../images/Date_fill.png";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { parse } from "rsuite/esm/utils/dateUtils";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs } from "swiper";
 
 function Singleroom({ dates, setDates, book, setBook, al }) {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const params = useParams();
   const [popup, setPopup] = useState({
     isOpen: false,
@@ -287,8 +290,71 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
               }
             />
           )}
-
-          <div
+          <Swiper
+            style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+            spaceBetween={10}
+            navigation={true}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper2"
+          >
+            <SwiperSlide>
+              {!al ? (
+                <img src={rooms.rooms.acf.room.images[0]} alt="" />
+              ) : (
+                <img src={rooms.rooms.acf.roomal.images[0]} alt="" />
+              )}
+            </SwiperSlide>
+            <SwiperSlide>
+              {!al ? (
+                <img src={rooms.rooms.acf.room.images[1]} alt="" />
+              ) : (
+                <img src={rooms.rooms.acf.roomal.images[1]} alt="" />
+              )}
+            </SwiperSlide>
+            <SwiperSlide>
+              {!al ? (
+                <img src={rooms.rooms.acf.room.images[2]} alt="" />
+              ) : (
+                <img src={rooms.rooms.acf.room.images[2]} alt="" />
+              )}
+            </SwiperSlide>
+          </Swiper>
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            spaceBetween={10}
+            slidesPerView={4}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              {!al ? (
+                <img src={rooms.rooms.acf.room.images[0]} alt="" />
+              ) : (
+                <img src={rooms.rooms.acf.roomal.images[0]} alt="" />
+              )}
+            </SwiperSlide>
+            <SwiperSlide>
+              {!al ? (
+                <img src={rooms.rooms.acf.room.images[1]} alt="" />
+              ) : (
+                <img src={rooms.rooms.acf.roomal.images[1]} alt="" />
+              )}
+            </SwiperSlide>
+            <SwiperSlide>
+              {!al ? (
+                <img src={rooms.rooms.acf.room.images[2]} alt="" />
+              ) : (
+                <img src={rooms.rooms.acf.room.images[2]} alt="" />
+              )}
+            </SwiperSlide>
+          </Swiper>
+          {/* <div
             className="single-room-grid"
             onClick={() => {
               setPopup({ ...popup, isOpen: true });
@@ -317,7 +383,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                 )}
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="title-and-location">
             <h2 className="single-room-title">{rooms.rooms.acf.room.name}</h2>
             {!al ? (

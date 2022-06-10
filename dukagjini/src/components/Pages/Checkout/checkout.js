@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import Thankyou from "../Thankyou/Thankyou";
 import "./checkout.css";
 // import { Addresses } from "./addresses";
@@ -8,6 +8,27 @@ import { Summary } from "./summary";
 import { Userdetails } from "./userdetails";
 
 function Checkout({ posts, book, setBook, al }) {
+  const params = useParams();
+  const [rooms, setRooms] = useState({
+    rooms: [],
+    isLoaded: false,
+  });
+  useEffect(() => {
+    axios
+      .get(
+        "https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/Rooms/" +
+          params.id
+      )
+      .then((res) => {
+        setRooms({
+          ...rooms,
+          rooms: res.data,
+          isLoaded: true,
+        });
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  // console.log(rooms.rooms.acf.room.images[0]);
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -18,6 +39,7 @@ function Checkout({ posts, book, setBook, al }) {
     accepted: false,
     connections: {},
     mailError: true,
+    image: [],
     nameValid: true,
     lastNameValid: true,
     numberValid: true,
@@ -134,7 +156,7 @@ function Checkout({ posts, book, setBook, al }) {
       });
   };
 
-  return (
+  return rooms.isLoaded ? (
     <>
       <div className="checkout">
         {showDesc()}
@@ -218,7 +240,7 @@ function Checkout({ posts, book, setBook, al }) {
       <form
         method="POST"
         action="https://cmsdukagjini.blackbird.marketing/wp-content/sendEmailReservation.php"
-        style={{ display: "none" }}
+        // style={{ display: "none" }}
       >
         <input type="text" name="name" value={formData.name} />
         <input type="text" name="lastName" value={formData.lastName} />
@@ -227,6 +249,11 @@ function Checkout({ posts, book, setBook, al }) {
         <input type="text" name="CheckInDate" value={book.checkin} />
         <input type="text" name="CheckOutDate" value={book.checkout} />
         <input type="text" name="type" value="create" />
+        <input
+          type="text"
+          name="image"
+          value={rooms.rooms.acf.room.images[0]}
+        />
         <input type="text" name="roomName" value={book.longRoomName} />
         <input type="text" name="nights" value={book.nights} />
         <input type="text" name="adults" value={book.adult} />
@@ -243,6 +270,6 @@ function Checkout({ posts, book, setBook, al }) {
       </form>
       <iframe name="sendEmail" style={{ display: "none" }} />
     </>
-  );
+  ) : null;
 }
 export default Checkout;
