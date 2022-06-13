@@ -60,6 +60,7 @@ export function StaticRooms({ al }) {
                   <Swiper
                     modules={[Navigation]}
                     spaceBetween={50}
+                    loop={true}
                     slidesPerView={1}
                     navigation
                   >

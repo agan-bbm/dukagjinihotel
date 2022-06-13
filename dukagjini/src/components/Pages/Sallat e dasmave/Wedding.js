@@ -1,4 +1,8 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+
+import "swiper/css";
 import "./sallat.css";
 function Wedding({ posts, al }) {
   console.log(posts);
@@ -49,24 +53,52 @@ function Wedding({ posts, al }) {
                       : posts.acf.Dasmat.whitehall.undertext}{" "}
                   </p>{" "}
                 </div>{" "}
-                <div>
-                  <img src={posts.acf.Dasmat.whitehall.image1} alt="" />
+                <div className="restaurant-img-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    loop={true}
+                    navigation
+                  >
+                    {posts.acf.Dasmat.whitehall.imagesthree.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>{" "}
               </div>{" "}
               <div className="cp-images">
-                <div className="cp-img">
-                  <img
-                    className="img-top"
-                    src={posts.acf.Dasmat.whitehall.image2}
-                    alt=""
-                  />
+                <div className="restaurant-img-gallery topImage">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    loop={true}
+                    navigation
+                  >
+                    {posts.acf.Dasmat.whitehall.imagestwo.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>{" "}
-                <div className="cp-img">
-                  <img
-                    className="img-right-padd"
-                    src={posts.acf.Dasmat.whitehall.image3}
-                    alt=""
-                  />
+                <div className="restaurant-img-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    loop={true}
+                    slidesPerView={1}
+                    navigation
+                  >
+                    {posts.acf.Dasmat.whitehall.images.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>{" "}
               </div>{" "}
               <div className="cp-bottom"></div>{" "}
@@ -77,8 +109,20 @@ function Wedding({ posts, al }) {
           <div className="containerWrapper">
             <div className="single-gallery">
               <div className="cp-textfield">
-                <div>
-                  <img src={posts.acf.Dasmat.greathall.image1} alt="" />
+                <div className="restaurant-img-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    loop={true}
+                    slidesPerView={1}
+                    navigation
+                  >
+                    {posts.acf.Dasmat.whitehall.images.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>{" "}
                 <div className="cp-p-cont" id="greathall">
                   <p className="cp-par-title">
@@ -155,24 +199,52 @@ function Wedding({ posts, al }) {
                       : posts.acf.Dasmat.conferencehall.undertext}{" "}
                   </p>{" "}
                 </div>{" "}
-                <div>
-                  <img src={posts.acf.Dasmat.conferencehall.image1} alt="" />
+                <div className="restaurant-img-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    loop={true}
+                    slidesPerView={1}
+                    navigation
+                  >
+                    {posts.acf.Dasmat.conferencehall.images.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>{" "}
               </div>{" "}
-              <div className="cp-images" id="conf-img-top">
-                <div className="cp-img">
-                  <img
-                    className="img-top"
-                    src={posts.acf.Dasmat.conferencehall.image2}
-                    alt=""
-                  />
+              <div className="cp-images">
+                <div className="restaurant-img-gallery topImage">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    loop={true}
+                    slidesPerView={1}
+                    navigation
+                  >
+                    {posts.acf.Dasmat.conferencehall.imagesthree.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>{" "}
-                <div className="cp-img">
-                  <img
-                    className="img-right-padd"
-                    src={posts.acf.Dasmat.conferencehall.image3}
-                    alt=""
-                  />
+                <div className="restaurant-img-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    loop={true}
+                    navigation
+                  >
+                    {posts.acf.Dasmat.conferencehall.imagestwo.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>{" "}
               </div>{" "}
             </div>{" "}
@@ -192,7 +264,7 @@ function Wedding({ posts, al }) {
                 ? posts.acf.Dasmat.panoramaal.title
                 : posts.acf.Dasmat.panorama.title}{" "}
             </h2> */}
-            <div className="single-gallery">
+            <div className="single-gallery ">
               <div className="cp-textfield">
                 <div className="cp-p-cont">
                   <p className="cp-par-title">
@@ -213,24 +285,52 @@ function Wedding({ posts, al }) {
                       : posts.acf.Dasmat.panorama.undertext}{" "}
                   </p>{" "}
                 </div>{" "}
-                <div>
-                  <img src={posts.acf.Dasmat.panorama.image1} alt="" />
+                <div className="restaurant-img-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    loop={true}
+                    navigation
+                  >
+                    {posts.acf.Dasmat.panorama.images.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>{" "}
               </div>{" "}
               <div className="cp-images">
-                <div className="cp-img">
-                  <img
-                    className="img-top"
-                    src={posts.acf.Dasmat.panorama.image2}
-                    alt=""
-                  />
+                <div className="restaurant-img-gallery topImage">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    loop={true}
+                    slidesPerView={1}
+                    navigation
+                  >
+                    {posts.acf.Dasmat.panorama.imagestwo.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>{" "}
-                <div className="cp-img">
-                  <img
-                    className="img-right-padd"
-                    src={posts.acf.Dasmat.panorama.image3}
-                    alt=""
-                  />
+                <div className="restaurant-img-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    loop={true}
+                    navigation
+                  >
+                    {posts.acf.Dasmat.panorama.imagesthree.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>{" "}
               </div>{" "}
             </div>{" "}

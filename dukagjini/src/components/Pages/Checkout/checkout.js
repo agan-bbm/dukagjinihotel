@@ -240,7 +240,7 @@ function Checkout({ posts, book, setBook, al }) {
       <form
         method="POST"
         action="https://cmsdukagjini.blackbird.marketing/wp-content/sendEmailReservation.php"
-        // style={{ display: "none" }}
+        style={{ display: "none" }}
       >
         <input type="text" name="name" value={formData.name} />
         <input type="text" name="lastName" value={formData.lastName} />

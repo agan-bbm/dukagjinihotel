@@ -3,6 +3,7 @@ import QuiltedImageList from "../../Gallery";
 import "./about.css";
 
 import HistoryTab from "./historyTab";
+import IconTab from "./IconTab";
 import LocationTab from "./locationTab";
 
 function About({ posts, founder }) {
@@ -20,6 +21,12 @@ function About({ posts, founder }) {
       return (
         <div>
           <HistoryTab posts={posts.acf.abouttabs.secondtab} />
+        </div>
+      );
+    } else if (content === 3) {
+      return (
+        <div>
+          <IconTab posts={posts.acf.abouttabs.fourthtab} />
         </div>
       );
     } else
@@ -77,6 +84,17 @@ function About({ posts, founder }) {
             >
               <p className="tabName">
                 {posts.acf.abouttabs.thirdtab.tabheading}
+              </p>
+            </div>
+            <div
+              className="about-button hoverable"
+              id={content === 3 ? "about-active" : ""}
+              onClick={() => {
+                setContent(3);
+              }}
+            >
+              <p className="tabName">
+                {posts.acf.abouttabs.fourthtab.tabheading}
               </p>
             </div>
           </div>
