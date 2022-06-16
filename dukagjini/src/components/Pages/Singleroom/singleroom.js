@@ -29,7 +29,9 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
     adult: 1,
     children: 0,
   });
+
   const [guests, setGuests] = useState(1);
+
   const [childAges, setChildAges] = useState({
     child1: 7,
     child2: 7,
@@ -75,6 +77,12 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
     return counter;
   };
 
+  var thirdperson = 0;
+
+  if (guests == 3) {
+    thirdperson = 4;
+    console.log(thirdperson);
+  }
   const maxPPl = 4;
   const People = () => {
     for (var i = 1; i <= maxPPl; i++) {
@@ -239,7 +247,6 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
       );
     }
   };
-
   // console.log(childAges);
   // console.log(guests);
   console.log("booooooooooook", book);
@@ -248,17 +255,29 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
 
   const returnPrice = () => {
     if (rooms.isLoaded) {
+      const secondperson =
+        book.adult > 1 ? parseInt(rooms.rooms.acf.room.secondperson) : 0;
+      const thirdperson =
+        book.adult >= 3 ? parseInt(rooms.rooms.acf.room.thirdperson) : 0;
+      const fourthperson =
+        book.adult >= 4 ? parseInt(rooms.rooms.acf.room.fourthperson) : 0;
       if (parseInt(book.children) > 0) {
         return nights === 0
           ? rooms.rooms.acf.room.room_price
-          : parseInt(rooms.rooms.acf.room.room_price) *
-              nights *
-              (guests - getChildrenUnder6()) +
+          : parseInt(rooms.rooms.acf.room.room_price) * nights +
+              secondperson +
+              thirdperson +
+              fourthperson +
+              20 * (book.children - getChildrenUnder6()) +
               "€";
       } else {
         return nights === 0
           ? rooms.rooms.acf.room.room_price
-          : parseInt(rooms.rooms.acf.room.room_price) * nights * guests + "€";
+          : parseInt(rooms.rooms.acf.room.room_price) * nights +
+              secondperson +
+              thirdperson +
+              fourthperson +
+              "€";
       }
     }
   };

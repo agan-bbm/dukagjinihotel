@@ -29,6 +29,53 @@ function Checkout({ posts, book, setBook, al }) {
       .catch((err) => console.log(err));
   }, []);
   // console.log(rooms.rooms.acf.room.images[0]);
+  fetch("https://cmsdukagjini.blackbird.marketing/wp-json/jwt-auth/v1/token", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      accept: "application/json",
+    },
+    body: JSON.stringify({
+      username: "Admin",
+      password: "blackbird",
+    }),
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (user) {
+      console.log(user.token);
+      localStorage.setItem("jwt", user.token);
+    });
+  // const headers = {
+
+  // };
+
+  const CreateBooking = () => {
+    fetch("https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/booking", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization:
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY21zZHVrYWdqaW5pLmJsYWNrYmlyZC5tYXJrZXRpbmciLCJpYXQiOjE2NTUxOTk3NjIsIm5iZiI6MTY1NTE5OTc2MiwiZXhwIjoxNjU1ODA0NTYyLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.cQ5yNkYjdxQhYx8w_AzJX_RnwC6E2Xdud6wTJ6KvTng",
+      },
+      body: JSON.stringify(bookingData),
+    });
+
+    // .post(
+    //   "https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/booking",
+    //   bookingData,
+    //   headers:
+    // )
+    // .then(function (response) {
+    //   return response.json();
+    // })
+    // .then(function (post) {
+    //   console.log(post);
+    // });
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -43,7 +90,46 @@ function Checkout({ posts, book, setBook, al }) {
     nameValid: true,
     lastNameValid: true,
     numberValid: true,
+    room_name: "",
   });
+
+  const [bookingData, setBookingData] = useState({
+    title: "newreservation",
+    content: "",
+    status: "pending",
+    acf: {
+      price: book.price,
+      room_name: book.roomName,
+      startdate: book.checkin,
+      enddate: book.checkout,
+
+      details: {
+        firstname: "",
+        lastname: "",
+        email: "",
+        phone: "",
+        message: "",
+      },
+    },
+    persons: {
+      adults: book.adult,
+      childrenunder6: book.children,
+      childrenover6: book.children,
+    },
+  });
+  console.log(bookingData);
+  const handleChange = (e) => {
+    console.log(e);
+    setBookingData({
+      ...bookingData,
+      acf: {
+        ...bookingData.acf,
+
+        details: { ...bookingData.acf.details, [e.target.id]: e.target.value },
+      },
+    });
+  };
+
   const [reservationId, setReservationId] = useState("");
   const [page, setPage] = useState(0);
 
@@ -237,6 +323,7 @@ function Checkout({ posts, book, setBook, al }) {
           </button>
         </div>
       </div>
+
       <form
         method="POST"
         action="https://cmsdukagjini.blackbird.marketing/wp-content/sendEmailReservation.php"
@@ -269,6 +356,57 @@ function Checkout({ posts, book, setBook, al }) {
         </button>
       </form>
       <iframe name="sendEmail" style={{ display: "none" }} />
+
+      <input type="text" name="room_name" value={book.longRoomName} />
+      <input type="text" name="startdate" value={book.checkin} />
+      <input type="text" name="enddate" value={book.checkout} />
+      <input type="text" name="firstname" value={formData.name} />
+      <input
+        type="text"
+        name="lastname"
+        value={formData.lastName}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+      />
+
+      <input
+        type="text"
+        name="phone"
+        value={formData.number}
+        onChange={handleChange}
+      />
+
+      <input
+        type="text"
+        name="message"
+        value={book.message}
+        onChange={handleChange}
+      />
+
+      <input
+        type="text"
+        name="persons"
+        value={book.guests}
+        onChange={handleChange}
+      />
+
+      <button
+        type="submit"
+        onClick={() => {
+          CreateBooking();
+        }}
+      >
+        submit booking
+      </button>
+      {/* <form
+        method="POST"
+        action="https://cmsdukagjini.blackbird.marketing/wp-content/sendBooking.php"
+      > */}
     </>
   ) : null;
 }

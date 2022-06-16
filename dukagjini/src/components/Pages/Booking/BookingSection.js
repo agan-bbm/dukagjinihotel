@@ -81,7 +81,7 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
 
   const diffTime = Math.abs(endDate - startDate);
   const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
+  console.log(startDate);
   return (
     <>
       <div className="booking-container">

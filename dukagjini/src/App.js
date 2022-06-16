@@ -49,6 +49,11 @@ function App() {
     longRoomName: "",
     nights: 1,
     price: 0,
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    message: "",
   });
   useEffect(() => {
     axios
