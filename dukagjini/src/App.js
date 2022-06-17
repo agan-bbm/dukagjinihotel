@@ -146,6 +146,7 @@ function App() {
                   dates={dates}
                   setDates={setDates}
                   book={book}
+                  posts={homepage}
                   setBook={setBook}
                   al={al}
                 />

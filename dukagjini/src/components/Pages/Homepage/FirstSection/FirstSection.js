@@ -28,7 +28,7 @@ function FirstSection({ posts, book, setBook, al }) {
   const onChange = (dates) => {
     const [start, end] = dates;
     if (end === start) {
-      console.log();
+      // console.log();
     } else {
       setStartDate(start);
       setEndDate(end);

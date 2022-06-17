@@ -5,7 +5,7 @@ import { Navigation } from "swiper";
 import "swiper/css";
 import "./sallat.css";
 function Wedding({ posts, al }) {
-  console.log(posts);
+  // console.log;
   return (
     <>
       <div className="custom-pages" id="weddingid">

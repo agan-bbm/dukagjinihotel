@@ -2,7 +2,7 @@ import React from "react";
 import "./spa.css";
 
 export function Spa({ posts, al }) {
-  console.log(posts);
+  // console.log;
   return (
     <>
       <div className="custom-pages">

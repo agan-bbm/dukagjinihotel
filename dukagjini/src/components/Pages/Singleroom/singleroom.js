@@ -55,7 +55,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           isLoaded: true,
         });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log);
   }, []);
   useEffect(() => {
     setGuests(parseInt(book.adult) + parseInt(book.children));
@@ -64,9 +64,9 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
   if (rooms.isLoaded) {
     maxPersons = rooms.rooms.acf.room.max_persons;
   }
-  console.log(maxPersons);
-  // console.log(guests);
-  // console.log(book);
+  // console.log;
+  // console.log;
+  // console.log;
 
   const getChildrenUnder6 = () => {
     var counter = 0;
@@ -81,7 +81,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
 
   if (guests == 3) {
     thirdperson = 4;
-    console.log(thirdperson);
+    // console.log;
   }
   const maxPPl = 4;
   const People = () => {
@@ -102,7 +102,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
     }
     return [year, month, day].join("-");
   };
-  console.log(parseInt(book.children), "parseInt(book.children) ");
+  // console.log, "parseInt(book.children) ");
   let adultList = [];
   let childList = [];
   let ages = [];
@@ -148,15 +148,15 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
 
     rooms.isLoaded ? rooms.rooms.acf.room.images[2] : "",
   ];
-  // console.log("---------------------------------");
-  // console.log(childAges);
-  // console.log("---------------------------------");
+  // console.log;
+  // console.log;
+  // console.log;
 
-  // console.log(childAges.filter((e) => e.child1));
+  // console.log => e.child1));
 
   // var newArr = [];
 
-  // console.log("ages array", newArr);
+  // console.log;
 
   const childrensAgeDropdown = (children) => {
     // const newArr = [];
@@ -171,7 +171,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
             // newArr.push(e.target.value);
             setChildAges({ ...childAges, child1: e.target.value });
 
-            console.log("dorpwdown1", parseInt(e.target.value));
+            // console.log);
           }}
         >
           {renderChildrenAge()}
@@ -185,7 +185,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
             id=""
             defaultValue={7}
             onChange={(e) => {
-              // console.log("ages array", newArr);
+              // console.log;
 
               // newArr.push(e.target.value);
               setChildAges({ ...childAges, child1: e.target.value });
@@ -200,7 +200,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
             onChange={(e) => {
               // newArr.push(e.target.value);
               setChildAges({ ...childAges, child2: e.target.value });
-              // console.log("ages array", newArr);
+              // console.log;
             }}
           >
             {renderChildrenAge1()}
@@ -247,11 +247,11 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
       );
     }
   };
-  // console.log(childAges);
-  // console.log(guests);
-  console.log("booooooooooook", book);
-  console.log(guests);
-  // console.log(childAges);
+  // console.log;
+  // console.log;
+  // console.log;
+  // console.log;
+  // console.log;
 
   const returnPrice = () => {
     if (rooms.isLoaded) {
@@ -265,18 +265,18 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         return nights === 0
           ? rooms.rooms.acf.room.room_price
           : parseInt(rooms.rooms.acf.room.room_price) * nights +
-              secondperson +
-              thirdperson +
-              fourthperson +
-              20 * (book.children - getChildrenUnder6()) +
+              secondperson * nights +
+              thirdperson * nights +
+              fourthperson * nights +
+              20 * (book.children - getChildrenUnder6()) * nights +
               "€";
       } else {
         return nights === 0
           ? rooms.rooms.acf.room.room_price
           : parseInt(rooms.rooms.acf.room.room_price) * nights +
-              secondperson +
-              thirdperson +
-              fourthperson +
+              secondperson * nights +
+              thirdperson * nights +
+              fourthperson * nights +
               "€";
       }
     }
@@ -497,7 +497,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                         id=""
                         value={book.adult}
                         onChange={(e) => {
-                          // console.log(reservation);
+                          // console.log;
                           setReservation({
                             ...reservation,
                             adult: e.target.value,

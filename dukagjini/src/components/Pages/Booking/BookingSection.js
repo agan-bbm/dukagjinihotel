@@ -23,8 +23,9 @@ import seaview from "../../../images/seaview.png";
 import balcony from "../../../images/balcony.png";
 import Daterange from "../../Shared/DatePicker/daterange";
 import { Rooms } from "../Rooms";
+import { addDays, subDays } from "rsuite/esm/utils/dateUtils";
 
-function BookingSection({ dates, setDates, book, setBook, al }) {
+function BookingSection({ dates, setDates, book, setBook, al, posts }) {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(null);
   const todayDate = new Date();
@@ -81,7 +82,14 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
 
   const diffTime = Math.abs(endDate - startDate);
   const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  console.log(startDate);
+  // console.log;
+  const startblocked = posts.acf.start_blockeddate;
+  const endblocked = posts.acf.end_blockeddate;
+
+  // console.log;
+  // console.log;
+
+  // console.log;
   return (
     <>
       <div className="booking-container">
@@ -115,6 +123,15 @@ function BookingSection({ dates, setDates, book, setBook, al }) {
               monthsShown={2}
               inline
               minDate={todayDate}
+              // excludeDateIntervals={[
+              //   { start: subDays(new Date(), 5), end: addDays(new Date(), 5) },
+              // ]}
+              excludeDateIntervals={[
+                {
+                  start: subDays(new Date(startblocked), 0),
+                  end: addDays(new Date(endblocked), 0),
+                },
+              ]}
             />
             <div>
               <button

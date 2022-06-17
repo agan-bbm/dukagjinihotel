@@ -1,7 +1,7 @@
 import React from "react";
 import BookingSection from "../components/Pages/Booking/BookingSection";
 
-function Booking({ dates, setDates, book, setBook, al }) {
+function Booking({ dates, setDates, book, setBook, al, posts }) {
   return (
     <>
       <BookingSection
@@ -10,6 +10,7 @@ function Booking({ dates, setDates, book, setBook, al }) {
         book={book}
         setBook={setBook}
         al={al}
+        posts={posts}
       />
     </>
   );

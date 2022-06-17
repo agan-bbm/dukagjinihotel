@@ -12,7 +12,7 @@ import Faq from "../components/Pages/Homepage/Faq/Faq";
 import Intro from "../components/Pages/Homepage/intro-custompages/intro";
 
 function Homepage({ posts, book, setBook, al }) {
-  console.log(posts);
+  // console.log;
   return (
     <>
       <div className="homepage">

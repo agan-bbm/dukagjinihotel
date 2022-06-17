@@ -7,7 +7,7 @@ import "swiper/css";
 import "./restaurant.css";
 
 function Restaurant({ posts, al }) {
-  console.log(posts);
+  // console.log;
   return (
     <>
       <div className="custom-pages">

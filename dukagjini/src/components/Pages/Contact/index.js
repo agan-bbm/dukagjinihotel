@@ -31,10 +31,10 @@ function Contact() {
         f
       )
       .then((res) => {
-        // console.log(res);
+        // console.log;
       })
       .catch((err) => {
-        // console.log(err);
+        // console.log;
         window.location.href = window.location.origin + "/error";
       });
   };

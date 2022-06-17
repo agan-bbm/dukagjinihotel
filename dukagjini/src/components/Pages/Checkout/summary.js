@@ -63,7 +63,7 @@ export function Summary({ posts, book, setBook, al }) {
     parseInt(formatDate(book.checkout).substring(8, 10)) -
     parseInt(formatDate(book.checkin).substring(8, 10));
 
-  console.log(book);
+  // console.log;
   return rooms.isLoaded ? (
     <>
       <div className="single-room">
