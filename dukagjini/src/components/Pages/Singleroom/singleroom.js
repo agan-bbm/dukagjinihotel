@@ -427,6 +427,15 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                   {rooms.rooms.acf.roomal.longdesc}
                 </p>
               )}
+              <p
+                style={{
+                  fontStyle: "italic",
+                  color: "#575757",
+                  fontSize: "13px",
+                }}
+              >
+                {rooms.rooms.acf.room.shtrati_portativ}
+              </p>
               <div className="room-features-wrapper">
                 {!al ? (
                   <p className="room-features-p">Room Features</p>
