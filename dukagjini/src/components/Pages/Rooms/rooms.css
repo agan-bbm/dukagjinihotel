@@ -104,7 +104,7 @@ hr {
 .icon-rooms-page {
   display: flex;
   align-items: center;
-  width: 28%;
+  width: 100%;
   background: #F8F2EC;
   margin: 10px 0px;
   justify-content: center;
@@ -122,9 +122,10 @@ hr {
 }
 
 .icon-info {
-  display: flex;
-  grid-template-columns: 49% 49%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   flex-direction: row;
+grid-column-gap: 20px;
   width: 80%;
   justify-content: space-between;
   flex-wrap: wrap;

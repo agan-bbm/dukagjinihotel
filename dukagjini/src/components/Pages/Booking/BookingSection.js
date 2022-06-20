@@ -128,8 +128,14 @@ function BookingSection({ dates, setDates, book, setBook, al, posts }) {
               // ]}
               excludeDateIntervals={[
                 {
-                  start: subDays(new Date(startblocked), 0),
-                  end: addDays(new Date(endblocked), 0),
+                  start: subDays(
+                    new Date(startblocked ? startblocked : "11/06/2048"),
+                    0
+                  ),
+                  end: addDays(
+                    new Date(endblocked ? endblocked : "12/06/2048"),
+                    0
+                  ),
                 },
               ]}
             />

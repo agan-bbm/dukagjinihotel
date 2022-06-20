@@ -51,31 +51,6 @@ function Checkout({ posts, book, setBook, al }) {
 
   // };
 
-  const CreateBooking = () => {
-    fetch("https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/booking", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        Authorization:
-          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY21zZHVrYWdqaW5pLmJsYWNrYmlyZC5tYXJrZXRpbmciLCJpYXQiOjE2NTUxOTk3NjIsIm5iZiI6MTY1NTE5OTc2MiwiZXhwIjoxNjU1ODA0NTYyLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.cQ5yNkYjdxQhYx8w_AzJX_RnwC6E2Xdud6wTJ6KvTng",
-      },
-      body: JSON.stringify(bookingData),
-    });
-
-    // .post(
-    //   "https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/booking",
-    //   bookingData,
-    //   headers:
-    // )
-    // .then(function (response) {
-    //   return response.json();
-    // })
-    // .then(function (post) {
-    //   console.log;
-    // });
-  };
-
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -93,6 +68,9 @@ function Checkout({ posts, book, setBook, al }) {
     room_name: "",
   });
 
+  const [reservationId, setReservationId] = useState("");
+  const [page, setPage] = useState(0);
+  console.log(book);
   const [bookingData, setBookingData] = useState({
     title: "newreservation",
     content: "",
@@ -110,29 +88,14 @@ function Checkout({ posts, book, setBook, al }) {
         phone: "",
         message: "",
       },
-    },
-    persons: {
-      adults: book.adult,
-      childrenunder6: book.children,
-      childrenover6: book.children,
+
+      persons: {
+        adults: book.adult,
+        childrenunder6: book.children,
+        childrenover6: book.children,
+      },
     },
   });
-  // console.log;
-  const handleChange = (e) => {
-    // console.log;
-    setBookingData({
-      ...bookingData,
-      acf: {
-        ...bookingData.acf,
-
-        details: { ...bookingData.acf.details, [e.target.id]: e.target.value },
-      },
-    });
-  };
-
-  const [reservationId, setReservationId] = useState("");
-  const [page, setPage] = useState(0);
-
   const showForm = () => {
     switch (page) {
       case 0:
@@ -143,6 +106,9 @@ function Checkout({ posts, book, setBook, al }) {
             reservationId={reservationId}
             al={al}
             book={book}
+            CreateBooking={CreateBooking}
+            bookingData={bookingData}
+            setBookingData={setBookingData}
           />
         );
       case 1:
@@ -163,7 +129,29 @@ function Checkout({ posts, book, setBook, al }) {
         return <Thankyou posts={posts.acf.checkout.thankyou} />;
     }
   };
-
+  const CreateBooking = () => {
+    fetch("https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/booking", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization:
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY21zZHVrYWdqaW5pLmJsYWNrYmlyZC5tYXJrZXRpbmciLCJpYXQiOjE2NTUxOTk3NjIsIm5iZiI6MTY1NTE5OTc2MiwiZXhwIjoxNjU1ODA0NTYyLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.cQ5yNkYjdxQhYx8w_AzJX_RnwC6E2Xdud6wTJ6KvTng",
+      },
+      body: JSON.stringify(bookingData),
+    });
+    // .post(
+    //   "https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/booking",
+    //   bookingData,
+    //   headers:
+    // )
+    // .then(function (response) {
+    //   return response.json();
+    // })
+    // .then(function (post) {
+    //   console.log;
+    // });
+  };
   const [style, setStyle] = useState("cont");
   const changeStyle = () => {
     setStyle("none");
@@ -325,7 +313,6 @@ function Checkout({ posts, book, setBook, al }) {
           </button>
         </div>
       </div>
-
       <form
         method="POST"
         action="https://cmsdukagjini.blackbird.marketing/wp-content/sendEmailReservation.php"
@@ -358,44 +345,6 @@ function Checkout({ posts, book, setBook, al }) {
         </button>
       </form>
       <iframe name="sendEmail" style={{ display: "none" }} />
-
-      <input type="text" name="room_name" value={book.longRoomName} />
-      <input type="text" name="startdate" value={book.checkin} />
-      <input type="text" name="enddate" value={book.checkout} />
-      <input type="text" name="firstname" value={formData.name} />
-      <input
-        type="text"
-        name="lastname"
-        value={formData.lastName}
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-
-      <input
-        type="text"
-        name="phone"
-        value={formData.number}
-        onChange={handleChange}
-      />
-
-      <input
-        type="text"
-        name="message"
-        value={book.message}
-        onChange={handleChange}
-      />
-
-      <input
-        type="text"
-        name="persons"
-        value={book.guests}
-        onChange={handleChange}
-      />
 
       {/* <button
         type="submit"

@@ -255,6 +255,51 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
 
   const returnPrice = () => {
     if (rooms.isLoaded) {
+      const datenewprice = new Date(
+        formatDate(rooms.rooms.acf.room.datenewprice)
+      );
+      console.log(datenewprice);
+      const dateendprice = new Date(
+        formatDate(rooms.rooms.acf.room.dateendprice)
+      );
+      console.log(dateendprice);
+
+      var çmimi = rooms.rooms.acf.room.room_price;
+      console.log(çmimi);
+
+      if (formatDate(datenewprice) < formatDate(book.checkout)) {
+        if (formatDate(dateendprice) < formatDate(book.checkout)) {
+          const newdiffTime = Math.abs(datenewprice - dateendprice);
+          const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24));
+
+          const userdiffTime = Math.abs(book.checkout - book.checkin);
+          const userdiffDays = Math.ceil(userdiffTime / (1000 * 60 * 60 * 24));
+
+          const daysWithoutOffer = userdiffDays - daysWithOffer;
+
+          çmimi =
+            parseInt(daysWithoutOffer) *
+              parseInt(rooms.rooms.acf.room.room_price) +
+            parseInt(daysWithOffer) * parseInt(rooms.rooms.acf.room.newprice);
+          console.log(çmimi);
+        } else {
+          const newdiffTime = Math.abs(datenewprice - book.checkout);
+          const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24));
+
+          const userdiffTime = Math.abs(book.checkout - book.checkin);
+          const userdiffDays = Math.ceil(userdiffTime / (1000 * 60 * 60 * 24));
+
+          const daysWithoutOffer =
+            parseInt(userdiffDays) - parseInt(daysWithOffer);
+
+          çmimi =
+            daysWithoutOffer * parseInt(rooms.rooms.acf.room.room_price) +
+            daysWithOffer * parseInt(rooms.rooms.acf.room.newprice);
+
+          console.log(çmimi);
+        }
+      }
+
       const secondperson =
         book.adult > 1 ? parseInt(rooms.rooms.acf.room.secondperson) : 0;
       const thirdperson =
@@ -263,8 +308,8 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         book.adult >= 4 ? parseInt(rooms.rooms.acf.room.fourthperson) : 0;
       if (parseInt(book.children) > 0) {
         return nights === 0
-          ? rooms.rooms.acf.room.room_price
-          : parseInt(rooms.rooms.acf.room.room_price) * nights +
+          ? çmimi
+          : parseInt(çmimi) * nights +
               secondperson * nights +
               thirdperson * nights +
               fourthperson * nights +
@@ -272,8 +317,8 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
               "€";
       } else {
         return nights === 0
-          ? rooms.rooms.acf.room.room_price
-          : parseInt(rooms.rooms.acf.room.room_price) * nights +
+          ? çmimi
+          : parseInt(çmimi) * nights +
               secondperson * nights +
               thirdperson * nights +
               fourthperson * nights +
@@ -281,6 +326,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
       }
     }
   };
+
   return rooms.isLoaded ? (
     <>
       <div className="single-room-page">

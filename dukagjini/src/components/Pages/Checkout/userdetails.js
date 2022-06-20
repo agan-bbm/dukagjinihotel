@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./checkout.css";
-export function Userdetails({ formData, setFormData, book, al }) {
+export function Userdetails({
+  formData,
+  setFormData,
+  book,
+  al,
+  CreateBooking,
+  bookingData,
+  setBookingData,
+}) {
   const formatDate = (date) => {
     let d = new Date(date);
     let month = (d.getMonth() + 1).toString();
@@ -71,12 +79,86 @@ export function Userdetails({ formData, setFormData, book, al }) {
       setFormData({ ...formData, lastNameValid: true, lastName: username });
     }
   };
-  console.log(book);
+
+  console.log(bookingData);
+  // console.log;
+  const handleChange = (e) => {
+    // console.log;
+    setBookingData({
+      ...bookingData,
+      acf: {
+        ...bookingData.acf,
+
+        details: {
+          ...bookingData.acf.details,
+          [e.target.name]: e.target.value,
+        },
+      },
+    });
+  };
+
   return (
     <>
       <div className="checkout-form">
         <form action="" className="form">
           <div className="inputs">
+            <div className="input-field">
+              <input type="hidden" name="room_name" value={book.longRoomName} />
+            </div>
+            <div className="input-field">
+              <input type="hidden" name="startdate" value={book.checkin} />
+            </div>
+            <div className="input-field">
+              <input type="hidden" name="enddate" value={book.checkout} />
+            </div>
+            <div className="input-field">
+              <input
+                type="text"
+                name="firstname"
+                value={bookingData.acf.details.firstname}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="input-field">
+              <input
+                type="text"
+                name="lastname"
+                value={bookingData.acf.details.lastName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="input-field">
+              <input
+                type="text"
+                name="email"
+                value={bookingData.acf.details.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="input-field">
+              <input
+                type="text"
+                name="phone"
+                value={bookingData.acf.details.phone}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="input-field">
+              <input
+                type="textarea"
+                name="message"
+                value={bookingData.acf.details.message}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="input-field">
+              <input
+                type="text"
+                name="persons"
+                value={book.guests}
+                onChange={handleChange}
+              />
+            </div>
             <div className="userdtl-inputrow">
               <div class="input-field">
                 <label for="name">{!al ? "Name" : "Emri"}</label>
