@@ -366,28 +366,102 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         formatDate(book.checkin) < formatDate(dateendprice) &&
         formatDate(book.checkout) <= formatDate(dateendprice)
       ) {
-        console.log("QETASH VEQ MRENA JE");
-        const newdiffTime = Math.abs(dateendprice - datenewprice);
-        const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24));
+        if (
+          formatDate(book.checkin) > formatDate(datenewprice) &&
+          formatDate(book.checkin) < formatDate(dateendprice) &&
+          formatDate(book.checkout) <= formatDate(dateendprice)
+        ) {
+          console.log("QETASH VEQ MRENA JE 25");
+          const newdiffTime = Math.abs(
+            new Date(dateendprice) - new Date(datenewprice)
+          );
+          const daysWithOffer = Math.round(newdiffTime / (1000 * 3600 * 24));
 
-        const userdiffStart = Math.abs(book.checkin - datenewprice);
-        const daysWithOfferend = Math.ceil(
-          userdiffStart / (1000 * 60 * 60 * 24)
+          const userdiffStart = Math.abs(
+            new Date(book.checkin) - new Date(datenewprice)
+          );
+          const daysWithOfferend = Math.round(
+            new Date(userdiffStart) / (1000 * 3600 * 24) - 1
+          );
+          console.log(daysWithOfferend);
+
+          const userdiffEnd = Math.abs(
+            new Date(dateendprice) - new Date(book.checkout)
+          );
+          const daysWithOfferstart = Math.round(
+            userdiffEnd / (1000 * 3600 * 24) - 1
+          );
+          console.log(daysWithOfferstart);
+
+          const daysWithOfferCalc =
+            parseInt(daysWithOfferend) + parseInt(daysWithOfferstart);
+          console.log(daysWithOfferCalc);
+
+          çmimi = parseInt(rooms.rooms.acf.room.newprice) * daysWithOfferCalc;
+
+          return calcPrice(çmimi);
+          console.log(çmimi);
+        } else if (
+          formatDate(book.checkin) >= formatDate(datenewprice) &&
+          formatDate(book.checkin) < formatDate(dateendprice) &&
+          formatDate(book.checkout) < formatDate(dateendprice)
+        ) {
+          console.log("QETASH VEQ MRENA JE 24");
+          const newdiffTime = Math.abs(
+            new Date(dateendprice) - new Date(datenewprice)
+          );
+          const daysWithOffer = Math.round(newdiffTime / (1000 * 3600 * 24));
+
+          const userdiffStart = Math.abs(
+            new Date(book.checkin) - new Date(datenewprice)
+          );
+          const daysWithOfferend = Math.round(
+            new Date(userdiffStart) / (1000 * 3600 * 24)
+          );
+          console.log(daysWithOfferend);
+
+          const userdiffEnd = Math.abs(
+            new Date(dateendprice) - new Date(book.checkout)
+          );
+          const daysWithOfferstart = Math.round(
+            userdiffEnd / (1000 * 3600 * 24)
+          );
+          console.log(daysWithOfferstart);
+
+          const daysWithOfferCalc =
+            parseInt(daysWithOfferend) + parseInt(daysWithOfferstart);
+          console.log(daysWithOfferCalc);
+
+          çmimi = parseInt(rooms.rooms.acf.room.newprice) * daysWithOfferCalc;
+
+          return calcPrice(çmimi);
+          console.log(çmimi);
+        }
+        console.log("QETASH VEQ MRENA JE");
+        const newdiffTime = Math.abs(
+          new Date(dateendprice) - new Date(datenewprice)
+        );
+        const daysWithOffer = Math.round(newdiffTime / (1000 * 3600 * 24));
+
+        const userdiffStart = Math.abs(
+          new Date(book.checkin) - new Date(datenewprice)
+        );
+        const daysWithOfferend = Math.round(
+          new Date(userdiffStart) / (1000 * 3600 * 24)
         );
         console.log(daysWithOfferend);
-        const userdiffEnd = Math.abs(dateendprice - book.checkout);
-        const daysWithOfferstart = Math.ceil(
-          userdiffEnd / (1000 * 60 * 60 * 24)
+
+        const userdiffEnd = Math.abs(
+          new Date(dateendprice) - new Date(book.checkout)
         );
+        const daysWithOfferstart = Math.round(userdiffEnd / (1000 * 3600 * 24));
         console.log(daysWithOfferstart);
 
         const daysWithOfferCalc =
-          parseInt(daysWithOfferend) - 1 + parseInt(daysWithOfferstart) - 1;
-        console.log(daysWithOffer);
+          parseInt(daysWithOfferend) + parseInt(daysWithOfferstart);
+        console.log(daysWithOfferCalc);
 
-        çmimi =
-          parseInt(rooms.rooms.acf.room.newprice) * daysWithOffer -
-          daysWithOfferCalc;
+        çmimi = parseInt(rooms.rooms.acf.room.newprice) * daysWithOfferCalc;
 
         return calcPrice(çmimi);
         console.log(çmimi);

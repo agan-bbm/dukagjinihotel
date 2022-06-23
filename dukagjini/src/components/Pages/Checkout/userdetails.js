@@ -33,52 +33,86 @@ export function Userdetails({
     }
   };
 
-  const validateEmail = (email) => {
+  const validateEmail = (e) => {
     const emailRegex = new RegExp(
       // /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
 
       /^([^@\s\."'\(\)\[\]\{\}\\/,:;]+\.)*[^@\s\."'\(\)\[\]\{\}\\/,:;]+@[^@\s\."'\(\)\[\]\{\}\\/,:;]+(\.[^@\s\."'\(\)\[\]\{\}\\/,:;]+)+$/i
     );
 
-    if (emailRegex.test(email) === false) {
-      setFormData({ ...formData, mailError: false, email: email });
+    if (emailRegex.test(e.target.value) === false) {
+      setFormData({ ...formData, mailError: false, email: e.target.value });
+      handleChange(e);
     } else {
-      setFormData({ ...formData, mailError: true, email: email });
+      setFormData({ ...formData, mailError: true, email: e.target.value });
+      handleChange(e);
     }
   };
-  const validateNumber = (number) => {
+  const validateNumber = (e) => {
     const strongRegex = new RegExp(
       /^\(?([0-9]{3})\)?[-. ]?([0-9]{3,6})[-. ]?([0-9]{3,8})$/
     );
 
-    if (strongRegex.test(number) === false) {
-      setFormData({ ...formData, numberValid: false, number: number });
+    if (strongRegex.test(e.target.value) === false) {
+      setFormData({ ...formData, numberValid: false, number: e.target.value });
+      handleChange(e);
     } else {
-      setFormData({ ...formData, numberValid: true, number: number });
+      setFormData({ ...formData, numberValid: true, number: e.target.value });
+      handleChange(e);
     }
   };
-  const validateUsername = (username) => {
+  const validateUsername = (e) => {
     const strongRegex = new RegExp(
       "(^[A-Za-z]{2,16})([ ]{0,1})([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})"
     );
 
-    if (!strongRegex.test(username)) {
-      setFormData({ ...formData, nameValid: false, name: username });
+    if (!strongRegex.test(e.target.value)) {
+      setFormData({ ...formData, nameValid: false, name: e.target.value });
+      handleChange(e);
     } else {
-      setFormData({ ...formData, nameValid: true, name: username });
+      setFormData({ ...formData, nameValid: true, name: e.target.value });
+      handleChange(e);
     }
   };
-  const validateLastname = (username) => {
+  const validateLastname = (e) => {
     const strongRegex = new RegExp(
       "(^[A-Za-z]{2,16})([ ]{0,1})([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})"
     );
 
-    if (!strongRegex.test(username)) {
-      setFormData({ ...formData, lastNameValid: false, lastName: username });
+    if (!strongRegex.test(e.target.value)) {
+      setFormData({
+        ...formData,
+        lastNameValid: false,
+        lastName: e.target.value,
+      });
+      handleChange(e);
     } else {
-      setFormData({ ...formData, lastNameValid: true, lastName: username });
+      setFormData({
+        ...formData,
+        lastNameValid: true,
+        lastName: e.target.value,
+      });
+      handleChange(e);
     }
   };
+  const validateMessage = (e) => {
+    const strongRegex = new RegExp(
+      "(^[A-Za-z]{2,16})([ ]{0,1})([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})"
+    );
+
+    if (!strongRegex.test(e.target.value)) {
+      setFormData({
+        ...formData,
+        lastNameValid: false,
+        message: e.target.value,
+      });
+      handleChange(e);
+    } else {
+      setFormData({ ...formData, messageValid: true, message: e.target.value });
+      handleChange(e);
+    }
+  };
+  console.log(book);
 
   console.log(bookingData);
   // console.log;
@@ -102,73 +136,16 @@ export function Userdetails({
       <div className="checkout-form">
         <form action="" className="form">
           <div className="inputs">
-            <div className="input-field">
-              <input type="hidden" name="room_name" value={book.longRoomName} />
-            </div>
-            <div className="input-field">
-              <input type="hidden" name="startdate" value={book.checkin} />
-            </div>
-            <div className="input-field">
-              <input type="hidden" name="enddate" value={book.checkout} />
-            </div>
-            <div className="input-field">
-              <input
-                type="text"
-                name="firstname"
-                value={bookingData.acf.details.firstname}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="input-field">
-              <input
-                type="text"
-                name="lastname"
-                value={bookingData.acf.details.lastName}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="input-field">
-              <input
-                type="text"
-                name="email"
-                value={bookingData.acf.details.email}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="input-field">
-              <input
-                type="text"
-                name="phone"
-                value={bookingData.acf.details.phone}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="input-field">
-              <input
-                type="textarea"
-                name="message"
-                value={bookingData.acf.details.message}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="input-field">
-              <input
-                type="text"
-                name="persons"
-                value={book.guests}
-                onChange={handleChange}
-              />
-            </div>
             <div className="userdtl-inputrow">
               <div class="input-field">
-                <label for="name">{!al ? "Name" : "Emri"}</label>
+                <label for="firstname">{!al ? "Name" : "Emri"}</label>
                 <input
                   type="text"
                   required
-                  name="name"
+                  name="firstname"
                   value={formData.name}
                   onChange={(e) => {
-                    validateUsername(e.target.value);
+                    validateUsername(e);
                   }}
                 />
                 <p
@@ -183,14 +160,14 @@ export function Userdetails({
                 </p>
               </div>
               <div class="input-field">
-                <label for="surname">{!al ? "Last Name" : "Mbiemri"}</label>
+                <label for="lastname">{!al ? "Last Name" : "Mbiemri"}</label>
                 <input
                   type="text"
                   required
-                  name="lastName"
+                  name="lastname"
                   value={formData.lastName}
                   onChange={(e) => {
-                    validateLastname(e.target.value);
+                    validateLastname(e);
                   }}
                 />
                 <p
@@ -210,14 +187,14 @@ export function Userdetails({
 
             <div className="userdtl-inputrow">
               <div class="input-field">
-                <label for="number">{!al ? "Number" : "Numri"}</label>
+                <label for="phone">{!al ? "Number" : "Numri"}</label>
                 <input
                   type="text"
                   required
-                  name="number"
+                  name="phone"
                   value={formData.number}
                   onChange={(e) => {
-                    validateNumber(e.target.value);
+                    validateNumber(e);
                   }}
                 />
                 <p
@@ -242,7 +219,7 @@ export function Userdetails({
                   name="email"
                   // className={emailError ? "" : "error"}
                   onChange={(e) => {
-                    validateEmail(e.target.value);
+                    validateEmail(e);
                   }}
                 />{" "}
                 {!formData.mailError ? (
@@ -259,6 +236,19 @@ export function Userdetails({
                       : "Ju lutem shënoni një email valid"}
                   </p>
                 ) : null}
+              </div>
+            </div>
+            <div className="userdtl-inputrow">
+              <div class="input-field">
+                <label for="message">{!al ? "message" : "message"}</label>
+                <input
+                  type="textarea"
+                  rows={4}
+                  value={formData.message}
+                  name="message"
+                  // className={emailError ? "" : "error"}
+                  onChange={validateMessage}
+                />
               </div>
             </div>
             <div>

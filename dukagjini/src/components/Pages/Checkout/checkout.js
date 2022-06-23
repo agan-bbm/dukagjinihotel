@@ -66,6 +66,7 @@ function Checkout({ posts, book, setBook, al }) {
     lastNameValid: true,
     numberValid: true,
     room_name: "",
+    message: "",
   });
 
   const [reservationId, setReservationId] = useState("");
@@ -82,17 +83,18 @@ function Checkout({ posts, book, setBook, al }) {
       enddate: book.checkout,
 
       details: {
-        firstname: "",
-        lastname: "",
-        email: "",
-        phone: "",
-        message: "",
+        firstname: formData.name,
+        lastname: formData.lastName,
+        email: formData.email,
+        phone: formData.number,
+        message: formData.message,
       },
 
       persons: {
-        adults: book.adult,
-        childrenunder6: book.children,
-        childrenover6: book.children,
+        adults: book.adult.toString(),
+        childrenunder6: book.children.toString(),
+        childrenover6: book.children.toString(),
+        guests: book.guests.toString(),
       },
     },
   });
@@ -129,14 +131,14 @@ function Checkout({ posts, book, setBook, al }) {
         return <Thankyou posts={posts.acf.checkout.thankyou} />;
     }
   };
+  console.log(process.env.REACT_APP_ACCESS_TOKEN);
   const CreateBooking = () => {
     fetch("https://cmsdukagjini.blackbird.marketing/wp-json/wp/v2/booking", {
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization:
-          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY21zZHVrYWdqaW5pLmJsYWNrYmlyZC5tYXJrZXRpbmciLCJpYXQiOjE2NTUxOTk3NjIsIm5iZiI6MTY1NTE5OTc2MiwiZXhwIjoxNjU1ODA0NTYyLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.cQ5yNkYjdxQhYx8w_AzJX_RnwC6E2Xdud6wTJ6KvTng",
+        Authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN}`,
       },
       body: JSON.stringify(bookingData),
     });
@@ -261,7 +263,11 @@ function Checkout({ posts, book, setBook, al }) {
               formData.name === "" ||
               formData.lastName === "" ||
               formData.email === "" ||
-              formData.number === ""
+              formData.number === "" ||
+              !formData.numberValid ||
+              !formData.nameValid ||
+              !formData.lastNameValid ||
+              !formData.mailError
             }
             id="finalBtn"
             className="form-button "
@@ -289,11 +295,11 @@ function Checkout({ posts, book, setBook, al }) {
                   localStorage.removeItem("adult");
                   localStorage.removeItem("checkin");
                   localStorage.removeItem("roomName");
+                  CreateBooking();
                 } else {
                   setPage(page + 1);
                 }
               }
-              CreateBooking();
             }}
           >
             Continue
@@ -321,10 +327,24 @@ function Checkout({ posts, book, setBook, al }) {
         <input type="text" name="name" value={formData.name} />
         <input type="text" name="lastName" value={formData.lastName} />
         <input type="text" name="number" value={formData.number} />
+
         <input type="text" name="email" value={formData.email} />
-        <input type="text" name="CheckInDate" value={book.checkin} />
-        <input type="text" name="CheckOutDate" value={book.checkout} />
-        <input type="text" name="type" value="create" />
+        <input type="text" name="message" value={formData.message} />
+
+        <input
+          type="text"
+          name="CheckInDate"
+          value={formatDate(book.checkin)}
+        />
+        <input
+          type="text"
+          name="CheckOutDate"
+          value={formatDate(book.checkout)}
+        />
+        {/* <input type="text" name="type" value="create" /> */}
+
+        <input type="text" name="type" value="notify" />
+        <input type="text" name="AdminEmail" value="aganhaziri@gmail.com" />
         <input
           type="text"
           name="image"
