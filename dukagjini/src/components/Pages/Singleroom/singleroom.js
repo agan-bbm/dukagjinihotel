@@ -289,44 +289,44 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         formatDate(rooms.rooms.acf.room.datenewprice)
       );
 
-      console.log(datenewprice);
+      // console.log(datenewprice);
       const dateendprice = new Date(
         formatDate(rooms.rooms.acf.room.dateendprice)
       );
-      console.log(dateendprice);
+      // console.log(dateendprice);
       datenewprice.setHours(0, 0, 0, 0);
       dateendprice.setHours(0, 0, 0, 0);
       var çmimi = rooms.rooms.acf.room.room_price;
-      console.log(çmimi);
+      // console.log(çmimi);
 
       if (
         formatDate(book.checkin) < formatDate(datenewprice) &&
         formatDate(book.checkout) < formatDate(dateendprice) &&
         formatDate(book.checkout) > formatDate(datenewprice)
       ) {
-        console.log("nto je tash");
+        // console.log("nto je tash");
         const offerdays = Math.abs(dateendprice - datenewprice);
 
         const offerdayscount = Math.ceil(offerdays / (1000 * 60 * 60 * 24)); //2
-        console.log(offerdayscount);
+        // console.log(offerdayscount);
 
         const newdiffTime = Math.abs(datenewprice - book.checkin);
         const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24)); //1
-        console.log(daysWithOffer);
+        // console.log(daysWithOffer);
 
         const outofoffer = Math.abs(book.checkout - datenewprice);
         const outofoffercount = Math.ceil(outofoffer / (1000 * 60 * 60 * 24)); //2
-        console.log(outofoffercount);
+        // console.log(outofoffercount);
 
         const offerPrice =
           daysWithOffer * parseInt(rooms.rooms.acf.room.room_price); //2*50
-        console.log(offerPrice);
+        // console.log(offerPrice);
         const normalprice =
           outofoffercount * parseInt(rooms.rooms.acf.room.newprice); //2-1=1*80
-        console.log(normalprice);
+        // console.log(normalprice);
 
         çmimi = offerPrice + normalprice;
-        console.log(çmimi);
+        // console.log(çmimi);
         return calcPrice(çmimi);
       }
       //FROM OUTSIDE TO INSIDE OFFER
@@ -335,29 +335,29 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         formatDate(book.checkout) <= formatDate(dateendprice) &&
         formatDate(book.checkout) > formatDate(datenewprice)
       ) {
-        console.log("PREJ JASHT MRENA");
+        // console.log("PREJ JASHT MRENA");
         const offerdays = Math.abs(dateendprice - datenewprice);
         const offerdayscount = Math.ceil(offerdays / (1000 * 60 * 60 * 24)); //2
-        console.log(offerdayscount);
+        // console.log(offerdayscount);
 
         const newdiffTime = Math.abs(datenewprice - book.checkin);
         const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24)); //1
-        console.log(daysWithOffer);
+        // console.log(daysWithOffer);
 
         const normalprice =
           daysWithOffer * parseInt(rooms.rooms.acf.room.room_price); //2-1=1*80
-        console.log(normalprice);
+        // console.log(normalprice);
 
         const outofoffer = Math.abs(book.checkout - datenewprice);
         const outofoffercount = Math.ceil(outofoffer / (1000 * 60 * 60 * 24)); //2
-        console.log(outofoffercount);
+        // console.log(outofoffercount);
 
         const offerPrice =
           outofoffercount * parseInt(rooms.rooms.acf.room.newprice); //2*50
-        console.log(offerPrice);
+        // console.log(offerPrice);
 
         çmimi = offerPrice + normalprice;
-        console.log(çmimi);
+        // console.log(çmimi);
         return calcPrice(çmimi);
       }
 
@@ -369,32 +369,32 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         formatDate(book.checkin) < formatDate(dateendprice) &&
         formatDate(book.checkout) > formatDate(dateendprice)
       ) {
-        console.log("PREJ MRENA JASTH");
+        // console.log("PREJ MRENA JASTH");
 
         const offerdays = Math.abs(dateendprice - datenewprice);
         const offerdayscount = Math.ceil(offerdays / (1000 * 60 * 60 * 24)); //2
-        console.log(offerdayscount);
+        // console.log(offerdayscount);
 
         const newdiffTime = Math.abs(book.checkin - datenewprice);
         const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24)); //1
-        console.log(daysWithOffer);
+        // console.log(daysWithOffer);
 
         const pricenewoffer =
           (offerdayscount - daysWithOffer) *
           parseInt(rooms.rooms.acf.room.newprice); //2-1=1*80
-        console.log(pricenewoffer);
+        // console.log(pricenewoffer);
 
         const outofoffer = Math.abs(book.checkout - dateendprice);
         const outofoffercount = Math.ceil(outofoffer / (1000 * 60 * 60 * 24)); //2
-        console.log(outofoffercount);
+        // console.log(outofoffercount);
 
         const normalPrice =
           outofoffercount * parseInt(rooms.rooms.acf.room.room_price); //2*50
-        console.log(normalPrice);
+        // console.log(normalPrice);
 
         çmimi = pricenewoffer + normalPrice;
         return calcPrice(çmimi);
-        console.log(çmimi);
+        // console.log(çmimi);
       }
       //FROM INSIDE OFFER TO INSIDE OFFER
       if (
@@ -407,7 +407,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           formatDate(book.checkin) < formatDate(dateendprice) &&
           formatDate(book.checkout) <= formatDate(dateendprice)
         ) {
-          console.log("QETASH VEQ MRENA JE 27");
+          // console.log("QETASH VEQ MRENA JE 27");
           const newdiffTime = Math.abs(
             new Date(dateendprice) - new Date(datenewprice)
           );
@@ -419,7 +419,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           const daysWithOfferend = Math.round(
             new Date(userdiffStart) / (1000 * 3600 * 24)
           );
-          console.log(daysWithOfferend);
+          // console.log(daysWithOfferend);
 
           const userdiffEnd = Math.abs(
             new Date(dateendprice) - new Date(book.checkout)
@@ -427,38 +427,38 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           const daysWithOfferstart = Math.round(
             userdiffEnd / (1000 * 3600 * 24)
           );
-          console.log(daysWithOfferstart);
+          // console.log(daysWithOfferstart);
 
           const daysWithOfferCalc =
             parseInt(daysWithOfferend) + parseInt(daysWithOfferstart);
-          console.log(daysWithOfferCalc);
+          // console.log(daysWithOfferCalc);
 
           çmimi = parseInt(rooms.rooms.acf.room.newprice) * daysWithOfferCalc;
 
           return calcPrice(çmimi);
-          console.log(çmimi);
+          // console.log(çmimi);
         } else if (
           formatDate(book.checkin) == formatDate(datenewprice) &&
           formatDate(book.checkout) == formatDate(dateendprice)
         ) {
-          console.log("QETASH VEQ MRENA Jeeeeeeee");
+          // console.log("QETASH VEQ MRENA Jeeeeeeee");
           const newdiffTime = Math.abs(
             new Date(dateendprice) - new Date(datenewprice)
           );
           const daysWithOffer = Math.round(newdiffTime / (1000 * 3600 * 24));
 
-          console.log(daysWithOffer);
+          // console.log(daysWithOffer);
 
           çmimi = parseInt(rooms.rooms.acf.room.newprice) * daysWithOffer;
 
           return calcPrice(çmimi);
-          console.log(çmimi);
+          // console.log(çmimi);
         } else if (
           formatDate(book.checkin) >= formatDate(datenewprice) &&
           formatDate(book.checkin) < formatDate(dateendprice) &&
           formatDate(book.checkout) < formatDate(dateendprice)
         ) {
-          console.log("QETASH VEQ MRENA JE 26");
+          // console.log("QETASH VEQ MRENA JE 26");
           const newdiffTime = Math.abs(
             new Date(dateendprice) - new Date(datenewprice)
           );
@@ -470,7 +470,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           const daysWithOfferend = Math.round(
             new Date(userdiffStart) / (1000 * 3600 * 24)
           );
-          console.log(daysWithOfferend);
+          // console.log(daysWithOfferend);
 
           const userdiffEnd = Math.abs(
             new Date(dateendprice) - new Date(book.checkout)
@@ -478,16 +478,16 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           const daysWithOfferstart = Math.round(
             userdiffEnd / (1000 * 3600 * 24)
           );
-          console.log(daysWithOfferstart);
+          // console.log(daysWithOfferstart);
 
           const daysWithOfferCalc =
             parseInt(daysWithOfferend) + parseInt(daysWithOfferstart);
-          console.log(daysWithOfferCalc);
+          // console.log(daysWithOfferCalc);
 
           çmimi = parseInt(rooms.rooms.acf.room.newprice) * daysWithOfferCalc;
 
           return calcPrice(çmimi);
-          console.log(çmimi);
+          // console.log(çmimi);
         }
       }
 
@@ -496,7 +496,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         formatDate(book.checkin) < formatDate(datenewprice) &&
         formatDate(book.checkout) > formatDate(dateendprice)
       ) {
-        console.log("PI JASHT JASTH APET");
+        // console.log("PI JASHT JASTH APET");
         const newdiffTime = Math.abs(dateendprice - datenewprice);
         const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24));
 
@@ -511,7 +511,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
           daysWithOffer * parseInt(rooms.rooms.acf.room.newprice);
 
         return calcPrice(çmimi);
-        console.log(çmimi);
+        // console.log(çmimi);
       }
       //VEQ OUTSIDE
       if (
@@ -521,9 +521,9 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         const newdiffTime = Math.abs(book.checkout - book.checkin);
         const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24));
         çmimi = parseInt(rooms.rooms.acf.room.room_price) * daysWithOffer;
-        console.log(çmimi);
+        // console.log(çmimi);
         return calcPrice(çmimi);
-        console.log("VEQ OUTSIDE JE");
+        // console.log("VEQ OUTSIDE JE");
       }
     }
   };
