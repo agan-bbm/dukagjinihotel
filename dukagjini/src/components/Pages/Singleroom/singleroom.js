@@ -140,6 +140,9 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
     }
     return ages2;
   };
+  book.checkin.setHours(0, 0, 0, 0);
+  book.checkout.setHours(0, 0, 0, 0);
+
   const diffTime = Math.abs(book.checkout - book.checkin);
   const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   const images = [
@@ -285,14 +288,47 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
       const datenewprice = new Date(
         formatDate(rooms.rooms.acf.room.datenewprice)
       );
+
       console.log(datenewprice);
       const dateendprice = new Date(
         formatDate(rooms.rooms.acf.room.dateendprice)
       );
       console.log(dateendprice);
-
+      datenewprice.setHours(0, 0, 0, 0);
+      dateendprice.setHours(0, 0, 0, 0);
       var çmimi = rooms.rooms.acf.room.room_price;
       console.log(çmimi);
+
+      if (
+        formatDate(book.checkin) < formatDate(datenewprice) &&
+        formatDate(book.checkout) < formatDate(dateendprice) &&
+        formatDate(book.checkout) > formatDate(datenewprice)
+      ) {
+        console.log("nto je tash");
+        const offerdays = Math.abs(dateendprice - datenewprice);
+
+        const offerdayscount = Math.ceil(offerdays / (1000 * 60 * 60 * 24)); //2
+        console.log(offerdayscount);
+
+        const newdiffTime = Math.abs(datenewprice - book.checkin);
+        const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24)); //1
+        console.log(daysWithOffer);
+
+        const outofoffer = Math.abs(book.checkout - datenewprice);
+        const outofoffercount = Math.ceil(outofoffer / (1000 * 60 * 60 * 24)); //2
+        console.log(outofoffercount);
+
+        const offerPrice =
+          daysWithOffer * parseInt(rooms.rooms.acf.room.room_price); //2*50
+        console.log(offerPrice);
+        const normalprice =
+          outofoffercount * parseInt(rooms.rooms.acf.room.newprice); //2-1=1*80
+        console.log(normalprice);
+
+        çmimi = offerPrice + normalprice;
+        console.log(çmimi);
+        return calcPrice(çmimi);
+      }
       //FROM OUTSIDE TO INSIDE OFFER
       if (
         formatDate(book.checkin) < formatDate(datenewprice) &&
@@ -313,8 +349,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         console.log(normalprice);
 
         const outofoffer = Math.abs(book.checkout - datenewprice);
-        const outofoffercount =
-          Math.ceil(outofoffer / (1000 * 60 * 60 * 24)) - 1; //2
+        const outofoffercount = Math.ceil(outofoffer / (1000 * 60 * 60 * 24)); //2
         console.log(outofoffercount);
 
         const offerPrice =
@@ -341,8 +376,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         console.log(offerdayscount);
 
         const newdiffTime = Math.abs(book.checkin - datenewprice);
-        const daysWithOffer =
-          Math.ceil(newdiffTime / (1000 * 60 * 60 * 24)) - 1; //1
+        const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24)); //1
         console.log(daysWithOffer);
 
         const pricenewoffer =
@@ -351,8 +385,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         console.log(pricenewoffer);
 
         const outofoffer = Math.abs(book.checkout - dateendprice);
-        const outofoffercount =
-          Math.ceil(outofoffer / (1000 * 60 * 60 * 24)) - 1; //2
+        const outofoffercount = Math.ceil(outofoffer / (1000 * 60 * 60 * 24)); //2
         console.log(outofoffercount);
 
         const normalPrice =

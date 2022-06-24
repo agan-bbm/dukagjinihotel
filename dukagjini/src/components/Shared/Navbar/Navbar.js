@@ -131,21 +131,7 @@ function Navbar({ al, setAl }) {
             {" "}
             <span>{al ? "Sallat tona" : "Venues"}</span>
           </NavLink>
-          <NavLink
-            to="/peja"
-            className={!navbar ? "white-links" : " black-links white-links "}
-            style={({ isActive }) =>
-              isActive
-                ? {
-                    borderBottom: "3px solid #c3996c",
-                    fontWeight: "500",
-                  }
-                : { color: "" }
-            }
-          >
-            {" "}
-            <span>{al ? "Eksploroni Pejën" : "Explore Peja"}</span>
-          </NavLink>
+
           <NavLink
             to="/Spa"
             className={!navbar ? "white-links" : " black-links white-links "}
@@ -175,6 +161,21 @@ function Navbar({ al, setAl }) {
           >
             {" "}
             <span>{al ? "Restaurant" : "Restaurant"}</span>
+          </NavLink>
+          <NavLink
+            to="/peja"
+            className={!navbar ? "white-links" : " black-links white-links "}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    borderBottom: "3px solid #c3996c",
+                    fontWeight: "500",
+                  }
+                : { color: "" }
+            }
+          >
+            {" "}
+            <span>{al ? "Eksploroni Pejën" : "Explore Peja"}</span>
           </NavLink>
         </div>
 

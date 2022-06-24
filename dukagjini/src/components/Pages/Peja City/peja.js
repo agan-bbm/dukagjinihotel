@@ -5,7 +5,7 @@ import "./peja.css";
 import { Navigation } from "swiper";
 
 function Peja({ posts, al }) {
-  console.log(posts);
+  // console.log(posts);
   return (
     <>
       <div className="custom-pages">
