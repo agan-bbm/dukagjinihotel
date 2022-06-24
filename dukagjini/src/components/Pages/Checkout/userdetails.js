@@ -103,7 +103,7 @@ export function Userdetails({
     if (!strongRegex.test(e.target.value)) {
       setFormData({
         ...formData,
-        lastNameValid: false,
+        messageValid: false,
         message: e.target.value,
       });
       handleChange(e);
