@@ -138,7 +138,8 @@ function Checkout({ posts, book, setBook, al }) {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.REACT_APP_ACCESS_TOKEN}`,
+        Authorization:
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY21zZHVrYWdqaW5pLmJsYWNrYmlyZC5tYXJrZXRpbmciLCJpYXQiOjE2NTYwNTY4MzQsIm5iZiI6MTY1NjA1NjgzNCwiZXhwIjoxNjU2NjYxNjM0LCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.bhITNBryPY-mFqsJJqCwHxqLX-OTwEzFrbtxPntQUEI",
       },
       body: JSON.stringify(bookingData),
     });
