@@ -86,8 +86,8 @@ export function Summary({ posts, book, setBook, al }) {
                       </SwiperSlide>
                     ))
                   : ""
-                : rooms.rooms.acf.roomal.images
-                ? rooms.rooms.acf.roomal.images.map((img) => (
+                : rooms.rooms.acf.room.images
+                ? rooms.rooms.acf.room.images.map((img) => (
                     <SwiperSlide>
                       <img
                         src={img.length > 0 ? img : ""}

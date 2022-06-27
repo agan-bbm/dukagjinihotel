@@ -1,6 +1,6 @@
 .aboutBanner {
   padding-top: 150px;
-  /* background-image: url("../../../../src/images/aboutBanner.png"); */
+  background-image: url("../../../../src/images/aboutBanner.png");
   background-size: cover;
   height: 200px;
 }
