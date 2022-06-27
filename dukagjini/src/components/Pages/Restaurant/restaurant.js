@@ -191,7 +191,7 @@ function Restaurant({ posts, al }) {
           <div className="containerWrapper">
             <h2 className="cp-heading">
               {al
-                ? posts.acf.restaurant.panoramaal.title
+                ? posts.acf.restaurant.panorama.title
                 : posts.acf.restaurant.panorama.title}{" "}
             </h2>
             <div className="single-gallery ">
@@ -199,19 +199,19 @@ function Restaurant({ posts, al }) {
                 <div className="cp-p-cont">
                   <p className="cp-par-title">
                     {al
-                      ? posts.acf.restaurant.panoramaal.para_title
+                      ? posts.acf.restaurant.panorama.para_title
                       : posts.acf.restaurant.panorama.para_title}
                   </p>{" "}
                   <p>
                     {" "}
                     {al
-                      ? posts.acf.restaurant.panoramaal.paragraph
+                      ? posts.acf.restaurantal.panorama.paragraph
                       : posts.acf.restaurant.panorama.paragraph}{" "}
                   </p>{" "}
                   <p className="cp-bottom-p">
                     {" "}
                     {al
-                      ? posts.acf.restaurant.panoramaal.undertext
+                      ? posts.acf.restaurant.panorama.undertext
                       : posts.acf.restaurant.panorama.undertext}{" "}
                   </p>{" "}
                 </div>{" "}
@@ -363,19 +363,26 @@ function Restaurant({ posts, al }) {
         ></div>{" "}
         <div className="custom-pages-container">
           <div className="containerWrapper">
-            <h2 className="cp-heading"> {posts.acf.restaurant.treni.title} </h2>
+            <h2 className="cp-heading">
+              {" "}
+              {!al
+                ? posts.acf.restaurant.treni.titleen
+                : posts.acf.restaurant.treni.title}{" "}
+            </h2>
             <div className="single-gallery">
               <div className="cp-textfield reverse">
                 <div className="cp-p-cont">
                   <p className="cp-par-title">
                     {" "}
-                    {posts.acf.restaurant.treni.para_title}{" "}
+                    {!al
+                      ? posts.acf.restaurant.treni.para_titleen
+                      : posts.acf.restaurant.treni.para_title}{" "}
                   </p>{" "}
                   <p>
                     {" "}
                     {!al
-                      ? posts.acf.restaurant.treni.paragraph
-                      : posts.acf.restaurantal.treni.paragraph}{" "}
+                      ? posts.acf.restaurant.treni.paragraphen
+                      : posts.acf.restaurant.treni.paragraph}{" "}
                   </p>{" "}
                 </div>{" "}
                 <div className="restaurant-img-gallery">
