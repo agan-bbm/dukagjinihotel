@@ -47,10 +47,39 @@ function Footer({ al }) {
                     ? "Vendi ku duhet të vini kur jeni në Pejë"
                     : "The place you need to be when in Peja"}
                 </p>
-                <p>info@hoteldukagjini.com</p>
-                <p>+38349766140</p>
-                <p>038 771 166</p>
-                <p>038 771 177</p>
+                <p>
+                  {" "}
+                  <a
+                    href="mailto:info@hoteldukagjini.com"
+                    style={{ color: "#BFBFBF" }}
+                  >
+                    {" "}
+                    info@hoteldukagjini.com
+                  </a>
+                </p>
+                <p>
+                  {" "}
+                  <a style={{ color: "#BFBFBF" }} href="tel: 049766140">
+                    {" "}
+                    +38349766140
+                  </a>{" "}
+                </p>
+                <p>
+                  {" "}
+                  <a
+                    style={{ color: "#BFBFBF" }}
+                    href="tel:038 771 166"
+                  ></a>{" "}
+                  038 771 166
+                </p>
+                <p>
+                  {" "}
+                  <a
+                    style={{ color: "#BFBFBF" }}
+                    href="tel:038 771 177"
+                  ></a>{" "}
+                  038 771 177
+                </p>
               </ul>
             </div>
             <div className="contact-footer">

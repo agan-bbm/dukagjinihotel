@@ -139,6 +139,7 @@ select {
   /* border: white; */
   cursor: pointer;
   border-radius: 3px;
+  transition: all 0.2s ease-in-out;
 }
 
 .swiper-pagination-bullet-active {

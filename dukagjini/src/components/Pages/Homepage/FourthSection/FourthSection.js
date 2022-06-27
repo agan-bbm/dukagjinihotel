@@ -70,7 +70,7 @@ function FourthSection({ posts, al }) {
                     <div className="single-room-rec">
                       <div className="mainSingleImg">
                         {al ? (
-                          <img src={e.acf.roomal.images[0]} alt="" />
+                          <img src={e.acf.room.images[0]} alt="" />
                         ) : (
                           <img src={e.acf.room.images[0]} alt="" />
                         )}
@@ -129,7 +129,7 @@ function FourthSection({ posts, al }) {
               <div className="single-room-rec">
                 <div className="mainSingleImg">
                   {al ? (
-                    <img src={e.acf.roomal.images[0]} alt="" />
+                    <img src={e.acf.room.images[0]} alt="" />
                   ) : (
                     <img src={e.acf.room.images[0]} alt="" />
                   )}

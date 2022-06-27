@@ -143,7 +143,9 @@ function BookingSection({ dates, setDates, book, setBook, al, posts }) {
               <button
                 className="default-button"
                 id="check-avl-rooms"
-                disabled={nights === 0}
+                disabled={
+                  nights === 0 || endDate == null || startDate == endDate
+                }
                 onClick={() => {
                   getRooms();
                   setLoader(true);

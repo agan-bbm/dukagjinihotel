@@ -18,12 +18,18 @@ import logo_2 from "../../Utils/logo_2";
 import imgllogo from "../../../images/mobilellogo.png";
 
 function Navbar({ al, setAl }) {
+  const [isOpen, setOpen] = useState(false);
+
   const [navbar, setNavbar] = useState(false);
   const [visible, setVisible] = React.useState(false);
   const [style, setStyle] = useState("cont");
-
+  const handleToggle = () => {
+    setOpen(false);
+  };
   const changeStyle = () => {
     setStyle("fixed");
+
+    setOpen(true);
   };
   const changeFixed = () => {
     setStyle("");
@@ -49,7 +55,7 @@ function Navbar({ al, setAl }) {
           }}
           className="burger-icon"
         >
-          <Hamburger size={25} />
+          <Hamburger toggled={isOpen} size={25} />
         </button>
       );
     } else {
@@ -61,12 +67,16 @@ function Navbar({ al, setAl }) {
           }}
           className="burger-icon"
         >
-          <Hamburger size={25} />
+          <Hamburger toggle={setOpen} size={25} />
         </button>
       );
     }
   };
-
+  // {
+  //   isOpen
+  //     ? (document.body.style.overflow = "visible")
+  //     : (document.body.style.overflow = "hidden");
+  // }
   const logo = () => {
     return logo_2({ navbar: navbar });
   };
@@ -197,7 +207,13 @@ function Navbar({ al, setAl }) {
               </p>
 
               <p className="mobile-menu-link">
-                <NavLink to="/restaurant">
+                <NavLink
+                  onClick={() => {
+                    handleToggle();
+                    // changeFixed();
+                  }}
+                  to="/restaurant"
+                >
                   {al ? "Restaurant" : "Restaurant"}
                 </NavLink>
               </p>

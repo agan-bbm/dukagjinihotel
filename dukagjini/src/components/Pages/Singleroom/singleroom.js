@@ -376,20 +376,20 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
         // console.log(offerdayscount);
 
         const newdiffTime = Math.abs(book.checkin - datenewprice);
-        const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24)); //1
+        const daysWithOffer = Math.ceil(newdiffTime / (1000 * 60 * 60 * 24));
         // console.log(daysWithOffer);
 
         const pricenewoffer =
           (offerdayscount - daysWithOffer) *
-          parseInt(rooms.rooms.acf.room.newprice); //2-1=1*80
+          parseInt(rooms.rooms.acf.room.newprice);
         // console.log(pricenewoffer);
 
         const outofoffer = Math.abs(book.checkout - dateendprice);
-        const outofoffercount = Math.ceil(outofoffer / (1000 * 60 * 60 * 24)); //2
+        const outofoffercount = Math.ceil(outofoffer / (1000 * 60 * 60 * 24));
         // console.log(outofoffercount);
 
         const normalPrice =
-          outofoffercount * parseInt(rooms.rooms.acf.room.room_price); //2*50
+          outofoffercount * parseInt(rooms.rooms.acf.room.room_price);
         // console.log(normalPrice);
 
         çmimi = pricenewoffer + normalPrice;
