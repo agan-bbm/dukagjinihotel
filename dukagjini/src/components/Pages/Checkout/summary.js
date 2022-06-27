@@ -23,6 +23,7 @@ import penthouse from "../../../images/penthouse.jpg";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { borderRadius } from "@mui/system";
+import { Rooms } from "../Rooms";
 
 export function Summary({ posts, book, setBook, al }) {
   const params = useParams();
@@ -63,7 +64,6 @@ export function Summary({ posts, book, setBook, al }) {
     parseInt(formatDate(book.checkout).substring(8, 10)) -
     parseInt(formatDate(book.checkin).substring(8, 10));
 
-  // console.log;
   return rooms.isLoaded ? (
     <>
       <div className="single-room">

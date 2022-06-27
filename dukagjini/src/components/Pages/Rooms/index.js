@@ -134,8 +134,8 @@ export function Rooms({ freeRooms, loader, al, book, setBook }) {
                               </SwiperSlide>
                             ))
                           : ""
-                        : e.acf.roomal.images
-                        ? e.acf.roomal.images.map((img) => (
+                        : e.acf.room.images
+                        ? e.acf.room.images.map((img) => (
                             <SwiperSlide>
                               <img src={img.length > 0 ? img : ""} />
                             </SwiperSlide>

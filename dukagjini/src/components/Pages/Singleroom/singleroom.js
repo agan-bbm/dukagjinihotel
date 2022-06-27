@@ -571,14 +571,14 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
               {!al ? (
                 <img src={rooms.rooms.acf.room.images[0]} alt="" />
               ) : (
-                <img src={rooms.rooms.acf.roomal.images[0]} alt="" />
+                <img src={rooms.rooms.acf.room.images[0]} alt="" />
               )}
             </SwiperSlide>
             <SwiperSlide>
               {!al ? (
                 <img src={rooms.rooms.acf.room.images[1]} alt="" />
               ) : (
-                <img src={rooms.rooms.acf.roomal.images[1]} alt="" />
+                <img src={rooms.rooms.acf.room.images[1]} alt="" />
               )}
             </SwiperSlide>
             <SwiperSlide>
@@ -602,14 +602,14 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
               {!al ? (
                 <img src={rooms.rooms.acf.room.images[0]} alt="" />
               ) : (
-                <img src={rooms.rooms.acf.roomal.images[0]} alt="" />
+                <img src={rooms.rooms.acf.room.images[0]} alt="" />
               )}
             </SwiperSlide>
             <SwiperSlide>
               {!al ? (
                 <img src={rooms.rooms.acf.room.images[1]} alt="" />
               ) : (
-                <img src={rooms.rooms.acf.roomal.images[1]} alt="" />
+                <img src={rooms.rooms.acf.room.images[1]} alt="" />
               )}
             </SwiperSlide>
             <SwiperSlide>
@@ -681,7 +681,9 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                   fontSize: "13px",
                 }}
               >
-                {rooms.rooms.acf.room.shtrati_portativ}
+                {al
+                  ? rooms.rooms.acf.room.shtrati_portativ
+                  : rooms.rooms.acf.room.shtrati_portativen}
               </p>
               <div className="room-features-wrapper">
                 {!al ? (
@@ -846,7 +848,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                   <div className="price-single-page">
                     <p className="l-price">Total Price</p>
 
-                    <p className="l-price">
+                    <p className="cmimi-dhomes">
                       {/* {nights === 0
                         ? rooms.rooms.acf.room.room_price
                         : parseInt(rooms.rooms.acf.room.room_price) *

@@ -141,7 +141,21 @@ function Navbar({ al, setAl }) {
             {" "}
             <span>{al ? "Sallat tona" : "Venues"}</span>
           </NavLink>
-
+          <NavLink
+            to="/restaurant"
+            className={!navbar ? "white-links" : " black-links white-links "}
+            style={({ isActive }) =>
+              isActive
+                ? {
+                    borderBottom: "3px solid #c3996c",
+                    fontWeight: "500",
+                  }
+                : { color: "" }
+            }
+          >
+            {" "}
+            <span>{al ? "Restaurant" : "Restaurant"}</span>
+          </NavLink>
           <NavLink
             to="/Spa"
             className={!navbar ? "white-links" : " black-links white-links "}
@@ -158,7 +172,7 @@ function Navbar({ al, setAl }) {
             <span>{al ? "Shëndet dhe mirëqenie" : "Wellness & Fitness"}</span>
           </NavLink>
           <NavLink
-            to="/restaurant"
+            to="/about"
             className={!navbar ? "white-links" : " black-links white-links "}
             style={({ isActive }) =>
               isActive
@@ -170,7 +184,7 @@ function Navbar({ al, setAl }) {
             }
           >
             {" "}
-            <span>{al ? "Restaurant" : "Restaurant"}</span>
+            <span>{al ? "Rreth Nesh" : "About Us"}</span>
           </NavLink>
           <NavLink
             to="/peja"
@@ -217,8 +231,11 @@ function Navbar({ al, setAl }) {
                   {al ? "Restaurant" : "Restaurant"}
                 </NavLink>
               </p>
+
               <p className="mobile-menu-link">
-                <NavLink to="/peja">{al ? "Peja" : "Peja"}</NavLink>
+                <NavLink to="/wedding">
+                  {al ? "Sallat e dasmave" : "Wedding hall"}
+                </NavLink>
               </p>
               <p className="mobile-menu-link">
                 <NavLink to="/spa">
@@ -226,8 +243,12 @@ function Navbar({ al, setAl }) {
                 </NavLink>
               </p>
               <p className="mobile-menu-link">
-                <NavLink to="/wedding">
-                  {al ? "Sallat e dasmave" : "Wedding hall"}
+                <NavLink to="/about">{al ? "Rreth nesh" : "About us"}</NavLink>
+              </p>
+
+              <p className="mobile-menu-link">
+                <NavLink to="/peja">
+                  {al ? "Eksploroni Pejën" : "Explore Peja"}
                 </NavLink>
               </p>
               <p className="mobile-menu-link" id="bookBtnMob">
