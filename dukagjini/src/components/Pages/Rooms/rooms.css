@@ -240,7 +240,8 @@ grid-column-gap: 20px;
   .icon-info {
     width: 100%;
     display: grid;
-    grid-template-columns: 49% 49%;
+    grid-template-columns: repeat(2,1fr);
+
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;

@@ -44,7 +44,7 @@ function Navbar({ al, setAl }) {
   }, []);
 
   const options = [al ? <img src={En}></img> : <img src={Al}></img>];
-  const defaultOption = <img src={En}></img>;
+  const defaultOption = [al ? <img src={Al}></img> : <img src={En}></img>];
   const button = () => {
     if (visible) {
       return (

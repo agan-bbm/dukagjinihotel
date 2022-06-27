@@ -184,6 +184,97 @@ function Restaurant({ posts, al }) {
         <div
           className="restaurant-banner"
           style={{
+            backgroundImage: `url(${posts.acf.restaurant.panorama.banner})`,
+          }}
+        ></div>{" "}
+        <div className="custom-pages-container">
+          <div className="containerWrapper">
+            <h2 className="cp-heading">
+              {al
+                ? posts.acf.restaurant.panoramaal.title
+                : posts.acf.restaurant.panorama.title}{" "}
+            </h2>
+            <div className="single-gallery ">
+              <div className="cp-textfield">
+                <div className="cp-p-cont">
+                  <p className="cp-par-title">
+                    {al
+                      ? posts.acf.restaurant.panoramaal.para_title
+                      : posts.acf.restaurant.panorama.para_title}
+                  </p>{" "}
+                  <p>
+                    {" "}
+                    {al
+                      ? posts.acf.restaurant.panoramaal.paragraph
+                      : posts.acf.restaurant.panorama.paragraph}{" "}
+                  </p>{" "}
+                  <p className="cp-bottom-p">
+                    {" "}
+                    {al
+                      ? posts.acf.restaurant.panoramaal.undertext
+                      : posts.acf.restaurant.panorama.undertext}{" "}
+                  </p>{" "}
+                </div>{" "}
+                <div className="restaurant-img-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    loop={true}
+                    navigation
+                  >
+                    {posts.acf.restaurant.panorama.images.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>{" "}
+              </div>{" "}
+              <div className="cp-images">
+                <div className="restaurant-img-gallery topImage">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    loop={true}
+                    slidesPerView={1}
+                    navigation
+                  >
+                    {posts.acf.restaurant.panorama.imagestwo.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>{" "}
+                <div className="restaurant-img-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    loop={true}
+                    navigation
+                  >
+                    {posts.acf.restaurant.panorama.imagesthree.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>{" "}
+              </div>{" "}
+            </div>{" "}
+            <div className="cp-bottom">
+              <p className="cp-bottom-p">
+                {" "}
+                {posts.acf.restaurant.shisha.undertext}{" "}
+              </p>{" "}
+            </div>{" "}
+          </div>{" "}
+        </div>
+        <div
+          className="restaurant-banner"
+          style={{
             backgroundImage: `url(${posts.acf.restaurant.veranda.banner})`,
           }}
         ></div>{" "}
@@ -264,6 +355,83 @@ function Restaurant({ posts, al }) {
             </div>{" "}
           </div>{" "}
         </div>{" "}
+        <div
+          className="restaurant-banner"
+          style={{
+            backgroundImage: `url(${posts.acf.restaurant.treni.banner})`,
+          }}
+        ></div>{" "}
+        <div className="custom-pages-container">
+          <div className="containerWrapper">
+            <h2 className="cp-heading"> {posts.acf.restaurant.treni.title} </h2>
+            <div className="single-gallery">
+              <div className="cp-textfield reverse">
+                <div className="cp-p-cont">
+                  <p className="cp-par-title">
+                    {" "}
+                    {posts.acf.restaurant.treni.para_title}{" "}
+                  </p>{" "}
+                  <p>
+                    {" "}
+                    {!al
+                      ? posts.acf.restaurant.treni.paragraph
+                      : posts.acf.restaurantal.treni.paragraph}{" "}
+                  </p>{" "}
+                </div>{" "}
+                <div className="restaurant-img-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    loop={true}
+                    slidesPerView={1}
+                    navigation
+                  >
+                    {posts.acf.restaurant.treni.images.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>{" "}
+              </div>{" "}
+              <div className="cp-images reverse">
+                <div className="restaurant-img-gallery topImage">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    loop={true}
+                    navigation
+                  >
+                    {posts.acf.restaurant.treni.imagestwo.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>{" "}
+                <div className="restaurant-img-gallery">
+                  <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    loop={true}
+                    navigation
+                  >
+                    {posts.acf.restaurant.treni.imagesthree.map((img) => (
+                      <SwiperSlide>
+                        <img src={img.length > 0 ? img : ""} />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>{" "}
+              </div>{" "}
+              <div className="cp-bottom">
+                <p className="cp-bottom-p"> </p>{" "}
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+        </div>
         <div
           className="restaurant-banner"
           style={{

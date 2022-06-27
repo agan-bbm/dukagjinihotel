@@ -84,7 +84,9 @@ function Peja({ posts, al }) {
             </div>
             <div className="containerWrapper" id="peja-mobileimagesdiv">
               <div className="peja-mobileimages">
-                <p className="peja-paragraph-4imgs">{posts.acf.peja.text}</p>
+                <p className="peja-paragraph-4imgs">
+                  {!al ? posts.acf.peja.text : posts.acf.pejashqip.text}
+                </p>
 
                 <Swiper
                   spaceBetween={15}
