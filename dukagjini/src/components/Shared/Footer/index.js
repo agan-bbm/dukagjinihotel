@@ -66,19 +66,17 @@ function Footer({ al }) {
                 </p>
                 <p>
                   {" "}
-                  <a
-                    style={{ color: "#BFBFBF" }}
-                    href="tel:038 771 166"
-                  ></a>{" "}
-                  038 771 166
+                  <a style={{ color: "#BFBFBF" }} href="tel: 038 771 166">
+                    {" "}
+                    038 771 166
+                  </a>{" "}
                 </p>
                 <p>
                   {" "}
-                  <a
-                    style={{ color: "#BFBFBF" }}
-                    href="tel:038 771 177"
-                  ></a>{" "}
-                  038 771 177
+                  <a style={{ color: "#BFBFBF" }} href="tel: 038 771 177">
+                    {" "}
+                    038 771 177
+                  </a>{" "}
                 </p>
               </ul>
             </div>

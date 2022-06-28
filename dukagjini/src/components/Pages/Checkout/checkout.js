@@ -92,12 +92,13 @@ function Checkout({ posts, book, setBook, al }) {
 
       persons: {
         adults: book.adult.toString(),
-        childrenunder6: book.children.toString(),
-        childrenover6: book.children.toString(),
+        childrenunder6: book.childrenunder6.toString(),
+        childrenover6: book.childrenover6.toString(),
         guests: book.guests.toString(),
       },
     },
   });
+
   const showForm = () => {
     switch (page) {
       case 0:

@@ -29,7 +29,7 @@ console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
   "padding:9px 5px; background:black; line-height:25px;color: white"
 );
-// console.warn = console.error = () => {};
+console.warn = console.error = () => {};
 
 function App() {
   const [state, setState] = useState({
@@ -44,6 +44,9 @@ function App() {
     checkout: "",
     adult: 1,
     children: 0,
+    childrenover6: 0,
+
+    childrenunder6: 0,
     roomName: "",
     guests: 1,
     longRoomName: "",

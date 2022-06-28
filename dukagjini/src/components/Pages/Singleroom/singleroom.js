@@ -73,7 +73,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
     if (parseInt(childAges.child1) <= 6) counter++;
     if (parseInt(childAges.child2) <= 6) counter++;
     if (parseInt(childAges.child3) <= 6) counter++;
-
+    // console.log(counter);
     return counter;
   };
 
@@ -255,7 +255,11 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
   // console.log;
   // console.log;
   // console.log;
+  book.childrenunder6 = getChildrenUnder6();
+  book.childrenover6 = book.children - getChildrenUnder6();
+  // console.log(book.childrenover6);
 
+  // console.log(book.childrenunder6);
   const calcPrice = (çmimi) => {
     const secondperson =
       book.adult > 1 ? parseInt(rooms.rooms.acf.room.secondperson) : 0;
@@ -874,8 +878,7 @@ function Singleroom({ dates, setDates, book, setBook, al }) {
                           roomName: rooms.rooms.acf.room.short_room_name,
                           longRoomName: rooms.rooms.acf.room.name,
                           nights: nights,
-                          guests:
-                            parseInt(guests) - parseInt(getChildrenUnder6()),
+                          guests: parseInt(guests),
                           price: returnPrice(),
                         });
                       }}
