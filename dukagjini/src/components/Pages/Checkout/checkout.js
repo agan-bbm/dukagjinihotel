@@ -73,7 +73,7 @@ function Checkout({ posts, book, setBook, al }) {
   const [page, setPage] = useState(0);
   console.log(book);
   const [bookingData, setBookingData] = useState({
-    title: "newreservation",
+    title: "New Reservation",
     content: "",
     status: "pending",
     acf: {

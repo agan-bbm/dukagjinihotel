@@ -154,7 +154,11 @@ export function Userdetails({
                     width: "300px",
                   }}
                 >
-                  {formData.nameValid ? "" : "Ju lutem shënoni një emër valid!"}
+                  {formData.nameValid
+                    ? ""
+                    : !al
+                    ? "Please enter a valid firstname"
+                    : "Ju lutem shënoni një emër valid"}
                 </p>
               </div>
               <div class="input-field">
@@ -178,6 +182,8 @@ export function Userdetails({
                 >
                   {formData.lastNameValid
                     ? ""
+                    : !al
+                    ? "Please enter a valid lastname"
                     : "Ju lutem shënoni një mbiemër valid"}
                 </p>
               </div>
@@ -205,7 +211,9 @@ export function Userdetails({
                 >
                   {formData.numberValid
                     ? ""
-                    : "Ju lutem shënoni një numër telefoni valid"}
+                    : !al
+                    ? "Please enter a valid phone number"
+                    : "Ju lutem shënoni një numër telefoni valid "}
                 </p>
               </div>
               <div class="input-field">
@@ -220,28 +228,28 @@ export function Userdetails({
                     validateEmail(e);
                   }}
                 />{" "}
-                {!formData.mailError ? (
-                  <p
-                    style={{
-                      color: "red",
-                      fontSize: "12px",
-                      textAlign: "left",
-                      width: "300px",
-                    }}
-                  >
-                    {!al
-                      ? "Please enter a valid email"
-                      : "Ju lutem shënoni një email valid"}
-                  </p>
-                ) : null}
+                <p
+                  style={{
+                    color: "red",
+                    fontSize: "12px",
+                    textAlign: "left",
+                    width: "300px",
+                  }}
+                >
+                  {formData.mailError
+                    ? ""
+                    : !al
+                    ? "Please enter a valid email"
+                    : "Ju lutem shënoni një email valid"}
+                </p>
               </div>
             </div>
             <div className="userdtl-inputrow">
               <div class="input-field">
-                <label for="message">{!al ? "message" : "message"}</label>
-                <input
-                  type="textarea"
-                  rows={4}
+                <label for="message">{!al ? "Message" : "Mesazhi"}</label>
+                <textarea
+                  type="text"
+                  rows={6}
                   value={formData.message}
                   name="message"
                   // className={emailError ? "" : "error"}

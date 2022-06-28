@@ -85,6 +85,9 @@
 
 
 @media(max-width:767px){
+    .fifthSection{
+        margin-top: 50px;
+    }
     .fifthSection h2 {
         text-align: center;
         font-size: 22px;

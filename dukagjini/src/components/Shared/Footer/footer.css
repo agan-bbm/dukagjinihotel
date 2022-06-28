@@ -198,9 +198,16 @@ ul li {
 @media (max-width: 767px) {
   .footer-container {
     flex-direction: column;
+    text-align: center;
+  }
+  .footerLists li{
+    text-align: center;
   }
   .socials-rights{
     flex-direction: column;
+  }
+  .footer-logo{
+    margin: auto;
   }
   .room-title {
     margin-top: 0;

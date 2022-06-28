@@ -117,6 +117,9 @@
   }
 }
 @media (max-width: 767px) {
+  .testimonial{
+    margin-right: 1px;
+  }
   .sixthHeader h2 {
     margin: 0;
     padding: 10px;

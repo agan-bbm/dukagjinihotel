@@ -246,11 +246,27 @@ margin-top: 0;
     }
 }
 @media(max-width:767px){
+    .cp-intro-left{
+        margin-top: 40px;
+    }
+   
+    .cp-intro-left p{
+        text-align: center !important;
+    }
+    .cp-intro-right p{
+        text-align: center !important;
+    }
+    .cp-intro-left a{
+        margin: 15px auto;
+    }
+    .cp-intro-right a {
+        margin: 15px auto;
+    }
     .intro img{
         object-fit: cover;
     }
     .intro h2 {
-        text-align: left;
+        text-align: center !important;
         font-family: "Ogg";
         font-weight: 400 !important;
         font-size: 28px;
@@ -258,7 +274,7 @@ margin-top: 0;
     }
     #wellnes-mainheading {
         margin-bottom: 0;
-        margin-top: 15px;
+        margin-top: 40px;
     }
     #venues-heading{
         margin-top: 15px;
@@ -300,6 +316,7 @@ margin-top: 0;
     }
     #introwellness .cp-intro-left {
         width: auto;
+        margin: 0;
     }
     #introwellness .cp-intro-left img {
         height: 100%;
@@ -358,6 +375,7 @@ margin-top: 0;
     }
     #weddingintrodiv .cp-intro-right{
         width: 100%;
+        margin-top: 40px;
     }
     #weddingintrodiv .cp-intro-left {
         width: 100%;
