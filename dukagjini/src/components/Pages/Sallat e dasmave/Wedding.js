@@ -117,7 +117,7 @@ function Wedding({ posts, al }) {
                     slidesPerView={1}
                     navigation
                   >
-                    {posts.acf.Dasmat.whitehall.images.map((img) => (
+                    {posts.acf.Dasmat.greathall.images.map((img) => (
                       <SwiperSlide>
                         <img src={img.length > 0 ? img : ""} />
                       </SwiperSlide>

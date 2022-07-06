@@ -38,7 +38,13 @@ body {
 .mobileVisibility {
   display: none;
 }
-
+.page404{
+  display: flex;justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
 .error-page {
   padding: 150px 0;
   width: 100%;

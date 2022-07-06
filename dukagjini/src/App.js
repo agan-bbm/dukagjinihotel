@@ -24,6 +24,8 @@ import { Spa } from "./components/Pages/SPA page/spa";
 import Restaurant from "./components/Pages/Restaurant/restaurant";
 import Wedding from "./components/Pages/Sallat e dasmave/Wedding";
 import Peja from "./components/Pages/Peja City/peja";
+import P404 from "./components/Pages/P404";
+// import PageNotFound from "./PageNotFound";
 
 console.log(
   "%c Developed by: Black Bird Marketing https://blackbird.marketing",
@@ -142,6 +144,9 @@ function App() {
                 />
               }
             />
+            <Route path="*" element={<P404 posts={homepage} />} />
+
+            {/* <Route path="*" element={<NotFound />} /> */}
             <Route
               path="/booking"
               element={
@@ -204,6 +209,7 @@ function App() {
               path="/delete-reservation"
               element={<DeleteReservation />}
             ></Route>
+
             <Route path="/error" element={<ReservationError />}></Route>
           </Routes>
           <Footer al={al} setAl={setAl} />

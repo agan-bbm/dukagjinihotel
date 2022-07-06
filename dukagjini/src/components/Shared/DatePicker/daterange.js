@@ -35,7 +35,7 @@ function Daterange({ dates, setDates }) {
     <>
       <div className="select-dates-txt">
         <h2 className="range-h2">Select Dates</h2>
-        <p className="range-p">Book directly with us. Best Rates Generated</p>
+        <p className="range-p">Book directly with us. Best rates generated.</p>
       </div>
 
       <DatePicker

@@ -38,7 +38,7 @@
     
 }
 .peja-slider-texts{
-    width: 50%;
+    /* width: 50%; */
     margin: 0 auto;
 }
 .peja-singleRecommended h2{
@@ -101,7 +101,7 @@
     display: block;
 }
 .peja-slider-texts{
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
 }
     .peja-images{

@@ -148,6 +148,9 @@
     width: 150px;
     font-size: 14px;
 }
+.price-book button:hover {
+    background-color: #946638;
+}
 .icon {
     display: flex;
     align-items: center;

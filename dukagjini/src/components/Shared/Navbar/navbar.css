@@ -255,10 +255,10 @@ g.bottom-left-group.scrolled {
 .Dropdown-option img {
   width: 25px;
 }
-.Dropdown-control{
-    border: 1px solid rgba(219, 5, 41, 0.2) !important;
-    border-radius: 8px !important;
-    background-color: rgba(219, 5, 41, 0.04) !important;
+.Dropdown-control {
+  border: 1px solid #CA9E72 !important;
+  border-radius: 8px !important;
+  background-color: transparent;
 }
 .translate-desktop {
   width: 60px !important;

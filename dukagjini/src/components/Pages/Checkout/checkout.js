@@ -140,7 +140,7 @@ function Checkout({ posts, book, setBook, al }) {
         Accept: "application/json",
         "Content-Type": "application/json",
         Authorization:
-          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY21zZHVrYWdqaW5pLmJsYWNrYmlyZC5tYXJrZXRpbmciLCJpYXQiOjE2NTYwNTY4MzQsIm5iZiI6MTY1NjA1NjgzNCwiZXhwIjoxNjU2NjYxNjM0LCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.bhITNBryPY-mFqsJJqCwHxqLX-OTwEzFrbtxPntQUEI",
+          "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY21zZHVrYWdqaW5pLmJsYWNrYmlyZC5tYXJrZXRpbmciLCJpYXQiOjE2NTY5NDE3MDYsIm5iZiI6MTY1Njk0MTcwNiwiZXhwIjoxNjU3NTQ2NTA2LCJkYXRhIjp7InVzZXIiOnsiaWQiOiIxIn19fQ.1P2XEYBs90sFyCEmz4iutM1pzTvU_2ecavWAKex5PzA",
       },
       body: JSON.stringify(bookingData),
     });

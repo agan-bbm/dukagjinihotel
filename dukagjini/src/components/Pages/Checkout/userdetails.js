@@ -61,7 +61,7 @@ export function Userdetails({
   };
   const validateUsername = (e) => {
     const strongRegex = new RegExp(
-      "(^[A-Za-z]{2,16})([ ]{0,1})([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})"
+      "(^[A-Za-z]{1,16})([ ]{0,1})([A-Za-z]{1,16})?([ ]{0,1})?([A-Za-z]{2,16})?([ ]{0,1})?([A-Za-z]{2,16})"
     );
 
     if (!strongRegex.test(e.target.value)) {

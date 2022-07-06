@@ -123,13 +123,15 @@
     }
     .single-gallery img {
         margin: 20px 0px;
+        object-fit: contain;
     }
     .restaurant-img-gallery{
         width: auto;
-        height: 600px;
+        height: 500px;
       }
       .restaurant-img-gallery .swiper-slide{
           background:transparent !important;
+          height: 500px;
       }
       .topImage{
         margin-top: 0;

@@ -103,11 +103,11 @@ function BookingSection({ dates, setDates, book, setBook, al, posts }) {
               )}
               {!al ? (
                 <p className="range-p">
-                  Book directly with us. Best Rates Generated
+                  Book directly with us. Best rates generated.
                 </p>
               ) : (
                 <p className="range-p">
-                  Rezervoni direkt me ne. Çmimet më të mira të krijuara
+                  Rezervoni direkt me ne. Çmimet më të mira të krijuara.
                 </p>
               )}
             </div>
